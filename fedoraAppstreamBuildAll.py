@@ -22,7 +22,7 @@
 import glob
 import os
 import shutil
-import fedoraAppstreamBuild
+import fedoraAppstreamBuildPkg
 from subprocess import call
 
 def main():
@@ -36,7 +36,7 @@ def main():
     files = glob.glob("./packages/*.rpm")
     files.sort()
 
-    job = fedoraAppstreamBuild.AppstreamBuild()
+    job = fedoraAppstreamBuildPkg.AppstreamBuild()
     for f in files:
         try:
             job.build(f)
