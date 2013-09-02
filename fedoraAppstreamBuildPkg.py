@@ -187,6 +187,13 @@ class AppstreamBuild:
             except Exception, e:
                 pass
 
+            # Keywords are optional but highly reccomended
+            keywords = None
+            try:
+                keywords = config.get('Desktop Entry', 'Keywords')
+            except Exception, e:
+                pass
+
             # check icon exists
             try:
                 icon_fullpath = get_icon_filename(icon)
@@ -218,7 +225,6 @@ class AppstreamBuild:
             # FIXME: do translations too
             xml.write("    <summary>%s</summary>\n" % sanitise_xml(summary))
             xml.write("    <icon type=\"cached\">%s</icon>\n" % app_id)
-            # FIXME: get keywords from AppData
             if categories:
                 xml.write("    <appcategories>\n")
                 for cat in categories.split(';')[:-1]:
@@ -228,6 +234,11 @@ class AppstreamBuild:
                         continue
                     xml.write("      <appcategory>%s</appcategory>\n" % cat)
                 xml.write("    </appcategories>\n")
+            if keywords:
+                xml.write("    <keywords>\n")
+                for keyword in keywords.split(';')[:-1]:
+                    xml.write("      <keyword>%s</keyword>\n" % keyword)
+                xml.write("    </keywords>\n")
             # FIXME: get url::homepage from AppData
             xml.write("  </application>\n")
 
