@@ -80,7 +80,7 @@ def get_icon_filename(icon):
     # pixmap
     icon_fullpath = "./tmp/usr/share/pixmaps/%s" % icon
     if os.path.exists(icon_fullpath):
-        return icon_fullpath
+        return resize_icon(icon_fullpath)
 
     # hicolor, something we don't have to resize
     icon_sizes_no_resize = [ '64x64', '48x48', '32x32' ]
