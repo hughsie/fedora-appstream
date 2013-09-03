@@ -324,8 +324,9 @@ class AppstreamBuild:
             tar.close()
 
         # remove tmp
-        shutil.rmtree('./tmp')
-        shutil.rmtree('./icons')
+        if not os.getenv('APPSTREAM_DEBUG'):
+            shutil.rmtree('./tmp')
+            shutil.rmtree('./icons')
 
 def main():
     job = AppstreamBuild()
