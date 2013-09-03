@@ -20,23 +20,23 @@
 # Copyright (C) 2009-2013
 #    Richard Hughes <richard@hughsie.com>
 #
+# Copyright (C) 2013
+#    Florian Festi <ffesti@redhat.com>
+#
 
 import ConfigParser
 import glob
 from PIL import Image
 import os
 import shutil
-import subprocess
 import sys
 import tarfile
-
-import yum
-from yum.packages import YumLocalPackage, parsePackages
 
 import cairo
 import rsvg
 
 import fedoraAppstreamData
+import fedoraAppstreamPkg
 
 # NOTE; we could use escape() from xml.sax.saxutils import escape but that seems
 # like a big dep for such trivial functionality
@@ -104,7 +104,6 @@ class AppstreamBuild:
 
     def __init__(self):
         #to do something
-        self.yb = yum.YumBase()
         self.cat_blacklist = ['GTK', 'Qt', 'KDE']
 
         # get the list of stock icons
@@ -119,6 +118,13 @@ class AppstreamBuild:
 
     def build(self, filename):
 
+        # check the package has .desktop files
+        print 'SOURCE\t', filename
+        pkg = fedoraAppstreamPkg.AppstreamPkg(filename)
+        if not pkg.contains_desktop_file:
+            print 'IGNORE\t', f, '\t', "no desktop files"
+
+        # set up state
         if not os.path.exists('./appstream'):
             os.makedirs('./appstream')
         if not os.path.exists('./icons'):
@@ -127,17 +133,15 @@ class AppstreamBuild:
         if os.path.exists('./tmp'):
             shutil.rmtree('./tmp')
         os.makedirs('./tmp')
-        print 'SOURCE\t', filename
 
-        # parse file
-        pkg = YumLocalPackage(ts=self.yb.rpmdb.readOnlyTS(), filename=filename)
-
-        # explode contents into tmp, FIXME: use native decompressor
-        cmd = "/home/hughsie/Code/app-install/src/app-install-extract-package --package=%s --directory=%s" % (filename, 'tmp')
-        p = subprocess.Popen(cmd, cwd='.', shell=True, stdout=subprocess.PIPE)
-        p.wait()
-        if p.returncode:
-            raise StandardError('Cannot extract package: ' + p.stdout)
+        # explode contents into tmp
+        wildcards = []
+        wildcards.append('./usr/share/applications/*.desktop')
+        wildcards.append('./usr/share/appdata/*.xml')
+        wildcards.append('./usr/share/icons/hicolor/*/apps/*')
+        wildcards.append('./usr/share/pixmaps/*.*')
+        wildcards.append('./usr/share/icons/*.*')
+        pkg.extract('./tmp', wildcards)
 
         # open the AppStream file for writing
         has_header = False
