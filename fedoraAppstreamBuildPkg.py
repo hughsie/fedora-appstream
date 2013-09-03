@@ -109,6 +109,11 @@ class AppstreamBuild:
         self.yb = yum.YumBase()
         self.cat_blacklist = ['GTK', 'Qt', 'KDE']
 
+        # get the list of stock icons
+        f = open('./stock-icon-names.txt', 'r')
+        self.stock_icons = f.read().rstrip().split('\n')
+        f.close()
+
     def build(self, filename):
 
         if not os.path.exists('./appstream'):
@@ -147,6 +152,7 @@ class AppstreamBuild:
             description = None
             homepage_url = None
             keywords = None
+            icon_fullpath = None
 
             # do not include apps with NoDisplay=True
             try:
@@ -203,14 +209,15 @@ class AppstreamBuild:
                 pass
 
             # check icon exists
-            try:
-                icon_fullpath = get_icon_filename(icon)
-            except Exception as e:
-                print 'IGNORE\t', f, '\t', "icon is corrupt:", icon
-                continue
-            if not os.path.exists(icon_fullpath):
-                print 'IGNORE\t', f, '\t', "icon does not exist:", icon
-                continue
+            if icon not in self.stock_icons:
+                try:
+                    icon_fullpath = get_icon_filename(icon)
+                except Exception as e:
+                    print 'IGNORE\t', f, '\t', "icon is corrupt:", icon
+                    continue
+                if not os.path.exists(icon_fullpath):
+                    print 'IGNORE\t', f, '\t', "icon does not exist:", icon
+                    continue
 
             print 'PROCESS\t', f
 
@@ -259,7 +266,10 @@ class AppstreamBuild:
             xml.write("    <name>%s</name>\n" % sanitise_xml(name))
             # FIXME: do translations too
             xml.write("    <summary>%s</summary>\n" % sanitise_xml(summary))
-            xml.write("    <icon type=\"cached\">%s</icon>\n" % app_id)
+            if icon_fullpath:
+                xml.write("    <icon type=\"cached\">%s</icon>\n" % app_id)
+            else:
+                xml.write("    <icon type=\"stock\">%s</icon>\n" % icon)
             if categories:
                 xml.write("    <appcategories>\n")
                 categories = categories.split(';')[:-1]
@@ -287,14 +297,15 @@ class AppstreamBuild:
             xml.write("  </application>\n")
 
             # copy icon
-            output_file = './icons/' + app_id + '.png'
-            icon_file = open(icon_fullpath, 'rb')
-            icon_data = icon_file.read()
-            icon_file.close()
-            icon_file = open(output_file, 'wb')
-            icon_file.write(icon_data)
-            icon_file.close()
-            print 'WRITING\t', output_file
+            if icon_fullpath:
+                output_file = './icons/' + app_id + '.png'
+                icon_file = open(icon_fullpath, 'rb')
+                icon_data = icon_file.read()
+                icon_file.close()
+                icon_file = open(output_file, 'wb')
+                icon_file.write(icon_data)
+                icon_file.close()
+                print 'WRITING\t', output_file
 
         # create AppStream XML
         xml.write("</applications>\n")
