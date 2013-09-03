@@ -36,6 +36,8 @@ from yum.packages import YumLocalPackage, parsePackages
 import cairo
 import rsvg
 
+import fedoraAppstreamData
+
 # NOTE; we could use escape() from xml.sax.saxutils import escape but that seems
 # like a big dep for such trivial functionality
 def sanitise_xml(text):
@@ -117,7 +119,7 @@ class AppstreamBuild:
         if os.path.exists('./tmp'):
             shutil.rmtree('./tmp')
         os.makedirs('./tmp')
-        print 'processing', filename
+        print 'SOURCE\t', filename
 
         # parse file
         pkg = YumLocalPackage(ts=self.yb.rpmdb.readOnlyTS(), filename=filename)
@@ -139,6 +141,12 @@ class AppstreamBuild:
         for f in files:
             config = ConfigParser.RawConfigParser()
             config.read(f)
+
+            # optional
+            categories = None
+            description = None
+            homepage_url = None
+            keywords = None
 
             # do not include apps with NoDisplay=True
             try:
@@ -183,14 +191,12 @@ class AppstreamBuild:
                 continue
 
             # Categories are optional but highly reccomended
-            categories = None
             try:
                 categories = config.get('Desktop Entry', 'Categories')
             except Exception, e:
                 pass
 
             # Keywords are optional but highly reccomended
-            keywords = None
             try:
                 keywords = config.get('Desktop Entry', 'Keywords')
             except Exception, e:
@@ -210,6 +216,33 @@ class AppstreamBuild:
 
             basename = f.split("/")[-1]
             app_id = basename.replace('.desktop', '')
+
+            # do we have an AppData file?
+            appdata_file = './tmp/usr/share/appdata/' + app_id + '.appdata.xml'
+            appdata_extra_file = './appdata-extra/' + app_id + '.appdata.xml'
+            if os.path.exists(appdata_file) and os.path.exists(appdata_extra_file):
+                raise StandardError('both AppData extra and upstream exist: ' + app_id)
+
+            # just use the extra file in places of the missing upstream one
+            if os.path.exists(appdata_extra_file):
+                appdata_file = appdata_extra_file
+
+            # need to extract details
+            if os.path.exists(appdata_file):
+                data = fedoraAppstreamData.AppstreamData()
+                data.extract(appdata_file)
+
+                # check the id matches
+                if data.get_id() != app_id:
+                    raise StandardError('The AppData id does not match: ' + app_id)
+
+                # check the licence is okay
+                if data.get_licence() != 'CC0':
+                    raise StandardError('The AppData licence is not okay: ' + app_id)
+
+                # get optional bits
+                homepage_url = data.get_url()
+                description = data.get_description()
 
             # write header
             if not has_header:
@@ -247,7 +280,10 @@ class AppstreamBuild:
                 for keyword in keywords.split(';')[:-1]:
                     xml.write("      <keyword>%s</keyword>\n" % keyword)
                 xml.write("    </keywords>\n")
-            # FIXME: get url::homepage from AppData
+            if homepage_url:
+                xml.write("    <url type=\"homepage\">%s</url>\n" % homepage_url)
+            if description:
+                xml.write("    <description>%s</description>\n" % description)
             xml.write("  </application>\n")
 
             # copy icon
