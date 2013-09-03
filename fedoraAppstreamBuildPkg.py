@@ -273,6 +273,11 @@ class AppstreamBuild:
             if categories:
                 xml.write("    <appcategories>\n")
                 categories = categories.split(';')[:-1]
+                # check for a common problem
+                if 'AudioVideo' in categories:
+                    if not 'Audio' in categories and not 'Video' in categories:
+                        print 'WARNING\t', f, '\tHas AudioVideo but not Audio or Video'
+                        categories.extend(['Audio', 'Video'])
                 for cat in categories:
                     if cat in self.cat_blacklist:
                         continue
@@ -280,11 +285,6 @@ class AppstreamBuild:
                         continue
                     xml.write("      <appcategory>%s</appcategory>\n" % cat)
                 xml.write("    </appcategories>\n")
-
-                # check for a common problem
-                if 'AudioVideo' in categories:
-                    if not 'Audio' in categories and not 'Video' in categories:
-                        print 'WARNING\t', f, '\tHas AudioVideo but not Audio or Video'
             if keywords:
                 xml.write("    <keywords>\n")
                 for keyword in keywords.split(';')[:-1]:
