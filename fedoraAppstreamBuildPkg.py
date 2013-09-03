@@ -210,7 +210,7 @@ class AppstreamBuild:
                 try:
                     icon_fullpath = get_icon_filename(icon)
                 except Exception as e:
-                    print 'IGNORE\t', f, '\t', "icon is corrupt:", icon
+                    print 'IGNORE\t', f, '\t', "icon is corrupt:", icon, str(e)
                     continue
                 if not os.path.exists(icon_fullpath):
                     print 'IGNORE\t', f, '\t', "icon does not exist:", icon
