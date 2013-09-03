@@ -26,6 +26,13 @@ import sys
 import re
 import xml.etree.ElementTree as ET
 
+def _to_utf8(txt, errors='replace'):
+    if isinstance(txt, str):
+        return txt
+    if isinstance(txt, unicode):
+        return txt.encode('utf-8', errors=errors)
+    return str(txt)
+
 class AppstreamData:
 
     def __init__(self):
@@ -54,21 +61,21 @@ class AppstreamData:
         desc = ''
         for item in self.root.find("description"):
             if item.tag == 'p':
-                para = item.text
+                para = _to_utf8(item.text)
                 para = para.lstrip()
                 para = para.replace('\n', ' ')
                 para = re.sub('\ +', ' ', para)
                 desc = desc + para + '\n\n'
             elif item.tag == 'ul':
                 for li in item:
-                    txt = li.text
+                    txt = _to_utf8(li.text)
                     txt = txt.replace('\n', ' ')
                     txt = re.sub('\ +', ' ', txt)
                     desc = desc + ' • ' + txt + '\n'
             elif item.tag == 'ol':
                 cnt = 1
                 for li in item:
-                    txt = li.text
+                    txt = _to_utf8(li.text)
                     txt = txt.replace('\n', ' ')
                     txt = re.sub('\ +', ' ', txt)
                     desc = desc + ' ' + str(cnt) + '. ' + txt + '\n'

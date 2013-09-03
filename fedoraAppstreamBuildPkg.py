@@ -101,6 +101,13 @@ def get_icon_filename(icon):
 
     return ''
 
+def _to_utf8(txt, errors='replace'):
+    if isinstance(txt, str):
+        return txt
+    if isinstance(txt, unicode):
+        return txt.encode('utf-8', errors=errors)
+    return str(txt)
+
 class AppstreamBuild:
 
     def __init__(self):
@@ -316,7 +323,7 @@ class AppstreamBuild:
             if homepage_url:
                 xml.write("    <url type=\"homepage\">%s</url>\n" % homepage_url)
             if description:
-                xml.write("    <description>%s</description>\n" % description)
+                xml.write("    <description>%s</description>\n" % _to_utf8(description))
             xml.write("  </application>\n")
 
             # copy icon
