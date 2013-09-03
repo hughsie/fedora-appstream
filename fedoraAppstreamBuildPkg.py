@@ -229,13 +229,19 @@ class AppstreamBuild:
             xml.write("    <icon type=\"cached\">%s</icon>\n" % app_id)
             if categories:
                 xml.write("    <appcategories>\n")
-                for cat in categories.split(';')[:-1]:
+                categories = categories.split(';')[:-1]
+                for cat in categories:
                     if cat in self.cat_blacklist:
                         continue
                     if cat.startswith('X-'):
                         continue
                     xml.write("      <appcategory>%s</appcategory>\n" % cat)
                 xml.write("    </appcategories>\n")
+
+                # check for a common problem
+                if 'AudioVideo' in categories:
+                    if not 'Audio' in categories and not 'Video' in categories:
+                        print 'WARNING\t', f, '\tHas AudioVideo but not Audio or Video'
             if keywords:
                 xml.write("    <keywords>\n")
                 for keyword in keywords.split(';')[:-1]:
