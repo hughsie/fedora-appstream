@@ -77,26 +77,21 @@ def get_icon_filename(icon):
     if os.path.exists(icon_fullpath):
         return resize_icon(icon_fullpath)
 
-    # app specified a bare filename without extension
-    if icon.find('.png') == -1 and icon.find('.svg') == -1:
-        icon = icon + '.png'
-
     # pixmap
-    icon_fullpath = "./tmp/usr/share/pixmaps/%s" % icon
+    icon_fullpath = './tmp/usr/share/pixmaps/' + icon + '.png'
+    if os.path.exists(icon_fullpath):
+        return resize_icon(icon_fullpath)
+    icon_fullpath = './tmp/usr/share/pixmaps/' + icon + '.svg'
     if os.path.exists(icon_fullpath):
         return resize_icon(icon_fullpath)
 
-    # hicolor, something we don't have to resize
-    icon_sizes_no_resize = [ '64x64', '48x48', '32x32' ]
-    for s in icon_sizes_no_resize:
-        icon_fullpath = './tmp/usr/share/icons/hicolor/' + s + '/apps/' + icon
+    # hicolor apps
+    icon_sizes = [ '64x64', '128x128', '96x96', '256x256', '48x48', '32x32' ]
+    for s in icon_sizes:
+        icon_fullpath = './tmp/usr/share/icons/hicolor/' + s + '/apps/' + icon + '.png'
         if os.path.exists(icon_fullpath):
-            return icon_fullpath
-
-    # hicolor, something we have to resize
-    icon_sizes_resize = [ '96x96', '128x128', '256x256' ]
-    for s in icon_sizes_resize:
-        icon_fullpath = './tmp/usr/share/icons/hicolor/' + s + '/apps/' + icon
+            return resize_icon(icon_fullpath)
+        icon_fullpath = './tmp/usr/share/icons/hicolor/' + s + '/apps/' + icon + '.svg'
         if os.path.exists(icon_fullpath):
             return resize_icon(icon_fullpath)
 
