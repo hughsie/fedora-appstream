@@ -24,11 +24,14 @@ fedoraAppstreamCompose.py
  * Outputs appstream.xml.gz
  * TODO: outputs appstream-icons.tar
 
-fedoraAppstreamCache.py f20
+fedoraAppstreamCache.py f20 "fedora,fedora-updates"
 ---
  * Creates ./packages
  * Only used when making standalone metadata using existing repos
- * *TODO: downloads all the rpm files to packages/.rpm*
+ * Searches existing files in packages/
+ * Downloads any missing rpm files to packages/.rpm
+ * *TODO: needs to also download other things from the srpm*
+ * Deletes any obsolete or removed packages
 
 fedoraAppstreamBuildAll.py
 ---
