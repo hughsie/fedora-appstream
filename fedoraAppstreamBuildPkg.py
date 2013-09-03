@@ -139,7 +139,8 @@ class AppstreamBuild:
         print 'SOURCE\t', filename
         pkg = fedoraAppstreamPkg.AppstreamPkg(filename)
         if not pkg.contains_desktop_file:
-            print 'IGNORE\t', f, '\t', "no desktop files"
+            print 'IGNORE\t', filename, '\t', "no desktop files"
+            return
 
         # set up state
         if not os.path.exists('./appstream'):
