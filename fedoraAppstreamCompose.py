@@ -1,4 +1,6 @@
 #!/usr/bin/python
+# -*- coding: utf-8 -*-
+#
 # Licensed under the GNU General Public License Version 2
 #
 # This program is free software; you can redistribute it and/or modify
