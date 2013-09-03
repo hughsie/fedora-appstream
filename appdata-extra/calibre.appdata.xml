@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+<id type="desktop">calibre.desktop</id>
+<licence>CC0</licence>
+<description>
+<p>
+Calibre is meant to be a complete e-library solution. It includes library
+management, format conversion, news feeds to e-book conversion as well as
+e-book reader sync features.
+</p>
+<p>
+Calibre is primarily an e-book cataloging program. It manages your e-book
+collection for you. It is designed around the concept of the logical book,
+i.e. a single entry in the database that may correspond to e-books in several
+formats. It also supports conversion from a dozen different e-book formats to
+LRF and EPUB. A graphical interface to the conversion software can be
+accessed easily by just clicking the "Convert E-books" button.
+</p>
+<p>
+Calibre has also a built-in e-book viewer that can display all the major e-book
+formats.
+</p>
+</description>
+<url type="homepage">http://calibre-ebook.com/</url>
+<screenshots>
+<screenshot type="default"></screenshot>
+</screenshots>
+<updatecontact>someone_who_cares@upstream_project.org</updatecontact>
+</application>
