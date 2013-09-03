@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+<id type="desktop">sol.desktop</id>
+<licence>CC0</licence>
+<description>
+<p>
+Aisleriot — also known as sol or solitaire — is a card game application that
+features 88 different solitaire-type card games which are designed to play
+using a mouse or trackpad.
+</p>
+<p>
+The solitaire game modes include:
+</p>
+<ul>
+<li>Accordion</li>
+<li>Agnes</li>
+<li>Athena</li>
+<li>Auld Lang Syne</li>
+<li>Aunt Mary</li>
+<li>Backbone</li>
+<li>Bakers Dozen</li>
+<li>Bakers Game</li>
+<li>Bear River</li>
+<li>Beleaguered Castle</li>
+<li>Block Ten</li>
+<li>Bristol</li>
+<li>Camelot</li>
+<li>Canfield</li>
+<li>Carpet</li>
+<li>Chessboard</li>
+<li>Clock</li>
+<li>Cover</li>
+<li>Cruel</li>
+<li>Diamond Mine</li>
+<li>Doublets</li>
+<li>Eagle Wing</li>
+<li>Easthaven</li>
+<li>Eight Off</li>
+<li>Elevator</li>
+<li>Eliminator</li>
+<li>Escalator</li>
+<li>First Law</li>
+<li>Fortress</li>
+<li>Fortunes</li>
+<li>Forty Thieves</li>
+<li>Fourteen</li>
+<li>Freecell</li>
+<li>Gaps</li>
+<li>Gay Gordons</li>
+<li>Giant</li>
+<li>Glenwood</li>
+<li>Gold Mine</li>
+<li>Golf</li>
+<li>Gypsy</li>
+<li>Helsinki</li>
+<li>Hopscotch</li>
+<li>Isabel</li>
+<li>Jamestown</li>
+<li>Jumbo</li>
+<li>Kansas</li>
+<li>King Albert</li>
+<li>King's Audience</li>
+<li>Klondike</li>
+<li>Labyrinth</li>
+<li>Lady Jane</li>
+<li>Maze</li>
+<li>Monte Carlo</li>
+<li>Napoleon's Tomb</li>
+<li>Neighbor</li>
+<li>Odessa</li>
+<li>Osmosis</li>
+<li>Peek</li>
+<li>Pileon</li>
+<li>Plait</li>
+<li>Poker</li>
+<li>Quatorze</li>
+<li>Royal East</li>
+<li>Saratoga</li>
+<li>Scorpion,Scuffle</li>
+<li>Seahaven</li>
+<li>Sir Tommy</li>
+<li>Spiderette</li>
+<li>Spider Three Decks</li>
+<li>Spider</li>
+<li>Straight Up</li>
+<li>Streets and Alleys</li>
+<li>Ten Across</li>
+<li>Terrace</li>
+<li>Thieves</li>
+<li>Thirteen</li>
+<li>Thumb and Pouch</li>
+<li>Treize</li>
+<li>Triple Peaks</li>
+<li>Union Square</li>
+<li>Valentine</li>
+<li>Westhaven</li>
+<li>Whitehead</li>
+<li>Will o' the Wisp</li>
+<li>Yield</li>
+<li>Yukon</li>
+<li>Zebra</li>
+</ul>
+</description>
+<url type="homepage">https://wiki.gnome.org/Aisleriot</url>
+<screenshots>
+<screenshot type="default">https://wiki.gnome.org/Aisleriot?action=AttachFile&amp;do=get&amp;target=aisleriot-3.10.png</screenshot>
+</screenshots>
+</application>
