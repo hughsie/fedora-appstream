@@ -54,8 +54,9 @@ class AppstreamData:
         for item in self.root.find("description"):
             if item.tag == 'p':
                 para = item.text
+                para = para.lstrip()
                 para = para.replace('\n', ' ')
-                desc = desc.lstrip() + para.replace('  ', ' ') + '\n\n'
+                desc = desc + para.replace('  ', ' ') + '\n\n'
             elif item.tag == 'ul':
                 for li in item:
                     desc = desc + ' • ' + li.text + '\n'
