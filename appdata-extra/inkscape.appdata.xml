@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+<id type="desktop">inkscape.desktop</id>
+<licence>CC0</licence>
+<description>
+<p>
+An Open Source vector graphics editor, with capabilities similar to Illustrator, CorelDraw, or Xara X, using the W3C standard Scalable Vector Graphics (SVG) file format
+</p>
+<p>
+Inkscape supports many advanced SVG features (markers, clones, alpha blending, etc.) and great care is taken in designing a streamlined interface. It is very easy to edit nodes, perform complex path operations, trace bitmaps and much more. We also aim to maintain a thriving user and developer community by using open, community-oriented development. 
+</p>
+</description>
+<url type="homepage">http://inkscape.org/</url>
+<screenshots>
+<screenshot type="default">http://inkscape.org/screenshots/gallery/inkscape-0.48-ferrari.png</screenshot>
+</screenshots>
+<updatecontact>someone_who_cares@upstream_project.org</updatecontact>
+</application>
