@@ -50,7 +50,7 @@ def resize_icon(icon):
 
     # use PIL to resize PNG files
     ext = icon.rsplit('.', 1)[1]
-    pil_exts = [ 'png', 'xpm' ]
+    pil_exts = [ 'png', 'gif', 'xpm' ]
     if ext in pil_exts:
         im = Image.open(icon)
         width, height = im.size
