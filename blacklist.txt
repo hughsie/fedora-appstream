@@ -7,3 +7,5 @@ xfce-keyboard-settings
 xfce-mouse-settings
 xfce-settings-manager
 xfce-ui-settings
+redhat-userpasswd
+system-config-date
