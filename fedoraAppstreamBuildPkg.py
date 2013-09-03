@@ -29,6 +29,7 @@ import glob
 from PIL import Image
 import os
 import shutil
+import subprocess
 import sys
 import tarfile
 
@@ -135,18 +136,25 @@ class AppstreamBuild:
         os.makedirs('./tmp')
 
         # explode contents into tmp
-        wildcards = []
-        if not os.getenv('APPSTREAM_DEBUG'):
-            wildcards.append('./usr/share/applications/*.desktop')
-            wildcards.append('./usr/share/appdata/*.xml')
-            wildcards.append('./usr/share/icons/hicolor/*/apps/*')
-            wildcards.append('./usr/share/pixmaps/*.*')
-            wildcards.append('./usr/share/icons/*.*')
-            wildcards.append('./usr/share/*/images/*')
-            pkg.extract('./tmp', wildcards)
+        if os.path.exists('./extract-package'):
+            cmd = "'./extract-package' %s %s" % (filename, 'tmp')
+            p = subprocess.Popen(cmd, cwd='.', shell=True, stdout=subprocess.PIPE)
+            p.wait()
+            if p.returncode:
+                raise StandardError('Cannot extract package: ' + p.stdout)
         else:
-            wildcards.append('./*/*.*')
-            pkg.extract('./tmp', wildcards)
+            wildcards = []
+            if not os.getenv('APPSTREAM_DEBUG'):
+                wildcards.append('./usr/share/applications/*.desktop')
+                wildcards.append('./usr/share/appdata/*.xml')
+                wildcards.append('./usr/share/icons/hicolor/*/apps/*')
+                wildcards.append('./usr/share/pixmaps/*.*')
+                wildcards.append('./usr/share/icons/*.*')
+                wildcards.append('./usr/share/*/images/*')
+                pkg.extract('./tmp', wildcards)
+            else:
+                wildcards.append('./*/*.*')
+                pkg.extract('./tmp', wildcards)
 
         # open the AppStream file for writing
         has_header = False

@@ -3,3 +3,4 @@
 *.gz
 appstream
 packages
+extract-package
