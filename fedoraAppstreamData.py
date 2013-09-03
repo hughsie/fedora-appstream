@@ -68,7 +68,7 @@ class AppstreamData:
                 raise StandardError('Do not know how to parse' + item.tag + ' for ' + self.filename)
         if len(desc) == 0:
             return None
-        return desc.rstrip()
+        return desc.replace('  ', ' ').rstrip()
     def get_url(self):
         return self.root.find("url").text
 
