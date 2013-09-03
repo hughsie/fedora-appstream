@@ -207,9 +207,11 @@ phone
 preferences-desktop
 preferences-desktop
 preferences-desktop-accessibility
+preferences-desktop-default-applications
 preferences-desktop-display
 preferences-desktop-font
 preferences-desktop-keyboard
+preferences-desktop-keyboard-shortcuts
 preferences-desktop-locale
 preferences-desktop-multimedia
 preferences-desktop-peripherals
@@ -226,6 +228,7 @@ preferences-system-notifications
 preferences-system-privacy
 preferences-system-search
 preferences-system-sharing
+preferences-system-windows
 printer
 printer
 printer-error
