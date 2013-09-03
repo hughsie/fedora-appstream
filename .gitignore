@@ -1,4 +1,6 @@
 *.pyc
 *.pyo
+*.txt
+*.gz
 appstream
 packages
