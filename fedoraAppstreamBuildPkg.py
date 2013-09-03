@@ -114,6 +114,11 @@ class AppstreamBuild:
         self.stock_icons = f.read().rstrip().split('\n')
         f.close()
 
+        # get blacklisted applications
+        f = open('./blacklist.txt', 'r')
+        self.blacklisted_ids = f.read().rstrip().split('\n')
+        f.close()
+
     def build(self, filename):
 
         if not os.path.exists('./appstream'):
@@ -223,6 +228,9 @@ class AppstreamBuild:
 
             basename = f.split("/")[-1]
             app_id = basename.replace('.desktop', '')
+            if app_id in self.blacklisted_ids:
+                print 'IGNORE\t', f, '\t', "application is blacklisted:", icon
+                continue
 
             # do we have an AppData file?
             appdata_file = './tmp/usr/share/appdata/' + app_id + '.appdata.xml'
