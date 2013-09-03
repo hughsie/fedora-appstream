@@ -158,7 +158,6 @@ class AppstreamBuild:
                 extra_files = glob.glob("./packages/%s*.rpm" % c[1])
                 decompress_files.extend(extra_files)
                 print "INFO\tAdding %i extra files for %s" % (len(extra_files), pkg.name)
-        print decompress_files
 
         # explode contents into tmp
         for filename in decompress_files:
