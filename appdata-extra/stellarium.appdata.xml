@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+<id type="desktop">stellarium.desktop</id>
+<licence>CC0</licence>
+<description>
+<p>
+Stellarium is a free open source planetarium for your computer.
+It shows a realistic sky in 3D, just like what you see with the naked eye,
+binoculars or a telescope.
+</p>
+<p>		
+It is being used in planetarium projectors. Just set your coordinates and go.
+</p>
+</description>
+<url type="homepage">http://www.stellarium.org/</url>
+<screenshots>
+<screenshot type="default">http://www.stellarium.org/screenshots.php</screenshot>
+</screenshots>
+<updatecontact>someone_who_cares@upstream_project.org</updatecontact>
+</application>
