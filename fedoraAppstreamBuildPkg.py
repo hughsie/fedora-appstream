@@ -92,10 +92,11 @@ def get_icon_filename(icon):
                 return resize_icon(icon_fullpath)
 
     # pixmap
-    for ext in supported_ext:
-        icon_fullpath = './tmp/usr/share/pixmaps/' + icon + ext
-        if os.path.isfile(icon_fullpath):
-            return resize_icon(icon_fullpath)
+    for location in [ 'pixmaps', 'icons' ]:
+        for ext in supported_ext:
+            icon_fullpath = './tmp/usr/share/' + location + '/' + icon + ext
+            if os.path.isfile(icon_fullpath):
+                return resize_icon(icon_fullpath)
 
     return ''
 
