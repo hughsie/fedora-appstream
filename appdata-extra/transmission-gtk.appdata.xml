@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+<id type="desktop">transmission-gtk.desktop</id>
+<licence>CC0</licence>
+<description>
+<p>
+BitTorrent is a peer-to-peer file-sharing protocol that is commonly used to distribute large amounts of data between multiple users.
+</p>
+<p>
+Transmission is a BitTorrent client with an easy-to-use frontend on top a cross-platform backend. Native frontends are available for OS X and Windows, as well as command line and web frontends.
+</p>
+<p>
+Notable features of Transmission include Local Peer Discovery and Full Encryption,
+Full encryption, DHTµTP, PEX and Magnet Link support.
+</p>
+</description>
+<url type="homepage">http://www.transmissionbt.com/</url>
+<screenshots>
+<screenshot type="default">http://www.transmissionbt.com/images/screenshots/GTK-Large.jpg</screenshot>
+</screenshots>
+</application>
