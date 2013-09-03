@@ -104,7 +104,7 @@ class AppstreamBuild:
 
     def __init__(self):
         #to do something
-        self.cat_blacklist = ['GTK', 'Qt', 'KDE']
+        self.cat_blacklist = ['GTK', 'Qt', 'KDE', 'GNOME']
 
         # get the list of stock icons
         f = open('./stock-icon-names.txt', 'r')
