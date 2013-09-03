@@ -77,20 +77,20 @@ def get_icon_filename(icon):
     if os.path.exists(icon_fullpath):
         return resize_icon(icon_fullpath)
 
-    # pixmap
-    supported_ext = [ '.png', '.svg', '' ]
-    for ext in supported_ext:
-        icon_fullpath = './tmp/usr/share/pixmaps/' + icon + ext
-        if os.path.exists(icon_fullpath):
-            return resize_icon(icon_fullpath)
-
     # hicolor apps
+    supported_ext = [ '.png', '.svg', '' ]
     icon_sizes = [ '64x64', '128x128', '96x96', '256x256', '48x48', '32x32' ]
     for s in icon_sizes:
         for ext in supported_ext:
             icon_fullpath = './tmp/usr/share/icons/hicolor/' + s + '/apps/' + icon + ext
-            if os.path.exists(icon_fullpath):
+            if os.path.isfile(icon_fullpath):
                 return resize_icon(icon_fullpath)
+
+    # pixmap
+    for ext in supported_ext:
+        icon_fullpath = './tmp/usr/share/pixmaps/' + icon + ext
+        if os.path.isfile(icon_fullpath):
+            return resize_icon(icon_fullpath)
 
     return ''
 
