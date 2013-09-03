@@ -54,6 +54,8 @@ def resize_icon(icon):
     if ext in pil_exts:
         im = Image.open(icon)
         width, height = im.size
+        if width < 32 and height < 32:
+            raise StandardError('Icon too small to process')
         if width <= 64 and height <= 64:
             return icon
         im = im.resize((64, 64), Image.ANTIALIAS)
