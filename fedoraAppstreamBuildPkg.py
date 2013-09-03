@@ -84,7 +84,7 @@ def get_icon_filename(icon):
 
     # hicolor apps
     supported_ext = [ '.png', '.svg', '.xpm', '' ]
-    icon_sizes = [ '64x64', '128x128', '96x96', '256x256', '48x48', '32x32', 'scalable' ]
+    icon_sizes = [ '64x64', '128x128', '96x96', '256x256', '48x48', '32x32', '24x24', '16x16', 'scalable' ]
     for s in icon_sizes:
         for ext in supported_ext:
             icon_fullpath = './tmp/usr/share/icons/hicolor/' + s + '/apps/' + icon + ext
