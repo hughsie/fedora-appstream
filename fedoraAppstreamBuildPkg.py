@@ -32,6 +32,7 @@ import shutil
 import subprocess
 import sys
 import tarfile
+import fnmatch
 
 import cairo
 import rsvg
@@ -124,6 +125,14 @@ class AppstreamBuild:
         self.blacklisted_ids = f.read().rstrip().split('\n')
         f.close()
 
+        # get extra packages needed for some applications
+        f = open('./common-packages.txt', 'r')
+        entries = common_packages = f.read().rstrip().split('\n')
+        self.common_packages = []
+        for e in entries:
+            self.common_packages.append(e.split('\t', 2))
+        f.close()
+
     def build(self, filename):
 
         # check the package has .desktop files
@@ -142,26 +151,36 @@ class AppstreamBuild:
             shutil.rmtree('./tmp')
         os.makedirs('./tmp')
 
+        # we only need to do this if we're not running on the builders
+        decompress_files = [ filename ]
+        for c in self.common_packages:
+            if fnmatch.fnmatch(pkg.name, c[0]):
+                extra_files = glob.glob("./packages/%s*.rpm" % c[1])
+                decompress_files.extend(extra_files)
+                print "INFO\tAdding %i extra files for %s" % (len(extra_files), pkg.name)
+        print decompress_files
+
         # explode contents into tmp
-        if os.path.exists('./extract-package'):
-            cmd = "'./extract-package' %s %s" % (filename, 'tmp')
-            p = subprocess.Popen(cmd, cwd='.', shell=True, stdout=subprocess.PIPE)
-            p.wait()
-            if p.returncode:
-                raise StandardError('Cannot extract package: ' + p.stdout)
-        else:
-            wildcards = []
-            if not os.getenv('APPSTREAM_DEBUG'):
-                wildcards.append('./usr/share/applications/*.desktop')
-                wildcards.append('./usr/share/appdata/*.xml')
-                wildcards.append('./usr/share/icons/hicolor/*/apps/*')
-                wildcards.append('./usr/share/pixmaps/*.*')
-                wildcards.append('./usr/share/icons/*.*')
-                wildcards.append('./usr/share/*/images/*')
-                pkg.extract('./tmp', wildcards)
+        for filename in decompress_files:
+            if os.path.exists('./extract-package'):
+                cmd = "'./extract-package' %s %s" % (filename, 'tmp')
+                p = subprocess.Popen(cmd, cwd='.', shell=True, stdout=subprocess.PIPE)
+                p.wait()
+                if p.returncode:
+                    raise StandardError('Cannot extract package: ' + p.stdout)
             else:
-                wildcards.append('./*/*.*')
-                pkg.extract('./tmp', wildcards)
+                wildcards = []
+                if not os.getenv('APPSTREAM_DEBUG'):
+                    wildcards.append('./usr/share/applications/*.desktop')
+                    wildcards.append('./usr/share/appdata/*.xml')
+                    wildcards.append('./usr/share/icons/hicolor/*/apps/*')
+                    wildcards.append('./usr/share/pixmaps/*.*')
+                    wildcards.append('./usr/share/icons/*.*')
+                    wildcards.append('./usr/share/*/images/*')
+                    pkg.extract('./tmp', wildcards)
+                else:
+                    wildcards.append('./*/*.*')
+                    pkg.extract('./tmp', wildcards)
 
         # open the AppStream file for writing
         has_header = False

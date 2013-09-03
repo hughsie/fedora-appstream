@@ -48,6 +48,14 @@ def update(repos, reponame):
     if not os.path.exists('./packages'):
         os.makedirs('./packages')
 
+    # get extra packages needed for some applications
+    f = open('./common-packages.txt', 'r')
+    entries = common_packages = f.read().rstrip().split('\n')
+    extra_packages = []
+    for e in entries:
+        extra_packages.append(e.split('\t')[1])
+    f.close()
+
     # find out what we've got already
     files = glob.glob("./packages/*.rpm")
     files.sort()
@@ -96,7 +104,7 @@ def update(repos, reponame):
                 desktop_files.append(instfile[24:])
 
         # don't download packages without desktop files
-        if len(desktop_files) == 0:
+        if len(desktop_files) == 0 and pkg.name not in extra_packages:
             continue
 
         # get base name without the slash
