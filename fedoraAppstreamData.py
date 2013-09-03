@@ -23,6 +23,7 @@
 
 #import os
 import sys
+import re
 import xml.etree.ElementTree as ET
 
 class AppstreamData:
@@ -56,14 +57,21 @@ class AppstreamData:
                 para = item.text
                 para = para.lstrip()
                 para = para.replace('\n', ' ')
-                desc = desc + para.replace('  ', ' ') + '\n\n'
+                para = re.sub('\ +', ' ', para)
+                desc = desc + para + '\n\n'
             elif item.tag == 'ul':
                 for li in item:
-                    desc = desc + ' • ' + li.text + '\n'
+                    txt = li.text
+                    txt = txt.replace('\n', ' ')
+                    txt = re.sub('\ +', ' ', txt)
+                    desc = desc + ' • ' + txt + '\n'
             elif item.tag == 'ol':
                 cnt = 1
                 for li in item:
-                    desc = desc + ' ' + str(cnt) + '. ' + li.text + '\n'
+                    txt = li.text
+                    txt = txt.replace('\n', ' ')
+                    txt = re.sub('\ +', ' ', txt)
+                    desc = desc + ' ' + str(cnt) + '. ' + txt + '\n'
                     cnt = cnt + 1
             else:
                 raise StandardError('Do not know how to parse' + item.tag + ' for ' + self.filename)
