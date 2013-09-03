@@ -47,9 +47,11 @@ def sanitise_xml(text):
     return text
 
 def resize_icon(icon):
-    
+
     # use PIL to resize PNG files
-    if icon.endswith('.png'):
+    ext = icon.rsplit('.', 1)[1]
+    pil_exts = [ 'png', 'xpm' ]
+    if ext in pil_exts:
         im = Image.open(icon)
         width, height = im.size
         if width <= 64 and height <= 64:
@@ -60,7 +62,8 @@ def resize_icon(icon):
         return icon_fullpath
 
     # use RSVG to write PNG file
-    if icon.endswith('.svg'):
+    rsvg_exts = [ 'svg' ]
+    if ext in rsvg_exts:
         img = cairo.ImageSurface(cairo.FORMAT_ARGB32, 64, 64)
         ctx = cairo.Context(img)
         handler = rsvg.Handle(icon)
@@ -78,7 +81,7 @@ def get_icon_filename(icon):
         return resize_icon(icon_fullpath)
 
     # hicolor apps
-    supported_ext = [ '.png', '.svg', '' ]
+    supported_ext = [ '.png', '.svg', '.xpm', '' ]
     icon_sizes = [ '64x64', '128x128', '96x96', '256x256', '48x48', '32x32', 'scalable' ]
     for s in icon_sizes:
         for ext in supported_ext:
