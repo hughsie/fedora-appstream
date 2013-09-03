@@ -329,7 +329,8 @@ class AppstreamBuild:
 
 def main():
     job = AppstreamBuild()
-    job.build(sys.argv[1])
+    for fn in sys.argv[1:]:
+        job.build(fn)
     sys.exit(0)
 
 if __name__ == "__main__":
