@@ -10,3 +10,6 @@ xfce-ui-settings
 redhat-userpasswd
 system-config-date
 gnome-wacom-panel
+redhat-usermount
+system-config-keyboard
+
