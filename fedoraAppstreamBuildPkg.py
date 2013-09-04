@@ -126,6 +126,11 @@ class AppstreamBuild:
         self.blacklisted_ids = f.read().rstrip().split('\n')
         f.close()
 
+        # get blacklisted categories
+        f = open('./data/blacklist-category.txt', 'r')
+        self.blacklisted_categories = f.read().rstrip().split('\n')
+        f.close()
+
         # get extra packages needed for some applications
         f = open('./data/common-packages.txt', 'r')
         entries = common_packages = f.read().rstrip().split('\n')
@@ -248,12 +253,26 @@ class AppstreamBuild:
                 categories = config.get('Desktop Entry', 'Categories')
             except Exception, e:
                 pass
+            if categories:
+                categories = categories.split(';')[:-1]
 
             # Keywords are optional but highly reccomended
             try:
                 keywords = config.get('Desktop Entry', 'Keywords')
             except Exception, e:
                 pass
+
+            # We blacklist some apps by categories
+            if categories:
+                blacklisted = False
+                for c in categories:
+                    for b in self.blacklisted_categories:
+                        if fnmatch.fnmatch(c, b):
+                            print 'IGNORE\t', f, '\tcategory is blacklisted:', c
+                            blacklisted = True
+                            break
+            if blacklisted:
+                continue;
 
             # check icon exists
             if icon not in self.stock_icons:
@@ -322,7 +341,6 @@ class AppstreamBuild:
                 xml.write("    <icon type=\"stock\">%s</icon>\n" % icon)
             if categories:
                 xml.write("    <appcategories>\n")
-                categories = categories.split(';')[:-1]
                 # check for a common problem
                 if 'AudioVideo' in categories:
                     if not 'Audio' in categories and not 'Video' in categories:
