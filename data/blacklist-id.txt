@@ -7,6 +7,7 @@ xfce-keyboard-settings
 xfce-mouse-settings
 xfce-settings-manager
 xfce-ui-settings
+xfce4-about
 redhat-userpasswd
 system-config-date
 gnome-wacom-panel
