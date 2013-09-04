@@ -9,3 +9,4 @@ xfce-settings-manager
 xfce-ui-settings
 redhat-userpasswd
 system-config-date
+gnome-wacom-panel
