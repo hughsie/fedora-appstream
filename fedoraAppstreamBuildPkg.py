@@ -122,7 +122,7 @@ class AppstreamBuild:
         f.close()
 
         # get blacklisted applications
-        f = open('./data/blacklist.txt', 'r')
+        f = open('./data/blacklist-id.txt', 'r')
         self.blacklisted_ids = f.read().rstrip().split('\n')
         f.close()
 
