@@ -263,8 +263,8 @@ class AppstreamBuild:
                 pass
 
             # We blacklist some apps by categories
+            blacklisted = False
             if categories:
-                blacklisted = False
                 for c in categories:
                     for b in self.blacklisted_categories:
                         if fnmatch.fnmatch(c, b):
