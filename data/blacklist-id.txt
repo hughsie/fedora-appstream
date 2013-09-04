@@ -1,5 +1,5 @@
 display-properties
-mate-network-properties
+mate-*
 xfce4-accessibility-settings
 xfce4-mime-settings
 xfce4-settings-editor
