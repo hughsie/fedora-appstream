@@ -71,6 +71,7 @@ def resize_icon(icon):
         img = cairo.ImageSurface(cairo.FORMAT_ARGB32, 64, 64)
         ctx = cairo.Context(img)
         handler = rsvg.Handle(icon)
+        ctx.scale(float(64) / handler.props.width, float(64) / handler.props.height)
         handler.render_cairo(ctx)
         icon_fullpath = '/tmp/image.png'
         img.write_to_png(icon_fullpath)
