@@ -116,17 +116,17 @@ class AppstreamBuild:
         self.cat_blacklist = ['GTK', 'Qt', 'KDE', 'GNOME']
 
         # get the list of stock icons
-        f = open('./stock-icon-names.txt', 'r')
+        f = open('./data/stock-icon-names.txt', 'r')
         self.stock_icons = f.read().rstrip().split('\n')
         f.close()
 
         # get blacklisted applications
-        f = open('./blacklist.txt', 'r')
+        f = open('./data/blacklist.txt', 'r')
         self.blacklisted_ids = f.read().rstrip().split('\n')
         f.close()
 
         # get extra packages needed for some applications
-        f = open('./common-packages.txt', 'r')
+        f = open('./data/common-packages.txt', 'r')
         entries = common_packages = f.read().rstrip().split('\n')
         self.common_packages = []
         for e in entries:

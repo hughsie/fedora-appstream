@@ -49,7 +49,7 @@ def update(repos, reponame):
         os.makedirs('./packages')
 
     # get extra packages needed for some applications
-    f = open('./common-packages.txt', 'r')
+    f = open('./data/common-packages.txt', 'r')
     entries = common_packages = f.read().rstrip().split('\n')
     extra_packages = []
     for e in entries:
