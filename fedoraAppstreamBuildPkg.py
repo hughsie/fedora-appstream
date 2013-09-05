@@ -33,6 +33,7 @@ import subprocess
 import sys
 import tarfile
 import fnmatch
+import gtk
 
 import cairo
 import rsvg
@@ -50,9 +51,22 @@ def sanitise_xml(text):
 
 def resize_icon(icon):
 
-    # use PIL to resize PNG files
+    # get ending
     ext = icon.rsplit('.', 1)[1]
-    pil_exts = [ 'png', 'gif', 'xpm' ]
+    icon_tmp = '/tmp/image.png'
+
+    # use GDK to process XPM files
+    gdk_exts = [ 'xpm' ]
+    if ext in gdk_exts:
+        pixbuf = gtk.gdk.pixbuf_new_from_file(icon)
+        if pixbuf.get_width() < 32 and pixbuf.get_height() < 32:
+            raise StandardError('Icon too small to process')
+        pixbuf = gtk.gdk.pixbuf_new_from_file_at_size(icon, 64, 64)
+        pixbuf.save(icon_tmp, "png")
+        return icon_tmp
+
+    # use PIL to resize PNG files
+    pil_exts = [ 'png', 'gif' ]
     if ext in pil_exts:
         im = Image.open(icon)
         width, height = im.size
@@ -61,9 +75,8 @@ def resize_icon(icon):
         if width <= 64 and height <= 64:
             return icon
         im = im.resize((64, 64), Image.ANTIALIAS)
-        icon_fullpath = '/tmp/image.png'
-        im.save(icon_fullpath)
-        return icon_fullpath
+        im.save(icon_tmp)
+        return icon_tmp
 
     # use RSVG to write PNG file
     rsvg_exts = [ 'svg' ]
@@ -73,9 +86,8 @@ def resize_icon(icon):
         handler = rsvg.Handle(icon)
         ctx.scale(float(64) / handler.props.width, float(64) / handler.props.height)
         handler.render_cairo(ctx)
-        icon_fullpath = '/tmp/image.png'
-        img.write_to_png(icon_fullpath)
-        return icon_fullpath
+        img.write_to_png(icon_tmp)
+        return icon_tmp
     return ''
 
 def get_icon_filename(icon):
