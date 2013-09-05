@@ -56,7 +56,7 @@ def resize_icon(icon):
     icon_tmp = '/tmp/image.png'
 
     # use GDK to process XPM files
-    gdk_exts = [ 'xpm' ]
+    gdk_exts = [ 'xpm', 'ico' ]
     if ext in gdk_exts:
         pixbuf = gtk.gdk.pixbuf_new_from_file(icon)
         if pixbuf.get_width() < 32 and pixbuf.get_height() < 32:
