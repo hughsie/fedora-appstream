@@ -300,15 +300,16 @@ class AppstreamBuild:
 
             # do we have to add any categories
             if categories:
-                cats_to_add = self.categories_add[app_id]
-                if cats_to_add:
-                    # check it's not been added upstream
-                    for cat in cats_to_add:
-                        if cat in categories:
-                            print 'WARNING\t' + app_id + ' now includes category ' + cat
-                        else:
-                            print 'INFO\tFor ' + app_id + ' manually adding category', cat
-                    categories.extend(cats_to_add)
+                if self.categories_add.has_key(app_id):
+                    cats_to_add = self.categories_add[app_id]
+                    if cats_to_add:
+                        # check it's not been added upstream
+                        for cat in cats_to_add:
+                            if cat in categories:
+                                print 'WARNING\t' + app_id + ' now includes category ' + cat
+                            else:
+                                print 'INFO\tFor ' + app_id + ' manually adding category', cat
+                        categories.extend(cats_to_add)
 
             # application is blacklisted
             for b in self.blacklisted_ids:
