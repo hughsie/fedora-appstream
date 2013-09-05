@@ -92,13 +92,22 @@ def resize_icon(icon):
 
 def get_icon_filename(icon):
 
+    # we can handle these sorts of files
+    supported_ext = [ '.png', '.svg', '.xpm' ]
+
+    # remove any extension we recognise
+    if not icon.startswith('/'):
+        icon_split = icon.rsplit('.', 1)
+        if len(icon_split) == 2:
+            if '.' + icon_split[1] in supported_ext:
+                icon = icon_split[0]
+
     # fully qualified path
     icon_fullpath = './tmp/' + icon
     if os.path.exists(icon_fullpath):
         return resize_icon(icon_fullpath)
 
     # hicolor apps
-    supported_ext = [ '.png', '.svg', '.xpm', '' ]
     icon_sizes = [ '64x64', '128x128', '96x96', '256x256', 'scalable', '48x48', '32x32', '24x24', '16x16' ]
     for s in icon_sizes:
         for ext in supported_ext:

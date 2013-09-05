@@ -1,8 +1,11 @@
 alliance-libs	alliance
+beneath-a-steel-sky*	scummvm
 coq-coqide	coq
-drascula	scummvm
+drascula*	scummvm
 efte-	efte-common
 fcitx-*	fcitx-data
+flight-of-the-amazon-queen	scummvm
+gcin	gcin-data
 hotot-gtk	hotot-common
 java-1.7.0-openjdk-devel	java-1.7.0-openjdk
 kchmviewer-qt	kchmviewer
