@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+<id type="desktop">abiword.desktop</id>
+<licence>CC0</licence>
+<description>
+<p>
+AbiWord is a free word processing program similar to Microsoft® Word.
+It is suitable for a wide variety of word processing tasks.
+</p>
+<p>
+AbiWord allows you to collaborate with multiple people on one document at the
+same time.
+It is tightly integrated with the AbiCollab.net web service, which lets you
+store documents online, allows easy document sharing with your friends, and
+performs format conversions on the fly.
+</p>
+<!-- FIXME: Probably needs another paragraph -->
+</description>
+<url type="homepage">http://www.abisource.com/</url>
+<screenshots>
+<!-- FIXME: Needs an official up to date screenshot -->
+<screenshot type="default">http://www.abisource.com/screenshots/AbiWord-2.0-Gnome.png</screenshot>
+</screenshots>
+<updatecontact>someone_who_cares@upstream_project.org</updatecontact>
+</application>

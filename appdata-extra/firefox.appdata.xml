@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+<id type="desktop">firefox.desktop</id>
+<licence>CC0</licence>
+<description>
+<p>
+Bringing together all kinds of awesomeness to make browsing better for you.
+Get to your favorite sites quickly – even if you don’t remember the URLs.
+Type your term into the location bar (aka the Awesome Bar) and the autocomplete
+function will include possible matches from your browsing history, bookmarked
+sites and open tabs.
+</p>
+<!-- FIXME: Needs another couple of paragraphs -->
+</description>
+<url type="homepage">http://www.mozilla.org/en-US/</url>
+<screenshots>
+<!-- FIXME: Needs an official up to date screenshot -->
+<screenshot type="default">https://wiki.mozilla.org/images/e/e1/Bon_Echo_Beta_2_Screen_Shot_1.PNG</screenshot>
+</screenshots>
+<updatecontact>someone_who_cares@upstream_project.org</updatecontact>
+</application>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+<id type="desktop">gedit.desktop</id>
+<licence>CC0</licence>
+<description>
+<p>
+gedit is the official text editor of the GNOME desktop environment.
+While aiming at simplicity and ease of use, gedit is a powerful general purpose
+text editor.
+</p>
+<p>
+gedit features also a flexible plugin system which can be used to dynamically
+add new advanced features to gedit itself.
+</p>
+</description>
+<url type="homepage">https://projects.gnome.org/gedit/</url>
+<screenshots>
+<screenshot type="default">https://projects.gnome.org/gedit/images/gedit1.png</screenshot>
+</screenshots>
+<updatecontact>someone_who_cares@upstream_project.org</updatecontact>
+</application>

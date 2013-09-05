@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+<id type="desktop">rhythmbox.desktop</id>
+<licence>CC0</licence>
+<description>
+<p>
+Rhythmbox is an integrated music management application, originally inspired by
+Apple's iTunes.
+It is free software, designed to work well under the GNOME Desktop, and based on
+the powerful GStreamer media framework..
+</p>
+<!-- FIXME: Needs another couple of paragraphs -->
+</description>
+<url type="homepage">https://projects.gnome.org/rhythmbox/</url>
+<screenshots>
+<screenshot type="default">https://projects.gnome.org/rhythmbox/screenshots/rb-auto-playlist.png</screenshot>
+</screenshots>
+<updatecontact>someone_who_cares@upstream_project.org</updatecontact>
+</application>
