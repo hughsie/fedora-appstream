@@ -88,6 +88,7 @@ face-cool
 face-crying
 face-devilish
 face-embarrassed
+face-glasses
 face-kiss
 face-laugh
 face-monkey
@@ -228,6 +229,7 @@ preferences-system-notifications
 preferences-system-privacy
 preferences-system-search
 preferences-system-sharing
+preferences-system-windows
 preferences-system-windows
 printer
 printer
