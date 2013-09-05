@@ -13,4 +13,4 @@ system-config-date
 gnome-wacom-panel
 redhat-usermount
 system-config-keyboard
-
+nm-connection-editor
