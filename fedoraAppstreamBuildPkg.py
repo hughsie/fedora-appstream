@@ -131,6 +131,14 @@ class AppstreamBuild:
         self.blacklisted_categories = f.read().rstrip().split('\n')
         f.close()
 
+        # get extra categories to add for apps
+        self.categories_add = {}
+        f = open('./data/category-add.txt', 'r')
+        for line in f.read().rstrip().split('\n'):
+            entry = line.split('\t', 1)
+            self.categories_add[entry[0]] = entry[1].split(',')
+        f.close()
+
         # get extra packages needed for some applications
         f = open('./data/common-packages.txt', 'r')
         entries = common_packages = f.read().rstrip().split('\n')
@@ -289,6 +297,18 @@ class AppstreamBuild:
 
             basename = f.split("/")[-1]
             app_id = basename.replace('.desktop', '')
+
+            # do we have to add any categories
+            if categories:
+                cats_to_add = self.categories_add[app_id]
+                if cats_to_add:
+                    # check it's not been added upstream
+                    for cat in cats_to_add:
+                        if cat in categories:
+                            print 'WARNING\t' + app_id + ' now includes category ' + cat
+                        else:
+                            print 'INFO\tFor ' + app_id + ' manually adding category', cat
+                    categories.extend(cats_to_add)
 
             # application is blacklisted
             for b in self.blacklisted_ids:

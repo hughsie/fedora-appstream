@@ -1,0 +1,5 @@
+nautilus	FileManager
+rhythmbox	Player
+gnome-software	Settings,PackageManager
+nautilus	System,FileManager
+gnome-terminal	System
