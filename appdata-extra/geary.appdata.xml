@@ -4,7 +4,10 @@
 <licence>CC0</licence>
 <description>
 <p>
-Geary is a new email reader for GNOME designed to let you read your email quickly and effortlessly. Its interface is based on conversations, so you can easily read an entire discussion without having to click from message to message. Geary is still in early development and has limited features today.
+Geary is a new email reader for GNOME designed to let you read your email
+quickly and effortlessly. Its interface is based on conversations, so you can
+easily read an entire discussion without having to click from message to message.
+Geary is still in early development and has limited features today.
 </p>
 <p>
 Geary is designed to integrate with the GNOME desktop and is completely free.
@@ -18,5 +21,6 @@ Geary is designed to integrate with the GNOME desktop and is completely free.
 <screenshots>
 <screenshot type="default">http://www.yorba.org/wp-content/uploads/2013/03/geary_main.png</screenshot>
 </screenshots>
+<!-- FIXME: change this to an upstream email address for spec updates -->
 <updatecontact>someone_who_cares@upstream_project.org</updatecontact>
 </application>

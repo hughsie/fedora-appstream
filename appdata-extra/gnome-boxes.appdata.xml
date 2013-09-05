@@ -24,5 +24,6 @@ little input from user.
 <!-- FIXME: Needs an official up to date screenshot -->
 <screenshot type="default">https://people.gnome.org/~teuf/gnome-boxes/screenshots-release-notes-3.6/fr/boxes-overview-fr.png</screenshot>
 </screenshots>
+<!-- FIXME: change this to an upstream email address for spec updates -->
 <updatecontact>someone_who_cares@upstream_project.org</updatecontact>
 </application>

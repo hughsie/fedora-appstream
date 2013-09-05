@@ -18,5 +18,6 @@ customizable feel that attempts to minimize the costs of transition.
 <screenshots>
 <screenshot type="default">https://projects.gnome.org/gnumeric/screenshots/001.png</screenshot>
 </screenshots>
+<!-- FIXME: change this to an upstream email address for spec updates -->
 <updatecontact>someone_who_cares@upstream_project.org</updatecontact>
 </application>

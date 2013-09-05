@@ -4,10 +4,14 @@
 <licence>CC0</licence>
 <description>
 <p>
-Thunderbird is an email client that allows you to read, write and organise all of your email messages. It is compatible with most email accounts, including the most popular webmail services.
+Thunderbird is an email client that allows you to read, write and organise all
+of your email messages. It is compatible with most email accounts, including the
+most popular webmail services.
 </p>
 <p>
-Thunderbird is designed by Mozilla, a global community working together to make the Internet better. Mozilla believe that the Internet should be open, public, and accessible to everyone without any restrictions.
+Thunderbird is designed by Mozilla, a global community working together to make
+the Internet better. Mozilla believe that the Internet should be open, public,
+and accessible to everyone without any restrictions.
 </p>
 <ul>
 <li>Easier than ever to set up a new e-mail account.</li>
@@ -19,5 +23,6 @@ Thunderbird is designed by Mozilla, a global community working together to make 
 <screenshots>
 <screenshot type="default"></screenshot>
 </screenshots>
+<!-- FIXME: change this to an upstream email address for spec updates -->
 <updatecontact>someone_who_cares@upstream_project.org</updatecontact>
 </application>

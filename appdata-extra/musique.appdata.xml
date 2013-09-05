@@ -4,11 +4,13 @@
 <licence>CC0</licence>
 <description>
 <p>
-Musique does its best to stay out of the way and keep you focused on the only thing that really matters: Music.
+Musique does its best to stay out of the way and keep you focused on the only
+thing that really matters: Music.
 </p>
 <p>
 Musique is great for those who appreciate its efficient simplicity.
-Consider getting it as a gift for kids and other family members that may find other players too complex and cumbersome.
+Consider getting it as a gift for kids and other family members that may find
+other players too complex and cumbersome.
 </p>
 <ul>
 <li>Starts fast, very lightweight and can easily handle large collections.</li>
@@ -26,5 +28,6 @@ Consider getting it as a gift for kids and other family members that may find ot
 <screenshots>
 <screenshot type="default"></screenshot>
 </screenshots>
+<!-- FIXME: change this to an upstream email address for spec updates -->
 <updatecontact>someone_who_cares@upstream_project.org</updatecontact>
 </application>
