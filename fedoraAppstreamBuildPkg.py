@@ -289,9 +289,15 @@ class AppstreamBuild:
 
             basename = f.split("/")[-1]
             app_id = basename.replace('.desktop', '')
-            if app_id in self.blacklisted_ids:
-                print 'IGNORE\t', f, '\t', "application is blacklisted:", icon
-                continue
+
+            # application is blacklisted
+            for b in self.blacklisted_ids:
+                if fnmatch.fnmatch(app_id, b):
+                    print 'IGNORE\t', f, '\t', "application is blacklisted:", app_id
+                    blacklisted = True
+                    break
+            if blacklisted:
+                continue;
 
             # do we have an AppData file?
             appdata_file = './tmp/usr/share/appdata/' + app_id + '.appdata.xml'
