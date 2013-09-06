@@ -31,6 +31,7 @@ import gzip
 def main():
 
     distro_name = 'fedora-20'
+    application_ids = {}
 
     # used as a temp location
     if os.path.exists('./tmp'):
@@ -50,7 +51,21 @@ def main():
     for f in files:
         f = open(f, 'r')
         s = f.read()
-        # TODO: such a hack....
+
+        # detect duplicate IDs in the data
+        is_dupe = False
+        for l in s.split('\n'):
+            if l.startswith('    <id type="desktop">'):
+                app_id = l[23:-5]
+                if application_ids.has_key(app_id):
+                    found = application_ids[app_id]
+                    is_dupe = True
+                    print 'Duplicate ID', app_id, 'detected in', f, 'and', found, 'ignoring'
+                application_ids[app_id] = f
+        if is_dupe:
+            continue;
+
+        # TODO: such a hack, but it's so quick....
         s = s.replace('<?xml version="1.0"?>\n', '')
         s = s.replace('<applications version="0.1">\n', '')
         s = s.replace('</applications>\n', '')
