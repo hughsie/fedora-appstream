@@ -12,5 +12,5 @@ redhat-userpasswd
 system-config-date
 gnome-wacom-panel
 redhat-usermount
-system-config-keyboard
+system-config-*
 nm-connection-editor
