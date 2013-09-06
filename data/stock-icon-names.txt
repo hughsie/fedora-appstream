@@ -208,7 +208,6 @@ phone
 preferences-desktop
 preferences-desktop
 preferences-desktop-accessibility
-preferences-desktop-default-applications
 preferences-desktop-display
 preferences-desktop-font
 preferences-desktop-keyboard
