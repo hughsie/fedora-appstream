@@ -75,7 +75,7 @@ def resize_icon(icon):
         if width <= 64 and height <= 64:
             return icon
         im = im.resize((64, 64), Image.ANTIALIAS)
-        im.save(icon_tmp)
+        im.save(icon_tmp, 'png')
         return icon_tmp
 
     # use RSVG to write PNG file
