@@ -231,7 +231,7 @@ class AppstreamBuild:
             # optional
             categories = None
             description = None
-            homepage_url = None
+            homepage_url = pkg.homepage_url
             keywords = None
             icon_fullpath = None
 

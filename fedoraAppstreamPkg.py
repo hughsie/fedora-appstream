@@ -71,6 +71,7 @@ class AppstreamPkg:
         fd = os.open(filename, os.O_RDONLY)
         hdr = _ts.hdrFromFdno(fd)
         self.name = hdr.name
+        self.homepage_url = hdr['url']
         fi = hdr.fiFromHeader()
 
         # does this have a desktop file
