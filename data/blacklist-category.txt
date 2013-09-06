@@ -1,1 +1,2 @@
 X-*-Settings-Panel
+X-*-SettingsDialog
