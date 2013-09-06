@@ -67,6 +67,11 @@ def update(repos, reponame):
         os.close(fd)
     print "INFO:\t\tFound %i existing packages for %s" % (len(existing), reponame)
 
+    # load package blacklist
+    f = open('./data/blacklist-packages.txt')
+    blacklisted_packages = f.read().rstrip().split('\n')
+    f.close()
+
     # setup yum
     yb = yum.YumBase()
     yb.preconf.releasever = reponame[1:]
@@ -92,6 +97,10 @@ def update(repos, reponame):
 
         # not our arch
         if pkg.arch not in basearch_list:
+            continue
+
+        # don't download blacklisted packages
+        if pkg.name in blacklisted_packages:
             continue
 
         # make sure the metadata exists
