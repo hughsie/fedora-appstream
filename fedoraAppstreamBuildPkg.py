@@ -173,6 +173,27 @@ class AppstreamBuild:
             self.common_packages.append(e.split('\t', 2))
         f.close()
 
+    def decompress(self, filename):
+        if os.path.exists('./extract-package'):
+            cmd = "'./extract-package' %s %s" % (filename, 'tmp')
+            p = subprocess.Popen(cmd, cwd='.', shell=True, stdout=subprocess.PIPE)
+            p.wait()
+            if p.returncode:
+                raise StandardError('Cannot extract package: ' + p.stdout)
+        else:
+            wildcards = []
+            if not os.getenv('APPSTREAM_DEBUG'):
+                wildcards.append('./usr/share/applications/*.desktop')
+                wildcards.append('./usr/share/appdata/*.xml')
+                wildcards.append('./usr/share/icons/hicolor/*/apps/*')
+                wildcards.append('./usr/share/pixmaps/*.*')
+                wildcards.append('./usr/share/icons/*.*')
+                wildcards.append('./usr/share/*/images/*')
+                pkg.extract('./tmp', wildcards)
+            else:
+                wildcards.append('./*/*.*')
+                pkg.extract('./tmp', wildcards)
+
     def build(self, filename):
 
         # check the package has .desktop files
@@ -197,43 +218,27 @@ class AppstreamBuild:
             shutil.rmtree('./tmp')
         os.makedirs('./tmp')
 
-        # we only need to do this if we're not running on the builders
+        # decompress main file and search for desktop files
+        self.decompress(filename)
+        files = glob.glob("./tmp/usr/share/applications/*.desktop")
+        files.sort()
+
+        # we only need to install additional files if we're not running on
+        # the builders
         decompress_files = [ filename ]
         for c in self.common_packages:
             if fnmatch.fnmatch(pkg.name, c[0]):
                 extra_files = glob.glob("./packages/%s*.rpm" % c[1])
-                decompress_files.extend(extra_files)
-                print "INFO\tAdding %i extra files for %s" % (len(extra_files), pkg.name)
-
-        # explode contents into tmp
-        for filename in decompress_files:
-            if os.path.exists('./extract-package'):
-                cmd = "'./extract-package' %s %s" % (filename, 'tmp')
-                p = subprocess.Popen(cmd, cwd='.', shell=True, stdout=subprocess.PIPE)
-                p.wait()
-                if p.returncode:
-                    raise StandardError('Cannot extract package: ' + p.stdout)
-            else:
-                wildcards = []
-                if not os.getenv('APPSTREAM_DEBUG'):
-                    wildcards.append('./usr/share/applications/*.desktop')
-                    wildcards.append('./usr/share/appdata/*.xml')
-                    wildcards.append('./usr/share/icons/hicolor/*/apps/*')
-                    wildcards.append('./usr/share/pixmaps/*.*')
-                    wildcards.append('./usr/share/icons/*.*')
-                    wildcards.append('./usr/share/*/images/*')
-                    pkg.extract('./tmp', wildcards)
-                else:
-                    wildcards.append('./*/*.*')
-                    pkg.extract('./tmp', wildcards)
+                for f in extra_files:
+                    print "INFO\tAdding extra package %s for %s" % (f, pkg.name)
+                    self.decompress(f)
 
         # open the AppStream file for writing
         has_header = False
         xml_output_file = './appstream/' + pkg.name + '.xml'
         xml = open(xml_output_file, 'w')
 
-        files = glob.glob("./tmp/usr/share/applications/*.desktop")
-        files.sort()
+        # process each desktop file in the original package
         for f in files:
             config = ConfigParser.RawConfigParser()
             config.read(f)
