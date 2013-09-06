@@ -419,10 +419,10 @@ class AppstreamBuild:
             if keywords:
                 xml.write("    <keywords>\n")
                 for keyword in keywords.split(';')[:-1]:
-                    xml.write("      <keyword>%s</keyword>\n" % keyword)
+                    xml.write("      <keyword>%s</keyword>\n" % sanitise_xml(keyword))
                 xml.write("    </keywords>\n")
             if homepage_url:
-                xml.write("    <url type=\"homepage\">%s</url>\n" % homepage_url)
+                xml.write("    <url type=\"homepage\">%s</url>\n" % sanitise_xml(homepage_url))
             if description:
                 xml.write("    <description>%s</description>\n" % _to_utf8(description))
             xml.write("  </application>\n")
