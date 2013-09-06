@@ -14,3 +14,5 @@ gnome-wacom-panel
 redhat-usermount
 system-config-*
 nm-connection-editor
+lxinput
+lxrandr
