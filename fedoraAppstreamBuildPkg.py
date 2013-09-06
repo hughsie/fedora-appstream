@@ -147,6 +147,11 @@ class AppstreamBuild:
         self.blacklisted_ids = f.read().rstrip().split('\n')
         f.close()
 
+        # get blacklisted applications
+        f = open('./data/blacklist-packages.txt', 'r')
+        self.blacklisted_packages = f.read().rstrip().split('\n')
+        f.close()
+
         # get blacklisted categories
         f = open('./data/blacklist-category.txt', 'r')
         self.blacklisted_categories = f.read().rstrip().split('\n')
@@ -176,6 +181,11 @@ class AppstreamBuild:
         if not pkg.contains_desktop_file:
             print 'IGNORE\t', filename, '\t', "no desktop files"
             return
+
+        for b in self.blacklisted_packages:
+            if fnmatch.fnmatch(pkg.name, b):
+                print 'IGNORE\t', filename, '\t', "package is blacklisted:", pkg.name
+                return
 
         # set up state
         if not os.path.exists('./appstream'):
