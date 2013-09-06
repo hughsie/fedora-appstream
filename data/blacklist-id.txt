@@ -16,3 +16,4 @@ system-config-*
 nm-connection-editor
 lxinput
 lxrandr
+xfce4-session-logout
