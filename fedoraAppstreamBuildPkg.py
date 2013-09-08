@@ -173,9 +173,9 @@ class AppstreamBuild:
             self.common_packages.append(e.split('\t', 2))
         f.close()
 
-    def decompress(self, filename):
+    def decompress(self, pkg):
         if os.path.exists('./extract-package'):
-            cmd = "'./extract-package' %s %s" % (filename, 'tmp')
+            cmd = "'./extract-package' %s %s" % (pkg.filename, 'tmp')
             p = subprocess.Popen(cmd, cwd='.', shell=True, stdout=subprocess.PIPE)
             p.wait()
             if p.returncode:
@@ -219,7 +219,7 @@ class AppstreamBuild:
         os.makedirs('./tmp')
 
         # decompress main file and search for desktop files
-        self.decompress(filename)
+        self.decompress(pkg)
         files = glob.glob("./tmp/usr/share/applications/*.desktop")
         files.sort()
 
@@ -230,8 +230,9 @@ class AppstreamBuild:
             if fnmatch.fnmatch(pkg.name, c[0]):
                 extra_files = glob.glob("./packages/%s*.rpm" % c[1])
                 for f in extra_files:
-                    print "INFO\tAdding extra package %s for %s" % (f, pkg.name)
-                    self.decompress(f)
+                    extra_pkg = fedoraAppstreamPkg.AppstreamPkg(f)
+                    print "INFO\tAdding extra package %s for %s" % (extra_pkg.name, pkg.name)
+                    self.decompress(extra_pkg)
 
         # open the AppStream file for writing
         has_header = False
