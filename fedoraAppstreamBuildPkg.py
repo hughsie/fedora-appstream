@@ -33,10 +33,10 @@ import subprocess
 import sys
 import tarfile
 import fnmatch
-import gtk
+import re
+from gi.repository import GdkPixbuf, GLib, Rsvg
 
 import cairo
-import rsvg
 
 import fedoraAppstreamData
 import fedoraAppstreamPkg
@@ -58,10 +58,10 @@ def resize_icon(icon):
     # use GDK to process XPM files
     gdk_exts = [ 'xpm', 'ico' ]
     if ext in gdk_exts:
-        pixbuf = gtk.gdk.pixbuf_new_from_file(icon)
+        pixbuf = GdkPixbuf.Pixbuf.new_from_file(icon)
         if pixbuf.get_width() < 32 and pixbuf.get_height() < 32:
             raise StandardError('Icon too small to process')
-        pixbuf = gtk.gdk.pixbuf_new_from_file_at_size(icon, 64, 64)
+        pixbuf = GdkPixbuf.Pixbuf.new_from_file_at_size(icon, 64, 64)
         pixbuf.save(icon_tmp, "png")
         return icon_tmp
 
@@ -83,7 +83,7 @@ def resize_icon(icon):
     if ext in rsvg_exts:
         img = cairo.ImageSurface(cairo.FORMAT_ARGB32, 64, 64)
         ctx = cairo.Context(img)
-        handler = rsvg.Handle(icon)
+        handler = Rsvg.Handle.new_from_file(icon)
         ctx.scale(float(64) / handler.props.width, float(64) / handler.props.height)
         handler.render_cairo(ctx)
         img.write_to_png(icon_tmp)
@@ -241,71 +241,66 @@ class AppstreamBuild:
 
         # process each desktop file in the original package
         for f in files:
-            config = ConfigParser.RawConfigParser()
-            config.read(f)
+            config = GLib.KeyFile()
+            config.load_from_file(f, GLib.KeyFileFlags.KEEP_TRANSLATIONS)
 
             # optional
+            names = {}
             categories = None
-            description = None
+            descriptions = {}
+            comments = {}
             homepage_url = pkg.homepage_url
+            icon = None
             keywords = None
             icon_fullpath = None
-
-            # do not include apps with NoDisplay=True
-            try:
-                if config.getboolean('Desktop Entry', 'NoDisplay'):
+            skip = False
+            DG = GLib.KEY_FILE_DESKTOP_GROUP
+            keys, _ = config.get_keys(DG)
+            for k in keys:
+                if k == GLib.KEY_FILE_DESKTOP_KEY_NO_DISPLAY and config.get_boolean(DG, k):
                     print 'IGNORE\t', f, '\t', "not included in the menu"
-                    continue
-            except Exception, e:
-                pass
-
-            # do not include apps with Type != Application
-            try:
-                if config.get('Desktop Entry', 'Type') != 'Application':
+                    skip = True
+                    break
+                elif k == GLib.KEY_FILE_DESKTOP_KEY_TYPE and \
+                     config.get_string(DG, k) != GLib.KEY_FILE_DESKTOP_TYPE_APPLICATION:
                     print 'IGNORE\t', f, '\t', "not an application"
-                    continue;
-            except Exception, e:
+                    skip = True
+                    break
+                elif k.startswith(GLib.KEY_FILE_DESKTOP_KEY_NAME):
+                    m = re.match(GLib.KEY_FILE_DESKTOP_KEY_NAME + '\[([^\]]+)\]', k)
+                    if m:
+                        names[m.group(1)] = config.get_string(DG, k)
+                    else:
+                        names['C'] = config.get_string(DG, k)
+                elif k.startswith(GLib.KEY_FILE_DESKTOP_KEY_COMMENT):
+                    m = re.match(GLib.KEY_FILE_DESKTOP_KEY_COMMENT + '\[([^\]]+)\]', k)
+                    if m:
+                        comments[m.group(1)] = config.get_string(DG, k)
+                    else:
+                        comments['C'] = config.get_string(DG, k)
+                elif k == GLib.KEY_FILE_DESKTOP_KEY_ICON:
+                    icon = config.get_string(DG, k)
+                elif k == GLib.KEY_FILE_DESKTOP_KEY_CATEGORIES:
+                    categories = config.get_string_list(DG, k)
+                elif k == 'Keywords':
+                    keywords = config.get_string_list(DG, k)
+
+            if skip:
                 continue
 
             # Do not include apps without a Name
-            try:
-                name = config.get('Desktop Entry', 'Name')
-            except Exception, e:
+            if not 'C' in names:
                 print 'IGNORE\t', f, '\t', "no Name"
                 continue
 
             # Do not include apps without a Comment
-            try:
-                summary = config.get('Desktop Entry', 'Comment')
-            except Exception, e:
+            if not 'C' in comments:
                 print 'IGNORE\t', f, '\t', "no Comment"
                 continue
-            if len(summary) == 0:
-                print 'IGNORE\t', f, '\t', "Comment unspecified"
-                continue
 
-            try:
-                icon = config.get('Desktop Entry', 'Icon')
-            except Exception, e:
-                print 'IGNORE\t', f, '\t', "no Icon"
-                continue
-            if len(icon) == 0:
+            if not icon:
                 print 'IGNORE\t', f, '\t', "Icon unspecified"
                 continue
-
-            # Categories are optional but highly reccomended
-            try:
-                categories = config.get('Desktop Entry', 'Categories')
-            except Exception, e:
-                pass
-            if categories:
-                categories = categories.split(';')[:-1]
-
-            # Keywords are optional but highly reccomended
-            try:
-                keywords = config.get('Desktop Entry', 'Keywords')
-            except Exception, e:
-                pass
 
             # We blacklist some apps by categories
             blacklisted = False
@@ -385,7 +380,7 @@ class AppstreamBuild:
                 tmp = data.get_url()
                 if tmp:
                     homepage_url = tmp
-                description = data.get_description()
+                descriptions = data.get_descriptions()
 
             # write header
             if not has_header:
@@ -398,10 +393,14 @@ class AppstreamBuild:
             xml.write("  <application>\n")
             xml.write("    <id type=\"desktop\">%s</id>\n" % basename)
             xml.write("    <pkgname>%s</pkgname>\n" % pkg.name)
-            # FIXME: do translations too
-            xml.write("    <name>%s</name>\n" % sanitise_xml(name))
-            # FIXME: do translations too
-            xml.write("    <summary>%s</summary>\n" % sanitise_xml(summary))
+            xml.write("    <name>%s</name>\n" % sanitise_xml(names['C']))
+            for lang in names:
+                if lang != 'C':
+                    xml.write("    <name xml:lang=\"%s\">%s</name>\n" % (sanitise_xml(lang), sanitise_xml(names[lang])))
+            xml.write("    <summary>%s</summary>\n" % sanitise_xml(comments['C']))
+            for lang in comments:
+                if lang != 'C':
+                    xml.write("    <summary xml:lang=\"%s\">%s</summary>\n" % (sanitise_xml(lang), sanitise_xml(comments[lang])))
             if icon_fullpath:
                 xml.write("    <icon type=\"cached\">%s</icon>\n" % app_id)
             else:
@@ -422,13 +421,16 @@ class AppstreamBuild:
                 xml.write("    </appcategories>\n")
             if keywords:
                 xml.write("    <keywords>\n")
-                for keyword in keywords.split(';')[:-1]:
+                for keyword in keywords:
                     xml.write("      <keyword>%s</keyword>\n" % sanitise_xml(keyword))
                 xml.write("    </keywords>\n")
             if homepage_url:
                 xml.write("    <url type=\"homepage\">%s</url>\n" % sanitise_xml(homepage_url))
-            if description:
-                xml.write("    <description>%s</description>\n" % _to_utf8(description))
+            if 'C' in descriptions:
+                xml.write("    <description>%s</description>\n" % sanitise_xml(descriptions['C']))
+                for lang in descriptions:
+                    if lang != 'C':
+                        xml.write("    <description xml:lang=\"%s\">%s</description>\n" % (sanitise_xml(lang), sanitise_xml(descriptions[lang])))
             xml.write("  </application>\n")
 
             # copy icon
