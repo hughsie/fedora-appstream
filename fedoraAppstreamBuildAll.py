@@ -55,8 +55,8 @@ def main():
         try:
             job.build(f)
         except Exception as e:
-            print e
-            break
+            print 'WARNING\t', f, str(e)
+            pass
 
 if __name__ == "__main__":
     main()
