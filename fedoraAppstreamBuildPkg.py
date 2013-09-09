@@ -360,7 +360,8 @@ class AppstreamBuild:
             appdata_file = './tmp/usr/share/appdata/' + app_id + '.appdata.xml'
             appdata_extra_file = './appdata-extra/' + app_id + '.appdata.xml'
             if os.path.exists(appdata_file) and os.path.exists(appdata_extra_file):
-                raise StandardError('both AppData extra and upstream exist: ' + app_id)
+                print 'DELETE\t', appdata_extra_file, 'as upstream AppData file exists'
+                os.remove(appdata_extra_file)
 
             # just use the extra file in places of the missing upstream one
             if os.path.exists(appdata_extra_file):
