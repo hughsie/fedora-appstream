@@ -184,6 +184,7 @@ class AppstreamBuild:
             wildcards = []
             if not os.getenv('APPSTREAM_DEBUG'):
                 wildcards.append('./usr/share/applications/*.desktop')
+                wildcards.append('./usr/share/applications/kde4/*.desktop')
                 wildcards.append('./usr/share/appdata/*.xml')
                 wildcards.append('./usr/share/icons/hicolor/*/apps/*')
                 wildcards.append('./usr/share/pixmaps/*.*')
@@ -220,7 +221,9 @@ class AppstreamBuild:
 
         # decompress main file and search for desktop files
         self.decompress(pkg)
-        files = glob.glob("./tmp/usr/share/applications/*.desktop")
+        files = []
+        files.extend(glob.glob("./tmp/usr/share/applications/*.desktop"))
+        files.extend(glob.glob("./tmp/usr/share/applications/kde4/*.desktop"))
         files.sort()
 
         # we only need to install additional files if we're not running on
