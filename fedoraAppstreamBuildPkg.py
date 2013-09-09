@@ -173,7 +173,7 @@ class AppstreamBuild:
             self.common_packages.append(e.split('\t', 2))
         f.close()
 
-    def decompress(self, pkg):
+    def decompress(self, pkg, extra=False):
         if os.path.exists('./extract-package'):
             cmd = "'./extract-package' %s %s" % (pkg.filename, 'tmp')
             p = subprocess.Popen(cmd, cwd='.', shell=True, stdout=subprocess.PIPE)
@@ -183,7 +183,8 @@ class AppstreamBuild:
         else:
             wildcards = []
             if not os.getenv('APPSTREAM_DEBUG'):
-                wildcards.append('./usr/share/applications/*.desktop')
+                if not extra:
+                    wildcards.append('./usr/share/applications/*.desktop')
                 wildcards.append('./usr/share/appdata/*.xml')
                 wildcards.append('./usr/share/icons/hicolor/*/apps/*')
                 wildcards.append('./usr/share/pixmaps/*.*')
@@ -232,7 +233,7 @@ class AppstreamBuild:
                 for f in extra_files:
                     extra_pkg = fedoraAppstreamPkg.AppstreamPkg(f)
                     print "INFO\tAdding extra package %s for %s" % (extra_pkg.name, pkg.name)
-                    self.decompress(extra_pkg)
+                    self.decompress(extra_pkg, extra=True)
 
         # open the AppStream file for writing
         has_header = False
