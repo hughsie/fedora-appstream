@@ -63,6 +63,7 @@ class AppstreamPkg:
 
     def __init__(self, filename):
         self.contains_desktop_file = False
+        self.filename = filename
         self.name = None
         self._f = None
         self._default_wildcards = []
