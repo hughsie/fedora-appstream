@@ -380,7 +380,9 @@ class AppstreamBuild:
                     raise StandardError('The AppData licence is not okay: ' + app_id)
 
                 # get optional bits
-                homepage_url = data.get_url()
+                tmp = data.get_url()
+                if tmp:
+                    homepage_url = tmp
                 description = data.get_description()
 
             # write header
