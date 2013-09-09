@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+<id type="desktop">deja-dup.desktop</id>
+<licence>CC0</licence>
+<description>
+<p>
+Déjà Dup is a simple backup tool. It allows you to backup the Right Way (encrypted, off-site, and regular) without sacrificing ease of use.
+</p>
+<p>
+Déjà Dup is designed to integrate with the GNOME desktop and is completely free.
+</p>
+<ul>
+ <li>Support for local, remote, or cloud backup locations, such as Amazon S3, Rackspace Cloud Files, and Ubuntu One</li>
+ <li>Securely encrypts and compresses your data</li>
+ <li>Incrementally backs up, letting you restore from any particular backup</li>
+ <li>Schedules regular backups</li>
+</ul>
+</description>
+<url type="homepage">https://launchpad.net/deja-dup</url>
+<screenshots>
+<screenshot type="default">https://wiki.gnome.org/Apps/DejaDup/Screenshots</screenshot>
+</screenshots>
+<updatecontact>deja-dup-list@gnome.org</updatecontact>
+</application>

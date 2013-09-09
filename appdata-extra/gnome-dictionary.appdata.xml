@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+<id type="desktop">gnome-dictionary.desktop</id>
+<licence>CC0</licence>
+<description>
+<p>
+GNOME Dictionary is a simple dictionary application that looks up definitions of words online.
+Though it looks up English definitions by default, you can easily switch to
+Spanish or add other online dictionaries to suit your needs.
+</p>
+</description>
+<url type="homepage">https://wiki.gnome.org/Dictionary</url>
+<screenshots>
+<screenshot type="default">https://wiki.gnome.org/Dictionary?action=AttachFile&do=get&target=Dictionary-window.png</screenshot>
+</screenshots>
+<updatecontact>sindhus@live.in</updatecontact>
+</application>

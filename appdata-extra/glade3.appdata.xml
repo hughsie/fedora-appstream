@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+<id type="desktop">glade3.desktop</id>
+<licence>CC0</licence>
+<description>
+<p>
+Glade is a tool providing quick and easy development of user interfaces for the
+GTK+ toolkit and the GNOME desktop environment.
+</p>
+<p>
+The user interfaces designed in Glade are saved as XML, and can be loaded
+dynamically into applications by using GtkBuilder.
+Those files can be used in many programming languages including C, C++, C#, Vala,
+Java, Perl, Python, and others.
+Glade's ability to connect widget signals with corresponding functions makes the
+integration of user interfaces into code even simpler.
+</p>
+</description>
+<url type="homepage">http://glade.gnome.org/</url>
+<screenshots>
+<screenshot type="default">http://glade.gnome.org/images/glade-main-page.png</screenshot>
+</screenshots>
+<updatecontact>glade-devel_at_lists.ximian.com</updatecontact>
+</application>
