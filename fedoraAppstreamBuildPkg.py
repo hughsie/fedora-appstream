@@ -242,6 +242,9 @@ class AppstreamBuild:
         xml_output_file = './appstream/' + pkg.name + '.xml'
         xml = open(xml_output_file, 'w')
 
+        # check for duplicate apps in the package
+        application_ids = []
+
         # process each desktop file in the original package
         for f in files:
             config = GLib.KeyFile()
@@ -332,6 +335,13 @@ class AppstreamBuild:
 
             basename = f.split("/")[-1]
             app_id = basename.replace('.desktop', '')
+
+            # packages that ship .desktop files in /usr/share/applications
+            # *and* /usr/share/applications/kde4 do not need multiple entries
+            if app_id in application_ids:
+                print 'IGNORE\t', f, '\t', app_id, 'duplicate ID in package'
+                continue
+            application_ids.append(app_id)
 
             # do we have to add any categories
             if categories:
