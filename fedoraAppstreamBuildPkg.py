@@ -248,8 +248,8 @@ class AppstreamBuild:
             # optional
             names = {}
             categories = None
+            descriptions = {}
             comments = {}
-            description = None
             homepage_url = pkg.homepage_url
             keywords = None
             icon_fullpath = None
@@ -379,7 +379,7 @@ class AppstreamBuild:
                 tmp = data.get_url()
                 if tmp:
                     homepage_url = tmp
-                description = data.get_description()
+                descriptions = data.get_descriptions()
 
             # write header
             if not has_header:
@@ -425,8 +425,10 @@ class AppstreamBuild:
                 xml.write("    </keywords>\n")
             if homepage_url:
                 xml.write("    <url type=\"homepage\">%s</url>\n" % sanitise_xml(homepage_url))
-            if description:
-                xml.write("    <description>%s</description>\n" % _to_utf8(description))
+            xml.write("    <description>%s</description>\n" % sanitise_xml(descriptions['C']))
+            for lang in descriptions:
+                if lang != 'C':
+                    xml.write("    <description xml:lang=\"%s\">%s</description>\n" % (sanitise_xml(lang), sanitise_xml(descriptions[lang])))
             xml.write("  </application>\n")
 
             # copy icon

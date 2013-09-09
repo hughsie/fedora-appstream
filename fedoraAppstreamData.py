@@ -26,6 +26,8 @@ import sys
 import re
 import xml.etree.ElementTree as ET
 
+XML_LANG = '{http://www.w3.org/XML/1998/namespace}lang'
+
 def _to_utf8(txt, errors='replace'):
     if isinstance(txt, str):
         return txt
@@ -57,34 +59,45 @@ class AppstreamData:
             s = ss.find('screenshot')
             if s:
                 return s.text
-    def get_description(self):
-        desc = ''
+
+    def _append_for_lang(self, descriptions, lang, content):
+        if not lang:
+            lang = 'C'
+
+        if lang in descriptions:
+            descriptions[lang] = descriptions[lang] + content
+        else:
+            descriptions[lang] = content
+
+    def get_descriptions(self):
+        descriptions = {}
         for item in self.root.find("description"):
             if item.tag == 'p':
                 para = _to_utf8(item.text)
                 para = para.lstrip()
                 para = para.replace('\n', ' ')
                 para = re.sub('\ +', ' ', para)
-                desc = desc + para + '\n\n'
+                self._append_for_lang(descriptions, item.get(XML_LANG), para + '\n\n')
             elif item.tag == 'ul':
                 for li in item:
                     txt = _to_utf8(li.text)
                     txt = txt.replace('\n', ' ')
                     txt = re.sub('\ +', ' ', txt)
-                    desc = desc + ' • ' + txt + '\n'
+                    self._append_for_lang(descriptions, item.get(XML_LANG), ' • ' + txt + '\n')
             elif item.tag == 'ol':
                 cnt = 1
                 for li in item:
                     txt = _to_utf8(li.text)
                     txt = txt.replace('\n', ' ')
                     txt = re.sub('\ +', ' ', txt)
-                    desc = desc + ' ' + str(cnt) + '. ' + txt + '\n'
+                    self._append_for_lang(descriptions, item.get(XML_LANG), ' ' + str(cnt) + '. ' + txt + '\n')
                     cnt = cnt + 1
             else:
                 raise StandardError('Do not know how to parse' + item.tag + ' for ' + self.filename)
-        if len(desc) == 0:
-            return None
-        return desc.replace('  ', ' ').rstrip()
+
+        for lang in descriptions:
+            descriptions[lang] = descriptions[lang].replace('  ', ' ').rstrip()
+        return descriptions
     def get_url(self):
         return self.root.find("url").text
 
