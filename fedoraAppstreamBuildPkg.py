@@ -34,7 +34,7 @@ import sys
 import tarfile
 import fnmatch
 import re
-from gi.repository import GdkPixbuf, GLib, Rsvg
+from gi.repository import GdkPixbuf, Gdk, GLib, Rsvg
 
 import cairo
 
@@ -62,7 +62,12 @@ def resize_icon(icon):
         if pixbuf.get_width() < 32 and pixbuf.get_height() < 32:
             raise StandardError('Icon too small to process')
         pixbuf = GdkPixbuf.Pixbuf.new_from_file_at_size(icon, 64, 64)
-        pixbuf.save(icon_tmp, "png")
+        img = cairo.ImageSurface(cairo.FORMAT_ARGB32, 64, 64)
+        ctx = cairo.Context(img)
+        ctx.scale(float(64) / pixbuf.get_width(), float(64) / pixbuf.get_height())
+        Gdk.cairo_set_source_pixbuf(ctx, pixbuf, 0.0, 0.0)
+        ctx.paint()
+        img.write_to_png(icon_tmp)
         return icon_tmp
 
     # use PIL to resize PNG files
