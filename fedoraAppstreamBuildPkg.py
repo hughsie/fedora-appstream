@@ -255,6 +255,7 @@ class AppstreamBuild:
             categories = None
             descriptions = {}
             comments = {}
+            mimetypes = None
             homepage_url = pkg.homepage_url
             icon = None
             keywords = None
@@ -290,6 +291,8 @@ class AppstreamBuild:
                     categories = config.get_string_list(DG, k)
                 elif k == 'Keywords':
                     keywords = config.get_string_list(DG, k)
+                elif k == 'MimeType':
+                    mimetypes = config.get_string_list(DG, k)
 
             if skip:
                 continue
@@ -437,6 +440,11 @@ class AppstreamBuild:
                 for keyword in keywords:
                     xml.write("      <keyword>%s</keyword>\n" % sanitise_xml(keyword))
                 xml.write("    </keywords>\n")
+            if mimetypes:
+                xml.write("    <mimetypes>\n")
+                for keyword in keywords:
+                    xml.write("      <mimetype>%s</mimetype>\n" % sanitise_xml(mimetype))
+                xml.write("    </mimetypes>\n")
             if homepage_url:
                 xml.write("    <url type=\"homepage\">%s</url>\n" % sanitise_xml(homepage_url))
             if 'C' in descriptions:
