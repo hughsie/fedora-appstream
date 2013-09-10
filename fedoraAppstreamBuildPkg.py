@@ -442,7 +442,7 @@ class AppstreamBuild:
                 xml.write("    </keywords>\n")
             if mimetypes:
                 xml.write("    <mimetypes>\n")
-                for keyword in keywords:
+                for mimetype in mimetypes:
                     xml.write("      <mimetype>%s</mimetype>\n" % sanitise_xml(mimetype))
                 xml.write("    </mimetypes>\n")
             if homepage_url:
