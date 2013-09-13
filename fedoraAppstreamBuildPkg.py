@@ -129,7 +129,7 @@ class AppstreamBuild:
             return
 
         # hicolor apps
-        icon_sizes = [ '64x64', '128x128', '96x96', '256x256', 'scalable', '48x48', '32x32', '24x24', '16x16' ]
+        icon_sizes = self.cfg.get_preferred_icon_sizes()
         for s in icon_sizes:
             for ext in supported_ext:
                 icon_fullpath = './tmp/usr/share/icons/hicolor/' + s + '/apps/' + icon + ext

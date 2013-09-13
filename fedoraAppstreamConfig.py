@@ -75,6 +75,14 @@ class AppstreamConfig:
             pass
         return blacklist
 
+    def get_preferred_icon_sizes(self):
+        prefs = []
+        try:
+            prefs = self._config.get_string_list(self._group_name, 'PreferredIconSizes')
+        except Exception as e:
+            pass
+        return prefs
+
     def get_stock_icons(self):
         # get the list of stock icons
         f = open('./data/stock-icon-names.txt', 'r')
@@ -114,6 +122,7 @@ def main():
     print 'distro-name:\t\t', cfg.distro_name
     print 'icon-size:\t\t', cfg.icon_size
     print 'min-icon-size:\t\t', cfg.min_icon_size
+    print 'preferred-sizes:\t', cfg.get_preferred_icon_sizes()
     print 'content-licences:\t', cfg.get_content_licences()
     print 'ignore-categories:\t', cfg.get_category_ignore_list()
     print 'blacklist-categories:\t', cfg.get_category_blacklist()
