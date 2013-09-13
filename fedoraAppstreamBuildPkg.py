@@ -295,6 +295,8 @@ class AppstreamBuild:
                         comments['C'] = config.get_string(DG, k)
                 elif k == GLib.KEY_FILE_DESKTOP_KEY_ICON:
                     icon = config.get_string(DG, k)
+                    if icon:
+                        icon = icon.strip()
                 elif k == GLib.KEY_FILE_DESKTOP_KEY_CATEGORIES:
                     categories = config.get_string_list(DG, k)
                 elif k == 'Keywords':
