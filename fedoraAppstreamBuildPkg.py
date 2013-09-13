@@ -40,6 +40,7 @@ import cairo
 
 import fedoraAppstreamData
 import fedoraAppstreamPkg
+import fedoraAppstreamConfig
 
 # NOTE; we could use escape() from xml.sax.saxutils import escape but that seems
 # like a big dep for such trivial functionality
@@ -142,44 +143,7 @@ def _to_utf8(txt, errors='replace'):
 class AppstreamBuild:
 
     def __init__(self):
-        #to do something
-        self.cat_blacklist = ['GTK', 'Qt', 'KDE', 'GNOME']
-
-        # get the list of stock icons
-        f = open('./data/stock-icon-names.txt', 'r')
-        self.stock_icons = f.read().rstrip().split('\n')
-        f.close()
-
-        # get blacklisted applications
-        f = open('./data/blacklist-id.txt', 'r')
-        self.blacklisted_ids = f.read().rstrip().split('\n')
-        f.close()
-
-        # get blacklisted applications
-        f = open('./data/blacklist-packages.txt', 'r')
-        self.blacklisted_packages = f.read().rstrip().split('\n')
-        f.close()
-
-        # get blacklisted categories
-        f = open('./data/blacklist-category.txt', 'r')
-        self.blacklisted_categories = f.read().rstrip().split('\n')
-        f.close()
-
-        # get extra categories to add for apps
-        self.categories_add = {}
-        f = open('./data/category-add.txt', 'r')
-        for line in f.read().rstrip().split('\n'):
-            entry = line.split('\t', 1)
-            self.categories_add[entry[0]] = entry[1].split(',')
-        f.close()
-
-        # get extra packages needed for some applications
-        f = open('./data/common-packages.txt', 'r')
-        entries = common_packages = f.read().rstrip().split('\n')
-        self.common_packages = []
-        for e in entries:
-            self.common_packages.append(e.split('\t', 2))
-        f.close()
+        self.cfg = fedoraAppstreamConfig.AppstreamConfig()
 
     def decompress(self, pkg):
         if os.path.exists('./extract-package'):
@@ -212,7 +176,7 @@ class AppstreamBuild:
             print 'IGNORE\t', filename, '\t', "no desktop files"
             return
 
-        for b in self.blacklisted_packages:
+        for b in self.cfg.get_package_blacklist():
             if fnmatch.fnmatch(pkg.name, b):
                 print 'IGNORE\t', filename, '\t', "package is blacklisted:", pkg.name
                 return
@@ -237,7 +201,7 @@ class AppstreamBuild:
         # we only need to install additional files if we're not running on
         # the builders
         decompress_files = [ filename ]
-        for c in self.common_packages:
+        for c in self.cfg.get_package_data_list():
             if fnmatch.fnmatch(pkg.name, c[0]):
                 extra_files = glob.glob("./packages/%s*.rpm" % c[1])
                 for f in extra_files:
@@ -325,7 +289,7 @@ class AppstreamBuild:
             blacklisted = False
             if categories:
                 for c in categories:
-                    for b in self.blacklisted_categories:
+                    for b in self.cfg.get_category_blacklist():
                         if fnmatch.fnmatch(c, b):
                             print 'IGNORE\t', f, '\tcategory is blacklisted:', c
                             blacklisted = True
@@ -337,7 +301,7 @@ class AppstreamBuild:
             app_id = basename.replace('.desktop', '')
 
             # check icon exists
-            if icon not in self.stock_icons:
+            if icon not in self.cfg.get_stock_icons():
                 icon_fullpath = './icons/' + app_id + '.png'
                 try:
                     write_appstream_icon(icon, icon_fullpath)
@@ -359,19 +323,18 @@ class AppstreamBuild:
 
             # do we have to add any categories
             if categories:
-                if self.categories_add.has_key(app_id):
-                    cats_to_add = self.categories_add[app_id]
-                    if cats_to_add:
-                        # check it's not been added upstream
-                        for cat in cats_to_add:
-                            if cat in categories:
-                                print 'WARNING\t' + app_id + ' now includes category ' + cat
-                            else:
-                                print 'INFO\tFor ' + app_id + ' manually adding category', cat
-                        categories.extend(cats_to_add)
+                cats_to_add = self.cfg.get_category_extra_for_id(app_id)
+                if cats_to_add:
+                    # check it's not been added upstream
+                    for cat in cats_to_add:
+                        if cat in categories:
+                            print 'WARNING\t' + app_id + ' now includes category ' + cat
+                        else:
+                            print 'INFO\tFor ' + app_id + ' manually adding category', cat
+                    categories.extend(cats_to_add)
 
             # application is blacklisted
-            for b in self.blacklisted_ids:
+            for b in self.cfg.get_id_blacklist():
                 if fnmatch.fnmatch(app_id, b):
                     print 'IGNORE\t', f, '\t', "application is blacklisted:", app_id
                     blacklisted = True
@@ -440,7 +403,7 @@ class AppstreamBuild:
                         print 'WARNING\t', f, '\tHas AudioVideo but not Audio or Video'
                         categories.extend(['Audio', 'Video'])
                 for cat in categories:
-                    if cat in self.cat_blacklist:
+                    if cat in self.cfg.get_category_ignore_list():
                         continue
                     if cat.startswith('X-'):
                         continue

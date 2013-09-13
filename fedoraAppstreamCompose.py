@@ -28,24 +28,27 @@ import shutil
 import tarfile
 import gzip
 
+import fedoraAppstreamConfig
+
 def main():
 
-    distro_name = 'fedora-20'
+    cfg = fedoraAppstreamConfig.AppstreamConfig()
+
     application_ids = {}
 
     # used as a temp location
     if os.path.exists('./tmp'):
         shutil.rmtree('./tmp')
     os.makedirs('./tmp')
-    if os.path.exists('./' + distro_name + '.xml.gz'):
-        os.remove('./' + distro_name + '.xml.gz')
-    if os.path.exists('./' + distro_name + '-icons.tar.gz'):
-        os.remove('./' + distro_name + '-icons.tar.gz')
+    if os.path.exists('./' + cfg.distro_name + '.xml.gz'):
+        os.remove('./' + cfg.distro_name + '.xml.gz')
+    if os.path.exists('./' + cfg.distro_name + '-icons.tar.gz'):
+        os.remove('./' + cfg.distro_name + '-icons.tar.gz')
 
     files = glob.glob("./appstream/*.xml")
     files.sort()
 
-    master = gzip.open('./' + distro_name + '.xml.gz', 'wb')
+    master = gzip.open('./' + cfg.distro_name + '.xml.gz', 'wb')
     master.write('<?xml version="1.0"?>\n')
     master.write('<applications version="0.1">\n')
     for f in files:
@@ -83,19 +86,19 @@ def main():
         tar.close()
 
     # create master icons file
-    tar = tarfile.open('./' + distro_name + '-icons.tar', "w")
+    tar = tarfile.open('./' + cfg.distro_name + '-icons.tar', "w")
     files = glob.glob("./tmp/*.png")
     for f in files:
         tar.add(f, arcname=f.split('/')[-1])
     tar.close()
 
     # compress to save a few Mb
-    f_in = open('./' + distro_name + '-icons.tar', 'rb')
-    f_out = gzip.open('./' + distro_name + '-icons.tar.gz', 'wb')
+    f_in = open('./' + cfg.distro_name + '-icons.tar', 'rb')
+    f_out = gzip.open('./' + cfg.distro_name + '-icons.tar.gz', 'wb')
     f_out.writelines(f_in)
     f_out.close()
     f_in.close()
-    os.remove('./' + distro_name + '-icons.tar')
+    os.remove('./' + cfg.distro_name + '-icons.tar')
 
 if __name__ == "__main__":
     main()

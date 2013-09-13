@@ -28,6 +28,8 @@ import rpmUtils
 import sys
 import yum
 
+import fedoraAppstreamConfig
+
 class Logger(object):
     def __init__(self, filename="Default.log"):
         self.terminal = sys.stdout
@@ -49,12 +51,10 @@ def update(repos, reponame):
         os.makedirs('./packages')
 
     # get extra packages needed for some applications
-    f = open('./data/common-packages.txt', 'r')
-    entries = common_packages = f.read().rstrip().split('\n')
+    cfg = fedoraAppstreamConfig.AppstreamConfig()
     extra_packages = []
-    for e in entries:
-        extra_packages.append(e.split('\t')[1])
-    f.close()
+    for e in cfg.get_package_data_list():
+        extra_packages.append(e[1])
 
     # find out what we've got already
     files = glob.glob("./packages/*.rpm")
@@ -66,11 +66,6 @@ def update(repos, reponame):
         existing[hdr.name] = f
         os.close(fd)
     print "INFO:\t\tFound %i existing packages for %s" % (len(existing), reponame)
-
-    # load package blacklist
-    f = open('./data/blacklist-packages.txt')
-    blacklisted_packages = f.read().rstrip().split('\n')
-    f.close()
 
     # setup yum
     yb = yum.YumBase()
@@ -100,7 +95,7 @@ def update(repos, reponame):
             continue
 
         # don't download blacklisted packages
-        if pkg.name in blacklisted_packages:
+        if pkg.name in cfg.get_package_blacklist():
             continue
 
         # make sure the metadata exists
