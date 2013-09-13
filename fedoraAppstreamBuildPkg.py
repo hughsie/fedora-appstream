@@ -49,11 +49,10 @@ def sanitise_xml(text):
     text = text.replace(">", "&gt;")
     return text
 
-def resize_icon(icon):
+def resize_icon(icon, filename):
 
     # get ending
     ext = icon.rsplit('.', 1)[1]
-    icon_tmp = '/tmp/image.png'
 
     # use GDK to process XPM files
     gdk_exts = [ 'xpm', 'ico' ]
@@ -62,8 +61,8 @@ def resize_icon(icon):
         if pixbuf.get_width() < 32 and pixbuf.get_height() < 32:
             raise StandardError('Icon too small to process')
         pixbuf = GdkPixbuf.Pixbuf.new_from_file_at_size(icon, 64, 64)
-        pixbuf.savev(icon_tmp, "png", [], [])
-        return icon_tmp
+        pixbuf.savev(filename, "png", [], [])
+        return
 
     # use PIL to resize PNG files
     pil_exts = [ 'png', 'gif' ]
@@ -71,12 +70,10 @@ def resize_icon(icon):
         im = Image.open(icon)
         width, height = im.size
         if width < 32 and height < 32:
-            raise StandardError('Icon too small to process')
-        if width <= 64 and height <= 64:
-            return icon
+            raise StandardError('Icon too small to process (' + str(width) + 'px)')
         im = im.resize((64, 64), Image.ANTIALIAS)
-        im.save(icon_tmp, 'png')
-        return icon_tmp
+        im.save(filename, 'png')
+        return
 
     # use RSVG to write PNG file
     rsvg_exts = [ 'svg' ]
@@ -86,11 +83,11 @@ def resize_icon(icon):
         handler = Rsvg.Handle.new_from_file(icon)
         ctx.scale(float(64) / handler.props.width, float(64) / handler.props.height)
         handler.render_cairo(ctx)
-        img.write_to_png(icon_tmp)
-        return icon_tmp
-    return ''
+        img.write_to_png(filename)
+        return
+    return
 
-def get_icon_filename(icon):
+def write_appstream_icon(icon, filename):
 
     # we can handle these sorts of files
     supported_ext = [ '.png', '.svg', '.xpm' ]
@@ -105,7 +102,8 @@ def get_icon_filename(icon):
     # fully qualified path
     icon_fullpath = './tmp/' + icon
     if os.path.exists(icon_fullpath):
-        return resize_icon(icon_fullpath)
+        resize_icon(icon_fullpath, filename)
+        return
 
     # hicolor apps
     icon_sizes = [ '64x64', '128x128', '96x96', '256x256', 'scalable', '48x48', '32x32', '24x24', '16x16' ]
@@ -113,16 +111,18 @@ def get_icon_filename(icon):
         for ext in supported_ext:
             icon_fullpath = './tmp/usr/share/icons/hicolor/' + s + '/apps/' + icon + ext
             if os.path.isfile(icon_fullpath):
-                return resize_icon(icon_fullpath)
+                resize_icon(icon_fullpath, filename)
+                return
 
     # pixmap
     for location in [ 'pixmaps', 'icons' ]:
         for ext in supported_ext:
             icon_fullpath = './tmp/usr/share/' + location + '/' + icon + ext
             if os.path.isfile(icon_fullpath):
-                return resize_icon(icon_fullpath)
+                resize_icon(icon_fullpath, filename)
+                return
 
-    return ''
+    return
 
 def _to_utf8(txt, errors='replace'):
     if isinstance(txt, str):
@@ -323,10 +323,14 @@ class AppstreamBuild:
             if blacklisted:
                 continue;
 
+            basename = f.split("/")[-1]
+            app_id = basename.replace('.desktop', '')
+
             # check icon exists
             if icon not in self.stock_icons:
+                icon_fullpath = './icons/' + app_id + '.png'
                 try:
-                    icon_fullpath = get_icon_filename(icon)
+                    write_appstream_icon(icon, icon_fullpath)
                 except Exception as e:
                     print 'IGNORE\t', f, '\t', "icon is corrupt:", icon, str(e)
                     continue
@@ -335,9 +339,6 @@ class AppstreamBuild:
                     continue
 
             print 'PROCESS\t', f
-
-            basename = f.split("/")[-1]
-            app_id = basename.replace('.desktop', '')
 
             # packages that ship .desktop files in /usr/share/applications
             # *and* /usr/share/applications/kde4 do not need multiple entries
@@ -453,17 +454,6 @@ class AppstreamBuild:
                     if lang != 'C':
                         xml.write("    <description xml:lang=\"%s\">%s</description>\n" % (sanitise_xml(lang), sanitise_xml(descriptions[lang])))
             xml.write("  </application>\n")
-
-            # copy icon
-            if icon_fullpath:
-                output_file = './icons/' + app_id + '.png'
-                icon_file = open(icon_fullpath, 'rb')
-                icon_data = icon_file.read()
-                icon_file.close()
-                icon_file = open(output_file, 'wb')
-                icon_file.write(icon_data)
-                icon_file.close()
-                print 'WRITING\t', output_file
 
         # create AppStream XML
         xml.write("</applications>\n")
