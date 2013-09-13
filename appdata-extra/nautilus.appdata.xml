@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <application>
 <id type="desktop">nautilus.desktop</id>
-<licence>CCO</licence>
+<licence>CC0</licence>
 <description>
 <p>
 Nautilus, also known as Files, is the default file manager of the GNOME desktop.

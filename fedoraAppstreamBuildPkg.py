@@ -364,7 +364,7 @@ class AppstreamBuild:
 
                 # check the licence is okay
                 if data.get_licence() != 'CC0':
-                    raise StandardError('The AppData licence is not okay: ' + app_id)
+                    raise StandardError('The AppData licence is not okay for ' + app_id + ': \'' + data.get_licence() + '\'')
 
                 # get optional bits
                 tmp = data.get_url()
