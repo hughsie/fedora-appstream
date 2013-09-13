@@ -26,7 +26,7 @@
 
 import ConfigParser
 import glob
-from PIL import Image
+from PIL import Image, ImageOps
 import os
 import shutil
 import subprocess
@@ -71,6 +71,14 @@ def resize_icon(icon, filename):
         width, height = im.size
         if width < 32 and height < 32:
             raise StandardError('Icon too small to process (' + str(width) + 'px)')
+
+        # do not resize, just add a transparent border
+        if width <= 64 and height <= 64:
+            bwidth = (64 - width) / 2
+            im = ImageOps.expand(im, border=bwidth)
+            im.save(filename, 'png')
+            return
+
         im = im.resize((64, 64), Image.ANTIALIAS)
         im.save(filename, 'png')
         return
