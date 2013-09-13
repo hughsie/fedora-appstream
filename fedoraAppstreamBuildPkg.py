@@ -50,89 +50,6 @@ def sanitise_xml(text):
     text = text.replace(">", "&gt;")
     return text
 
-def resize_icon(icon, filename):
-
-    # get ending
-    ext = icon.rsplit('.', 1)[1]
-
-    # use GDK to process XPM files
-    gdk_exts = [ 'xpm', 'ico' ]
-    if ext in gdk_exts:
-        pixbuf = GdkPixbuf.Pixbuf.new_from_file(icon)
-        if pixbuf.get_width() < 32 and pixbuf.get_height() < 32:
-            raise StandardError('Icon too small to process')
-        pixbuf = GdkPixbuf.Pixbuf.new_from_file_at_size(icon, 64, 64)
-        pixbuf.savev(filename, "png", [], [])
-        return
-
-    # use PIL to resize PNG files
-    pil_exts = [ 'png', 'gif' ]
-    if ext in pil_exts:
-        im = Image.open(icon)
-        width, height = im.size
-        if width < 32 and height < 32:
-            raise StandardError('Icon too small to process (' + str(width) + 'px)')
-
-        # do not resize, just add a transparent border
-        if width <= 64 and height <= 64:
-            bwidth = (64 - width) / 2
-            im = ImageOps.expand(im, border=bwidth)
-            im.save(filename, 'png')
-            return
-
-        im = im.resize((64, 64), Image.ANTIALIAS)
-        im.save(filename, 'png')
-        return
-
-    # use RSVG to write PNG file
-    rsvg_exts = [ 'svg' ]
-    if ext in rsvg_exts:
-        img = cairo.ImageSurface(cairo.FORMAT_ARGB32, 64, 64)
-        ctx = cairo.Context(img)
-        handler = Rsvg.Handle.new_from_file(icon)
-        ctx.scale(float(64) / handler.props.width, float(64) / handler.props.height)
-        handler.render_cairo(ctx)
-        img.write_to_png(filename)
-        return
-    return
-
-def write_appstream_icon(icon, filename):
-
-    # we can handle these sorts of files
-    supported_ext = [ '.png', '.svg', '.xpm' ]
-
-    # remove any extension we recognise
-    if not icon.startswith('/'):
-        icon_split = icon.rsplit('.', 1)
-        if len(icon_split) == 2:
-            if '.' + icon_split[1] in supported_ext:
-                icon = icon_split[0]
-
-    # fully qualified path
-    icon_fullpath = './tmp/' + icon
-    if os.path.exists(icon_fullpath):
-        resize_icon(icon_fullpath, filename)
-        return
-
-    # hicolor apps
-    icon_sizes = [ '64x64', '128x128', '96x96', '256x256', 'scalable', '48x48', '32x32', '24x24', '16x16' ]
-    for s in icon_sizes:
-        for ext in supported_ext:
-            icon_fullpath = './tmp/usr/share/icons/hicolor/' + s + '/apps/' + icon + ext
-            if os.path.isfile(icon_fullpath):
-                resize_icon(icon_fullpath, filename)
-                return
-
-    # pixmap
-    for location in [ 'pixmaps', 'icons' ]:
-        for ext in supported_ext:
-            icon_fullpath = './tmp/usr/share/' + location + '/' + icon + ext
-            if os.path.isfile(icon_fullpath):
-                resize_icon(icon_fullpath, filename)
-                return
-
-    return
-
 def _to_utf8(txt, errors='replace'):
     if isinstance(txt, str):
         return txt
@@ -144,6 +61,91 @@ class AppstreamBuild:
 
     def __init__(self):
         self.cfg = fedoraAppstreamConfig.AppstreamConfig()
+
+    def resize_icon(self, icon, filename):
+
+        # get ending
+        ext = icon.rsplit('.', 1)[1]
+        size = self.cfg.icon_size;
+        min_size = self.cfg.min_icon_size;
+
+        # use GDK to process XPM files
+        gdk_exts = [ 'xpm', 'ico' ]
+        if ext in gdk_exts:
+            pixbuf = GdkPixbuf.Pixbuf.new_from_file(icon)
+            if pixbuf.get_width() < min_size or pixbuf.get_height() < min_size:
+                raise StandardError('Icon too small to process')
+            pixbuf = GdkPixbuf.Pixbuf.new_from_file_at_size(icon, size, size)
+            pixbuf.savev(filename, "png", [], [])
+            return
+
+        # use PIL to resize PNG files
+        pil_exts = [ 'png', 'gif' ]
+        if ext in pil_exts:
+            im = Image.open(icon)
+            width, height = im.size
+            if width < min_size or height < min_size:
+                raise StandardError('Icon too small to process (' + str(width) + 'px)')
+
+            # do not resize, just add a transparent border
+            if width <= size and height <= size:
+                bwidth = (size - width) / 2
+                im = ImageOps.expand(im, border=bwidth)
+                im.save(filename, 'png')
+                return
+
+            im = im.resize((size, size), Image.ANTIALIAS)
+            im.save(filename, 'png')
+            return
+
+        # use RSVG to write PNG file
+        rsvg_exts = [ 'svg' ]
+        if ext in rsvg_exts:
+            img = cairo.ImageSurface(cairo.FORMAT_ARGB32, size, size)
+            ctx = cairo.Context(img)
+            handler = Rsvg.Handle.new_from_file(icon)
+            ctx.scale(float(64) / handler.props.width, float(size) / handler.props.height)
+            handler.render_cairo(ctx)
+            img.write_to_png(filename)
+            return
+        return
+
+    def write_appstream_icon(self, icon, filename):
+
+        # we can handle these sorts of files
+        supported_ext = [ '.png', '.svg', '.xpm' ]
+
+        # remove any extension we recognise
+        if not icon.startswith('/'):
+            icon_split = icon.rsplit('.', 1)
+            if len(icon_split) == 2:
+                if '.' + icon_split[1] in supported_ext:
+                    icon = icon_split[0]
+
+        # fully qualified path
+        icon_fullpath = './tmp/' + icon
+        if os.path.exists(icon_fullpath):
+            self.resize_icon(icon_fullpath, filename)
+            return
+
+        # hicolor apps
+        icon_sizes = [ '64x64', '128x128', '96x96', '256x256', 'scalable', '48x48', '32x32', '24x24', '16x16' ]
+        for s in icon_sizes:
+            for ext in supported_ext:
+                icon_fullpath = './tmp/usr/share/icons/hicolor/' + s + '/apps/' + icon + ext
+                if os.path.isfile(icon_fullpath):
+                    self.resize_icon(icon_fullpath, filename)
+                    return
+
+        # pixmap
+        for location in [ 'pixmaps', 'icons' ]:
+            for ext in supported_ext:
+                icon_fullpath = './tmp/usr/share/' + location + '/' + icon + ext
+                if os.path.isfile(icon_fullpath):
+                    self.resize_icon(icon_fullpath, filename)
+                    return
+
+        return
 
     def decompress(self, pkg):
         if os.path.exists('./extract-package'):
@@ -304,7 +306,7 @@ class AppstreamBuild:
             if icon not in self.cfg.get_stock_icons():
                 icon_fullpath = './icons/' + app_id + '.png'
                 try:
-                    write_appstream_icon(icon, icon_fullpath)
+                    self.write_appstream_icon(icon, icon_fullpath)
                 except Exception as e:
                     print 'IGNORE\t', f, '\t', "icon is corrupt:", icon, str(e)
                     continue

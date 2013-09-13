@@ -32,21 +32,48 @@ class AppstreamConfig:
         self._config.load_from_file(filename, GLib.KeyFileFlags.NONE)
         self._group_name = 'fedora-appstream'
         self.distro_name = self._config.get_string(self._group_name, 'DistroName')
+        self.icon_size = self._config.get_integer(self._group_name, 'IconSize')
+        self.min_icon_size = self._config.get_integer(self._group_name, 'MinIconSize')
 
     def get_id_blacklist(self):
-        return self._config.get_string_list(self._group_name, 'BlacklistIds')
+        blacklist = []
+        try:
+            blacklist = self._config.get_string_list(self._group_name, 'BlacklistIds')
+        except Exception as e:
+            pass
+        return blacklist
 
     def get_content_licences(self):
-        return self._config.get_string_list(self._group_name, 'AcceptableContentLicences')
+        licences = []
+        try:
+            licences = self._config.get_string_list(self._group_name, 'AcceptableContentLicences')
+        except Exception as e:
+            pass
+        return licences
 
     def get_category_blacklist(self):
-        return self._config.get_string_list(self._group_name, 'BlacklistCategories')
+        blacklist = []
+        try:
+            blacklist = self._config.get_string_list(self._group_name, 'BlacklistCategories')
+        except Exception as e:
+            pass
+        return blacklist
 
     def get_package_blacklist(self):
-        return self._config.get_string_list(self._group_name, 'BlacklistPackages')
+        blacklist = []
+        try:
+            blacklist = self._config.get_string_list(self._group_name, 'BlacklistPackages')
+        except Exception as e:
+            pass
+        return blacklist
 
     def get_category_ignore_list(self):
-        return self._config.get_string_list(self._group_name, 'IgnoreCategories')
+        blacklist = []
+        try:
+            blacklist = self._config.get_string_list(self._group_name, 'IgnoreCategories')
+        except Exception as e:
+            pass
+        return blacklist
 
     def get_stock_icons(self):
         # get the list of stock icons
@@ -75,11 +102,18 @@ class AppstreamConfig:
 
     def get_category_extra_for_id(self, id):
         # get additional categories for a specific application id
-        return self._config.get_string_list(self._group_name, 'CategoryAdd(' + id + ')')
+        add = []
+        try:
+            add = self._config.get_string_list(self._group_name, 'CategoryAdd(' + id + ')')
+        except Exception as e:
+            pass
+        return add
 
 def main():
     cfg = AppstreamConfig()
     print 'distro-name:\t\t', cfg.distro_name
+    print 'icon-size:\t\t', cfg.icon_size
+    print 'min-icon-size:\t\t', cfg.min_icon_size
     print 'content-licences:\t', cfg.get_content_licences()
     print 'ignore-categories:\t', cfg.get_category_ignore_list()
     print 'blacklist-categories:\t', cfg.get_category_blacklist()
