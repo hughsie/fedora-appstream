@@ -36,6 +36,9 @@ class AppstreamConfig:
     def get_id_blacklist(self):
         return self._config.get_string_list(self._group_name, 'BlacklistIds')
 
+    def get_content_licences(self):
+        return self._config.get_string_list(self._group_name, 'AcceptableContentLicences')
+
     def get_category_blacklist(self):
         return self._config.get_string_list(self._group_name, 'BlacklistCategories')
 
@@ -77,6 +80,7 @@ class AppstreamConfig:
 def main():
     cfg = AppstreamConfig()
     print 'distro-name:\t\t', cfg.distro_name
+    print 'content-licences:\t', cfg.get_content_licences()
     print 'ignore-categories:\t', cfg.get_category_ignore_list()
     print 'blacklist-categories:\t', cfg.get_category_blacklist()
     print 'blacklist-packages:\t', cfg.get_package_blacklist()

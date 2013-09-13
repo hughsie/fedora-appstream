@@ -363,7 +363,7 @@ class AppstreamBuild:
                     raise StandardError('The AppData id does not match: ' + app_id)
 
                 # check the licence is okay
-                if data.get_licence() != 'CC0':
+                if data.get_licence() not in self.cfg.get_content_licences():
                     raise StandardError('The AppData licence is not okay for ' + app_id + ': \'' + data.get_licence() + '\'')
 
                 # get optional bits
