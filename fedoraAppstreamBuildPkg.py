@@ -409,6 +409,9 @@ class AppstreamBuild:
                         continue
                     if cat.startswith('X-'):
                         continue
+                    # simple substitution
+                    if cat == 'Feed':
+                        cat = 'News'
                     xml.write("      <appcategory>%s</appcategory>\n" % cat)
                 xml.write("    </appcategories>\n")
             if keywords:
