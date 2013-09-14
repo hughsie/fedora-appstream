@@ -149,8 +149,7 @@ class AppstreamBuild:
 
     def decompress(self, pkg):
         if os.path.exists('./extract-package'):
-            cmd = "'./extract-package' %s %s" % (pkg.filename, 'tmp')
-            p = subprocess.Popen(cmd, cwd='.', shell=True, stdout=subprocess.PIPE)
+            p = subprocess.Popen(['./extract-package', pkg.filename, 'tmp'], cwd='.', stdout=subprocess.PIPE)
             p.wait()
             if p.returncode:
                 raise StandardError('Cannot extract package: ' + p.stdout)
