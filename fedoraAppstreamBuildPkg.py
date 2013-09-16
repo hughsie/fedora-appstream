@@ -35,14 +35,14 @@ import fnmatch
 
 import fedoraAppstreamData
 import fedoraAppstreamPkg
-import fedoraAppstreamConfig
+import config
 
 from desktop_file import DesktopFile
 
 class AppstreamBuild:
 
     def __init__(self):
-        self.cfg = fedoraAppstreamConfig.AppstreamConfig()
+        self.cfg = config.Config()
 
     def decompress(self, pkg):
         if os.path.exists('./extract-package'):

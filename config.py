@@ -24,7 +24,7 @@
 import sys
 from gi.repository import GLib
 
-class AppstreamConfig:
+class Config:
 
     def __init__(self, filename='./data/fedora-appstream.conf'):
 
@@ -126,7 +126,7 @@ class AppstreamConfig:
         return add
 
 def main():
-    cfg = AppstreamConfig()
+    cfg = Config()
     print 'distro-name:\t\t', cfg.distro_name
     print 'icon-size:\t\t', cfg.icon_size
     print 'min-icon-size:\t\t', cfg.min_icon_size

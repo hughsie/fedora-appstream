@@ -28,11 +28,11 @@ import shutil
 import tarfile
 import gzip
 
-import fedoraAppstreamConfig
+import config
 
 def main():
 
-    cfg = fedoraAppstreamConfig.AppstreamConfig()
+    cfg = config.Config()
 
     application_ids = {}
 
