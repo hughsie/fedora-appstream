@@ -29,16 +29,9 @@ import sys
 import yum
 import fnmatch
 
-import config
-
-class Logger(object):
-    def __init__(self, filename="Default.log"):
-        self.terminal = sys.stdout
-        self.log = open(filename, "a")
-
-    def write(self, message):
-        self.terminal.write(message)
-        self.log.write(message)
+# internal
+from config import Config
+from logger import Logger
 
 sys.stdout = Logger("cache.txt")
 
@@ -52,7 +45,7 @@ def update(repos, reponame):
         os.makedirs('./packages')
 
     # get extra packages needed for some applications
-    cfg = config.Config()
+    cfg = Config()
     extra_packages = []
     for e in cfg.get_package_data_list():
         extra_packages.append(e[1])

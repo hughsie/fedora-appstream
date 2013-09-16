@@ -17,38 +17,17 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
 
-# Copyright (C) 2009-2013
+# Copyright (C) 2013
 #    Richard Hughes <richard@hughsie.com>
 #
 
-import glob
-import os
 import sys
-import shutil
 
-# internal
-from build import Build
-from logger import Logger
+class Logger(object):
+    def __init__(self, filename="output.log"):
+        self.terminal = sys.stdout
+        self.log = open(filename, "a")
 
-sys.stdout = Logger("build-all.txt")
-
-def main():
-
-    # remove appstream
-    if os.path.exists('./appstream'):
-        shutil.rmtree('./appstream')
-    if os.path.exists('./icons'):
-        shutil.rmtree('./icons')
-
-    files = glob.glob("./packages/*.rpm")
-    files.sort()
-
-    job = Build()
-    for f in files:
-        try:
-            job.build(f)
-        except Exception as e:
-            print 'WARNING\t', f, str(e)
-
-if __name__ == "__main__":
-    main()
+    def write(self, message):
+        self.terminal.write(message)
+        self.log.write(message)

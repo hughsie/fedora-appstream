@@ -22,11 +22,13 @@
 #
 
 import sys
+
+# internal
 from package import Package
 
 # NOTE; we could use escape() from xml.sax.saxutils import escape but that seems
 # like a big dep for such trivial functionality
-def sanitise_xml(text):
+def quote(text):
     text = text.replace("&", "&amp;")
     text = text.replace("<", "&lt;")
     text = text.replace(">", "&gt;")
@@ -52,14 +54,16 @@ class Application:
         f.write("  <application>\n")
         f.write("    <id type=\"desktop\">%s.desktop</id>\n" % self.app_id)
         f.write("    <pkgname>%s</pkgname>\n" % self.pkgname)
-        f.write("    <name>%s</name>\n" % sanitise_xml(self.names['C']))
+        f.write("    <name>%s</name>\n" % quote(self.names['C']))
         for lang in self.names:
             if lang != 'C':
-                f.write("    <name xml:lang=\"%s\">%s</name>\n" % (sanitise_xml(lang), sanitise_xml(self.names[lang])))
-        f.write("    <summary>%s</summary>\n" % sanitise_xml(self.comments['C']))
+                f.write("    <name xml:lang=\"%s\">%s</name>\n" %
+                        (quote(lang), quote(self.names[lang])))
+        f.write("    <summary>%s</summary>\n" % quote(self.comments['C']))
         for lang in self.comments:
             if lang != 'C':
-                f.write("    <summary xml:lang=\"%s\">%s</summary>\n" % (sanitise_xml(lang), sanitise_xml(self.comments[lang])))
+                f.write("    <summary xml:lang=\"%s\">%s</summary>\n" %
+                        (quote(lang), quote(self.comments[lang])))
         if self.icon:
             if self.cached_icon:
                 f.write("    <icon type=\"cached\">%s</icon>\n" % self.app_id)
@@ -85,20 +89,21 @@ class Application:
         if self.keywords:
             f.write("    <keywords>\n")
             for keyword in self.keywords:
-                f.write("      <keyword>%s</keyword>\n" % sanitise_xml(keyword))
+                f.write("      <keyword>%s</keyword>\n" % quote(keyword))
             f.write("    </keywords>\n")
         if self.mimetypes:
             f.write("    <mimetypes>\n")
             for mimetype in self.mimetypes:
-                f.write("      <mimetype>%s</mimetype>\n" % sanitise_xml(mimetype))
+                f.write("      <mimetype>%s</mimetype>\n" % quote(mimetype))
             f.write("    </mimetypes>\n")
         if self.homepage_url:
-            f.write("    <url type=\"homepage\">%s</url>\n" % sanitise_xml(self.homepage_url))
+            f.write("    <url type=\"homepage\">%s</url>\n" % quote(self.homepage_url))
         if 'C' in self.descriptions:
-            f.write("    <description>%s</description>\n" % sanitise_xml(self.descriptions['C']))
+            f.write("    <description>%s</description>\n" % quote(self.descriptions['C']))
             for lang in self.descriptions:
                 if lang != 'C':
-                    f.write("    <description xml:lang=\"%s\">%s</description>\n" % (sanitise_xml(lang), sanitise_xml(self.descriptions[lang])))
+                    f.write("    <description xml:lang=\"%s\">%s</description>\n" %
+                            (quote(lang), quote(self.descriptions[lang])))
         f.write("  </application>\n")
 
 def main():

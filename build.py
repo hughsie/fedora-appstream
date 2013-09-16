@@ -24,7 +24,6 @@
 #    Florian Festi <ffesti@redhat.com>
 #
 
-import ConfigParser
 import glob
 import os
 import shutil
@@ -33,43 +32,44 @@ import sys
 import tarfile
 import fnmatch
 
-import fedoraAppstreamPkg
-import appdata
-import config
-
+# internal
+from package import Package
+from appdata import AppData
+from config import Config
 from desktop_file import DesktopFile
+
+def package_decompress(pkg):
+    if os.path.exists('./extract-package'):
+        p = subprocess.Popen(['./extract-package', pkg.filename, 'tmp'],
+                             cwd='.', stdout=subprocess.PIPE)
+        p.wait()
+        if p.returncode:
+            raise StandardError('Cannot extract package: ' + p.stdout)
+    else:
+        wildcards = []
+        if not os.getenv('APPSTREAM_DEBUG'):
+            wildcards.append('./usr/share/applications/*.desktop')
+            wildcards.append('./usr/share/applications/kde4/*.desktop')
+            wildcards.append('./usr/share/appdata/*.xml')
+            wildcards.append('./usr/share/icons/hicolor/*/apps/*')
+            wildcards.append('./usr/share/pixmaps/*.*')
+            wildcards.append('./usr/share/icons/*.*')
+            wildcards.append('./usr/share/*/images/*')
+            pkg.extract('./tmp', wildcards)
+        else:
+            wildcards.append('./*/*.*')
+            pkg.extract('./tmp', wildcards)
 
 class Build:
 
     def __init__(self):
-        self.cfg = config.Config()
-
-    def decompress(self, pkg):
-        if os.path.exists('./extract-package'):
-            p = subprocess.Popen(['./extract-package', pkg.filename, 'tmp'], cwd='.', stdout=subprocess.PIPE)
-            p.wait()
-            if p.returncode:
-                raise StandardError('Cannot extract package: ' + p.stdout)
-        else:
-            wildcards = []
-            if not os.getenv('APPSTREAM_DEBUG'):
-                wildcards.append('./usr/share/applications/*.desktop')
-                wildcards.append('./usr/share/applications/kde4/*.desktop')
-                wildcards.append('./usr/share/appdata/*.xml')
-                wildcards.append('./usr/share/icons/hicolor/*/apps/*')
-                wildcards.append('./usr/share/pixmaps/*.*')
-                wildcards.append('./usr/share/icons/*.*')
-                wildcards.append('./usr/share/*/images/*')
-                pkg.extract('./tmp', wildcards)
-            else:
-                wildcards.append('./*/*.*')
-                pkg.extract('./tmp', wildcards)
+        self.cfg = Config()
 
     def build(self, filename):
 
         # check the package has .desktop files
         print 'SOURCE\t', filename
-        pkg = fedoraAppstreamPkg.AppstreamPkg(filename)
+        pkg = Package(filename)
         if not pkg.contains_desktop_file:
             print 'IGNORE\t', filename, '\t', "no desktop files"
             return
@@ -90,7 +90,7 @@ class Build:
         os.makedirs('./tmp')
 
         # decompress main file and search for desktop files
-        self.decompress(pkg)
+        package_decompress(pkg)
         files = []
         files.extend(glob.glob("./tmp/usr/share/applications/*.desktop"))
         files.extend(glob.glob("./tmp/usr/share/applications/kde4/*.desktop"))
@@ -98,14 +98,13 @@ class Build:
 
         # we only need to install additional files if we're not running on
         # the builders
-        decompress_files = [ filename ]
         for c in self.cfg.get_package_data_list():
             if fnmatch.fnmatch(pkg.name, c[0]):
                 extra_files = glob.glob("./packages/%s*.rpm" % c[1])
                 for f in extra_files:
-                    extra_pkg = fedoraAppstreamPkg.AppstreamPkg(f)
+                    extra_pkg = Package(f)
                     print "INFO\tAdding extra package %s for %s" % (extra_pkg.name, pkg.name)
-                    self.decompress(extra_pkg)
+                    package_decompress(extra_pkg)
 
         # open the AppStream file for writing
         xml_output_file = './appstream/' + pkg.name + '.xml'
@@ -130,7 +129,7 @@ class Build:
             blacklisted = False
             for b in self.cfg.get_id_blacklist():
                 if fnmatch.fnmatch(app.app_id, b):
-                    print 'IGNORE\t', f, '\t', "application is blacklisted:", app_id
+                    print 'IGNORE\t', f, '\t', "application is blacklisted:", app.app_id
                     blacklisted = True
                     break
             if blacklisted:
@@ -139,7 +138,7 @@ class Build:
             # packages that ship .desktop files in /usr/share/applications
             # *and* /usr/share/applications/kde4 do not need multiple entries
             if app.app_id in application_ids:
-                print 'IGNORE\t', f, '\t', app_id, 'duplicate ID in package'
+                print 'IGNORE\t', f, '\t', app.app_id, 'duplicate ID in package'
                 continue
             application_ids.append(app.app_id)
 
@@ -160,22 +159,24 @@ class Build:
 
             # need to extract details
             if os.path.exists(appdata_file):
-                data = appdata.AppData()
+                data = AppData()
                 data.extract(appdata_file)
 
                 # check the id matches
                 if data.get_id() != app.app_id:
-                    raise StandardError('The AppData id does not match: ' + app_id)
+                    raise StandardError('The AppData id does not match: ' + app.app_id)
 
                 # check the licence is okay
                 if data.get_licence() not in self.cfg.get_content_licences():
-                    raise StandardError('The AppData licence is not okay for ' + app_id + ': \'' + data.get_licence() + '\'')
+                    raise StandardError('The AppData licence is not okay for ' +
+                                        app.app_id + ': \'' +
+                                        data.get_licence() + '\'')
 
                 # get optional bits
                 tmp = data.get_url()
                 if tmp:
-                    homepage_url = tmp
-                descriptions = data.get_descriptions()
+                    app.homepage_url = tmp
+                app.descriptions = data.get_descriptions()
 
             # we got something useful
             if not has_valid_content:

@@ -23,7 +23,6 @@
 
 import glob
 import os
-import gzip
 import shutil
 import tarfile
 import gzip
@@ -66,7 +65,7 @@ def main():
                     print 'Duplicate ID', app_id, 'detected in', f, 'and', found, 'ignoring'
                 application_ids[app_id] = f
         if is_dupe:
-            continue;
+            continue
 
         # TODO: such a hack, but it's so quick....
         s = s.replace('<?xml version="1.0"?>\n', '')

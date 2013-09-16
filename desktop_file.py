@@ -27,11 +27,12 @@ import re
 import fnmatch
 import cairo
 
+from PIL import Image, ImageOps
+from gi.repository import GdkPixbuf, GLib, Rsvg
+
+# internal
 from application import Application
 from package import Package
-
-from PIL import Image, ImageOps
-from gi.repository import GdkPixbuf, Gdk, GLib, Rsvg
 
 class DesktopFile(Application):
 
@@ -39,8 +40,8 @@ class DesktopFile(Application):
 
         # get ending
         ext = icon.rsplit('.', 1)[1]
-        size = self.cfg.icon_size;
-        min_size = self.cfg.min_icon_size;
+        size = self.cfg.icon_size
+        min_size = self.cfg.min_icon_size
 
         # use GDK to process XPM files
         gdk_exts = [ 'xpm', 'ico' ]
@@ -58,7 +59,8 @@ class DesktopFile(Application):
             im = Image.open(icon)
             width, height = im.size
             if width < min_size or height < min_size:
-                raise StandardError('Icon too small to process (' + str(width) + 'px)')
+                raise StandardError('Icon too small to process (' +
+                                    str(width) + 'px)')
 
             # do not resize, just add a transparent border
             if width <= size and height <= size:
@@ -77,7 +79,8 @@ class DesktopFile(Application):
             img = cairo.ImageSurface(cairo.FORMAT_ARGB32, size, size)
             ctx = cairo.Context(img)
             handler = Rsvg.Handle.new_from_file(icon)
-            ctx.scale(float(64) / handler.props.width, float(size) / handler.props.height)
+            ctx.scale(float(64) / handler.props.width,
+                      float(size) / handler.props.height)
             handler.render_cairo(ctx)
             img.write_to_png(filename)
             return
@@ -188,7 +191,7 @@ class DesktopFile(Application):
                         blacklisted = True
                         break
         if blacklisted:
-            return False;
+            return False
 
         # do we have to add any categories
         if self.categories:
@@ -197,9 +200,9 @@ class DesktopFile(Application):
                 # check it's not been added upstream
                 for cat in cats_to_add:
                     if cat in self.categories:
-                        print 'WARNING\t' + app_id + ' now includes category ' + cat
+                        print 'WARNING\t' + self.app_id + ' now includes category ' + cat
                     else:
-                        print 'INFO\tFor ' + app_id + ' manually adding category', cat
+                        print 'INFO\tFor ' + self.app_id + ' manually adding category', cat
                 self.categories.extend(cats_to_add)
 
         # check icon exists
