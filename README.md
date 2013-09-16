@@ -24,7 +24,7 @@ fedora-compose.py
  * Outputs appstream.xml.gz
  * TODO: outputs appstream-icons.tar
 
-fedoraAppstreamCache.py f20 "fedora,fedora-updates"
+fedora-download-cache.py f20 "fedora,fedora-updates"
 ---
  * Creates ./packages
  * Only used when making standalone metadata using existing repos
