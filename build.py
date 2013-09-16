@@ -39,7 +39,7 @@ import config
 
 from desktop_file import DesktopFile
 
-class AppstreamBuild:
+class Build:
 
     def __init__(self):
         self.cfg = config.Config()
@@ -206,7 +206,7 @@ class AppstreamBuild:
             shutil.rmtree('./icons')
 
 def main():
-    job = AppstreamBuild()
+    job = Build()
     for fn in sys.argv[1:]:
         job.build(fn)
     sys.exit(0)

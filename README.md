@@ -3,7 +3,7 @@ fedora-appstream
 
 AppStream tools for Fedora
 
-fedoraAppstreamBuildPkg.py pkgs/tr-1.0-1.fc20.rpm
+build.py pkgs/tr-1.0-1.fc20.rpm
 ---
  * Creates ./appstream
  * Creates ./icons

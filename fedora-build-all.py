@@ -25,7 +25,9 @@ import glob
 import os
 import sys
 import shutil
-import fedoraAppstreamBuildPkg
+
+import Build from build
+
 from subprocess import call
 
 class Logger(object):
