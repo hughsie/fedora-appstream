@@ -75,6 +75,14 @@ class AppstreamConfig:
             pass
         return blacklist
 
+    def get_interesting_installed_files(self):
+        data = []
+        try:
+            data = self._config.get_string_list(self._group_name, 'InterestingInstalledFiles')
+        except Exception as e:
+            pass
+        return data
+
     def get_preferred_icon_sizes(self):
         prefs = []
         try:
@@ -123,6 +131,7 @@ def main():
     print 'icon-size:\t\t', cfg.icon_size
     print 'min-icon-size:\t\t', cfg.min_icon_size
     print 'preferred-sizes:\t', cfg.get_preferred_icon_sizes()
+    print 'interesting-installed-files:\t', cfg.get_interesting_installed_files()
     print 'content-licences:\t', cfg.get_content_licences()
     print 'ignore-categories:\t', cfg.get_category_ignore_list()
     print 'blacklist-categories:\t', cfg.get_category_blacklist()

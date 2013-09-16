@@ -27,6 +27,7 @@ import rpm
 import rpmUtils
 import sys
 import yum
+import fnmatch
 
 import fedoraAppstreamConfig
 
@@ -102,13 +103,15 @@ def update(repos, reponame):
         repo = yb.repos.getRepo(pkg.repoid)
 
         # find out if any of the files ship a desktop file
-        desktop_files = []
+        interesting_files = []
         for instfile in pkg.returnFileEntries():
-            if instfile.startswith('/usr/share/applications/') and instfile.endswith('.desktop'):
-                desktop_files.append(instfile[24:])
+            for match in cfg.get_interesting_installed_files():
+                if fnmatch.fnmatch(instfile, match):
+                    interesting_files.append(instfile)
+                    break
 
         # don't download packages without desktop files
-        if len(desktop_files) == 0 and pkg.name not in extra_packages:
+        if len(interesting_files) == 0 and pkg.name not in extra_packages:
             continue
 
         # get base name without the slash
