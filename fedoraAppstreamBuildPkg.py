@@ -26,126 +26,23 @@
 
 import ConfigParser
 import glob
-from PIL import Image, ImageOps
 import os
 import shutil
 import subprocess
 import sys
 import tarfile
 import fnmatch
-import re
-from gi.repository import GdkPixbuf, Gdk, GLib, Rsvg
-
-import cairo
 
 import fedoraAppstreamData
 import fedoraAppstreamPkg
 import fedoraAppstreamConfig
 
-# NOTE; we could use escape() from xml.sax.saxutils import escape but that seems
-# like a big dep for such trivial functionality
-def sanitise_xml(text):
-    text = text.replace("&", "&amp;")
-    text = text.replace("<", "&lt;")
-    text = text.replace(">", "&gt;")
-    return text
-
-def _to_utf8(txt, errors='replace'):
-    if isinstance(txt, str):
-        return txt
-    if isinstance(txt, unicode):
-        return txt.encode('utf-8', errors=errors)
-    return str(txt)
+from desktop_file import DesktopFile
 
 class AppstreamBuild:
 
     def __init__(self):
         self.cfg = fedoraAppstreamConfig.AppstreamConfig()
-
-    def resize_icon(self, icon, filename):
-
-        # get ending
-        ext = icon.rsplit('.', 1)[1]
-        size = self.cfg.icon_size;
-        min_size = self.cfg.min_icon_size;
-
-        # use GDK to process XPM files
-        gdk_exts = [ 'xpm', 'ico' ]
-        if ext in gdk_exts:
-            pixbuf = GdkPixbuf.Pixbuf.new_from_file(icon)
-            if pixbuf.get_width() < min_size or pixbuf.get_height() < min_size:
-                raise StandardError('Icon too small to process')
-            pixbuf = GdkPixbuf.Pixbuf.new_from_file_at_size(icon, size, size)
-            pixbuf.savev(filename, "png", [], [])
-            return
-
-        # use PIL to resize PNG files
-        pil_exts = [ 'png', 'gif' ]
-        if ext in pil_exts:
-            im = Image.open(icon)
-            width, height = im.size
-            if width < min_size or height < min_size:
-                raise StandardError('Icon too small to process (' + str(width) + 'px)')
-
-            # do not resize, just add a transparent border
-            if width <= size and height <= size:
-                bwidth = (size - width) / 2
-                im = ImageOps.expand(im, border=bwidth)
-                im.save(filename, 'png')
-                return
-
-            im = im.resize((size, size), Image.ANTIALIAS)
-            im.save(filename, 'png')
-            return
-
-        # use RSVG to write PNG file
-        rsvg_exts = [ 'svg' ]
-        if ext in rsvg_exts:
-            img = cairo.ImageSurface(cairo.FORMAT_ARGB32, size, size)
-            ctx = cairo.Context(img)
-            handler = Rsvg.Handle.new_from_file(icon)
-            ctx.scale(float(64) / handler.props.width, float(size) / handler.props.height)
-            handler.render_cairo(ctx)
-            img.write_to_png(filename)
-            return
-        return
-
-    def write_appstream_icon(self, icon, filename):
-
-        # we can handle these sorts of files
-        supported_ext = [ '.png', '.svg', '.xpm' ]
-
-        # remove any extension we recognise
-        if not icon.startswith('/'):
-            icon_split = icon.rsplit('.', 1)
-            if len(icon_split) == 2:
-                if '.' + icon_split[1] in supported_ext:
-                    icon = icon_split[0]
-
-        # fully qualified path
-        icon_fullpath = './tmp/' + icon
-        if os.path.exists(icon_fullpath):
-            self.resize_icon(icon_fullpath, filename)
-            return
-
-        # hicolor apps
-        icon_sizes = self.cfg.get_preferred_icon_sizes()
-        for s in icon_sizes:
-            for ext in supported_ext:
-                icon_fullpath = './tmp/usr/share/icons/hicolor/' + s + '/apps/' + icon + ext
-                if os.path.isfile(icon_fullpath):
-                    self.resize_icon(icon_fullpath, filename)
-                    return
-
-        # pixmap
-        for location in [ 'pixmaps', 'icons' ]:
-            for ext in supported_ext:
-                icon_fullpath = './tmp/usr/share/' + location + '/' + icon + ext
-                if os.path.isfile(icon_fullpath):
-                    self.resize_icon(icon_fullpath, filename)
-                    return
-
-        return
 
     def decompress(self, pkg):
         if os.path.exists('./extract-package'):
@@ -211,141 +108,48 @@ class AppstreamBuild:
                     self.decompress(extra_pkg)
 
         # open the AppStream file for writing
-        has_header = False
         xml_output_file = './appstream/' + pkg.name + '.xml'
         xml = open(xml_output_file, 'w')
+        xml.write("<?xml version=\"1.0\"?>\n")
+        xml.write("<applications version=\"0.1\">\n")
 
         # check for duplicate apps in the package
         application_ids = []
+        has_valid_content = False
 
         # process each desktop file in the original package
         for f in files:
-            config = GLib.KeyFile()
-            config.load_from_file(f, GLib.KeyFileFlags.KEEP_TRANSLATIONS)
-
-            # optional
-            names = {}
-            categories = None
-            descriptions = {}
-            comments = {}
-            mimetypes = None
-            homepage_url = pkg.homepage_url
-            icon = None
-            keywords = None
-            icon_fullpath = None
-            skip = False
-            DG = GLib.KEY_FILE_DESKTOP_GROUP
-            keys, _ = config.get_keys(DG)
-            for k in keys:
-                if k == GLib.KEY_FILE_DESKTOP_KEY_NO_DISPLAY and config.get_boolean(DG, k):
-                    print 'IGNORE\t', f, '\t', "not included in the menu"
-                    skip = True
-                    break
-                elif k == GLib.KEY_FILE_DESKTOP_KEY_TYPE and \
-                     config.get_string(DG, k) != GLib.KEY_FILE_DESKTOP_TYPE_APPLICATION:
-                    print 'IGNORE\t', f, '\t', "not an application"
-                    skip = True
-                    break
-                elif k.startswith(GLib.KEY_FILE_DESKTOP_KEY_NAME):
-                    m = re.match(GLib.KEY_FILE_DESKTOP_KEY_NAME + '\[([^\]]+)\]', k)
-                    if m:
-                        names[m.group(1)] = config.get_string(DG, k)
-                    else:
-                        names['C'] = config.get_string(DG, k)
-                elif k.startswith(GLib.KEY_FILE_DESKTOP_KEY_COMMENT):
-                    m = re.match(GLib.KEY_FILE_DESKTOP_KEY_COMMENT + '\[([^\]]+)\]', k)
-                    if m:
-                        comments[m.group(1)] = config.get_string(DG, k)
-                    else:
-                        comments['C'] = config.get_string(DG, k)
-                elif k == GLib.KEY_FILE_DESKTOP_KEY_ICON:
-                    icon = config.get_string(DG, k)
-                    if icon:
-                        icon = icon.strip()
-                elif k == GLib.KEY_FILE_DESKTOP_KEY_CATEGORIES:
-                    categories = config.get_string_list(DG, k)
-                elif k == 'Keywords':
-                    keywords = config.get_string_list(DG, k)
-                elif k == 'MimeType':
-                    mimetypes = config.get_string_list(DG, k)
-
-            if skip:
-                continue
-
-            # Do not include apps without a Name
-            if not 'C' in names:
-                print 'IGNORE\t', f, '\t', "no Name"
-                continue
-
-            # Do not include apps without a Comment
-            if not 'C' in comments:
-                print 'IGNORE\t', f, '\t', "no Comment"
-                continue
-
-            if not icon:
-                print 'IGNORE\t', f, '\t', "Icon unspecified"
-                continue
-
-            # We blacklist some apps by categories
-            blacklisted = False
-            if categories:
-                for c in categories:
-                    for b in self.cfg.get_category_blacklist():
-                        if fnmatch.fnmatch(c, b):
-                            print 'IGNORE\t', f, '\tcategory is blacklisted:', c
-                            blacklisted = True
-                            break
-            if blacklisted:
-                continue;
-
-            basename = f.split("/")[-1]
-            app_id = basename.replace('.desktop', '')
-
-            # check icon exists
-            if icon not in self.cfg.get_stock_icons():
-                icon_fullpath = './icons/' + app_id + '.png'
-                try:
-                    self.write_appstream_icon(icon, icon_fullpath)
-                except Exception as e:
-                    print 'IGNORE\t', f, '\t', "icon is corrupt:", icon, str(e)
-                    continue
-                if not os.path.exists(icon_fullpath):
-                    print 'IGNORE\t', f, '\t', "icon does not exist:", icon
-                    continue
 
             print 'PROCESS\t', f
 
-            # packages that ship .desktop files in /usr/share/applications
-            # *and* /usr/share/applications/kde4 do not need multiple entries
-            if app_id in application_ids:
-                print 'IGNORE\t', f, '\t', app_id, 'duplicate ID in package'
-                continue
-            application_ids.append(app_id)
-
-            # do we have to add any categories
-            if categories:
-                cats_to_add = self.cfg.get_category_extra_for_id(app_id)
-                if cats_to_add:
-                    # check it's not been added upstream
-                    for cat in cats_to_add:
-                        if cat in categories:
-                            print 'WARNING\t' + app_id + ' now includes category ' + cat
-                        else:
-                            print 'INFO\tFor ' + app_id + ' manually adding category', cat
-                    categories.extend(cats_to_add)
+            app = DesktopFile(pkg, self.cfg)
+            basename = f.split("/")[-1]
+            app.app_id = basename.replace('.desktop', '')
 
             # application is blacklisted
+            blacklisted = False
             for b in self.cfg.get_id_blacklist():
-                if fnmatch.fnmatch(app_id, b):
+                if fnmatch.fnmatch(app.app_id, b):
                     print 'IGNORE\t', f, '\t', "application is blacklisted:", app_id
                     blacklisted = True
                     break
             if blacklisted:
-                continue;
+                continue
+
+            # packages that ship .desktop files in /usr/share/applications
+            # *and* /usr/share/applications/kde4 do not need multiple entries
+            if app.app_id in application_ids:
+                print 'IGNORE\t', f, '\t', app_id, 'duplicate ID in package'
+                continue
+            application_ids.append(app.app_id)
+
+            # parse desktop file
+            if not app.parse_file(f):
+                continue
 
             # do we have an AppData file?
-            appdata_file = './tmp/usr/share/appdata/' + app_id + '.appdata.xml'
-            appdata_extra_file = './appdata-extra/' + app_id + '.appdata.xml'
+            appdata_file = './tmp/usr/share/appdata/' + app.app_id + '.appdata.xml'
+            appdata_extra_file = './appdata-extra/' + app.app_id + '.appdata.xml'
             if os.path.exists(appdata_file) and os.path.exists(appdata_extra_file):
                 print 'DELETE\t', appdata_extra_file, 'as upstream AppData file exists'
                 os.remove(appdata_extra_file)
@@ -360,7 +164,7 @@ class AppstreamBuild:
                 data.extract(appdata_file)
 
                 # check the id matches
-                if data.get_id() != app_id:
+                if data.get_id() != app.app_id:
                     raise StandardError('The AppData id does not match: ' + app_id)
 
                 # check the licence is okay
@@ -373,73 +177,21 @@ class AppstreamBuild:
                     homepage_url = tmp
                 descriptions = data.get_descriptions()
 
-            # write header
-            if not has_header:
-                print 'WRITING\t', xml_output_file
-                xml.write("<?xml version=\"1.0\"?>\n")
-                xml.write("<applications version=\"0.1\">\n")
-                has_header = True
+            # we got something useful
+            if not has_valid_content:
+                has_valid_content = True
 
             # write content
-            xml.write("  <application>\n")
-            xml.write("    <id type=\"desktop\">%s</id>\n" % basename)
-            xml.write("    <pkgname>%s</pkgname>\n" % pkg.name)
-            xml.write("    <name>%s</name>\n" % sanitise_xml(names['C']))
-            for lang in names:
-                if lang != 'C':
-                    xml.write("    <name xml:lang=\"%s\">%s</name>\n" % (sanitise_xml(lang), sanitise_xml(names[lang])))
-            xml.write("    <summary>%s</summary>\n" % sanitise_xml(comments['C']))
-            for lang in comments:
-                if lang != 'C':
-                    xml.write("    <summary xml:lang=\"%s\">%s</summary>\n" % (sanitise_xml(lang), sanitise_xml(comments[lang])))
-            if icon_fullpath:
-                xml.write("    <icon type=\"cached\">%s</icon>\n" % app_id)
-            else:
-                xml.write("    <icon type=\"stock\">%s</icon>\n" % icon)
-            if categories:
-                xml.write("    <appcategories>\n")
-                # check for a common problem
-                if 'AudioVideo' in categories:
-                    if not 'Audio' in categories and not 'Video' in categories:
-                        print 'WARNING\t', f, '\tHas AudioVideo but not Audio or Video'
-                        categories.extend(['Audio', 'Video'])
-                for cat in categories:
-                    if cat in self.cfg.get_category_ignore_list():
-                        continue
-                    if cat.startswith('X-'):
-                        continue
-                    # simple substitution
-                    if cat == 'Feed':
-                        cat = 'News'
-                    xml.write("      <appcategory>%s</appcategory>\n" % cat)
-                xml.write("    </appcategories>\n")
-            if keywords:
-                xml.write("    <keywords>\n")
-                for keyword in keywords:
-                    xml.write("      <keyword>%s</keyword>\n" % sanitise_xml(keyword))
-                xml.write("    </keywords>\n")
-            if mimetypes:
-                xml.write("    <mimetypes>\n")
-                for mimetype in mimetypes:
-                    xml.write("      <mimetype>%s</mimetype>\n" % sanitise_xml(mimetype))
-                xml.write("    </mimetypes>\n")
-            if homepage_url:
-                xml.write("    <url type=\"homepage\">%s</url>\n" % sanitise_xml(homepage_url))
-            if 'C' in descriptions:
-                xml.write("    <description>%s</description>\n" % sanitise_xml(descriptions['C']))
-                for lang in descriptions:
-                    if lang != 'C':
-                        xml.write("    <description xml:lang=\"%s\">%s</description>\n" % (sanitise_xml(lang), sanitise_xml(descriptions[lang])))
-            xml.write("  </application>\n")
+            app.write(xml)
 
         # create AppStream XML
         xml.write("</applications>\n")
         xml.close()
-        if not has_header:
+        if not has_valid_content:
             os.remove(xml_output_file)
 
         # create AppStream icon tar
-        if has_header:
+        if has_valid_content:
             output_file = "./appstream/%s-icons.tar" % pkg.name
             print 'WRITING\t', output_file
             tar = tarfile.open(output_file, "w")

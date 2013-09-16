@@ -59,7 +59,7 @@ class LZMA:
         self.leftover = self.leftover[size:]
         return result
 
-class AppstreamPkg:
+class Package:
 
     def __init__(self, filename):
         self.contains_desktop_file = False
@@ -99,7 +99,7 @@ class AppstreamPkg:
         return files
 
 def main():
-    pkg = AppstreamPkg(sys.argv[1])
+    pkg = Package(sys.argv[1])
     print 'name:\t\t', pkg.name
     print 'is-app:\t\t', pkg.contains_desktop_file
     print 'decompressed:\t', pkg.extract('/tmp', [ './usr/share/applications/*.desktop' ])
