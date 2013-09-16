@@ -17,7 +17,7 @@ fedoraAppstreamBuildPkg.py pkgs/tr-1.0-1.fc20.rpm
  * Outputs appstream/tuxracer-icons.tar
  * Deletes ./tmp and all contents
 
-fedoraAppstreamCompose.py
+fedora-compose.py
 ---
  * Designed to be run on distro compose/mash
  * Joins all the appstream/*.xml files
