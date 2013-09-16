@@ -33,7 +33,7 @@ fedora-download-cache.py f20 "fedora,fedora-updates"
  * *TODO: needs to also download other things from the srpm*
  * Deletes any obsolete or removed packages
 
-fedoraAppstreamBuildAll.py
+fedora-build-all.py
 ---
  * Only used when making standalone metadata using existing repos
  * Deletes ./appstream and all contents
