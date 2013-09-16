@@ -35,7 +35,7 @@ def _to_utf8(txt, errors='replace'):
         return txt.encode('utf-8', errors=errors)
     return str(txt)
 
-class AppstreamData:
+class AppData:
 
     def __init__(self):
         self.root = None
@@ -54,10 +54,10 @@ class AppstreamData:
         return self.root.find("licence").text
     def get_screenshot(self):
         ss = self.root.find("screenshots")
-        if ss:
+        if ss is not None:
             # just return the fist one found
             s = ss.find('screenshot')
-            if s:
+            if s is not None:
                 return s.text
 
     def _append_for_lang(self, descriptions, lang, content):
@@ -102,13 +102,13 @@ class AppstreamData:
         return self.root.find("url").text
 
 def main():
-    data = AppstreamData()
+    data = AppData()
     data.extract(sys.argv[1])
     print 'id:\t\t', data.get_id()
     print 'licence:\t', data.get_licence()
     print 'url:\t\t', data.get_url()
     print 'screenshot:\t\t', data.get_screenshot()
-    print 'description:\t', data.get_description()
+    print 'description:\t', data.get_descriptions()
     print 'END'
     sys.exit(0)
 

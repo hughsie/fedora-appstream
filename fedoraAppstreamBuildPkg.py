@@ -33,8 +33,8 @@ import sys
 import tarfile
 import fnmatch
 
-import fedoraAppstreamData
 import fedoraAppstreamPkg
+import appdata
 import config
 
 from desktop_file import DesktopFile
@@ -160,7 +160,7 @@ class AppstreamBuild:
 
             # need to extract details
             if os.path.exists(appdata_file):
-                data = fedoraAppstreamData.AppstreamData()
+                data = appdata.AppData()
                 data.extract(appdata_file)
 
                 # check the id matches
