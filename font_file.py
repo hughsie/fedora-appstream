@@ -31,15 +31,13 @@ from PIL import Image, ImageOps, ImageFont, ImageDraw, ImageChops
 from application import Application
 from package import Package
 
-def autocrop(im, bgcolor):
-    if im.mode != "RGB":
-        im = im.convert("RGB")
-        bg = Image.new("RGB", im.size, bgcolor)
-        diff = ImageChops.difference(im, bg)
-        bbox = diff.getbbox()
-        if bbox:
-            return im.crop(bbox)
-    return None # no contents
+def autocrop(im):
+    bg = Image.new("RGBA", im.size)
+    diff = ImageChops.difference(im, bg)
+    bbox = diff.getbbox()
+    if bbox:
+        return im.crop(bbox)
+    return None
 
 def get_font_name(font):
     """Get the short name from the font's names table"""
@@ -69,18 +67,18 @@ class FontFile(Application):
         img_size_temp = (256, 256)
         bg_color = (255,255,255)
         fg_color = (0,0,0)
-        im_temp = Image.new("RGBA", img_size_temp, bg_color)
+        im_temp = Image.new("RGBA", img_size_temp)
         draw = ImageDraw.Draw(im_temp)
         font = ImageFont.truetype(font, 160)
         draw.text((20, 20), "Aa", fg_color, font=font)
 
         # crop to the smallest size
-        im_temp = autocrop(im_temp, bg_color)
+        im_temp = autocrop(im_temp)
         if not im_temp:
             return False
 
         # create a new image and paste the cropped image into the center
-        img = Image.new('RGBA', img_size_temp, bg_color)
+        img = Image.new('RGBA', img_size_temp)
         img_w, img_h = im_temp.size
         bg_w, bg_h = img.size
         offset = ((bg_w - img_w) / 2, (bg_h - img_h) / 2)
