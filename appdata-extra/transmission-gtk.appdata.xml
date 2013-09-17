@@ -22,6 +22,7 @@ Full encryption, DHTµTP, PEX and Magnet Link support.
 <screenshots>
 <screenshot type="default">http://www.transmissionbt.com/images/screenshots/GTK-Large.jpg</screenshot>
 </screenshots>
-<!-- FIXME: change this to an upstream email address for spec updates -->
+<!-- FIXME: change this to an upstream email address for spec updates
 <updatecontact>someone_who_cares@upstream_project.org</updatecontact>
+ -->
 </application>

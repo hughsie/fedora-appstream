@@ -21,6 +21,7 @@ performs format conversions on the fly.
 <!-- FIXME: Needs an official up to date screenshot -->
 <screenshot type="default">http://www.abisource.com/screenshots/AbiWord-2.0-Gnome.png</screenshot>
 </screenshots>
-<!-- FIXME: change this to an upstream email address for spec updates -->
+<!-- FIXME: change this to an upstream email address for spec updates
 <updatecontact>someone_who_cares@upstream_project.org</updatecontact>
+ -->
 </application>

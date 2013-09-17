@@ -19,6 +19,7 @@ you want and share them with others.
 <!-- FIXME: Needs an official up to date screenshot -->
 <screenshot type="default">https://projects.gnome.org/cheese/data/screenshots/cheese-2.28.0-main.jpg</screenshot>
 </screenshots>
-<!-- FIXME: change this to an upstream email address for spec updates -->
+<!-- FIXME: change this to an upstream email address for spec updates
 <updatecontact>someone_who_cares@upstream_project.org</updatecontact>
+ -->
 </application>

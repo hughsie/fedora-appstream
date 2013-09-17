@@ -15,6 +15,7 @@ URL shortening, and integration with online image services.
 <screenshots>
 <screenshot type="default">http://hotot.org/theme/lunar/static/gallery/feature/preview_media.png</screenshot>
 </screenshots>
-<!-- FIXME: change this to an upstream email address for spec updates -->
+<!-- FIXME: change this to an upstream email address for spec updates
 <updatecontact>someone_who_cares@upstream_project.org</updatecontact>
+ -->
 </application>

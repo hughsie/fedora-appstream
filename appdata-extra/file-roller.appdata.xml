@@ -21,6 +21,7 @@ With Archive Manager you can:
 <!-- FIXME: Needs an official up to date screenshot -->
 <screenshot type="default">http://fileroller.sourceforge.net/imgs/s1.png</screenshot>
 </screenshots>
-<!-- FIXME: change this to an upstream email address for spec updates -->
+<!-- FIXME: change this to an upstream email address for spec updates
 <updatecontact>someone_who_cares@upstream_project.org</updatecontact>
+ -->
 </application>

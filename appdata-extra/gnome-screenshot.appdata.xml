@@ -26,6 +26,7 @@ selected window.
 <screenshot type="default">http://www.FIXME/FIXMEFIXMEFIXME.jpg</screenshot>
 </screenshots>
 -->
-<!-- FIXME: change this to an upstream email address for spec updates -->
+<!-- FIXME: change this to an upstream email address for spec updates
 <updatecontact>someone_who_cares@upstream_project.org</updatecontact>
+ -->
 </application>

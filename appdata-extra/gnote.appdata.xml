@@ -15,6 +15,7 @@ Synchronization support is being worked on.
 <!-- FIXME: Needs an official up to date screenshot -->
 <screenshot type="default">https://extensions.gnome.org/static/extension-data/screenshots/screenshot_671_1.png</screenshot>
 </screenshots>
-<!-- FIXME: change this to an upstream email address for spec updates -->
+<!-- FIXME: change this to an upstream email address for spec updates
 <updatecontact>someone_who_cares@upstream_project.org</updatecontact>
+ -->
 </application>

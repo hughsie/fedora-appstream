@@ -11,7 +11,7 @@ Spanish or add other online dictionaries to suit your needs.
 </description>
 <url type="homepage">https://wiki.gnome.org/Dictionary</url>
 <screenshots>
-<screenshot type="default">https://wiki.gnome.org/Dictionary?action=AttachFile&do=get&target=Dictionary-window.png</screenshot>
+<screenshot type="default">https://wiki.gnome.org/Dictionary?action=AttachFile&amp;do=get&amp;target=Dictionary-window.png</screenshot>
 </screenshots>
 <updatecontact>sindhus@live.in</updatecontact>
 </application>

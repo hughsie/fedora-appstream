@@ -21,6 +21,7 @@ Geary is designed to integrate with the GNOME desktop and is completely free.
 <screenshots>
 <screenshot type="default">http://www.yorba.org/wp-content/uploads/2013/03/geary_main.png</screenshot>
 </screenshots>
-<!-- FIXME: change this to an upstream email address for spec updates -->
+<!-- FIXME: change this to an upstream email address for spec updates
 <updatecontact>someone_who_cares@upstream_project.org</updatecontact>
+ -->
 </application>
