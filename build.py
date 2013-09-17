@@ -31,12 +31,14 @@ import subprocess
 import sys
 import tarfile
 import fnmatch
+from gi.repository import Gio
 
 # internal
 from package import Package
 from appdata import AppData
 from config import Config
 from desktop_file import DesktopFile
+from font_file import FontFile
 
 def package_decompress(pkg):
     if os.path.exists('./extract-package'):
@@ -70,8 +72,8 @@ class Build:
         # check the package has .desktop files
         print 'SOURCE\t', filename
         pkg = Package(filename)
-        if not pkg.contains_desktop_file:
-            print 'IGNORE\t', filename, '\t', "no desktop files"
+        if not pkg.contains_desktop_file and not pkg.contains_font_file:
+            print 'IGNORE\t', filename, '\t', "no interesting files"
             return
 
         for b in self.cfg.get_package_blacklist():
@@ -92,8 +94,8 @@ class Build:
         # decompress main file and search for desktop files
         package_decompress(pkg)
         files = []
-        files.extend(glob.glob("./tmp/usr/share/applications/*.desktop"))
-        files.extend(glob.glob("./tmp/usr/share/applications/kde4/*.desktop"))
+        for f in self.cfg.get_interesting_installed_files():
+            files.extend(glob.glob("./tmp" + f))
         files.sort()
 
         # we only need to install additional files if we're not running on
@@ -121,9 +123,26 @@ class Build:
 
             print 'PROCESS\t', f
 
-            app = DesktopFile(pkg, self.cfg)
-            basename = f.split("/")[-1]
-            app.app_id = basename.replace('.desktop', '')
+            fi = Gio.file_new_for_path(f)
+            info = fi.query_info('standard::content-type', 0, None)
+
+            # create the right object depending on the content type
+            content_type = info.get_content_type()
+            if content_type == 'inode/symlink':
+                continue
+            if content_type == 'application/x-font-ttf':
+                app = FontFile(pkg, self.cfg)
+            elif content_type == 'application/x-font-otf':
+                app = FontFile(pkg, self.cfg)
+            elif content_type == 'application/x-desktop':
+                app = DesktopFile(pkg, self.cfg)
+            else:
+                print 'IGNORE\t', f, '\t', "content type " + content_type + " not supported"
+                continue
+
+            # the ID is the filename without the extension
+            basename = f.split('/')[-1]
+            app.set_id(basename.rsplit('.')[0])
 
             # application is blacklisted
             blacklisted = False

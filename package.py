@@ -63,6 +63,7 @@ class Package:
 
     def __init__(self, filename):
         self.contains_desktop_file = False
+        self.contains_font_file = False
         self.filename = filename
         self.name = None
         self._f = None
@@ -72,6 +73,7 @@ class Package:
         fd = os.open(filename, os.O_RDONLY)
         hdr = _ts.hdrFromFdno(fd)
         self.name = hdr.name
+        self.summary = hdr.summary
         self.homepage_url = hdr['url']
         fi = hdr.fiFromHeader()
 
@@ -80,7 +82,10 @@ class Package:
              nlink, state, vflags, user, group, digest) in fi:
             if fname.endswith(".desktop"):
                 self.contains_desktop_file = True
-                break
+            if fname.endswith(".otf"):
+                self.contains_font_file = True
+            if fname.endswith(".ttf"):
+                self.contains_font_file = True
         self._f = os.fdopen(fd)
 
     def __del__(self):
@@ -102,6 +107,7 @@ def main():
     pkg = Package(sys.argv[1])
     print 'name:\t\t', pkg.name
     print 'is-app:\t\t', pkg.contains_desktop_file
+    print 'is-font:\t\t', pkg.contains_font_file
     print 'decompressed:\t', pkg.extract('/tmp', [ './usr/share/applications/*.desktop' ])
     sys.exit(0)
 

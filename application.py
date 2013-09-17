@@ -50,6 +50,12 @@ class Application:
         self.cached_icon = False
         self.cfg = cfg
 
+    def set_id(self, app_id):
+        self.app_id = app_id
+        self.app_id = self.app_id.replace('&', '-')
+        self.app_id = self.app_id.replace('<', '-')
+        self.app_id = self.app_id.replace('>', '-')
+
     def write(self, f):
         f.write("  <application>\n")
         f.write("    <id type=\"desktop\">%s.desktop</id>\n" % self.app_id)

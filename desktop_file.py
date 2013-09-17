@@ -216,6 +216,7 @@ class DesktopFile(Application):
             if not os.path.exists(icon_fullpath):
                 print 'IGNORE\t', f, '\t', "icon does not exist:", icon
                 return False
+            self.cached_icon = True
 
         return True
 
