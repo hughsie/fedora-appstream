@@ -91,6 +91,14 @@ class Config:
             pass
         return prefs
 
+    def get_int(self, key):
+        prefs = []
+        try:
+            prefs = self._config.get_integer(self._group_name, key)
+        except Exception as e:
+            pass
+        return prefs
+
     def get_stock_icons(self):
         # get the list of stock icons
         f = open('./data/stock-icon-names.txt', 'r')

@@ -49,6 +49,7 @@ class Application:
         self.pkgname = pkg.name
         self.cached_icon = False
         self.cfg = cfg
+        self.screenshots = []
 
     def set_id(self, app_id):
         self.app_id = app_id

@@ -31,8 +31,11 @@ from PIL import Image, ImageOps, ImageFont, ImageDraw, ImageChops
 from application import Application
 from package import Package
 
-def autocrop(im):
-    bg = Image.new("RGBA", im.size)
+def autocrop(im, alpha):
+    if alpha:
+        bg = Image.new("RGBA", im.size, alpha)
+    else:
+        bg = Image.new("RGBA", im.size)
     diff = ImageChops.difference(im, bg)
     bbox = diff.getbbox()
     if bbox:
@@ -73,7 +76,7 @@ class FontFile(Application):
         draw.text((20, 20), "Aa", fg_color, font=font)
 
         # crop to the smallest size
-        im_temp = autocrop(im_temp)
+        im_temp = autocrop(im_temp, None)
         if not im_temp:
             return False
 
@@ -89,6 +92,45 @@ class FontFile(Application):
         img.save(filename, 'png')
         return True
 
+    def create_screenshot(self, font_file, filename):
+
+        # create a large canvas to draw the font to
+        img_size_temp = (2560, 256)
+        bg_color = (255,255,255)
+        fg_color = (0,0,0)
+        border_width = 5
+        basewidth = self.cfg.get_int('FontScreenshotWidth')
+
+        text = 'How quickly daft jumping zebras vex.'
+        im_temp = Image.new("RGBA", img_size_temp, bg_color)
+        draw = ImageDraw.Draw(im_temp)
+        font = ImageFont.truetype(font_file, 40)
+        draw.text((20, 20), text, fg_color, font=font)
+
+        font = ImageFont.truetype(font_file, 60)
+        draw.text((20, 70), text, fg_color, font=font)
+
+        font = ImageFont.truetype(font_file, 80)
+        draw.text((20, 140), text, fg_color, font=font)
+
+        # crop to the smallest size
+        im_temp = autocrop(im_temp, (255,255,255))
+        if not im_temp:
+            return False
+
+        # create a new image and paste the cropped image with a border
+        img = Image.new('RGBA', (im_temp.size[0] + border_width * 2,
+                                 im_temp.size[1] + border_width * 2), bg_color)
+        img.paste(im_temp, (border_width, border_width))
+
+        # resize to a known width */
+        wpercent = (basewidth / float(img.size[0]))
+        hsize = int((float(img.size[1]) * float(wpercent)))
+        img = img.resize((basewidth, hsize), Image.ANTIALIAS)
+        img.save(filename, 'png')
+
+        return True
+
     def parse_file(self, f):
         self.categories = [ 'Addons', 'Fonts' ]
 
@@ -102,6 +144,11 @@ class FontFile(Application):
             return False
         self.icon = self.app_id
         self.cached_icon = True
+
+        # generate a screenshot
+        icon_fullpath = './screenshots/' + self.app_id + '.png'
+        if not self.create_screenshot(f, icon_fullpath):
+            return False
 
         return True
 

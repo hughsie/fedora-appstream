@@ -86,6 +86,8 @@ class Build:
             os.makedirs('./appstream')
         if not os.path.exists('./icons'):
             os.makedirs('./icons')
+        if not os.path.exists('./screenshots'):
+            os.makedirs('./screenshots')
         # remove tmp
         if os.path.exists('./tmp'):
             shutil.rmtree('./tmp')
