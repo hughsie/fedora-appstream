@@ -62,6 +62,8 @@ def main():
                     app_id = l[23:-5]
                 elif l.startswith('    <id type="font">'):
                     app_id = l[20:-5]
+                elif l.startswith('    <id type="inputmethod">'):
+                    app_id = l[27:-5]
                 else:
                     print 'appstream id type not recognised'
                     break

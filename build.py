@@ -39,6 +39,7 @@ from appdata import AppData
 from config import Config
 from desktop_file import DesktopFile
 from font_file import FontFile
+from input_method import InputMethod
 
 def package_decompress(pkg):
     if os.path.exists('./extract-package'):
@@ -138,6 +139,8 @@ class Build:
                 app = FontFile(pkg, self.cfg)
             elif content_type == 'application/x-desktop':
                 app = DesktopFile(pkg, self.cfg)
+            elif content_type == 'application/xml':
+                app = InputMethod(pkg, self.cfg)
             else:
                 print 'IGNORE\t', f, '\t', "content type " + content_type + " not supported"
                 continue
