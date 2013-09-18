@@ -57,8 +57,14 @@ def main():
         # detect duplicate IDs in the data
         is_dupe = False
         for l in s.split('\n'):
-            if l.startswith('    <id type="desktop">'):
-                app_id = l[23:-5]
+            if l.startswith('    <id '):
+                if l.startswith('    <id type="desktop">'):
+                    app_id = l[23:-5]
+                elif l.startswith('    <id type="font">'):
+                    app_id = l[20:-5]
+                else:
+                    print 'appstream id type not recognised'
+                    break
                 if application_ids.has_key(app_id):
                     found = application_ids[app_id]
                     is_dupe = True

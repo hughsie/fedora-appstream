@@ -38,6 +38,7 @@ class Application:
 
     def __init__(self, pkg, cfg):
         self.app_id = None
+        self.app_id_full = None
         self.names = {}
         self.categories = None
         self.descriptions = {}
@@ -50,16 +51,26 @@ class Application:
         self.cached_icon = False
         self.cfg = cfg
         self.screenshots = []
+        self.type_id = None
 
     def set_id(self, app_id):
-        self.app_id = app_id
-        self.app_id = self.app_id.replace('&', '-')
-        self.app_id = self.app_id.replace('<', '-')
-        self.app_id = self.app_id.replace('>', '-')
+
+        # we use the full AppID when writing to AppStream XML
+        self.app_id_full = app_id
+        self.app_id_full = self.app_id_full.replace('&', '-')
+        self.app_id_full = self.app_id_full.replace('<', '-')
+        self.app_id_full = self.app_id_full.replace('>', '-')
+
+        # we use the short version (without the extension) internally when
+        # refering to things like icon names
+        self.app_id = self.app_id_full
+        split = self.app_id_full.rsplit('.', 1)
+        if len(split) > 1:
+            self.app_id = split[0]
 
     def write(self, f):
         f.write("  <application>\n")
-        f.write("    <id type=\"desktop\">%s.desktop</id>\n" % self.app_id)
+        f.write("    <id type=\"%s\">%s</id>\n" % (self.type_id, self.app_id_full))
         f.write("    <pkgname>%s</pkgname>\n" % self.pkgname)
         f.write("    <name>%s</name>\n" % quote(self.names['C']))
         for lang in self.names:

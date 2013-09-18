@@ -65,6 +65,11 @@ def get_font_name(font):
 
 class FontFile(Application):
 
+    def __init__(self, pkg, cfg):
+        Application.__init__(self, pkg, cfg)
+        self.type_id = 'font'
+        self.categories = [ 'Addons', 'Fonts' ]
+
     def create_icon(self, font, filename):
         # create a large canvas to draw the font to -- we don't know the width yet
         img_size_temp = (256, 256)
@@ -132,7 +137,6 @@ class FontFile(Application):
         return True
 
     def parse_file(self, f):
-        self.categories = [ 'Addons', 'Fonts' ]
 
         tt = ttLib.TTFont(f)
         self.names['C'] = get_font_name(tt)[0]

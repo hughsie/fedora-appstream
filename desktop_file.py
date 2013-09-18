@@ -36,6 +36,10 @@ from package import Package
 
 class DesktopFile(Application):
 
+    def __init__(self, pkg, cfg):
+        Application.__init__(self, pkg, cfg)
+        self.type_id = 'desktop'
+
     def resize_icon(self, icon, filename):
 
         # get ending

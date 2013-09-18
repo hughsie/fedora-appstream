@@ -142,9 +142,8 @@ class Build:
                 print 'IGNORE\t', f, '\t', "content type " + content_type + " not supported"
                 continue
 
-            # the ID is the filename without the extension
-            basename = f.split('/')[-1]
-            app.set_id(basename.rsplit('.')[0])
+            # the ID is the filename
+            app.set_id(f.split('/')[-1])
 
             # application is blacklisted
             blacklisted = False
