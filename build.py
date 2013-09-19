@@ -185,6 +185,17 @@ class Build:
                 data = AppData()
                 data.extract(appdata_file)
 
+                # check AppData file validates
+                env = os.environ
+                env['RELAX'] = '1'
+                p = subprocess.Popen(['appdata-validate', appdata_file],
+                                     cwd='.', env=env, stdout=subprocess.PIPE)
+                p.wait()
+                if p.returncode:
+                    for line in p.stdout:
+                        line = line.replace('\n', '')
+                        print 'WARNING\tAppData did not validate: ' + line
+
                 # check the id matches
                 if data.get_id() != app.app_id:
                     raise StandardError('The AppData id does not match: ' + app.app_id)
