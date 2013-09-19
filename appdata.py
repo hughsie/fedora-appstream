@@ -71,7 +71,10 @@ class AppData:
 
     def get_descriptions(self):
         descriptions = {}
-        for item in self.root.find("description"):
+        ss = self.root.find("description")
+        if ss is None:
+            return
+        for item in ss:
             if item.tag == 'p':
                 para = _to_utf8(item.text)
                 para = para.lstrip()

@@ -116,7 +116,7 @@ class Application:
             f.write("    </mimetypes>\n")
         if self.homepage_url:
             f.write("    <url type=\"homepage\">%s</url>\n" % quote(self.homepage_url))
-        if 'C' in self.descriptions:
+        if self.descriptions and 'C' in self.descriptions:
             f.write("    <description>%s</description>\n" % quote(self.descriptions['C']))
             for lang in self.descriptions:
                 if lang != 'C':
