@@ -175,7 +175,7 @@ class DesktopFile(Application):
             elif k == GLib.KEY_FILE_DESKTOP_KEY_EXEC:
                 tmp = config.get_string(DG, k)
                 if tmp.startswith('xfce4-'):
-                    self.project_group = 'XCFE'
+                    self.project_group = 'XFCE'
         if skip:
             return False
 
