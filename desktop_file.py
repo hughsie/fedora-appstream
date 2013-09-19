@@ -176,6 +176,11 @@ class DesktopFile(Application):
                 tmp = config.get_string(DG, k)
                 if tmp.startswith('xfce4-'):
                     self.project_group = 'XFCE'
+            elif k == GLib.KEY_FILE_DESKTOP_KEY_ONLY_SHOW_IN:
+                # if an app has only one entry, it's tied to that desktop
+                tmp = config.get_string_list(DG, k)
+                if len(tmp) == 1:
+                    self.project_group = tmp[0]
         if skip:
             return False
 
