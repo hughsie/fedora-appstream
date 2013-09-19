@@ -52,6 +52,7 @@ class Application:
         self.cfg = cfg
         self.screenshots = []
         self.type_id = None
+        self.project_group = None
 
     def set_id(self, app_id):
 
@@ -116,6 +117,8 @@ class Application:
             f.write("    </mimetypes>\n")
         if self.homepage_url:
             f.write("    <url type=\"homepage\">%s</url>\n" % quote(self.homepage_url))
+        if self.project_group:
+            f.write("    <project_group>%s</project_group>\n" % quote(self.project_group))
         if self.descriptions and 'C' in self.descriptions:
             f.write("    <description>%s</description>\n" % quote(self.descriptions['C']))
             for lang in self.descriptions:

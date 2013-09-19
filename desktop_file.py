@@ -168,6 +168,14 @@ class DesktopFile(Application):
                 self.keywords = config.get_string_list(DG, k)
             elif k == 'MimeType':
                 self.mimetypes = config.get_string_list(DG, k)
+            elif k == 'X-GNOME-Bugzilla-Product':
+                self.project_group = 'GNOME'
+            elif k == 'X-MATE-Bugzilla-Product':
+                self.project_group = 'MATE'
+            elif k == GLib.KEY_FILE_DESKTOP_KEY_EXEC:
+                tmp = config.get_string(DG, k)
+                if tmp.startswith('xfce4-'):
+                    self.project_group = 'XCFE'
         if skip:
             return False
 
