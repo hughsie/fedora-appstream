@@ -32,6 +32,8 @@ def quote(text):
     text = text.replace("&", "&amp;")
     text = text.replace("<", "&lt;")
     text = text.replace(">", "&gt;")
+    text = text.replace("\"", "&#34;")
+    text = text.replace("\'", "&#39;")
     return text
 
 class Application:
