@@ -28,12 +28,14 @@ import rpmUtils
 import sys
 import yum
 import fnmatch
+import datetime
 
 # internal
 from config import Config
 from logger import Logger
 
-sys.stdout = Logger("cache.txt")
+timestamp = datetime.datetime.now().strftime('%Y%m%d')
+sys.stdout = Logger("download-cache-%s.txt" % timestamp)
 
 _ts = rpm.ts()
 _ts.setVSFlags(0x7FFFFFFF)

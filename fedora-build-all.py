@@ -25,12 +25,14 @@ import glob
 import os
 import sys
 import shutil
+import datetime
 
 # internal
 from build import Build
 from logger import Logger
 
-sys.stdout = Logger("build-all.txt")
+timestamp = datetime.datetime.now().strftime('%Y%m%d')
+sys.stdout = Logger("build-all-%s.txt" % timestamp)
 
 def main():
 
