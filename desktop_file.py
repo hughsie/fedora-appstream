@@ -184,6 +184,9 @@ class DesktopFile(Application):
         if skip:
             return False
 
+        # are we overriding the project_group value?
+        self.project_group = self.cfg.get_project_group_for_id(self.app_id)
+
         # Do not include apps without a Name
         if not 'C' in self.names:
             print 'IGNORE\t', f, '\t', "no Name"

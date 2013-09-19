@@ -133,6 +133,15 @@ class Config:
             pass
         return add
 
+    def get_project_group_for_id(self, id):
+        # get project group for a specific application id
+        value = []
+        try:
+            value = self._config.get_string(self._group_name, 'ProjectGroup(' + id + ')')
+        except Exception as e:
+            pass
+        return value
+
 def main():
     cfg = Config()
     print 'distro-name:\t\t', cfg.distro_name
