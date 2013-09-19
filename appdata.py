@@ -99,7 +99,17 @@ class AppData:
             descriptions[lang] = descriptions[lang].replace('  ', ' ').rstrip()
         return descriptions
     def get_url(self):
-        return self.root.find("url").text
+        ss = self.root.find("url")
+        if ss is not None:
+            return ss.text
+    def get_name(self):
+        ss = self.root.find("name")
+        if ss is not None:
+            return ss.text
+    def get_summary(self):
+        ss = self.root.find("summary")
+        if ss is not None:
+            return ss.text
 
 def main():
     data = AppData()
