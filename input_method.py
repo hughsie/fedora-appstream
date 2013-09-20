@@ -42,6 +42,8 @@ class InputMethod(Application):
         Application.__init__(self, pkg, cfg)
         self.type_id = 'inputmethod'
         self.categories = [ 'Addons', 'InputSources' ]
+        self.icon = 'system-run-symbolic'
+        self.cached_icon = False
 
     def parse_file(self, f):
 
