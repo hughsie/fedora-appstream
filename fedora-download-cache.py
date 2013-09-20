@@ -140,7 +140,7 @@ def update(repos, reponame):
             os.remove(existing[i])
 
 def main():
-    default_repos = [ 'fedora', 'fedora-updates' ]
+    default_repos = [ 'fedora', 'updates', 'updates-testing' ]
     if len(sys.argv) == 3:
         update(sys.argv[2].split(','), sys.argv[1])
     elif len(sys.argv) == 2:
