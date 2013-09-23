@@ -62,6 +62,7 @@ class Application:
         self.screenshots = []
         self.type_id = None
         self.project_group = None
+        self.requires_appdata = False
 
     def set_id(self, app_id):
 

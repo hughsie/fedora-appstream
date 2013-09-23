@@ -195,7 +195,7 @@ class Build:
                             print 'WARNING\tAppData did not validate: ' + line
 
                 # check the id matches
-                if data.get_id() != app.app_id:
+                if data.get_id() != app.app_id and data.get_id() != app.app_id_full:
                     raise StandardError('The AppData id does not match: ' + app.app_id)
 
                 # check the licence is okay
@@ -221,6 +221,9 @@ class Build:
                 if tmp:
                     app.homepage_url = tmp
                 app.descriptions = data.get_descriptions()
+            elif app.requires_appdata:
+                print 'IGNORE\t', f, '\t', app.app_id_full, 'requires AppData to be included'
+                continue
 
             # we got something useful
             if not has_valid_content:
