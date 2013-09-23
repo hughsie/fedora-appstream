@@ -69,6 +69,10 @@ def update(repos, reponame):
     yb.doConfigSetup(errorlevel=-1, debuglevel=-1)
     yb.conf.cache = 0
 
+    # reget the metadata every day
+    for repo in yb.repos.listEnabled():
+        repo.metadata_expire = 60 * 60 * 24  # 24 hours
+
     # what is native for this arch
     basearch = rpmUtils.arch.getBaseArch()
     if basearch == 'i386':
