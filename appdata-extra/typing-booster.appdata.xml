@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+<id type="inputmethod">typing-booster.xml</id>
+<licence>CC0</licence>
+<name>Typing Booster</name>
+<summary>Typing Booster input method</summary>
+<description>
+<p>
+Ibus-Typing Booster is a predictive input method and predicts complete words
+based on partial input.
+One can then simply select the desired word from a list of suggestions and
+improve one's typing speed and spelling.
+</p>
+<p>
+Input methods are typing systems allowing users to input complex languages.
+They are necessary because these contain too many characters to simply be laid
+out on a traditional keyboard.
+</p>
+</description>
+<!--
+<url type="homepage">FIXME</url>
+-->
+</application>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+<id type="inputmethod">bogo.xml</id>
+<licence>CC0</licence>
+<name>BoGo</name>
+<summary>BoGo input method (Vietnamese)</summary>
+<description>
+<p>
+The BoGo input method is designed for entering Vietnamese text.
+</p>
+<p>
+Input methods are typing systems allowing users to input complex languages.
+They are necessary because these contain too many characters to simply be laid
+out on a traditional keyboard.
+</p>
+</description>
+<url type="homepage">http://github.com/BoGoEngine/ibus-bogo-python</url>
+</application>

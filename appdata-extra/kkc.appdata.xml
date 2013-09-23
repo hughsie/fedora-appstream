@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+<id type="inputmethod">kkc.xml</id>
+<licence>CC0</licence>
+<name>Kana Kanji</name>
+<summary>Kana Kanji input method(Japanese)</summary>
+<description>
+<p>
+The Kana Kanji input method is designed for entering Japanese text.
+It uses the Kana Kanji conversion library as backend, whose algorithm is based
+on 3-gram statistical language model generated from Wikipedia data.
+</p>
+<p>
+Input methods are typing systems allowing users to input complex languages.
+They are necessary because these contain too many characters to simply be laid
+out on a traditional keyboard.
+</p>
+</description>
+<url type="homepage">https://bitbucket.org/libkkc/libkkc/</url>
+</application>
