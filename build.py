@@ -73,9 +73,6 @@ class Build:
         # check the package has .desktop files
         print 'SOURCE\t', filename
         pkg = Package(filename)
-        if not pkg.contains_desktop_file and not pkg.contains_font_file:
-            print 'IGNORE\t', filename, '\t', "no interesting files"
-            return
 
         for b in self.cfg.get_package_blacklist():
             if fnmatch.fnmatch(pkg.name, b):
