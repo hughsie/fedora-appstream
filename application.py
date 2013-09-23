@@ -26,6 +26,13 @@ import sys
 # internal
 from package import Package
 
+def _to_utf8(txt, errors='replace'):
+    if isinstance(txt, str):
+        return txt
+    if isinstance(txt, unicode):
+        return txt.encode('utf-8', errors=errors)
+    return str(txt)
+
 # NOTE; we could use escape() from xml.sax.saxutils import escape but that seems
 # like a big dep for such trivial functionality
 def quote(text):
@@ -34,7 +41,7 @@ def quote(text):
     text = text.replace(">", "&gt;")
     text = text.replace("\"", "&#34;")
     text = text.replace("\'", "&#39;")
-    return text
+    return _to_utf8(text)
 
 class Application:
 
