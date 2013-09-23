@@ -22,6 +22,7 @@
 #
 
 import sys
+import sqlite3
 
 # internal
 from application import Application
@@ -44,6 +45,12 @@ class InputMethod(Application):
         self.categories = [ 'Addons', 'InputSources' ]
         self.icon = 'system-run-symbolic'
         self.cached_icon = False
+        self.requires_appdata = True
+
+class InputMethodComponent(InputMethod):
+
+    def __init__(self, pkg, cfg):
+        InputMethod.__init__(self, pkg, cfg)
 
     def parse_file(self, f):
 
@@ -114,9 +121,36 @@ class InputMethod(Application):
 
         return True
 
+class InputMethodTable(InputMethod):
+
+    def __init__(self, pkg, cfg):
+        InputMethod.__init__(self, pkg, cfg)
+
+    def parse_file(self, f):
+        # get details about the table from the database
+        name = None
+        description = None
+        conn = sqlite3.connect(f)
+        c = conn.cursor()
+        for row in c.execute('SELECT * FROM ime'):
+            if row[0] == 'name':
+                name = row[1]
+            if row[0] == 'description':
+                description = row[1]
+        conn.close()
+
+        # not specified
+        if not name or not description:
+            return False
+
+        self.names['C'] = name
+        self.comments['C'] = description
+
+        return True
+
 def main():
     pkg = Package(sys.argv[1])
-    app = InputMethod(pkg, None)
+    app = InputMethodComponent(pkg, None)
     app.app_id = 'test'
     f = open('/tmp/test.xml', 'w')
     app.write(f)
