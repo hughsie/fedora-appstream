@@ -3,7 +3,7 @@
 <id type="inputmethod">typing-booster.xml</id>
 <licence>CC0</licence>
 <name>Typing Booster</name>
-<summary>Typing Booster input method</summary>
+<summary>Predictive input method</summary>
 <description>
 <p>
 Ibus-Typing Booster is a predictive input method and predicts complete words

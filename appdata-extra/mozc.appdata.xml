@@ -3,7 +3,7 @@
 <id type="inputmethod">mozc.xml</id>
 <licence>CC0</licence>
 <name>Mozc</name>
-<summary>Mozc input method (Japanese)</summary>
+<summary>Japanese input method</summary>
 <description>
 <p>
 The Mozc input method is designed for entering Japanese text.

@@ -2,8 +2,8 @@
 <application>
 <id type="inputmethod">anthy.xml</id>
 <licence>CC0</licence>
-<name>Anthy (deprecated)</name>
-<summary>Anthy input method</summary>
+<name>Anthy</name>
+<summary>Japanese input method</summary>
 <description>
 <p>
 The Anthy input method is designed for entering Japanese text.
