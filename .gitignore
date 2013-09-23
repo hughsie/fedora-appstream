@@ -1,6 +1,7 @@
 *.pyc
 *.pyo
 *.gz
+*.txt
 appstream
 packages
 extract-package
