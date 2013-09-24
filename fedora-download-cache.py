@@ -58,7 +58,10 @@ def update(repos, reponame):
     existing = {}
     for f in files:
         fd = os.open(f, os.O_RDONLY)
-        hdr = _ts.hdrFromFdno(fd)
+        try:
+            hdr = _ts.hdrFromFdno(fd)
+        except Exception as e:
+            pass
         existing[hdr.name] = f
         os.close(fd)
     print "INFO:\t\tFound %i existing packages for %s" % (len(existing), reponame)
@@ -83,7 +86,11 @@ def update(repos, reponame):
 
     # find all packages
     downloaded = {}
-    pkgs = yb.pkgSack
+    try:
+        pkgs = yb.pkgSack
+    except yum.Errors.NoMoreMirrorsRepoError as e:
+        print "FAILED:\t\t" + str(e)
+        sys.exit(1)
     for pkg in pkgs:
 
         # not our repo
