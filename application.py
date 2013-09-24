@@ -95,7 +95,7 @@ class Application:
                         (quote(lang), quote(self.comments[lang])))
         if self.icon:
             if self.cached_icon:
-                f.write("    <icon type=\"cached\">%s</icon>\n" % self.app_id)
+                f.write("    <icon type=\"cached\">%s.png</icon>\n" % self.app_id)
             else:
                 f.write("    <icon type=\"stock\">%s</icon>\n" % self.icon)
         if self.categories:
