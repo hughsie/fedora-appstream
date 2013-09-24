@@ -40,6 +40,29 @@ sys.stdout = Logger("download-cache-%s.txt" % timestamp)
 _ts = rpm.ts()
 _ts.setVSFlags(0x7FFFFFFF)
 
+def _do_newest_filtering(pkglist):
+    '''
+    Only return the newest package for each name.arch
+    '''
+    newest = {}
+    for pkg in pkglist:
+        key = (pkg.name, pkg.arch)
+        if key in newest:
+
+            # the current package is older
+            if pkg.verCMP(newest[key]) < 0:
+                continue
+
+            # the current package is the same version
+            if pkg.verCMP(newest[key]) == 0:
+                continue
+
+            # the current package is newer than what we have stored
+            del newest[key]
+
+        newest[key] = pkg
+    return newest.values()
+
 def update(repos, reponame):
 
     # create if we're starting from nothing
@@ -91,7 +114,7 @@ def update(repos, reponame):
     except yum.Errors.NoMoreMirrorsRepoError as e:
         print "FAILED:\t\t" + str(e)
         sys.exit(1)
-    for pkg in pkgs:
+    for pkg in _do_newest_filtering(pkgs):
 
         # not our repo
         if pkg.repoid not in repos:
