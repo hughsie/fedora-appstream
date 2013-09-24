@@ -170,7 +170,7 @@ class Build:
 
             # do we have an AppData file?
             appdata_file = './tmp/usr/share/appdata/' + app.app_id + '.appdata.xml'
-            appdata_extra_file = './appdata-extra/' + app.app_id + '.appdata.xml'
+            appdata_extra_file = './appdata-extra/' + app.type_id + '/' + app.app_id + '.appdata.xml'
             if os.path.exists(appdata_file) and os.path.exists(appdata_extra_file):
                 print 'DELETE\t', appdata_extra_file, 'as upstream AppData file exists'
                 os.remove(appdata_extra_file)
