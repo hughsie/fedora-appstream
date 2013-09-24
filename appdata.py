@@ -101,18 +101,29 @@ class AppData:
         for lang in descriptions:
             descriptions[lang] = descriptions[lang].replace('  ', ' ').rstrip()
         return descriptions
+
     def get_url(self):
         ss = self.root.find("url")
         if ss is not None:
             return ss.text
-    def get_name(self):
-        ss = self.root.find("name")
-        if ss is not None:
-            return ss.text
-    def get_summary(self):
-        ss = self.root.find("summary")
-        if ss is not None:
-            return ss.text
+
+    def _get_localized_tags(self, name):
+        values = {}
+        for item in self.root:
+            if item.tag == name:
+                lang = item.get(XML_LANG)
+                if not lang:
+                    lang = 'C'
+                values[lang] = item.text
+        if len(values) == 0:
+            return None
+        return values
+
+    def get_names(self):
+        return self._get_localized_tags('name')
+
+    def get_summaries(self):
+        return self._get_localized_tags('summary')
 
 def main():
     data = AppData()

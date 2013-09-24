@@ -207,16 +207,14 @@ class Build:
                                         data.get_licence() + '\'')
 
                 # if we have an override, use it for all languages
-                tmp = data.get_name()
+                tmp = data.get_names()
                 if tmp:
-                    app.names = {}
-                    app.names['C'] = tmp
+                    app.names = tmp
 
                 # if we have an override, use it for all languages
-                tmp = data.get_summary()
+                tmp = data.get_summaries()
                 if tmp:
-                    app.comments = {}
-                    app.comments['C'] = tmp
+                    app.comments = tmp
 
                 # get optional bits
                 tmp = data.get_url()
