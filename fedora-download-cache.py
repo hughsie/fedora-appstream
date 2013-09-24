@@ -85,7 +85,8 @@ def update(repos, reponame):
             hdr = _ts.hdrFromFdno(fd)
         except Exception as e:
             pass
-        existing[hdr.name] = f
+        else:
+            existing[hdr.name] = f
         os.close(fd)
     print "INFO:\t\tFound %i existing packages for %s" % (len(existing), reponame)
 
