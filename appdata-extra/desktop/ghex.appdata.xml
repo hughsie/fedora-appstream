@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+<id type="desktop">ghex.desktop</id>
+<licence>CC0</licence>
+<description>
+<p>
+GHex allows the user to load data from any file, view and edit it in either hex or ASCII.
+It is a useful application for debugging problems with object code or encodings.
+</p>
+<p>
+GHex is also used by kids who cheat at computer games, by adding score or lives to saved games.
+</p>
+</description>
+<screenshots>
+<screenshot type="default">https://wiki.gnome.org/Ghex?action=AttachFile&amp;do=get&amp;target=ghex.png</screenshot>
+</screenshots>
+<url type="homepage">https://wiki.gnome.org/Ghex</url>
+<!--
+<updatecontact>xxxxxxxxxxxxxxxxxxxx</updatecontact>
+-->
+</application>

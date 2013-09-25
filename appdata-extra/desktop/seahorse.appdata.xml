@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+<id type="desktop">seahorse.desktop</id>
+<licence>CC0</licence>
+<description>
+<p>
+Seahorse is a GNOME application for managing encryption keys.
+It also integrates with nautilus, gedit and other places for encryption operations. 
+</p>
+<p>
+With seahorse you can create and manage PGP keys, create and manage SSH keys, publish and retrieve keys from key servers, cache your passphrase so you don't have to keep typing it and backup your keys and keyring.
+</p>
+</description>
+<screenshots>
+<screenshot type="default">https://projects.gnome.org/seahorse/images/main.png</screenshot>
+<screenshot>https://projects.gnome.org/seahorse/images/owner.png</screenshot>
+</screenshots>
+<url type="homepage">https://projects.gnome.org/seahorse/</url>
+<updatecontact>seahorse-list@gnome.org</updatecontact>
+</application>
