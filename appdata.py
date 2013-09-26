@@ -107,6 +107,11 @@ class AppData:
         if ss is not None:
             return ss.text
 
+    def get_project_group(self):
+        ss = self.root.find("project_group")
+        if ss is not None:
+            return ss.text
+
     def _get_localized_tags(self, name):
         values = {}
         for item in self.root:
@@ -131,6 +136,7 @@ def main():
     print 'id:\t\t', data.get_id()
     print 'licence:\t', data.get_licence()
     print 'url:\t\t', data.get_url()
+    print 'project_group:\t\t', data.get_project_group()
     print 'screenshot:\t\t', data.get_screenshot()
     print 'description:\t', data.get_descriptions()
     print 'END'

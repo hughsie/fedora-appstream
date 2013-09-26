@@ -220,6 +220,9 @@ class Build:
                 tmp = data.get_url()
                 if tmp:
                     app.homepage_url = tmp
+                tmp = data.get_project_group()
+                if tmp:
+                    app.project_group = tmp
                 app.descriptions = data.get_descriptions()
             elif app.requires_appdata:
                 print 'IGNORE\t', f, '\t', app.app_id_full, 'requires AppData to be included'
