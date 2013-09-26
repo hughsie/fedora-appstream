@@ -133,19 +133,17 @@ class DesktopFile(Application):
         config.load_from_file(f, GLib.KeyFileFlags.KEEP_TRANSLATIONS)
 
         icon_fullpath = None
-        skip = False
+        is_application = False
+        no_display = False
         DG = GLib.KEY_FILE_DESKTOP_GROUP
         keys, _ = config.get_keys(DG)
         for k in keys:
             if k == GLib.KEY_FILE_DESKTOP_KEY_NO_DISPLAY and config.get_boolean(DG, k):
-                print 'IGNORE\t', f, '\t', "not included in the menu"
-                skip = True
-                break
-            elif k == GLib.KEY_FILE_DESKTOP_KEY_TYPE and \
-                 config.get_string(DG, k) != GLib.KEY_FILE_DESKTOP_TYPE_APPLICATION:
-                print 'IGNORE\t', f, '\t', "not an application"
-                skip = True
-                break
+                no_display = True
+            elif k == GLib.KEY_FILE_DESKTOP_KEY_TYPE:
+                if config.get_string(DG, k) != GLib.KEY_FILE_DESKTOP_TYPE_APPLICATION:
+                    break
+                is_application = True
             elif k.startswith(GLib.KEY_FILE_DESKTOP_KEY_NAME):
                 m = re.match(GLib.KEY_FILE_DESKTOP_KEY_NAME + '\[([^\]]+)\]', k)
                 if m:
@@ -181,8 +179,14 @@ class DesktopFile(Application):
                 tmp = config.get_string_list(DG, k)
                 if len(tmp) == 1:
                     self.project_group = tmp[0]
-        if skip:
+        if not is_application:
+            print 'IGNORE\t', f, '\t', "not an application"
             return False
+
+        # if we're not showing in the menu, we'd need an AppData file
+        if no_display:
+            print 'INFO\t', f, '\t', "Requires AppData as NoDisplay=True"
+            self.requires_appdata = True
 
         # are we overriding the project_group value?
         self.project_group = self.cfg.get_project_group_for_id(self.app_id)
