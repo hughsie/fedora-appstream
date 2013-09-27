@@ -228,6 +228,46 @@ class Build:
                 print 'IGNORE\t', f, '\t', app.app_id_full, 'requires AppData to be included'
                 continue
 
+            # use the homepage to filter out same more generic apps
+            if not app.project_group:
+
+                # GNOME
+                project_urls = [ 'http*://*.gnome.org*',
+                                 'http://gnome-*.sourceforge.net/']
+                for m in project_urls:
+                    if fnmatch.fnmatch(app.homepage_url, m):
+                        app.project_group = "GNOME"
+
+                # KDE
+                project_urls = [ 'http*://*.kde.org*',
+                                'http://*kde-apps.org/*' ]
+                for m in project_urls:
+                    if fnmatch.fnmatch(app.homepage_url, m):
+                        app.project_group = "KDE"
+
+                # XFCE
+                project_urls = [ 'http://*xfce.org*' ]
+                for m in project_urls:
+                    if fnmatch.fnmatch(app.homepage_url, m):
+                        app.project_group = "XFCE"
+
+                # LXDE
+                project_urls = [ 'http://lxde.org*',
+                                 'http://lxde.sourceforge.net/*' ]
+                for m in project_urls:
+                    if fnmatch.fnmatch(app.homepage_url, m):
+                        app.project_group = "LXDE"
+
+                # MATE
+                project_urls = [ 'http://*mate-desktop.org*' ]
+                for m in project_urls:
+                    if fnmatch.fnmatch(app.homepage_url, m):
+                        app.project_group = "MATE"
+
+                # print that we auto-added it
+                if app.project_group:
+                    print 'INFO\t', f, '\t', app.app_id, 'assigned', app.project_group
+
             # we got something useful
             if not has_valid_content:
                 has_valid_content = True
