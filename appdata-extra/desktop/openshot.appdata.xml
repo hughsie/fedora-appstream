@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="desktop">openshot.desktop</id>
+  <licence>CC0</licence>
+  <summary>Easy-to-use Video Editor</summary>
+  <description>
+    <p>
+      Openshot is an open source video editor.
+      It permits the creation of videos using a wide variety of formats and
+      exporting to a wide variety of formats.
+      It has support for image sequences, permitting the creation of hand-drawn
+      animation.
+    </p>
+    <p>
+      OpenShot is easy and intuitive to use.
+      it is a simple interface designed to be largely plug and play.
+    </p>
+  </description>
+  <url type="homepage">http://www.openshotvideo.com/</url>
+  <screenshots>
+    <screenshot type="default">http://www.openshot.org/screenshots/</screenshot>
+  </screenshots>
+  <updatecontact>openshot.developers@lists.launchpad.net</updatecontact>
+</application>

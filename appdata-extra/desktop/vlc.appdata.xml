@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="desktop">vlc.desktop</id>
+  <licence>CC0</licence>
+  <summary>Fast and Powerful Media Player</summary>
+  <description>
+    <p>
+      VLC is a free and open source cross-platform multimedia player and
+      framework that plays most multimedia files as well as DVD, Audio CD, VCD,
+      and various streaming protocols.
+    </p>
+    <p>
+      VLC can also do media conversion and streaming.
+    </p>
+  </description>
+  <url type="homepage">http://www.videolan.org/vlc/index.html</url>
+  <screenshots>
+    <screenshot type="default">http://images1.videolan.org/vlc/screenshots/2.0.0/tm_vlc-2.0-gnome3-debian.jpg</screenshot>
+    <screenshot>http://images1.videolan.org/vlc/screenshots/2.0.0/tm_vlc-2.0-poney.jpg</screenshot>
+    <screenshot>http://images1.videolan.org/vlc/screenshots/2.0.0/tm_vlc-2.0-gnome3-open.jpg</screenshot>
+  </screenshots>
+  <updatecontact>vlc-devel@videolan.org</updatecontact>
+</application>

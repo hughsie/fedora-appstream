@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="desktop">octave.desktop</id>
+  <licence>CC0</licence>
+  <summary>Interactive programming environment for numerical computations</summary>
+  <description>
+    <p>
+      GNU Octave is a high-level interpreted language, primarily intended for
+      numerical computations.
+      It provides capabilities for the numerical solution of linear and
+      nonlinear problems, and for performing other numerical experiments.
+      It also provides extensive graphics capabilities for data visualization
+      and manipulation.
+    </p>
+    <p>
+      Octave is normally used through its interactive command line interface,
+      but it can also be used to write non-interactive programs.
+      The Octave language is quite similar to Matlab so that most programs are
+      easily portable.
+    </p>
+  </description>
+  <url type="homepage">http://www.octave.org</url>
+  <screenshots>
+    <screenshot type="default">http://www.gnu.org/software/octave/images/screenshot.png</screenshot>
+  </screenshots>
+  <updatecontact>octave-maintainers@octave.org</updatecontact>
+</application>

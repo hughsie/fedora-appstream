@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="desktop">rawtherapee.desktop</id>
+  <licence>CC0</licence>
+  <description>
+    <p>
+      Rawtherapee is free and cross-platform raw image processing program.
+      It involves the non-destructive editing concept.
+    </p>
+    <p>
+      Rawtherapee allows you to load a bunch of images , create an editing
+      profile and then apply these profile to the whole image queue.
+      The image selection can be fined with EXIF, 5-star rating and flaggin-
+      based filter.
+    </p>
+  </description>
+  <url type="homepage">http://www.rawtherapee.com/</url>
+  <screenshots>
+    <screenshot type="default">http://rawtherapee.com/images/screenshots/rt409-portrait-epd-usm-munsell.jpg</screenshot>
+    <screenshot>http://rawtherapee.com/images/screenshots/rt409-ca.jpg</screenshot>
+  </screenshots>
+  <!-- FIXME: change this to an upstream email address for spec updates
+  <updatecontact>someone_who_cares@upstream_project.org</updatecontact>
+   -->
+</application>

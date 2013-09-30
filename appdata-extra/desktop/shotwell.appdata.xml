@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="desktop">shotwell.desktop</id>
+  <licence>CC0</licence>
+  <summary>Popular photo organizer</summary>
+  <description>
+    <p>
+      Shotwell is an easy-to-use, fast photo organizer.
+      After importing photos from your camera, it lets you sort them by tag,
+      rating, or date.
+      Shotwell also allows you to do small edits, like correcting red eyes or
+      adjusting contrast.
+    </p>
+    <p>
+      If you wish, Shotwell can also upload your photos to sharing web sites
+      such as Flickr, Facebook, or Picasa.
+    </p>
+  </description>
+  <url type="homepage">http://www.yorba.org/projects/shotwell/</url>
+  <screenshots>
+    <screenshot type="default">http://www.yorba.org/wp-content/uploads/2013/02/harbor.png</screenshot>
+    <screenshot>http://www.yorba.org/wp-content/uploads/2013/02/import-300x155.png</screenshot>
+    <screenshot>http://www.yorba.org/wp-content/uploads/2013/02/organize-300x197.png</screenshot>
+    <screenshot>http://www.yorba.org/wp-content/uploads/2013/02/edit-300x247.png</screenshot>
+    <screenshot>http://www.yorba.org/wp-content/uploads/2013/02/publish-300x213.png</screenshot>
+  </screenshots>
+  <updatecontact>info@yorba.org</updatecontact>
+  <project_group>GNOME</project_group>
+</application>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="desktop">celestia.desktop</id>
+  <licence>CC0</licence>
+  <description>
+    <p>
+      Celestia provides photo-realistic, real-time, three-dimensional viewing of
+      the Solar System, the galaxy and the universe.
+    </p>
+    <p>
+      It is an easy to use, freely-distributed, multi-platform, open source,
+      software package which has become a valuable tool for astronomy education.
+      Used in homes, schools, museums and planetariums around the world, it also
+      is used as a visualization tool by space mission designers.
+    </p>
+  </description>
+  <url type="homepage">http://www.shatters.net/celestia/</url>
+  <screenshots>
+    <screenshot type="default">http://www.shatters.net/celestia/images/gallery/earth-t.jpg</screenshot>
+    <screenshot>http://www.shatters.net/celestia/images/gallery/florida-t.jpg</screenshot>
+    <screenshot>http://www.shatters.net/celestia/images/gallery/phobos-mars-t.jpg</screenshot>
+    <screenshot>http://www.shatters.net/celestia/images/gallery/voyager2-neptune-t.jpg</screenshot>
+    <screenshot>http://www.shatters.net/celestia/images/gallery/asteroidorb-t.jpg</screenshot>
+  </screenshots>
+  <updatecontact>claurel@gmail.com</updatecontact>
+</application>

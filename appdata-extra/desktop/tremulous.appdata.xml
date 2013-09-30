@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="desktop">tremulous.desktop</id>
+  <licence>CC0</licence>
+  <description>
+    <p>
+      Tremulous is a free, open source game that blends a team based FPS with
+      elements of an RTS.
+    </p>
+    <p>
+      Players can choose from 2 unique races, aliens and humans.
+      Players on both teams are able to build working structures in-game like an
+      RTS.
+    </p>
+  </description>
+  <url type="homepage">http://www.tremulous.net</url>
+  <screenshots>
+    <screenshot type="default">http://tremulous.net/media/screenshots/129_full.jpg</screenshot>
+    <screenshot>http://tremulous.net/media/screenshots/131_full.jpg</screenshot>
+    <screenshot>http://tremulous.net/media/screenshots/132_full.jpg</screenshot>
+  </screenshots>
+  <!-- FIXME: change this to an upstream email address for spec updates
+  <updatecontact>someone_who_cares@upstream_project.org</updatecontact>
+   -->
+</application>

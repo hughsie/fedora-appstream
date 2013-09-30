@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="desktop">pidgin.desktop</id>
+  <licence>CC0</licence>
+  <summary>Instant Messaging Client</summary>
+  <description>
+    <p>
+      Pidgin is a chat program which lets you log in to accounts on multiple
+      chat networks simultaneously.
+    </p>
+    <p>
+      This means that you can be chatting with friends on MSN, talking to a
+      friend on Google Talk, and sitting in a Yahoo chat room all at the same
+      time.
+    </p>
+  </description>
+  <url type="homepage">http://www.pidgin.im/</url>
+  <screenshots>
+    <screenshot type="default">http://www.pidgin.im/shared/img/contact_window.png</screenshot>
+  </screenshots>
+  <updatecontact>devel@pidgin.im</updatecontact>
+</application>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="desktop">gnome-banshee.desktop</id>
+  <licence>CC0</licence>
+  <summary>Powerful audio and video player</summary>
+  <description>
+    <p>
+      GNOME Banshee can play your music and videos, keep up with your podcasts
+      and Internet radio and discover new music and podcasts.
+    </p>
+    <p>
+      Keep your portable device loaded with good stuff. Simple enough to enjoy.
+      Powerful enough to thrill. Open source through and through.
+    </p>
+  </description>
+  <url type="homepage">http://banshee.fm/</url>
+  <screenshots>
+    <screenshot type="default">http://banshee.fm/theme/images/slides/scaled/music-450.png</screenshot>
+  </screenshots>
+  <updatecontact>banshee-list@gnome.org</updatecontact>
+  <project_group>GNOME</project_group>
+</application>

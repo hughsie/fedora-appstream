@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="desktop">gparted.desktop</id>
+  <licence>CC0</licence>
+  <description>
+    <p>
+      GParted is a GTK+ front-end to GNU Parted and the official GNOME Partition
+      Editor application.
+    </p>
+    <p>
+      It is used for creating, deleting, resizing, moving, checking and copying
+      partitions, and the file systems on them.
+    </p>
+  </description>
+  <url type="homepage">http://gparted.sourceforge.net</url>
+  <screenshots>
+    <screenshot type="default">http://gparted.sourceforge.net/screens/gparted_1_big.png</screenshot>
+    <screenshot>http://gparted.sourceforge.net/screens/gparted_4_big.png</screenshot>
+    <screenshot>http://gparted.sourceforge.net/screens/gparted_5_big.png</screenshot>
+  </screenshots>
+  <updatecontact>gedakc@users.sf.net</updatecontact>
+  <project_group>GNOME</project_group>
+</application>

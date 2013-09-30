@@ -8,11 +8,11 @@ Archive Manager is an archive manager for the GNOME environment.
 With Archive Manager you can:
 </p>
 <ul>
-<li>Create and modify archives.</li>
-<li>View the content of an archive.</li>
-<li>View and modify a file contained in the archive.</li>
-<li>Extract files from the archive.</li>
-<li>Save the archive in a different format.</li>
+<li>Create and modify archives</li>
+<li>View the content of an archive</li>
+<li>View and modify a file contained in the archive</li>
+<li>Extract files from the archive</li>
+<li>Save the archive in a different format</li>
 </ul>
 <!-- FIXME: Probably needs another paragraph -->
 </description>
