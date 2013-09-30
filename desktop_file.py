@@ -34,6 +34,9 @@ from gi.repository import GdkPixbuf, GLib, Rsvg
 from application import Application
 from package import Package
 
+class AppdataException(Exception):
+    pass
+
 class DesktopFile(Application):
 
     def __init__(self, pkg, cfg):
@@ -52,7 +55,7 @@ class DesktopFile(Application):
         if ext in gdk_exts:
             pixbuf = GdkPixbuf.Pixbuf.new_from_file(icon)
             if pixbuf.get_width() < min_size or pixbuf.get_height() < min_size:
-                raise StandardError('Icon too small to process')
+                raise AppdataException('Icon too small to process')
             pixbuf = GdkPixbuf.Pixbuf.new_from_file_at_size(icon, size, size)
             pixbuf.savev(filename, "png", [], [])
             return
@@ -63,8 +66,8 @@ class DesktopFile(Application):
             im = Image.open(icon)
             width, height = im.size
             if width < min_size or height < min_size:
-                raise StandardError('Icon too small to process (' +
-                                    str(width) + 'px)')
+                raise AppdataException('Icon too small to process (' +
+                                       str(width) + 'px)')
 
             # do not resize, just add a transparent border
             if width <= size and height <= size:
@@ -216,15 +219,15 @@ class DesktopFile(Application):
                 self.categories.extend(cats_to_add)
 
         # check icon exists
-        if self.icon not in self.cfg.get_stock_icons():
+        if self.icon and self.icon not in self.cfg.get_stock_icons():
             icon_fullpath = './icons/' + self.app_id + '.png'
             try:
                 self.write_appstream_icon(self.icon, icon_fullpath)
-            except Exception as e:
-                print 'IGNORE\t', f, '\t', "icon is corrupt:", icon, str(e)
+            except AppdataException as e:
+                print 'IGNORE\t', f, '\t', "icon is corrupt:", icon_fullpath, str(e)
                 return False
             if not os.path.exists(icon_fullpath):
-                print 'IGNORE\t', f, '\t', "icon does not exist:", icon
+                print 'IGNORE\t', f, '\t', "icon does not exist:", icon_fullpath
                 return False
             self.cached_icon = True
 
