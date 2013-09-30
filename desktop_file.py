@@ -191,20 +191,6 @@ class DesktopFile(Application):
         # are we overriding the project_group value?
         self.project_group = self.cfg.get_project_group_for_id(self.app_id)
 
-        # Do not include apps without a Name
-        if not 'C' in self.names:
-            print 'IGNORE\t', f, '\t', "no Name"
-            return False
-
-        # Do not include apps without a Comment
-        if not 'C' in self.comments:
-            print 'IGNORE\t', f, '\t', "no Comment"
-            return False
-
-        if not self.icon:
-            print 'IGNORE\t', f, '\t', "Icon unspecified"
-            return False
-
         # We blacklist some apps by categories
         blacklisted = False
         if self.categories:

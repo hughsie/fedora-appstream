@@ -272,6 +272,21 @@ class Build:
             if not has_valid_content:
                 has_valid_content = True
 
+            # Do not include apps without a name
+            if not 'C' in app.names:
+                print 'IGNORE\t', f, '\t', "no Name"
+                continue
+
+            # Do not include apps without a summary
+            if not 'C' in app.comments:
+                print 'IGNORE\t', f, '\t', "no Comment"
+                continue
+
+            # Do not include apps without an icon
+            if not app.icon:
+                print 'IGNORE\t', f, '\t', "Icon unspecified"
+                continue
+
             # write content
             app.write(xml)
 
