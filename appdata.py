@@ -51,7 +51,12 @@ class AppData:
             tmp = tmp.replace('.desktop', '')
         return tmp
     def get_licence(self):
-        return self.root.find("licence").text
+        tmp = self.root.find("licence").text
+        if tmp == 'CC BY':
+            tmp = 'CC-BY'
+        elif tmp == 'CC BY-SA':
+            tmp = 'CC-BY-SA'
+        return tmp
     def get_screenshot(self):
         ss = self.root.find("screenshots")
         if ss is not None:
