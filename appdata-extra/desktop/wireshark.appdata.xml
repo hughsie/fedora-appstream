@@ -15,8 +15,8 @@
   </description>
   <url type="homepage">http://www.wireshark.org</url>
   <screenshots>
-    <screenshot type="default">http://screenshots.en.sftcdn.net/en/scrn/34000/34498/wireshark-24.jpg </screenshot>
-    <screenshot> http://cdn.ttgtmedia.com/digitalguide/images/Misc/WiresharkSS4_lg.png</screenshot>
+    <screenshot type="default">http://screenshots.en.sftcdn.net/en/scrn/34000/34498/wireshark-24.jpg</screenshot>
+    <screenshot>http://cdn.ttgtmedia.com/digitalguide/images/Misc/WiresharkSS4_lg.png</screenshot>
   </screenshots>
   <updatecontact>http://www.wireshark.org/lists/</updatecontact>
 </application>

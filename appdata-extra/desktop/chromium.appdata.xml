@@ -16,9 +16,9 @@
   </description>
   <url type="homepage">http://www.chromium.org/home</url>
   <screenshots>
-    <screenshot type="default">http://i1-news.softpedia-static.com/images/news2/Chromium-for-Chrome-OS-Screenshots-3.png </screenshot>
-    <screenshot> http://androgeek.com/wp-content/uploads/2009/11/google-OS-App-Menu2.png </screenshot>
-    <screenshot> http://a.fsdn.com/con/app/proj/crportable/screenshots/Chromium%20Portable%20-%20First%20Run.jpg</screenshot>
+    <screenshot type="default">http://i1-news.softpedia-static.com/images/news2/Chromium-for-Chrome-OS-Screenshots-3.png</screenshot>
+    <screenshot>http://androgeek.com/wp-content/uploads/2009/11/google-OS-App-Menu2.png</screenshot>
+    <screenshot>http://a.fsdn.com/con/app/proj/crportable/screenshots/Chromium%20Portable%20-%20First%20Run.jpg</screenshot>
   </screenshots>
   <updatecontact>https://groups.google.com/a/chromium.org/d/forum/chromium-dev‎</updatecontact>
 </application>

@@ -22,7 +22,7 @@
   <url type="homepage">https://live.gnome.org/SoundJuicer</url>
   <screenshots>
     <screenshot type="default">http://www.burtonini.com/computing/screenshots/sj-main.png</screenshot>
-    <screenshot> http://www.burtonini.com/computing/screenshots/sj-prefs.png</screenshot>
+    <screenshot>http://www.burtonini.com/computing/screenshots/sj-prefs.png</screenshot>
   </screenshots>
   <updatecontact>ross(at)burtonini.com</updatecontact>
   <project_group>GNOME</project_group>
