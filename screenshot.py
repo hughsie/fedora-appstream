@@ -47,7 +47,10 @@ class Screenshot:
                 img2 = Image.new("RGBA", size)
                 offset = ((size[0] - img.size[0]) / 2,
                           (size[1] - img.size[1]) / 2)
-                img2.paste(img, offset, img);
+                if img.mode == 'RGBA':
+                    img2.paste(img, offset, img);
+                else:
+                    img2.paste(img, offset);
                 img = img2
         else:
             img = self._img
