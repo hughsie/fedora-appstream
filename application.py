@@ -76,8 +76,12 @@ class Application:
         cache_filename += '-' + os.path.basename(url)
         if not os.path.exists(cache_filename):
             urllib.urlretrieve (url, cache_filename)
-        img = Image.open(cache_filename)
-        self.screenshots.append(Screenshot(self.app_id, img))
+        try:
+            img = Image.open(cache_filename)
+        except IOError as e:
+            print 'WARNING\t', url, str(e)
+        else:
+            self.screenshots.append(Screenshot(self.app_id, img))
 
     def set_id(self, app_id):
 
