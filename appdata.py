@@ -57,14 +57,16 @@ class AppData:
         elif tmp == 'CC BY-SA':
             tmp = 'CC-BY-SA'
         return tmp
-    def get_screenshot(self):
+    def get_screenshots(self):
+        values = []
         ss = self.root.find("screenshots")
-        if ss is not None:
-            # just return the fist one found
-            s = ss.find('screenshot')
-            if s is not None:
-                return s.text
-
+        if ss is None:
+            return values
+        for item in ss:
+            if item.tag != 'screenshot':
+                continue
+            values.append(item.text)
+        return values
     def _append_for_lang(self, descriptions, lang, content):
         if not lang:
             lang = 'C'

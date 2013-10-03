@@ -84,8 +84,17 @@ class Build:
             os.makedirs('./appstream')
         if not os.path.exists('./icons'):
             os.makedirs('./icons')
+        if not os.path.exists('./screenshot-cache'):
+            os.makedirs('./screenshot-cache')
         if not os.path.exists('./screenshots'):
             os.makedirs('./screenshots')
+        if not os.path.exists('./screenshots/source'):
+            os.makedirs('./screenshots/source')
+        for size in self.cfg.get_screenshot_thumbnail_sizes():
+            path = './screenshots/' + str(size[0]) + 'x' + str(size[1])
+            if not os.path.exists(path):
+                os.makedirs(path)
+
         # remove tmp
         if os.path.exists('./tmp'):
             shutil.rmtree('./tmp')
@@ -187,8 +196,8 @@ class Build:
                 # check AppData file validates
                 if os.path.exists('/usr/bin/appdata-validate'):
                     env = os.environ
-                    env['RELAX'] = '1'
-                    p = subprocess.Popen(['/usr/bin/appdata-validate', appdata_file],
+                    p = subprocess.Popen(['/usr/bin/appdata-validate',
+                                          '--relax', appdata_file],
                                          cwd='.', env=env, stdout=subprocess.PIPE)
                     p.wait()
                     if p.returncode:
@@ -224,6 +233,13 @@ class Build:
                 if tmp:
                     app.project_group = tmp
                 app.descriptions = data.get_descriptions()
+
+                # get screenshots
+                tmp = data.get_screenshots()
+                for image in tmp:
+                    print 'DOWNLOADING\t', image
+                    app.add_screenshot_url(image)
+
             elif app.requires_appdata:
                 print 'IGNORE\t', f, '\t', app.app_id_full, 'requires AppData to be included'
                 continue

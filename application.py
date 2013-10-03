@@ -21,10 +21,15 @@
 #    Richard Hughes <richard@hughsie.com>
 #
 
+import os
 import sys
+import urllib
+
+from PIL import Image
 
 # internal
 from package import Package
+from screenshot import Screenshot
 
 def _to_utf8(txt, errors='replace'):
     if isinstance(txt, str):
@@ -63,6 +68,16 @@ class Application:
         self.type_id = None
         self.project_group = None
         self.requires_appdata = False
+
+    def add_screenshot_url(self, url):
+
+        # download image and add it
+        cache_filename = './screenshot-cache/' + self.app_id
+        cache_filename += '-' + os.path.basename(url)
+        if not os.path.exists(cache_filename):
+            urllib.urlretrieve (url, cache_filename)
+        img = Image.open(cache_filename)
+        self.screenshots.append(Screenshot(self.app_id, img))
 
     def set_id(self, app_id):
 
@@ -135,6 +150,32 @@ class Application:
                 if lang != 'C':
                     f.write("    <description xml:lang=\"%s\">%s</description>\n" %
                             (quote(lang), quote(self.descriptions[lang])))
+
+        # any screenshots
+        if len(self.screenshots) > 0:
+            f.write("    <screenshots>\n")
+            mirror_url = self.cfg.get_screenshot_mirror_url()
+            for s in self.screenshots:
+                f.write("      <screenshot>\n")
+
+                # write the full size source image
+                url = mirror_url + 'source/' + s.basename
+                f.write("        <image type=\"source\" width=\"%s\" "
+                        "height=\"%s\">%s</image>\n" %
+                        (s.width, s.height, url))
+
+                # write all the thumbnail sizes too
+                for size in self.cfg.get_screenshot_thumbnail_sizes():
+                    size_str = str(size[0]) + 'x' + str(size[1])
+                    url = mirror_url + size_str + '/' + s.basename
+                    s.dump_to_file('./screenshots/' + size_str, size)
+                    f.write("        <image type=\"thumbnail\" width=\"%s\" "
+                            "height=\"%s\">%s</image>\n" %
+                            (size[0], size[1], url))
+                f.write("      </screenshot>\n")
+                s.dump_to_file('./screenshots/source')
+            f.write("    </screenshots>\n")
+
         f.write("  </application>\n")
 
 def main():

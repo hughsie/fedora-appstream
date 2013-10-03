@@ -83,6 +83,26 @@ class Config:
             pass
         return data
 
+    def get_screenshot_mirror_url(self):
+        data = []
+        try:
+            data = self._config.get_string(self._group_name, 'ScreenshotMirrorUrl')
+        except Exception as e:
+            pass
+        return data
+
+    def get_screenshot_thumbnail_sizes(self):
+        data = []
+        sizes = []
+        try:
+            data = self._config.get_string_list(self._group_name, 'ScreenshotThumbnailSizes')
+        except Exception as e:
+            pass
+        for d in data:
+            tmp = d.split('x')
+            sizes.append((int(tmp[0]), int(tmp[1])))
+        return sizes
+
     def get_preferred_icon_sizes(self):
         prefs = []
         try:
@@ -147,6 +167,8 @@ def main():
     print 'distro-name:\t\t', cfg.distro_name
     print 'icon-size:\t\t', cfg.icon_size
     print 'min-icon-size:\t\t', cfg.min_icon_size
+    print 'screenshot-mirror-url:\t', cfg.get_screenshot_mirror_url()
+    print 'screenshot-thumbnail-sizes:\t', cfg.get_screenshot_thumbnail_sizes()
     print 'preferred-sizes:\t', cfg.get_preferred_icon_sizes()
     print 'interesting-installed-files:\t', cfg.get_interesting_installed_files()
     print 'content-licences:\t', cfg.get_content_licences()

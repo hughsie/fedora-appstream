@@ -30,6 +30,7 @@ from PIL import Image, ImageOps, ImageFont, ImageDraw, ImageChops
 # internal
 from application import Application
 from package import Package
+from screenshot import Screenshot
 
 def autocrop(im, alpha):
     if alpha:
@@ -132,7 +133,7 @@ class FontFile(Application):
         wpercent = (basewidth / float(img.size[0]))
         hsize = int((float(img.size[1]) * float(wpercent)))
         img = img.resize((basewidth, hsize), Image.ANTIALIAS)
-        img.save(filename, 'png')
+        self.screenshots.append(Screenshot(self.app_id, img))
 
         return True
 
