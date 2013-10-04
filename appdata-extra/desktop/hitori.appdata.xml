@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="desktop">hitori.desktop</id>
+  <licence>CC0</licence>
+  <description>
+    <p>
+      Hitori is a Japanese puzzle game, which is being played with a square grid
+      where each cell contains a number.
+    </p>
+    <p>
+      The goal is to highlight every number so that the following rules apply:
+      In each row respectively each column, there's only one number that's not
+      highlighted.
+      Highlighted cells may not be adjacent and all white fields must be
+      connected via at least one of their sides.
+    </p>
+  </description>
+  <url type="homepage">https://wiki.gnome.org/Apps/Hitori</url>
+  <screenshots>
+    <screenshot type="default">https://wiki.gnome.org/Apps/Hitori?action=AttachFile&amp;do=get&amp;target=screenshot-hitori.png</screenshot>
+  </screenshots>
+  <!-- FIXME: change this to an upstream email address for spec updates
+  <updatecontact>someone_who_cares@upstream_project.org</updatecontact>
+   -->
+  <project_group>GNOME</project_group>
+</application>

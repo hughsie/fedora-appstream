@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="desktop">gpodder.desktop</id>
+  <licence>CC0</licence>
+  <name>gPodder</name>
+  <summary>Manage and download podcasts</summary>
+  <description>
+    <p>
+      gPodder lets you manage your Podcast subscriptions, discover new content
+      and download episodes to your devices.
+    </p>
+    <p>
+      You can also take advantage of the service http://gpodder.net, which lets
+      you sync subscriptions, playback progress and starred episodes.
+    </p>
+  </description>
+  <url type="homepage">http://gpodder.org/</url>
+  <screenshots>
+    <screenshot type="default">http://gpodder.org/images/full_desktop.png</screenshot>
+  </screenshots>
+  <!-- FIXME: change this to an upstream email address for spec updates
+  <updatecontact>someone_who_cares@upstream_project.org</updatecontact>
+   -->
+  <project_group>GNOME</project_group>
+</application>

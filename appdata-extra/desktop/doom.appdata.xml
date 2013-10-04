@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="desktop">doom.desktop</id>
+  <licence>CC0</licence>
+  <summary>Science Fiction-Horror FPS Game</summary>
+  <description>
+    <p>
+      Chocolate Doom is a conservative, historically accurate Doom source port.
+    </p>
+    <p>
+       Rather than flashy new graphics, Chocolate Doom's main features are its
+      accurate reproduction of the original game as it was played in the 1990s.
+    </p>
+  </description>
+  <url type="homepage">http://chocolate-doom.org/</url>
+  <screenshots>
+    <screenshot type="default">http://images2.wikia.nocookie.net/__cb20110314042502/doom/images/3/35/Meet_cyberdemon.png</screenshot>
+    <screenshot>http://i1-news.softpedia-static.com/images/news2/Doom-4-Announced-Again-2.jpg</screenshot>
+    <screenshot>http://www.jameswoodcock.co.uk/wp-content/uploads/2006/10/doomenhanced.jpg</screenshot>
+    <screenshot>http://www.pc-freak.net/images/doom2.jpg</screenshot>
+  </screenshots>
+  <updatecontact>fraggle@remove-this-bit-to-email-me.users.sourceforge.net</updatecontact>
+</application>
