@@ -68,6 +68,7 @@ class Application:
         self.type_id = None
         self.project_group = None
         self.requires_appdata = False
+        self.thumbnail_screenshots = True
 
     def add_screenshot_url(self, url):
 
@@ -169,13 +170,14 @@ class Application:
                         (s.width, s.height, url))
 
                 # write all the thumbnail sizes too
-                for size in self.cfg.get_screenshot_thumbnail_sizes():
-                    size_str = str(size[0]) + 'x' + str(size[1])
-                    url = mirror_url + size_str + '/' + s.basename
-                    s.dump_to_file('./screenshots/' + size_str, size)
-                    f.write("        <image type=\"thumbnail\" width=\"%s\" "
-                            "height=\"%s\">%s</image>\n" %
-                            (size[0], size[1], url))
+                if self.thumbnail_screenshots:
+                    for size in self.cfg.get_screenshot_thumbnail_sizes():
+                        size_str = str(size[0]) + 'x' + str(size[1])
+                        url = mirror_url + size_str + '/' + s.basename
+                        s.dump_to_file('./screenshots/' + size_str, size)
+                        f.write("        <image type=\"thumbnail\" width=\"%s\" "
+                                "height=\"%s\">%s</image>\n" %
+                                (size[0], size[1], url))
                 f.write("      </screenshot>\n")
                 s.dump_to_file('./screenshots/source')
             f.write("    </screenshots>\n")

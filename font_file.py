@@ -70,6 +70,7 @@ class FontFile(Application):
         Application.__init__(self, pkg, cfg)
         self.type_id = 'font'
         self.categories = [ 'Addons', 'Fonts' ]
+        self.thumbnail_screenshots = False
 
     def create_icon(self, font, filename):
         # create a large canvas to draw the font to -- we don't know the width yet
