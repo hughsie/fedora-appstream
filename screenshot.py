@@ -40,7 +40,13 @@ class Screenshot:
         if size[0] > 0:
             #img = self._img.resize(size, Image.ANTIALIAS)
             img = self._img.copy()
-            img.thumbnail(size, Image.ANTIALIAS)
+
+            # if the screenshot is smaller than the thumbnail then just
+            # resize it to fit as PIL thumbnail only reduces in size
+            if img.size[0] < size[0] or img.size[1] < size[1]:
+                img = img.resize(size, Image.ANTIALIAS)
+            else:
+                img.thumbnail(size, Image.ANTIALIAS)
 
             # if we didn't have the exact aspect ratio, pad with alpha
             if img.size != size:
