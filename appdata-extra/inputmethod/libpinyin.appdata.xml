@@ -2,12 +2,12 @@
 <application>
 <id type="inputmethod">libpinyin.xml</id>
 <licence>CC0</licence>
-<name>Pin Yin</name>
-<summary>Chinese Pin Yin and Zhu Yin input method</summary>
+<name>Pinyin</name>
+<summary>Chinese Pinyin and Zhuyin input method</summary>
 <description>
 <p>
-The Pin Yin input method is designed for entering Chinese Pinyin and a Chinese
-ZhuYin text.
+The Pinyin input method is designed for entering Chinese text by
+using Pinyin or Zhuyin.
 </p>
 <p>
 Input methods are typing systems allowing users to input complex languages.
