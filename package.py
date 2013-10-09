@@ -72,6 +72,7 @@ class Package:
         hdr = _ts.hdrFromFdno(fd)
         self.name = hdr.name
         self.summary = hdr.summary
+        self.licence = hdr.license
         self.homepage_url = hdr['url']
         fi = hdr.fiFromHeader()
         self._f = os.fdopen(fd)

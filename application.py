@@ -59,6 +59,7 @@ class Application:
         self.comments = {}
         self.mimetypes = None
         self.homepage_url = pkg.homepage_url
+        self.licence = pkg.licence
         self.icon = None
         self.keywords = None
         self.pkgname = pkg.name
@@ -145,6 +146,8 @@ class Application:
             for mimetype in self.mimetypes:
                 f.write("      <mimetype>%s</mimetype>\n" % quote(mimetype))
             f.write("    </mimetypes>\n")
+        if self.licence:
+            f.write("    <licence>%s</licence>\n" % quote(self.licence))
         if self.homepage_url:
             f.write("    <url type=\"homepage\">%s</url>\n" % quote(self.homepage_url))
         if self.project_group:
