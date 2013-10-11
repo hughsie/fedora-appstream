@@ -303,6 +303,16 @@ class Build:
                 print 'IGNORE\t', f, '\t', "Icon unspecified"
                 continue
 
+            # do we have screeshot overrides?
+            extra_screenshots = os.path.join('./screenshots-extra', app.app_id)
+            if os.path.exists(extra_screenshots):
+                app.screenshots = []
+                overrides = glob.glob(extra_screenshots + "/*.png")
+                print 'INFO\tAdding', len(overrides), 'screenshot overrides'
+                overrides.sort()
+                for f in overrides:
+                    app.add_screenshot_filename(f)
+
             # write content
             app.write(xml)
 
