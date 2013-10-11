@@ -169,7 +169,10 @@ class Application:
             f.write("    <screenshots>\n")
             mirror_url = self.cfg.get_screenshot_mirror_url()
             for s in self.screenshots:
-                f.write("      <screenshot>\n")
+                if s == self.screenshots[0]:
+                    f.write("      <screenshot type=\"default\">\n")
+                else:
+                    f.write("      <screenshot type=\"normal\">\n")
 
                 # write the full size source image
                 url = mirror_url + 'source/' + s.basename
