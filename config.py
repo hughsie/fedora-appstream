@@ -155,7 +155,7 @@ class Config:
 
     def get_project_group_for_id(self, id):
         # get project group for a specific application id
-        value = []
+        value = None
         try:
             value = self._config.get_string(self._group_name, 'ProjectGroup(' + id + ')')
         except Exception as e:

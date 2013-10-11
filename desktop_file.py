@@ -173,6 +173,8 @@ class DesktopFile(Application):
                 self.project_group = 'GNOME'
             elif k == 'X-MATE-Bugzilla-Product':
                 self.project_group = 'MATE'
+            elif k == 'X-KDE-StartupNotify':
+                self.project_group = 'KDE'
             elif k == GLib.KEY_FILE_DESKTOP_KEY_EXEC:
                 tmp = config.get_string(DG, k)
                 if tmp.startswith('xfce4-'):
@@ -192,7 +194,9 @@ class DesktopFile(Application):
             self.requires_appdata = True
 
         # are we overriding the project_group value?
-        self.project_group = self.cfg.get_project_group_for_id(self.app_id)
+        project_group_override = self.cfg.get_project_group_for_id(self.app_id)
+        if project_group_override:
+            self.project_group = project_group_override
 
         # We blacklist some apps by categories
         blacklisted = False
