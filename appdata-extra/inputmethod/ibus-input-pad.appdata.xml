@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <application>
-<id type="inputmethod">sayura.xml</id>
+<id type="inputmethod">ibus-input-pad.xml</id>
 <licence>CC0</licence>
-<name>Sayura</name>
-<summary>Sihali input method</summary>
+<name>Input Pad</name>
+<summary>Input Pad input method</summary>
 <description>
 <p>
-The Sayura input method is designed for entering Sinhala text.
+The Input Pad input method is designed for entering special symbols.
 </p>
 <p>
 Input methods are typing systems allowing users to input complex languages.
@@ -14,5 +14,5 @@ They are necessary because these contain too many characters to simply be laid
 out on a traditional keyboard.
 </p>
 </description>
-<url type="homepage">https://fedorahosted.org/ibus-sayura/</url>
+<url type="homepage">http://code.google.com/p/ibus/</url>
 </application>

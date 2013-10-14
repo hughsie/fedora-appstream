@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <application>
-<id type="inputmethod">anthy.xml</id>
+<id type="inputmethod">ibus-mozc.xml</id>
 <licence>CC0</licence>
-<name>Anthy</name>
+<name>Mozc</name>
 <summary>Japanese input method</summary>
 <description>
 <p>
-The Anthy input method is designed for entering Japanese text.
+The Mozc input method is designed for entering Japanese text.
+It is multi-platform and is available on Chromium OS, Windows, Mac and Linux.
 </p>
 <p>
 Input methods are typing systems allowing users to input complex languages.
@@ -14,8 +15,7 @@ They are necessary because these contain too many characters to simply be laid
 out on a traditional keyboard.
 </p>
 </description>
-<url type="homepage">http://code.google.com/p/ibus/</url>
-</application>
 <!--
-https://raw.github.com/ibus/ibus-anthy/master/icons/ibus-anthy.svg
+<url type="homepage">FIXME</url>
 -->
+</application>

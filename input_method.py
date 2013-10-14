@@ -119,6 +119,9 @@ class InputMethodComponent(InputMethod):
             if desc:
                 self.comments['C'] = getText(desc[0].childNodes)
 
+        # use prefix
+        self.set_id('ibus-' + f.split('/')[-1])
+
         return True
 
 class InputMethodTable(InputMethod):

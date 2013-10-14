@@ -317,8 +317,9 @@ class Build:
                     print 'IGNORE\t', f, '\t', "content type " + content_type + " not supported"
                     continue
 
-                # the ID is the filename
-                app.set_id(f.split('/')[-1])
+                # the ID is the filename unless specified otherwise
+                if app.app_id is None:
+                    app.set_id(f.split('/')[-1])
 
                 # parse file
                 if not app.parse_file(f):
