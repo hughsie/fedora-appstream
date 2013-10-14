@@ -115,7 +115,9 @@ def update(repos, reponame):
     except yum.Errors.NoMoreMirrorsRepoError as e:
         print "FAILED:\t\t" + str(e)
         sys.exit(1)
-    for pkg in _do_newest_filtering(pkgs):
+    newest_packages = _do_newest_filtering(pkgs)
+    newest_packages.sort()
+    for pkg in newest_packages:
 
         # not our repo
         if pkg.repoid not in repos:
