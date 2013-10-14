@@ -60,6 +60,8 @@ def main():
             if l.startswith('    <id '):
                 if l.startswith('    <id type="desktop">'):
                     app_id = l[23:-5]
+                elif l.startswith('    <id type="codec">'):
+                    app_id = l[21:-5]
                 elif l.startswith('    <id type="font">'):
                     app_id = l[20:-5]
                 elif l.startswith('    <id type="inputmethod">'):
