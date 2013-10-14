@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <application>
-<id type="inputmethod">handwrite-jp.xml</id>
+<id type="inputmethod">ibus-bogo.xml</id>
 <licence>CC0</licence>
-<name>Japanese Handwriting</name>
-<summary>Japanese handwriting input method</summary>
+<name>BoGo</name>
+<summary>Vietnamese input method</summary>
 <description>
 <p>
-The handwriting input method is designed for entering Japanese text.
+The BoGo input method is designed for entering Vietnamese text.
 </p>
 <p>
 Input methods are typing systems allowing users to input complex languages.
@@ -14,5 +14,5 @@ They are necessary because these contain too many characters to simply be laid
 out on a traditional keyboard.
 </p>
 </description>
-<url type="homepage">http://code.google.com/p/ibus-handwrite/</url>
+<url type="homepage">http://github.com/BoGoEngine/ibus-bogo-python</url>
 </application>

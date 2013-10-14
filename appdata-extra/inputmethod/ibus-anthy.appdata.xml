@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <application>
-<id type="inputmethod">handwrite-zh.xml</id>
+<id type="inputmethod">ibus-anthy.xml</id>
 <licence>CC0</licence>
-<name>Simplified Chinese Handwriting</name>
-<summary>Simplified Chinese handwriting input method</summary>
+<name>Anthy</name>
+<summary>Japanese input method</summary>
 <description>
 <p>
-The handwriting input method is designed for entering Simplified Chinese text.
+The Anthy input method is designed for entering Japanese text.
 </p>
 <p>
 Input methods are typing systems allowing users to input complex languages.
@@ -14,5 +14,8 @@ They are necessary because these contain too many characters to simply be laid
 out on a traditional keyboard.
 </p>
 </description>
-<url type="homepage">http://code.google.com/p/ibus-handwrite/</url>
+<url type="homepage">http://code.google.com/p/ibus/</url>
 </application>
+<!--
+https://raw.github.com/ibus/ibus-anthy/master/icons/ibus-anthy.svg
+-->

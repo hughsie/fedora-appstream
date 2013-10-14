@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <application>
-<id type="inputmethod">wubi-haifeng86.db</id>
+<id type="inputmethod">ibus-wubi-haifeng86.db</id>
 <licence>CC0</licence>
 <name>HaiFeng Wubi 86</name>
 <summary>Simplified Chinese input method</summary>

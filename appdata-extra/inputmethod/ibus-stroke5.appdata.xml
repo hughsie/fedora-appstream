@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <application>
-<id type="inputmethod">typing-booster.xml</id>
+<id type="inputmethod">ibus-stroke5.db</id>
 <licence>CC0</licence>
-<name>Typing Booster</name>
-<summary>Predictive input method</summary>
+<name>Stroke 5</name>
+<summary>Chinese input method</summary>
 <description>
 <p>
-Ibus-Typing Booster is a predictive input method and predicts complete words
-based on partial input.
-One can then simply select the desired word from a list of suggestions and
-improve one's typing speed and spelling.
+Stroke 5 is a very simple stroke-based Chinese input method.
+It was designed specifically for people with limited hand mobility or computer
+literacy, like the elderly or disabled.
 </p>
 <p>
 Input methods are typing systems allowing users to input complex languages.

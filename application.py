@@ -66,6 +66,7 @@ class Application:
         self.cached_icon = False
         self.cfg = cfg
         self.screenshots = []
+        self.compulsory_for_desktop = []
         self.type_id = None
         self.project_group = None
         self.requires_appdata = False
@@ -104,6 +105,11 @@ class Application:
         split = self.app_id_full.rsplit('.', 1)
         if len(split) > 1:
             self.app_id = split[0]
+
+        # is this app compulsory for any specific desktop?
+        desktops = self.cfg.get_compulsory_for_desktop_for_id(self.app_id)
+        if desktops:
+            self.compulsory_for_desktop.extend(desktops)
 
     def write(self, f):
         f.write("  <application>\n")
@@ -163,6 +169,11 @@ class Application:
                 if lang != 'C':
                     f.write("    <description xml:lang=\"%s\">%s</description>\n" %
                             (quote(lang), quote(self.descriptions[lang])))
+
+        # compulsory for any specific desktop?
+        if len(self.compulsory_for_desktop) > 0:
+            for c in self.compulsory_for_desktop:
+                f.write("    <compulsory_for_desktop>%s</compulsory_for_desktop>\n"% c)
 
         # any screenshots
         if len(self.screenshots) > 0:

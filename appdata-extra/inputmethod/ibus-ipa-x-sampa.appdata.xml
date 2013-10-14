@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <application>
-<id type="inputmethod">ipa-x-sampa.db</id>
+<id type="inputmethod">ibus-ipa-x-sampa.db</id>
 <licence>CC0</licence>
 <name>International Phonetic Alphabet</name>
 <summary>IPA X-SAMPA input method</summary>
