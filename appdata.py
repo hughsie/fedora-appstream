@@ -67,6 +67,12 @@ class AppData:
                 continue
             values.append(item.text)
         return values
+    def get_compulsory_for_desktop(self):
+        values = []
+        for item in self.root:
+            if item.tag == 'compulsory_for_desktop':
+                values.append(item.text)
+        return values
     def _append_for_lang(self, descriptions, lang, content):
         if not lang:
             lang = 'C'

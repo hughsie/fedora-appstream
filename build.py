@@ -152,6 +152,11 @@ class Build:
                 print 'DOWNLOADING\t', image
                 app.add_screenshot_url(image)
 
+            # get compulsory_for_desktop
+            for c in data.get_compulsory_for_desktop():
+                if c not in app.compulsory_for_desktop:
+                    app.compulsory_for_desktop.append(c)
+
         elif app.requires_appdata:
             print 'IGNORE\t', app.pkgname, '\t', app.app_id_full, 'requires AppData to be included'
             return False
