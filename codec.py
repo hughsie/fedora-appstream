@@ -47,6 +47,13 @@ class Codec(Application):
         self.categories.append('Addons')
         self.categories.append('Codecs')
 
+        # use the pkgname as the id
+        app_id = pkg.name
+        app_id = app_id.replace('gstreamer1-', '')
+        app_id = app_id.replace('gstreamer-', '')
+        app_id = app_id.replace('plugins-', '')
+        self.set_id('gstreamer-' + app_id)
+
         # map the ID to a nice codec name
         self.codec_name = {}
         self.codec_name['espeak'] = 'eSpeak'
@@ -83,10 +90,6 @@ class Codec(Application):
         # nothing codec_name
         if len(app_ids) == 0:
             return False
-
-        # create an application based on the interesting codecs
-        app_ids.sort()
-        self.set_id('gstreamer-' + '-'.join(app_ids))
 
         # get a description
         summary.sort()
