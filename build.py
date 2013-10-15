@@ -196,10 +196,6 @@ class Build:
             if app.project_group:
                 print 'INFO\t', app.pkgname, '\t', app.app_id, 'assigned', app.project_group
 
-        # we got something useful
-        if not self.has_valid_content:
-            self.has_valid_content = True
-
         # Do not include apps without a name
         if not 'C' in app.names:
             print 'IGNORE\t', app.pkgname, '\t', "no Name"
@@ -224,6 +220,11 @@ class Build:
             overrides.sort()
             for f in overrides:
                 app.add_screenshot_filename(f)
+
+        # we got something useful
+        if not self.has_valid_content:
+            self.has_valid_content = True
+
         return True
 
     def build(self, filename):
