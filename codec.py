@@ -37,6 +37,7 @@ class Codec(Application):
     def __init__(self, pkg, cfg):
         Application.__init__(self, pkg, cfg)
         self.type_id = 'codec'
+        self.requires_appdata = True
         self.categories = []
         self.cached_icon = False
         desc = 'A codec decodes audio and video for for playback or editing and is also used for transmission or storage.'
