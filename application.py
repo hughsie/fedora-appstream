@@ -177,9 +177,9 @@ class Application:
                 f.write("    <compulsory_for_desktop>%s</compulsory_for_desktop>\n"% c)
 
         # any screenshots
-        if len(self.screenshots) > 0:
+        mirror_url = self.cfg.get_screenshot_mirror_url()
+        if mirror_url and len(self.screenshots) > 0:
             f.write("    <screenshots>\n")
-            mirror_url = self.cfg.get_screenshot_mirror_url()
             for s in self.screenshots:
                 if s == self.screenshots[0]:
                     f.write("      <screenshot type=\"default\">\n")
