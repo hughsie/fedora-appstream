@@ -23,6 +23,7 @@
 
 import glob
 import os
+import sys
 import shutil
 import tarfile
 import gzip
@@ -30,6 +31,11 @@ import gzip
 import config
 
 def main():
+
+    # check we're not top level
+    if os.path.exists('./application.py'):
+        print 'You cannot run these tools from the top level directory'
+        sys.exit(1)
 
     cfg = config.Config()
 
@@ -110,4 +116,5 @@ def main():
     os.remove('./' + cfg.distro_name + '-icons.tar')
 
 if __name__ == "__main__":
+
     main()

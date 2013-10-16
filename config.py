@@ -26,7 +26,7 @@ from gi.repository import GLib
 
 class Config:
 
-    def __init__(self, filename='./data/fedora-appstream.conf'):
+    def __init__(self, filename='../data/fedora-appstream.conf'):
 
         self._config = GLib.KeyFile()
         self._config.load_from_file(filename, GLib.KeyFileFlags.NONE)
