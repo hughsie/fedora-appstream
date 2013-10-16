@@ -138,9 +138,10 @@ class Build:
                 app.comments = tmp
 
             # get optional bits
-            tmp = data.get_url()
+            tmp = data.get_urls()
             if tmp:
-                app.homepage_url = tmp
+                for key in tmp:
+                    app.urls[key] = tmp[key]
             tmp = data.get_project_group()
             if tmp:
                 app.project_group = tmp
@@ -162,39 +163,42 @@ class Build:
             return False
 
         # use the homepage to filter out same more generic apps
-        if not app.project_group:
+        homepage_url = None
+        if app.urls.has_key('homepage'):
+            homepage_url = app.urls['homepage']
+        if homepage_url and not app.project_group:
 
             # GNOME
             project_urls = [ 'http*://*.gnome.org*',
                              'http://gnome-*.sourceforge.net/']
             for m in project_urls:
-                if fnmatch.fnmatch(app.homepage_url, m):
+                if fnmatch.fnmatch(homepage_url, m):
                     app.project_group = "GNOME"
 
             # KDE
             project_urls = [ 'http*://*.kde.org*',
                             'http://*kde-apps.org/*' ]
             for m in project_urls:
-                if fnmatch.fnmatch(app.homepage_url, m):
+                if fnmatch.fnmatch(homepage_url, m):
                     app.project_group = "KDE"
 
             # XFCE
             project_urls = [ 'http://*xfce.org*' ]
             for m in project_urls:
-                if fnmatch.fnmatch(app.homepage_url, m):
+                if fnmatch.fnmatch(homepage_url, m):
                     app.project_group = "XFCE"
 
             # LXDE
             project_urls = [ 'http://lxde.org*',
                              'http://lxde.sourceforge.net/*' ]
             for m in project_urls:
-                if fnmatch.fnmatch(app.homepage_url, m):
+                if fnmatch.fnmatch(homepage_url, m):
                     app.project_group = "LXDE"
 
             # MATE
             project_urls = [ 'http://*mate-desktop.org*' ]
             for m in project_urls:
-                if fnmatch.fnmatch(app.homepage_url, m):
+                if fnmatch.fnmatch(homepage_url, m):
                     app.project_group = "MATE"
 
             # print that we auto-added it

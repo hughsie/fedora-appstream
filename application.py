@@ -58,7 +58,8 @@ class Application:
         self.descriptions = {}
         self.comments = {}
         self.mimetypes = None
-        self.homepage_url = pkg.homepage_url
+        self.urls = {}
+        self.urls['homepage'] = pkg.homepage_url
         self.licence = pkg.licence
         self.icon = None
         self.keywords = None
@@ -159,8 +160,8 @@ class Application:
             f.write("    </mimetypes>\n")
         if self.licence:
             f.write("    <licence>%s</licence>\n" % quote(self.licence))
-        if self.homepage_url:
-            f.write("    <url type=\"homepage\">%s</url>\n" % quote(self.homepage_url))
+        for key in self.urls:
+            f.write("    <url type=\"%s\">%s</url>\n" % (key, quote(self.urls[key])))
         if self.project_group:
             f.write("    <project_group>%s</project_group>\n" % quote(self.project_group))
         if self.descriptions and 'C' in self.descriptions:

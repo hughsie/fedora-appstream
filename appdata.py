@@ -115,10 +115,13 @@ class AppData:
             descriptions[lang] = descriptions[lang].replace('  ', ' ').rstrip()
         return descriptions
 
-    def get_url(self):
-        ss = self.root.find("url")
-        if ss is not None:
-            return ss.text
+    def get_urls(self):
+        values = {}
+        for item in self.root:
+            if item.tag == 'url':
+                key = item.get('type')
+                values[key] = item.text
+        return values
 
     def get_project_group(self):
         ss = self.root.find("project_group")
