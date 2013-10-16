@@ -43,8 +43,8 @@ from input_method import InputMethodTable, InputMethodComponent
 from codec import Codec
 
 def package_decompress(pkg):
-    if os.path.exists('./extract-package'):
-        p = subprocess.Popen(['./extract-package', pkg.filename, 'tmp'],
+    if os.path.exists('../extract-package'):
+        p = subprocess.Popen(['../extract-package', pkg.filename, 'tmp'],
                              cwd='.', stdout=subprocess.PIPE)
         p.wait()
         if p.returncode:
@@ -91,7 +91,7 @@ class Build:
 
         # do we have an AppData file?
         appdata_file = './tmp/usr/share/appdata/' + app.app_id + '.appdata.xml'
-        appdata_extra_file = './appdata-extra/' + app.type_id + '/' + app.app_id + '.appdata.xml'
+        appdata_extra_file = '../appdata-extra/' + app.type_id + '/' + app.app_id + '.appdata.xml'
         if os.path.exists(appdata_file) and os.path.exists(appdata_extra_file):
             print 'DELETE\t', appdata_extra_file, 'as upstream AppData file exists'
             os.remove(appdata_extra_file)

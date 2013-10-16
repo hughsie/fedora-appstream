@@ -58,7 +58,7 @@ class Codec(Application):
         # map the ID to a nice codec name
         self.codec_name = {}
         self.codec_name['espeak'] = 'eSpeak'
-        csvfile = open('./data/gstreamer-data.csv', 'r')
+        csvfile = open('../data/gstreamer-data.csv', 'r')
         data = csv.reader(csvfile)
         for row in data:
             if row[1] == '-':
