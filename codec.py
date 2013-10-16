@@ -85,6 +85,8 @@ class Codec(Application):
             # add each short name if it's not existing before
             new = self.codec_name[app_id].split('|')
             for n in new:
+                if n.count('encoder') > 0:
+                    continue
                 if not n in summary:
                     summary.append(n)
 
