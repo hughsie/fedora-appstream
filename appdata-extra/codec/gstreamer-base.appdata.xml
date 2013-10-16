@@ -3,7 +3,7 @@
 <application>
   <id type="codec">gstreamer-base</id>
   <licence>CC0</licence>
-  <name>GStreamer Multimedia Codecs</name>
+  <name>GStreamer Multimedia Codecs - Base</name>
   <description>
     <p>
       This addon includes system codecs that are essential for the running system.
