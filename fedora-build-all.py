@@ -30,11 +30,46 @@ import datetime
 # internal
 from build import Build
 from logger import Logger
+from package import Package
 
 timestamp = datetime.datetime.now().strftime('%Y%m%d')
 sys.stdout = Logger("build-all-%s.txt" % timestamp)
 
+def _do_newest_filtering(filelist):
+    '''
+    Only return the newest package for each name.arch
+    '''
+    newest = {}
+    for f in filelist:
+        pkg = Package(f)
+        key = (pkg.name, pkg.arch)
+        if key in newest:
+
+            # the current package is older
+            if pkg.verCMP(newest[key]) < 0:
+                continue
+
+            # the current package is the same version
+            if pkg.verCMP(newest[key]) == 0:
+                continue
+
+            # the current package is newer than what we have stored
+            del newest[key]
+
+        newest[key] = pkg
+
+    # get back the file list
+    filelist_new = []
+    for pkg in newest.values():
+        filelist_new.append(pkg.filename)
+    return filelist_new
+
 def main():
+
+    # check we're not top level
+    if os.path.exists('./application.py'):
+        print 'You cannot run these tools from the top level directory'
+        sys.exit(1)
 
     # remove appstream
     if os.path.exists('./appstream'):
@@ -42,7 +77,8 @@ def main():
     if os.path.exists('./icons'):
         shutil.rmtree('./icons')
 
-    files = glob.glob("./packages/*.rpm")
+    files_all = glob.glob("./packages/*.rpm")
+    files = _do_newest_filtering(files_all)
     files.sort()
 
     job = Build()

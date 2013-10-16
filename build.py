@@ -138,9 +138,10 @@ class Build:
                 app.comments = tmp
 
             # get optional bits
-            tmp = data.get_url()
+            tmp = data.get_urls()
             if tmp:
-                app.homepage_url = tmp
+                for key in tmp:
+                    app.urls[key] = tmp[key]
             tmp = data.get_project_group()
             if tmp:
                 app.project_group = tmp
@@ -152,53 +153,57 @@ class Build:
                 print 'DOWNLOADING\t', image
                 app.add_screenshot_url(image)
 
+            # get compulsory_for_desktop
+            for c in data.get_compulsory_for_desktop():
+                if c not in app.compulsory_for_desktop:
+                    app.compulsory_for_desktop.append(c)
+
         elif app.requires_appdata:
             print 'IGNORE\t', app.pkgname, '\t', app.app_id_full, 'requires AppData to be included'
             return False
 
         # use the homepage to filter out same more generic apps
-        if not app.project_group:
+        homepage_url = None
+        if app.urls.has_key('homepage'):
+            homepage_url = app.urls['homepage']
+        if homepage_url and not app.project_group:
 
             # GNOME
             project_urls = [ 'http*://*.gnome.org*',
                              'http://gnome-*.sourceforge.net/']
             for m in project_urls:
-                if fnmatch.fnmatch(app.homepage_url, m):
+                if fnmatch.fnmatch(homepage_url, m):
                     app.project_group = "GNOME"
 
             # KDE
             project_urls = [ 'http*://*.kde.org*',
                             'http://*kde-apps.org/*' ]
             for m in project_urls:
-                if fnmatch.fnmatch(app.homepage_url, m):
+                if fnmatch.fnmatch(homepage_url, m):
                     app.project_group = "KDE"
 
             # XFCE
             project_urls = [ 'http://*xfce.org*' ]
             for m in project_urls:
-                if fnmatch.fnmatch(app.homepage_url, m):
+                if fnmatch.fnmatch(homepage_url, m):
                     app.project_group = "XFCE"
 
             # LXDE
             project_urls = [ 'http://lxde.org*',
                              'http://lxde.sourceforge.net/*' ]
             for m in project_urls:
-                if fnmatch.fnmatch(app.homepage_url, m):
+                if fnmatch.fnmatch(homepage_url, m):
                     app.project_group = "LXDE"
 
             # MATE
             project_urls = [ 'http://*mate-desktop.org*' ]
             for m in project_urls:
-                if fnmatch.fnmatch(app.homepage_url, m):
+                if fnmatch.fnmatch(homepage_url, m):
                     app.project_group = "MATE"
 
             # print that we auto-added it
             if app.project_group:
                 print 'INFO\t', app.pkgname, '\t', app.app_id, 'assigned', app.project_group
-
-        # we got something useful
-        if not self.has_valid_content:
-            self.has_valid_content = True
 
         # Do not include apps without a name
         if not 'C' in app.names:
@@ -224,6 +229,11 @@ class Build:
             overrides.sort()
             for f in overrides:
                 app.add_screenshot_filename(f)
+
+        # we got something useful
+        if not self.has_valid_content:
+            self.has_valid_content = True
+
         return True
 
     def build(self, filename):

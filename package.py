@@ -29,6 +29,8 @@ import lzma
 import cpio
 import fnmatch
 
+import rpmUtils.miscutils
+
 _ts = rpm.ts()
 _ts.setVSFlags(0x7FFFFFFF)
 
@@ -64,24 +66,37 @@ class Package:
     def __init__(self, filename):
         self.filename = filename
         self.name = None
-        self._f = None
         self._default_wildcards = []
 
         # open the rpm file
         fd = os.open(filename, os.O_RDONLY)
         hdr = _ts.hdrFromFdno(fd)
         self.name = hdr.name
+        self.epoch = hdr.epoch
+        self.version = hdr.version
+        self.release = hdr.release
+        self.arch = hdr.arch
         self.summary = hdr.summary
         self.licence = hdr.license
         self.homepage_url = hdr['url']
-        fi = hdr.fiFromHeader()
-        self._f = os.fdopen(fd)
+        os.close(fd)
 
-    def __del__(self):
-        self._f.close()
+    def verCMP(self, other):
+        rc = cmp(self.name, other.name)
+        if rc == 0:
+            (e1, v1, r1) = (self.epoch, self.version, self.release)
+            (e2, v2, r2) = (other.epoch, other.version, other.release)
+            rc = rpmUtils.miscutils.compareEVR((e1, v1, r1), (e2, v2, r2))
+        return rc
 
     def extract(self, targetpath, wildcards):
-        lf = LZMA(self._f)
+
+        # reopen
+        fd = os.open(self.filename, os.O_RDONLY)
+        hdr = _ts.hdrFromFdno(fd)
+        fi = hdr.fiFromHeader()
+        f = os.fdopen(fd)
+        lf = LZMA(f)
         cpioarchive = cpio.CpioArchive(lf)
         files = []
         for filename in cpioarchive:
@@ -90,6 +105,7 @@ class Package:
                     extract_file_from_cpio(targetpath, cpioarchive)
                     files.append(filename)
                     break
+        f.close()
         return files
 
 def main():

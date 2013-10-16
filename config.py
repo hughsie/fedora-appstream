@@ -22,18 +22,26 @@
 #
 
 import sys
+import ConfigParser
+
 from gi.repository import GLib
 
 class Config:
 
-    def __init__(self, filename='./data/fedora-appstream.conf'):
+    def __init__(self, filename='../data/fedora-appstream.conf'):
 
         self._config = GLib.KeyFile()
         self._config.load_from_file(filename, GLib.KeyFileFlags.NONE)
         self._group_name = 'fedora-appstream'
-        self.distro_name = self._config.get_string(self._group_name, 'DistroName')
         self.icon_size = self._config.get_integer(self._group_name, 'IconSize')
         self.min_icon_size = self._config.get_integer(self._group_name, 'MinIconSize')
+
+        # get the project defaults
+        self.cfg_project = ConfigParser.ConfigParser()
+        self.cfg_project.read('./project.conf')
+        self.distro_name = self.cfg_project.get('AppstreamProject', 'DistroName')
+        self.distro_tag = self.cfg_project.get('AppstreamProject', 'DistroTag')
+        self.repo_ids = self.cfg_project.get('AppstreamProject', 'RepoIds').split(',')
 
     def get_id_blacklist(self):
         blacklist = []
@@ -84,9 +92,10 @@ class Config:
         return data
 
     def get_screenshot_mirror_url(self):
+
         data = []
         try:
-            data = self._config.get_string(self._group_name, 'ScreenshotMirrorUrl')
+            data = self.cfg_project.get('AppstreamProject', 'ScreenshotMirrorUrl')
         except Exception as e:
             pass
         return data
@@ -121,7 +130,7 @@ class Config:
 
     def get_stock_icons(self):
         # get the list of stock icons
-        f = open('./data/stock-icon-names.txt', 'r')
+        f = open('../data/stock-icon-names.txt', 'r')
         stock_icons = f.read().rstrip().split('\n')
         f.close()
         return stock_icons

@@ -137,6 +137,12 @@ def update():
     outfile.close()
 
 def main():
+
+    # check we're not top level
+    if os.path.exists('./application.py'):
+        print 'You cannot run these tools from the top level directory'
+        sys.exit(1)
+
     update()
     sys.exit(0)
 

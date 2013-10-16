@@ -37,6 +37,7 @@ class Codec(Application):
     def __init__(self, pkg, cfg):
         Application.__init__(self, pkg, cfg)
         self.type_id = 'codec'
+        self.requires_appdata = True
         self.categories = []
         self.cached_icon = False
         desc = 'A codec decodes audio and video for for playback or editing and is also used for transmission or storage.'
@@ -46,6 +47,13 @@ class Codec(Application):
         self.icon = 'application-x-executable'
         self.categories.append('Addons')
         self.categories.append('Codecs')
+
+        # use the pkgname as the id
+        app_id = pkg.name
+        app_id = app_id.replace('gstreamer1-', '')
+        app_id = app_id.replace('gstreamer-', '')
+        app_id = app_id.replace('plugins-', '')
+        self.set_id('gstreamer-' + app_id)
 
         # map the ID to a nice codec name
         self.codec_name = {}
@@ -77,16 +85,14 @@ class Codec(Application):
             # add each short name if it's not existing before
             new = self.codec_name[app_id].split('|')
             for n in new:
+                if n.count('encoder') > 0:
+                    continue
                 if not n in summary:
                     summary.append(n)
 
         # nothing codec_name
         if len(app_ids) == 0:
             return False
-
-        # create an application based on the interesting codecs
-        app_ids.sort()
-        self.set_id('gstreamer-' + '-'.join(app_ids))
 
         # get a description
         summary.sort()

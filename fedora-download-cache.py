@@ -63,7 +63,7 @@ def _do_newest_filtering(pkglist):
         newest[key] = pkg
     return newest.values()
 
-def update(repos, reponame):
+def update():
 
     # create if we're starting from nothing
     if not os.path.exists('./packages'):
@@ -88,11 +88,11 @@ def update(repos, reponame):
         else:
             existing[hdr.name] = f
         os.close(fd)
-    print "INFO:\t\tFound %i existing packages for %s" % (len(existing), reponame)
+    print "INFO:\t\tFound %i existing packages for %s" % (len(existing), cfg.distro_tag)
 
     # setup yum
     yb = yum.YumBase()
-    yb.preconf.releasever = reponame[1:]
+    yb.preconf.releasever = cfg.distro_tag[1:]
     yb.doConfigSetup(errorlevel=-1, debuglevel=-1)
     yb.conf.cache = 0
 
@@ -120,7 +120,7 @@ def update(repos, reponame):
     for pkg in newest_packages:
 
         # not our repo
-        if pkg.repoid not in repos:
+        if pkg.repoid not in cfg.repo_ids:
             continue
 
         # not our arch
@@ -177,13 +177,14 @@ def update(repos, reponame):
             os.remove(existing[i])
 
 def main():
-    default_repos = [ 'fedora', 'updates', 'updates-testing' ]
-    if len(sys.argv) == 3:
-        update(sys.argv[2].split(','), sys.argv[1])
-    elif len(sys.argv) == 2:
-        update(default_repos, sys.argv[1])
-    else:
-        update(default_repos, 'f20')
+
+    # check we're not top level
+    if os.path.exists('./application.py'):
+        print 'You cannot run these tools from the top level directory'
+        sys.exit(1)
+
+    # update all the packages
+    update()
     sys.exit(0)
 
 if __name__ == "__main__":

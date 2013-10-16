@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2013 Richard Hughes <richard@hughsie.com> -->
+<application>
+  <id type="codec">gstreamer-espeak</id>
+  <licence>CC0</licence>
+  <name>eSpeak GStreamer Multimedia Codec</name>
+  <description>
+    <p>
+      eSpeak is a compact open source text-to-speech synthesizer for English
+      and other languages.
+      This codec includes different voices, whose characteristics can be altered.
+    </p>
+    <p>
+      A codec decodes audio and video for for playback or editing and is also
+      used for transmission or storage.
+      Different codecs are used in video-conferencing, streaming media and
+      video editing applications.
+    </p>
+  </description>
+</application>
