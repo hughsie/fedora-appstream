@@ -40,10 +40,6 @@ class Codec(Application):
         self.requires_appdata = True
         self.categories = []
         self.cached_icon = False
-        desc = 'A codec decodes audio and video for for playback or editing and is also used for transmission or storage.'
-        desc += '\n\n'
-        desc += 'Different codecs are used in video-conferencing, streaming media and video editing applications.'
-        self.descriptions['C'] = desc
         self.icon = 'application-x-executable'
         self.categories.append('Addons')
         self.categories.append('Codecs')
@@ -64,7 +60,7 @@ class Codec(Application):
             if row[1] == '-':
                 continue
             codec_id = row[0][31:-3]
-            self.codec_name[codec_id] = row[1]
+            self.codec_name[codec_id] = row[1].split('|')
         csvfile.close()
 
     def parse_files(self, files):
@@ -83,7 +79,7 @@ class Codec(Application):
             app_ids.append(app_id)
 
             # add each short name if it's not existing before
-            new = self.codec_name[app_id].split('|')
+            new = self.codec_name[app_id]
             for n in new:
                 if n.count('encoder') > 0:
                     continue
