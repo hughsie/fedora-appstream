@@ -62,7 +62,7 @@ class Application:
         self.urls['homepage'] = pkg.homepage_url
         self.licence = pkg.licence
         self.icon = None
-        self.keywords = None
+        self.keywords = []
         self.pkgname = pkg.name
         self.cached_icon = False
         self.cfg = cfg
@@ -148,7 +148,7 @@ class Application:
                     cat = 'News'
                 f.write("      <appcategory>%s</appcategory>\n" % cat)
             f.write("    </appcategories>\n")
-        if self.keywords:
+        if len(self.keywords) > 0:
             f.write("    <keywords>\n")
             for keyword in self.keywords:
                 f.write("      <keyword>%s</keyword>\n" % quote(keyword))

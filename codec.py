@@ -84,6 +84,7 @@ class Codec(Application):
                 if n.count('encoder') > 0:
                     continue
                 if not n in summary:
+                    self.keywords.append(n)
                     summary.append(n)
 
         # nothing codec_name
