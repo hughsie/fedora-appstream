@@ -6,7 +6,7 @@
   <name>GStreamer Multimedia Codecs - Non Free</name>
   <description>
     <p>
-      This addon includes several poor quality codecs that are missing
+      This addon includes several additional codecs that are missing
       something - perhaps a good code review, some documentation, a set of
       tests, a real live maintainer, or some actual wide use.
       However, they might be good enough to play your media files.
