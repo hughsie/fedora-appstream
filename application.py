@@ -59,7 +59,8 @@ class Application:
         self.comments = {}
         self.mimetypes = None
         self.urls = {}
-        self.urls['homepage'] = pkg.homepage_url
+        if pkg.homepage_url:
+            self.urls['homepage'] = pkg.homepage_url
         self.licence = pkg.licence
         self.icon = None
         self.keywords = []
