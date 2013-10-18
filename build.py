@@ -221,7 +221,7 @@ class Build:
             return False
 
         # do we have screeshot overrides?
-        extra_screenshots = os.path.join('./screenshots-extra', app.app_id)
+        extra_screenshots = os.path.join('../screenshots-extra', app.app_id)
         if os.path.exists(extra_screenshots):
             app.screenshots = []
             overrides = glob.glob(extra_screenshots + "/*.png")
