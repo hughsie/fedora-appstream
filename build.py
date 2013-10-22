@@ -34,6 +34,7 @@ import fnmatch
 from gi.repository import Gio
 
 # internal
+from logger import LoggerItem
 from package import Package
 from appdata import AppData
 from config import Config
@@ -77,7 +78,7 @@ class Build:
         blacklisted = False
         for b in self.cfg.get_id_blacklist():
             if fnmatch.fnmatch(app.app_id, b):
-                print 'IGNORE\t', "application is blacklisted:", app.app_id
+                app.log.write(LoggerItem.INFO, "application is blacklisted")
                 blacklisted = True
                 break
         if blacklisted:
@@ -86,7 +87,7 @@ class Build:
         # packages that ship .desktop files in /usr/share/applications
         # *and* /usr/share/applications/kde4 do not need multiple entries
         if app.app_id in self.application_ids:
-            print 'IGNORE\t', app.pkgname, '\t', app.app_id, 'duplicate ID in package'
+            app.log.write(LoggerItem.INFO, "duplicate ID in package %s" % app.pkgname)
             return False
         self.application_ids.append(app.app_id)
 
@@ -94,7 +95,7 @@ class Build:
         appdata_file = './tmp/usr/share/appdata/' + app.app_id + '.appdata.xml'
         appdata_extra_file = '../appdata-extra/' + app.type_id + '/' + app.app_id + '.appdata.xml'
         if os.path.exists(appdata_file) and os.path.exists(appdata_extra_file):
-            print 'DELETE\t', appdata_extra_file, 'as upstream AppData file exists'
+            app.log.write(LoggerItem.INFO, "deleting %s as upstream AppData file exists" % appdata_extra_file)
             os.remove(appdata_extra_file)
 
         # just use the extra file in places of the missing upstream one
@@ -116,7 +117,8 @@ class Build:
                 if p.returncode:
                     for line in p.stdout:
                         line = line.replace('\n', '')
-                        print 'WARNING\tAppData did not validate: ' + line
+                        app.log.write(LoggerItem.WARNING,
+                                      "AppData did not validate: %s" % line)
 
             # check the id matches
             if data.get_id() != app.app_id and data.get_id() != app.app_id_full:
@@ -151,7 +153,7 @@ class Build:
             # get screenshots
             tmp = data.get_screenshots()
             for image in tmp:
-                print 'DOWNLOADING\t', image
+                app.log.write(LoggerItem.INFO, "downloading %s" % image)
                 app.add_screenshot_url(image)
 
             # get compulsory_for_desktop
@@ -160,7 +162,7 @@ class Build:
                     app.compulsory_for_desktop.append(c)
 
         elif app.requires_appdata:
-            print 'IGNORE\t', app.pkgname, '\t', app.app_id_full, 'requires AppData to be included'
+            app.log.write(LoggerItem.INFO, "%s requires AppData" % app.app_id_full)
             return False
 
         # use the homepage to filter out same more generic apps
@@ -204,21 +206,21 @@ class Build:
 
             # print that we auto-added it
             if app.project_group:
-                print 'INFO\t', app.pkgname, '\t', app.app_id, 'assigned', app.project_group
+                app.log.write(LoggerItem.INFO, "assigned %s" % app.project_group)
 
         # Do not include apps without a name
         if not 'C' in app.names:
-            print 'IGNORE\t', app.pkgname, '\t', "no Name"
+            app.log.write(LoggerItem.INFO, "ignored as no Name")
             return False
 
         # Do not include apps without a summary
         if not 'C' in app.comments:
-            print 'IGNORE\t', app.pkgname, '\t', "no Comment"
+            app.log.write(LoggerItem.INFO, "ignored as no Comment")
             return False
 
         # Do not include apps without an icon
         if not app.icon:
-            print 'IGNORE\t', app.pkgname, '\t', "Icon unspecified"
+            app.log.write(LoggerItem.INFO, "ignored as no Icon")
             return False
 
         # do we have screeshot overrides?
@@ -226,7 +228,7 @@ class Build:
         if os.path.exists(extra_screenshots):
             app.screenshots = []
             overrides = glob.glob(extra_screenshots + "/*.png")
-            print 'INFO\tAdding', len(overrides), 'screenshot overrides'
+            app.log.write(LoggerItem.INFO, "adding %i screenshot overrides" % len(overrides))
             overrides.sort()
             for f in overrides:
                 app.add_screenshot_filename(f)
@@ -240,12 +242,11 @@ class Build:
     def build(self, filename):
 
         # check the package has .desktop files
-        print 'SOURCE\t', filename
         pkg = Package(filename)
 
         for b in self.cfg.get_package_blacklist():
             if fnmatch.fnmatch(pkg.name, b):
-                print 'IGNORE\t', filename, '\t', "package is blacklisted:", pkg.name
+                pkg.log.write(LoggerItem.INFO, "package is blacklisted")
                 return
 
         # set up state
@@ -283,7 +284,7 @@ class Build:
                 extra_files = glob.glob("./packages/%s*.rpm" % c[1])
                 for f in extra_files:
                     extra_pkg = Package(f)
-                    print "INFO\tAdding extra package %s for %s" % (extra_pkg.name, pkg.name)
+                    pkg.log.write(LoggerItem.INFO, "adding extra package %s" % extra_pkg.name)
                     package_decompress(extra_pkg)
 
         # open the AppStream file for writing
@@ -305,8 +306,7 @@ class Build:
             # process each desktop file in the original package
             for f in files:
 
-                print 'PROCESS\t', f
-
+                pkg.log.write(LoggerItem.INFO, "reading %s" % f)
                 fi = Gio.file_new_for_path(f)
                 info = fi.query_info('standard::content-type', 0, None)
 
@@ -325,7 +325,7 @@ class Build:
                 elif content_type == 'application/x-sqlite3':
                     app = InputMethodTable(pkg, self.cfg)
                 else:
-                    print 'IGNORE\t', f, '\t', "content type " + content_type + " not supported"
+                    pkg.log.write(LoggerItem.INFO, "content type %s not supported" % content_type)
                     continue
 
                 # the ID is the filename unless specified otherwise
@@ -349,7 +349,7 @@ class Build:
         # create AppStream icon tar
         if self.has_valid_content:
             output_file = "./appstream/%s-icons.tar" % pkg.name
-            print 'WRITING\t', output_file
+            pkg.log.write(LoggerItem.INFO, "writing %s and %s" % (xml_output_file, output_file))
             tar = tarfile.open(output_file, "w")
             files = glob.glob("./icons/*.png")
             for f in files:

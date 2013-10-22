@@ -29,6 +29,9 @@ import lzma
 import cpio
 import fnmatch
 
+# internal
+from logger import LoggerItem
+
 import rpmUtils.miscutils
 
 _ts = rpm.ts()
@@ -80,6 +83,7 @@ class Package:
         self.licence = hdr.license
         self.homepage_url = hdr['url']
         os.close(fd)
+        self.log = LoggerItem(os.path.basename(filename))
 
     def verCMP(self, other):
         rc = cmp(self.name, other.name)

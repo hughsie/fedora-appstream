@@ -28,6 +28,7 @@ import urllib
 from PIL import Image
 
 # internal
+from logger import LoggerItem
 from package import Package
 from screenshot import Screenshot
 
@@ -51,6 +52,7 @@ def quote(text):
 class Application:
 
     def __init__(self, pkg, cfg):
+        self.log = LoggerItem()
         self.app_id = None
         self.app_id_full = None
         self.names = {}
@@ -80,7 +82,8 @@ class Application:
         try:
             img = Image.open(filename)
         except IOError as e:
-            print 'WARNING\tFailed to open', filename, str(e)
+            self.log.write(LoggerItem.WARNING,
+                           "Failed to open %s: %s" % (filename, str(e)))
         else:
             self.screenshots.append(Screenshot(self.app_id, img))
 
@@ -107,6 +110,9 @@ class Application:
         split = self.app_id_full.rsplit('.', 1)
         if len(split) > 1:
             self.app_id = split[0]
+
+        # update the log name
+        self.log.update_key(self.app_id_full)
 
         # is this app compulsory for any specific desktop?
         desktops = self.cfg.get_compulsory_for_desktop_for_id(self.app_id)
@@ -137,7 +143,8 @@ class Application:
             # check for a common problem
             if 'AudioVideo' in self.categories:
                 if not 'Audio' in self.categories and not 'Video' in self.categories:
-                    print 'WARNING\t', self.app_id, ' has AudioVideo but not Audio or Video'
+                    self.log.write(LoggerItem.WARNING,
+                                   "has AudioVideo but not Audio or Video")
                     self.categories.extend(['Audio', 'Video'])
             for cat in self.categories:
                 if cat in self.cfg.get_category_ignore_list():

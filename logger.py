@@ -21,13 +21,33 @@
 #    Richard Hughes <richard@hughsie.com>
 #
 
+import os
 import sys
 
 class Logger(object):
-    def __init__(self, filename="output.log"):
+
+    def __init__(self, filename=None):
         self.terminal = sys.stdout
-        self.log = open(filename, "a")
+        if filename:
+            if not os.path.exists('./logs'):
+                os.makedirs('./logs')
+            self.log = open('./logs/' + filename, "a")
 
     def write(self, message):
         self.terminal.write(message)
         self.log.write(message)
+
+class LoggerItem(object):
+
+    INFO = 'INFO'
+    WARNING = 'WARNING'
+    FAILED = 'FAILED'
+
+    def __init__(self, key=''):
+        self.key = key
+
+    def update_key(self, key=''):
+        self.key = key
+
+    def write(self, enum, msg):
+        print enum.ljust(10) + self.key.ljust(50) + ' ' + msg

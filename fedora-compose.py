@@ -27,8 +27,13 @@ import sys
 import shutil
 import tarfile
 import gzip
+import datetime
 
 import config
+from logger import Logger, LoggerItem
+
+timestamp = datetime.datetime.now().strftime('%Y%m%d')
+sys.stdout = Logger("compose-%s.txt" % timestamp)
 
 def main():
 
@@ -38,6 +43,7 @@ def main():
         sys.exit(1)
 
     cfg = config.Config()
+    log = LoggerItem()
 
     application_ids = {}
 
@@ -56,8 +62,8 @@ def main():
     master = gzip.open('./' + cfg.distro_name + '.xml.gz', 'wb')
     master.write('<?xml version="1.0"?>\n')
     master.write('<applications version="0.1">\n')
-    for f in files:
-        f = open(f, 'r')
+    for filename in files:
+        f = open(filename, 'r')
         s = f.read()
 
         # detect duplicate IDs in the data
@@ -73,12 +79,16 @@ def main():
                 elif l.startswith('    <id type="inputmethod">'):
                     app_id = l[27:-5]
                 else:
-                    print 'appstream id type not recognised'
+                    log.update_key(filename)
+                    log.write(LoggerItem.WARNING,
+                              "appstream id type %s not recognised" % l)
                     break
+                log.update_key(app_id)
                 if application_ids.has_key(app_id):
                     found = application_ids[app_id]
                     is_dupe = True
-                    print 'Duplicate ID', app_id, 'detected in', f, 'and', found, 'ignoring'
+                    log.write(LoggerItem.WARNING,
+                              "duplicate ID found in %s and %s" % (f, found))
                 application_ids[app_id] = f
         if is_dupe:
             continue
@@ -88,6 +98,10 @@ def main():
         s = s.replace('<applications version="0.1">\n', '')
         s = s.replace('</applications>\n', '')
         f.close()
+
+        log.update_key(filename)
+        log.write(LoggerItem.INFO, "adding contents")
+
         master.write(s)
     master.write('</applications>\n')
     master.close()

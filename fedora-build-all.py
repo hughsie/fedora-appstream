@@ -29,7 +29,7 @@ import datetime
 
 # internal
 from build import Build
-from logger import Logger
+from logger import Logger, LoggerItem
 from package import Package
 
 timestamp = datetime.datetime.now().strftime('%Y%m%d')
@@ -81,12 +81,14 @@ def main():
     files = _do_newest_filtering(files_all)
     files.sort()
 
+    log = LoggerItem()
     job = Build()
     for f in files:
+        log.update_key(f)
         try:
             job.build(f)
         except Exception as e:
-            print 'WARNING\t', f, str(e)
+            log.write(LoggerItem.WARNING, str(e))
 
 if __name__ == "__main__":
     main()

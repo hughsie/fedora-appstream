@@ -31,6 +31,7 @@ from PIL import Image, ImageOps
 from gi.repository import GdkPixbuf, GLib, Rsvg
 
 # internal
+from logger import LoggerItem
 from application import Application
 from package import Package
 
@@ -185,12 +186,12 @@ class DesktopFile(Application):
                 if len(tmp) == 1:
                     self.project_group = tmp[0]
         if not is_application:
-            print 'IGNORE\t', f, '\t', "not an application"
+            self.log.write(LoggerItem.INFO, "not an application")
             return False
 
         # if we're not showing in the menu, we'd need an AppData file
         if no_display:
-            print 'INFO\t', f, '\t', "Requires AppData as NoDisplay=True"
+            self.log.write(LoggerItem.INFO, "NoDisplay=True")
             self.requires_appdata = True
 
         # are we overriding the project_group value?
@@ -204,7 +205,7 @@ class DesktopFile(Application):
             for c in self.categories:
                 for b in self.cfg.get_category_blacklist():
                     if fnmatch.fnmatch(c, b):
-                        print 'IGNORE\t', f, '\tcategory is blacklisted:', c
+                        self.log.write(LoggerItem.INFO, "category %s is blacklisted" % c)
                         blacklisted = True
                         break
         if blacklisted:
@@ -217,9 +218,9 @@ class DesktopFile(Application):
                 # check it's not been added upstream
                 for cat in cats_to_add:
                     if cat in self.categories:
-                        print 'WARNING\t' + self.app_id + ' now includes category ' + cat
+                        self.log.write(LoggerItem.WARNING, "self includes category %s" % cat)
                     else:
-                        print 'INFO\tFor ' + self.app_id + ' manually adding category', cat
+                        self.log.write(LoggerItem.INFO, "manually adding category %s" % cat)
                 self.categories.extend(cats_to_add)
 
         # check icon exists
@@ -228,10 +229,10 @@ class DesktopFile(Application):
             try:
                 self.write_appstream_icon(self.icon, icon_fullpath)
             except AppdataException as e:
-                print 'IGNORE\t', f, '\t', "icon is corrupt:", icon_fullpath, str(e)
+                self.log.write(LoggerItem.INFO, "icon %s is corrupt: %s" % (icon_fullpath, str(e)))
                 return False
             if not os.path.exists(icon_fullpath):
-                print 'IGNORE\t', f, '\t', "icon does not exist:", icon_fullpath
+                self.log.write(LoggerItem.INFO, "icon %s does not exist" % icon_fullpath)
                 return False
             self.cached_icon = True
 
