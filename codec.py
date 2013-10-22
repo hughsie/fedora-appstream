@@ -75,7 +75,7 @@ class Codec(Application):
                 continue
             app_id = f[36:-3]
             if not app_id in self.codec_name:
-                continue;
+                continue
             app_ids.append(app_id)
 
             # add each short name if it's not existing before

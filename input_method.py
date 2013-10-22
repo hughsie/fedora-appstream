@@ -92,7 +92,7 @@ class InputMethodComponent(InputMethod):
             self.comments['C'] = getText(desc[0].childNodes)
         desc = dom.getElementsByTagName("homepage")
         if desc:
-            self.homepage_url = getText(desc[0].childNodes)
+            self.urls['homepage'] = getText(desc[0].childNodes)
 
         # do we have a engine section we can use?
         #

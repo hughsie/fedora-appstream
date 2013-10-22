@@ -69,6 +69,7 @@ class Build:
     def __init__(self):
         self.cfg = Config()
         self.application_ids = []
+        self.has_valid_content = False
 
     def add_application(self, app):
 

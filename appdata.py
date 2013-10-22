@@ -39,6 +39,7 @@ class AppData:
 
     def __init__(self):
         self.root = None
+        self.filename = None
 
     def extract(self, filename):
         tree = ET.parse(filename)
@@ -151,9 +152,9 @@ def main():
     data.extract(sys.argv[1])
     print 'id:\t\t', data.get_id()
     print 'licence:\t', data.get_licence()
-    print 'url:\t\t', data.get_url()
+    print 'urls:\t\t', data.get_urls()
     print 'project_group:\t\t', data.get_project_group()
-    print 'screenshot:\t\t', data.get_screenshot()
+    print 'screenshots:\t\t', data.get_screenshots()
     print 'description:\t', data.get_descriptions()
     print 'END'
     sys.exit(0)

@@ -75,8 +75,7 @@ class FontFile(Application):
     def create_icon(self, font, filename):
         # create a large canvas to draw the font to -- we don't know the width yet
         img_size_temp = (256, 256)
-        bg_color = (255,255,255)
-        fg_color = (0,0,0)
+        fg_color = (0, 0, 0)
         im_temp = Image.new("RGBA", img_size_temp)
         draw = ImageDraw.Draw(im_temp)
         font = ImageFont.truetype(font, 160)
@@ -95,7 +94,7 @@ class FontFile(Application):
         img.paste(im_temp, offset)
 
         # rescale the image back to 64x64
-        img = img.resize((64,64), Image.ANTIALIAS)
+        img = img.resize((64, 64), Image.ANTIALIAS)
         img.save(filename, 'png')
         return True
 
@@ -103,8 +102,8 @@ class FontFile(Application):
 
         # create a large canvas to draw the font to
         img_size_temp = (2560, 256)
-        bg_color = (255,255,255)
-        fg_color = (0,0,0)
+        bg_color = (255, 255, 255)
+        fg_color = (0, 0, 0)
         border_width = 5
         basewidth = self.cfg.get_int('FontScreenshotWidth')
 
@@ -121,7 +120,7 @@ class FontFile(Application):
         draw.text((20, 140), text, fg_color, font=font)
 
         # crop to the smallest size
-        im_temp = autocrop(im_temp, (255,255,255))
+        im_temp = autocrop(im_temp, (255, 255, 255))
         if not im_temp:
             return False
 

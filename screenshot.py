@@ -21,7 +21,6 @@
 #    Richard Hughes <richard@hughsie.com>
 #
 
-import sys
 import hashlib
 from PIL import Image
 
@@ -36,7 +35,7 @@ class Screenshot:
         self.basename += hashlib.md5(img.tostring()).hexdigest()
         self.basename += '.png'
 
-    def dump_to_file(self, pathname, size=(0,0)):
+    def dump_to_file(self, pathname, size=(0, 0)):
         if size[0] > 0:
             #img = self._img.resize(size, Image.ANTIALIAS)
             img = self._img.copy()
@@ -54,9 +53,9 @@ class Screenshot:
                 offset = ((size[0] - img.size[0]) / 2,
                           (size[1] - img.size[1]) / 2)
                 if img.mode == 'RGBA':
-                    img2.paste(img, offset, img);
+                    img2.paste(img, offset, img)
                 else:
-                    img2.paste(img, offset);
+                    img2.paste(img, offset)
                 img = img2
         else:
             img = self._img
