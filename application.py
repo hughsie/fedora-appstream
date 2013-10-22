@@ -75,6 +75,7 @@ class Application:
         self.project_group = None
         self.requires_appdata = False
         self.thumbnail_screenshots = True
+        self.status_html = None
 
     def add_screenshot_filename(self, filename):
 
@@ -214,6 +215,45 @@ class Application:
             f.write("    </screenshots>\n")
 
         f.write("  </application>\n")
+
+        # write to the status file
+        if self.status_html and self.type_id != 'font':
+            self.status_html.write("<h2>%s</h2>\n" % self.app_id)
+            if mirror_url and len(self.screenshots) > 0:
+                for s in self.screenshots:
+                    url = mirror_url + '624x351/' + s.basename
+                    thumb_url = mirror_url + '112x63/' + s.basename
+                    self.status_html.write("<a href=\"%s\"><img src=\"%s\"/></a>\n" %
+                                           (url, thumb_url))
+            self.status_html.write("<table>\n")
+            self.status_html.write("<tr><td>%s</td><td><code>%s</code></td></tr>\n" %
+                                   ("Type", self.type_id))
+            self.status_html.write("<tr><td>%s</td><td>%s</td></tr>\n" %
+                                   ("Name", self.names['C']))
+            self.status_html.write("<tr><td>%s</td><td>%s</td></tr>\n" %
+                                   ("Comment", self.comments['C']))
+            if 'C' in self.descriptions:
+                self.status_html.write("<tr><td>%s</td><td>%s</td></tr>\n" %
+                                       ("Description", self.descriptions['C']))
+            self.status_html.write("<tr><td>%s</td><td><code>%s</code></td></tr>\n" %
+                                   ("Package", self.pkgname))
+            if self.categories:
+                self.status_html.write("<tr><td>%s</td><td>%s</td></tr>\n" %
+                                       ("Categories", ', '.join(self.categories)))
+            if len(self.keywords):
+                self.status_html.write("<tr><td>%s</td><td>%s</td></tr>\n" %
+                                       ("Keywords", ', '.join(self.keywords)))
+            if 'homepage' in self.urls:
+                self.status_html.write("<tr><td>%s</td><td>%s</td></tr>\n" %
+                                       ("Homepage", self.urls['homepage']))
+            if self.project_group:
+                self.status_html.write("<tr><td>%s</td><td>%s</td></tr>\n" %
+                                       ("Project", self.project_group))
+            if len(self.compulsory_for_desktop):
+                self.status_html.write("<tr><td>%s</td><td>%s</td></tr>\n" %
+                                       ("Compulsory", ', '.join(self.compulsory_for_desktop)))
+            self.status_html.write("</table>\n")
+            self.status_html.flush()
 
 def main():
     pkg = Package(sys.argv[1])

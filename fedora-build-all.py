@@ -77,18 +77,40 @@ def main():
     if os.path.exists('./icons'):
         shutil.rmtree('./icons')
 
+    # the status HTML page goes here too
+    if not os.path.exists('./screenshots'):
+        os.makedirs('./screenshots')
+
     files_all = glob.glob("./packages/*.rpm")
     files = _do_newest_filtering(files_all)
     files.sort()
 
     log = LoggerItem()
     job = Build()
+
+    # build status page
+    job.status_html = open('./screenshots/status.html', 'w')
+    job.status_html.write('<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 ' +
+                          'Transitional//EN" ' +
+                          '"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">\n')
+    job.status_html.write('<html xmlns="http://www.w3.org/1999/xhtml">\n')
+    job.status_html.write('<head>\n')
+    job.status_html.write('<meta http-equiv="Content-Type" content="text/html; ' +
+                          'charset=UTF-8" />\n')
+    job.status_html.write('<title>Application Data Review</title>\n')
+    job.status_html.write('</head>\n')
+    job.status_html.write('<body>\n')
+
     for f in files:
         log.update_key(f)
         try:
             job.build(f)
         except Exception as e:
             log.write(LoggerItem.WARNING, str(e))
+
+    job.status_html.write('</body>\n')
+    job.status_html.write('</html>\n')
+    job.status_html.close()
 
 if __name__ == "__main__":
     main()
