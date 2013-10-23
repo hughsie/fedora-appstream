@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+    <id type="desktop">lifeograph.desktop</id>
+    <licence>CC0</licence>
+    <name>Lifeograph</name>
+    <summary>A diary program</summary>
+    <description>
+        <p>
+            Lifeograph is a diary program to take personal notes on life. It has all
+            essential functionality expected in a diary program and strives to have
+            a clean and streamlined user interface.
+        </p>
+
+        <p>
+            Lifeograph:
+        </p>
+        <ul>
+            <li>supports encrypted (with real encryption) and unencrypted diaries</li>
+            <li>automatically logs out when not used for some time (to protect your diary when you forget to log out doing some other thing) (optional)</li>
+            <li>automatically formats entry titles and subheadings (we owe thanks to tomboy for the idea)</li>
+            <li>wiki-like rich text formatting (*bold*, _italic_, =strikeout=, etc…)</li>
+            <li>basic searching/filtering and replacing text</li>
+            <li>themes in text editor</li>
+            <li>favorite entries</li>
+            <li>entry tagging</li>
+            <li>spell checking</li>
+            <li>links between entries</li>
+            <li>links in URI form (http://, file://, mailto://, etc…)</li>
+            <li>automatic backups</li>
+            <li>printing individual entries or whole diaries</li>
+            <li>basic statistical charts</li>
+            <li>image thumbnails in entries</li>
+        </ul>
+    </description>
+    <screenshots>
+        <screenshot type="default">http://lifeograph.wdfiles.com/local--files/screenshots/lifeograph-0.11.0-edit.png</screenshot>
+    </screenshots>
+    <url type="homepage">http://lifeograph.wikidot.com/start</url>
+    <updatecontact>aoz_2@yahoo.com</updatecontact>
+</application>
+

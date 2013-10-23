@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+    <id type="desktop">xmedcon.desktop</id>
+    <licence>CC0</licence>
+    <name>Xmedcon</name>
+    <summary>A medical image conversion utility and library</summary>
+    <description>
+        <p>
+            This project stands for Medical Image Conversion and is released under the
+            GNU's (L)GPL license. It bundles the C source code, a library, a flexible
+            command-line utility and a graphical front-end based on the amazing Gtk+
+            toolkit.
+        </p>
+        <p>
+            Its main purpose is image conversion while preserving valuable medical
+            study information. The currently supported formats are: Acr/Nema 2.0,
+            Analyze (SPM), Concorde/uPET, DICOM 3.0, CTI ECAT 6/7, InterFile 3.3
+            and PNG or Gif87a/89a towards desktop applications.
+        </p>
+    </description>
+    <screenshots>
+        <screenshot type="default">http://xmedcon.sourceforge.net/images/shotlnx.jpg</screenshot>
+    </screenshots>
+    <url type="homepage">http://xmedcon.sourceforge.net//</url>
+    <updatecontact>enlf@users.sourceforge.net</updatecontact>
+</application>
+
