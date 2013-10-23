@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+    <id type="desktop">freemedforms.desktop</id>
+    <licence>CC0</licence>
+    <name>FreeMedForms EMR</name>
+    <summary>The FreeMedForms Electronic Medical Record Manager</summary>
+    <description>
+        <p>
+            FreeMedForms aims to be a open Electronic Medical Record Manager.
+            FreeMedForms is also a lot of derivatives sub-project, which are
+            just standalone compilation of FreeMedForms plugins.
+        </p>
+
+        <p>
+            This project is a free and open source project. A community grows up
+            around it. FreeMedForms and derivatives is released under the terms
+            of the GPLv3 License. Some parts of the code are LGPL v2.1.
+        </p>
+    </description>
+    <screenshots>
+        <screenshot type="default">http://freemedforms.com/_media/shots/freemedforms/080/presentation/generalui-fr.png</screenshot>
+        <screenshot>http://freemedforms.com/_media/shots/freemedforms/080/presentation/patientfiles-fr.png</screenshot>
+        <screenshot>http://freemedforms.com/_media/shots/freemedforms/060/presentation/calendar-en.png</screenshot>
+    </screenshots>
+    <url type="homepage">http://freemedforms.com/en/start</url>
+    <updatecontact>eric.maeker@gmail.com</updatecontact>
+</application>
+
