@@ -31,6 +31,7 @@ from PIL import Image, ImageOps, ImageFont, ImageDraw, ImageChops
 from application import Application
 from package import Package
 from screenshot import Screenshot
+from logger import LoggerItem
 
 def autocrop(im, alpha):
     if alpha:
@@ -43,26 +44,32 @@ def autocrop(im, alpha):
         return im.crop(bbox)
     return None
 
-def get_font_name(font):
+def _decode_record(record):
+    text = ''
+    if '\000' in record.string:
+        text = unicode(record.string, 'utf-16-be').encode('utf-8')
+    else:
+        text = record.string
+    return text
+
+def get_font_metadata(font):
     """Get the short name from the font's names table"""
-    FONT_SPECIFIER_NAME_ID = 4
-    FONT_SPECIFIER_FAMILY_ID = 1
-    name = ""
-    family = ""
+
+    # these are specified in http://stsf.sourceforge.net/st/sttypes_8h.html#a231
+    FONT_SPECIFIER_FONTFAMILY = 1
+    FONT_SPECIFIER_FONTSUBFAMILY = 2
+    FONT_SPECIFIER_FULLFONTNAME = 4
+
+    # extract
+    metadata = {}
     for record in font['name'].names:
-        if record.nameID == FONT_SPECIFIER_NAME_ID and not name:
-            if '\000' in record.string:
-                name = unicode(record.string, 'utf-16-be').encode('utf-8')
-            else:
-                name = record.string
-        elif record.nameID == FONT_SPECIFIER_FAMILY_ID and not family:
-            if '\000' in record.string:
-                family = unicode(record.string, 'utf-16-be').encode('utf-8')
-            else:
-                family = record.string
-        if name and family:
-            break
-    return name, family
+        if record.nameID == FONT_SPECIFIER_FONTFAMILY:
+            metadata['FontFamily'] = _decode_record(record)
+        elif record.nameID == FONT_SPECIFIER_FONTSUBFAMILY:
+            metadata['FontSubFamily'] = _decode_record(record)
+        elif record.nameID == FONT_SPECIFIER_FULLFONTNAME:
+            metadata['FontFullName'] = _decode_record(record)
+    return metadata
 
 class FontFile(Application):
 
@@ -72,14 +79,71 @@ class FontFile(Application):
         self.categories = [ 'Addons', 'Fonts' ]
         self.thumbnail_screenshots = False
 
-    def create_icon(self, font, filename):
+    def get_font_chars(self, font):
+
+        # get two UTF-8 chars that are present in the set
+        glyphs = font['hmtx'].metrics
+        if all(glyph in glyphs for glyph in ['A', 'a']):
+            return 'Aa'
+        if all(glyph in glyphs for glyph in ['one', 'two']):
+            return "12"
+        if all(glyph in glyphs for glyph in ['mail', 'thumbs-down']):
+            return u"📤👎"
+        if all(glyph in glyphs for glyph in ['Lambda', 'Sigma']):
+            return u"ΛΣ"
+        if all(glyph in glyphs for glyph in ['hamza_medial', 'veh.medi']):
+            return u"ڤء"
+        if all(glyph in glyphs for glyph in ['shatamil', 'uutamil']):
+            return u"ஶூ"
+        if all(glyph in glyphs for glyph in ['ashortdeva', 'ocandranuktadeva']):
+            return u"आऴ"
+        if all(glyph in glyphs for glyph in ['alef', 'pe']):
+            return u"פא"
+        if all(glyph in glyphs for glyph in ['earth', 'gemini']):
+            return u"♁♊"
+        if all(glyph in glyphs for glyph in ['lessnotequal', 'emptyset']):
+            return u"≨∅"
+        if all(glyph in glyphs for glyph in ['nabla', 'existential']):
+            return u"∇∃"
+        if all(glyph in glyphs for glyph in ['ttho', 'pho']):
+            return u"ꠑꠚ"
+        if all(glyph in glyphs for glyph in ['tilde', 'dagger']):
+            return u"†~"
+
+        # we failed, so show a list of glyphs we could use in the error
+        banned_glyphs = ['space', 'nonmarkingreturn']
+        possible_glyphs = []
+        for glyph in glyphs:
+            if glyph.startswith('uni'):
+                continue
+            if glyph in banned_glyphs:
+                continue
+            if not any((c in set('0123456789.-')) for c in glyph):
+                possible_glyphs.append(glyph)
+        if len(possible_glyphs) == 0:
+            self.log.write(LoggerItem.WARNING, "no suitable glyphs found")
+        else:
+            possible_glyphs.sort()
+            self.log.write(LoggerItem.WARNING, "no suitable glyphs found: %s" %
+                           ', '.join(possible_glyphs))
+        return None
+
+    def create_icon(self, font, tt, filename):
         # create a large canvas to draw the font to -- we don't know the width yet
         img_size_temp = (256, 256)
         fg_color = (0, 0, 0)
         im_temp = Image.new("RGBA", img_size_temp)
         draw = ImageDraw.Draw(im_temp)
         font = ImageFont.truetype(font, 160)
-        draw.text((20, 20), "Aa", fg_color, font=font)
+
+        # these fonts take AAAGGES to decompile
+        if self.app_id in [ 'batang', 'dotum', 'gulim', 'hline'] :
+            chars = 'Aa'
+        else:
+            chars = self.get_font_chars(tt)
+        if not chars:
+            return False
+        draw.text((20, 20), chars, fg_color, font=font)
 
         # crop to the smallest size
         im_temp = autocrop(im_temp, None)
@@ -147,7 +211,7 @@ class FontFile(Application):
         icon_fullpath = './icons/' + self.app_id + '.png'
 
         # generate a preview icon
-        if not self.create_icon(f, icon_fullpath):
+        if not self.create_icon(f, tt, icon_fullpath):
             return False
         self.icon = self.app_id
         self.cached_icon = True
