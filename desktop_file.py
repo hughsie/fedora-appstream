@@ -156,10 +156,13 @@ class DesktopFile(Application):
                     self.names['C'] = config.get_string(DG, k)
             elif k.startswith(GLib.KEY_FILE_DESKTOP_KEY_COMMENT):
                 m = re.match(GLib.KEY_FILE_DESKTOP_KEY_COMMENT + '\[([^\]]+)\]', k)
+                value = config.get_string(DG, k)
+                if len(value) == 0:
+                    continue
                 if m:
-                    self.comments[m.group(1)] = config.get_string(DG, k)
+                    self.comments[m.group(1)] = value
                 else:
-                    self.comments['C'] = config.get_string(DG, k)
+                    self.comments['C'] = value
             elif k == GLib.KEY_FILE_DESKTOP_KEY_ICON:
                 icon = config.get_string(DG, k)
                 if icon:
