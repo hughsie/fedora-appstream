@@ -139,9 +139,11 @@ class FontFile(Application):
 
     def parse_file(self, f):
 
-        tt = ttLib.TTFont(f)
-        self.names['C'] = get_font_name(tt)[0]
-        self.comments['C'] = "A font family from " + get_font_name(tt)[1]
+        tt = ttLib.TTFont(f, recalcBBoxes=False)
+        metadata = get_font_metadata(tt)
+        self.metadata.update(metadata)
+        self.names['C'] = metadata['FontFullName']
+        self.comments['C'] = "A font from " + metadata['FontFamily']
         icon_fullpath = './icons/' + self.app_id + '.png'
 
         # generate a preview icon

@@ -61,6 +61,7 @@ class Application:
         self.comments = {}
         self.mimetypes = None
         self.urls = {}
+        self.metadata = {}
         if pkg.homepage_url:
             self.urls['homepage'] = pkg.homepage_url
         self.licence = pkg.licence
@@ -213,6 +214,10 @@ class Application:
                 f.write("      </screenshot>\n")
                 s.dump_to_file('./screenshots/source')
             f.write("    </screenshots>\n")
+
+        # any metadata
+        for m in self.metadata:
+            f.write("    <X-%s>%s</X-%s>\n" % (m, self.metadata[m], m))
 
         f.write("  </application>\n")
 
