@@ -197,7 +197,8 @@ class FontFile(Application):
         wpercent = (basewidth / float(img.size[0]))
         hsize = int((float(img.size[1]) * float(wpercent)))
         img = img.resize((basewidth, hsize), Image.ANTIALIAS)
-        self.screenshots.append(Screenshot(self.app_id, img))
+        caption = self.metadata['FontSubFamily']
+        self.screenshots.append(Screenshot(self.app_id, img, caption))
 
         return True
 
@@ -206,7 +207,7 @@ class FontFile(Application):
         tt = ttLib.TTFont(f, recalcBBoxes=False)
         metadata = get_font_metadata(tt)
         self.metadata.update(metadata)
-        self.names['C'] = metadata['FontFullName']
+        self.names['C'] = metadata['FontFamily']
         self.comments['C'] = "A font from " + metadata['FontFamily']
         icon_fullpath = './icons/' + self.app_id + '.png'
 

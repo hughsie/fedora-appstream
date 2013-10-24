@@ -26,8 +26,9 @@ from PIL import Image
 
 class Screenshot:
 
-    def __init__(self, app_id, img):
+    def __init__(self, app_id, img, caption):
         self._img = img
+        self.caption = caption
         self.width = img.size[0]
         self.height = img.size[1]
         self.basename = app_id

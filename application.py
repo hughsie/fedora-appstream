@@ -78,7 +78,7 @@ class Application:
         self.thumbnail_screenshots = True
         self.status_html = None
 
-    def add_screenshot_filename(self, filename):
+    def add_screenshot_filename(self, filename, caption=None):
 
         # just add it
         try:
@@ -87,16 +87,16 @@ class Application:
             self.log.write(LoggerItem.WARNING,
                            "Failed to open %s: %s" % (filename, str(e)))
         else:
-            self.screenshots.append(Screenshot(self.app_id, img))
+            self.screenshots.append(Screenshot(self.app_id, img, caption))
 
-    def add_screenshot_url(self, url):
+    def add_screenshot_url(self, url, caption=None):
 
         # download image and add it
         cache_filename = './screenshot-cache/' + self.app_id
         cache_filename += '-' + os.path.basename(url)
         if not os.path.exists(cache_filename):
             urllib.urlretrieve (url, cache_filename)
-        self.add_screenshot_filename(cache_filename)
+        self.add_screenshot_filename(cache_filename, caption)
 
     def set_id(self, app_id):
 
@@ -196,6 +196,10 @@ class Application:
                 else:
                     f.write("      <screenshot type=\"normal\">\n")
 
+                # write caption
+                if s.caption:
+                    f.write("        <caption>%s</caption>\n" % s.caption)
+
                 # write the full size source image
                 url = mirror_url + 'source/' + s.basename
                 f.write("        <image type=\"source\" width=\"%s\" "
@@ -228,8 +232,8 @@ class Application:
                 for s in self.screenshots:
                     url = mirror_url + '624x351/' + s.basename
                     thumb_url = mirror_url + '112x63/' + s.basename
-                    self.status_html.write("<a href=\"%s\"><img src=\"%s\"/></a>\n" %
-                                           (url, thumb_url))
+                    self.status_html.write("<a href=\"%s\"><img src=\"%s\" alt=\"%s\"/></a>\n" %
+                                           (url, thumb_url, s.caption))
             self.status_html.write("<table>\n")
             self.status_html.write("<tr><td>%s</td><td><code>%s</code></td></tr>\n" %
                                    ("Type", self.type_id))
