@@ -39,7 +39,7 @@ from package import Package
 from appdata import AppData
 from config import Config
 from desktop_file import DesktopFile
-from font_file import FontFile
+from font_file import FontFile, FontFileFilter
 from input_method import InputMethodTable, InputMethodComponent
 from codec import Codec
 
@@ -349,6 +349,10 @@ class Build:
                 # write the application
                 if self.add_application(app):
                     valid_apps.append(app)
+
+        # group fonts of the same family
+        fltr = FontFileFilter()
+        valid_apps = fltr.merge(valid_apps)
 
         # create AppStream XML
         if self.has_valid_content:

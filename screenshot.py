@@ -28,6 +28,7 @@ class Screenshot:
 
     def __init__(self, app_id, img, caption):
         self._img = img
+        self.sort_id = 0
         self.caption = caption
         self.width = img.size[0]
         self.height = img.size[1]

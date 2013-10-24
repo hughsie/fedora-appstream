@@ -22,6 +22,8 @@
 #
 
 import sys
+import os
+import operator
 
 from fontTools import ttLib
 
@@ -32,6 +34,59 @@ from application import Application
 from package import Package
 from screenshot import Screenshot
 from logger import LoggerItem
+
+def _get_sortable_idx(font_str):
+    idx = 0
+    if font_str.find('Ita') != -1:
+        idx += 1
+    if font_str.find('Bol') != -1:
+        idx += 2
+    return idx
+
+class FontFileFilter():
+
+    def merge(self, valid_apps):
+        """
+        Merge fonts with the same family name.
+        """
+        font_families = {}
+        unique_apps = []
+        for app in valid_apps:
+            if app.type_id != 'font':
+                unique_apps.append(app)
+                continue
+
+            # sort in a sane way
+            app.screenshots[0].sort_id = _get_sortable_idx(app.metadata['FontSubFamily'])
+
+            # steal the screenshot if the family is the same
+            font_family = app.metadata['FontFamily']
+            if font_family not in font_families:
+                font_families[font_family] = app
+                unique_apps.append(app)
+            else:
+                found = font_families[font_family]
+                found.screenshots.append(app.screenshots[0])
+
+                # the lower index name is better
+                if _get_sortable_idx(app.app_id) < _get_sortable_idx(found.app_id):
+                    found.app_id = app.app_id
+                    os.remove("./icons/%s.png" % found.icon)
+                    found.icon = app.icon
+                else:
+                    os.remove("./icons/%s.png" % app.icon)
+
+                # resort the screenshots
+                found.screenshots = sorted(found.screenshots, key=operator.attrgetter('sort_id'))
+
+        # these are no longer valid as we're merged them together
+        for app in unique_apps:
+            if app.type_id == 'font':
+                del app.metadata['FontFamily']
+                del app.metadata['FontFullName']
+                del app.metadata['FontSubFamily']
+
+        return unique_apps
 
 def autocrop(im, alpha):
     if alpha:
