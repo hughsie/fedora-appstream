@@ -302,21 +302,16 @@ class Build:
                     pkg.log.write(LoggerItem.INFO, "adding extra package %s" % extra_pkg.name)
                     package_decompress(extra_pkg)
 
-        # open the AppStream file for writing
-        xml_output_file = './appstream/' + pkg.name + '.xml'
-        xml = open(xml_output_file, 'w')
-        xml.write("<?xml version=\"1.0\"?>\n")
-        xml.write("<applications version=\"0.1\">\n")
-
         # check for duplicate apps in the package
         self.has_valid_content = False
+        valid_apps = []
 
         # check for codecs
         if pkg.name.startswith('gstreamer'):
             app = Codec(pkg, self.cfg)
             if app.parse_files(files):
                 if self.add_application(app):
-                    app.write(xml)
+                    valid_apps.append(app)
         else:
             # process each desktop file in the original package
             for f in files:
@@ -353,16 +348,20 @@ class Build:
 
                 # write the application
                 if self.add_application(app):
-                    app.write(xml)
+                    valid_apps.append(app)
 
         # create AppStream XML
-        xml.write("</applications>\n")
-        xml.close()
-        if not self.has_valid_content:
-            os.remove(xml_output_file)
-
-        # create AppStream icon tar
         if self.has_valid_content:
+            xml_output_file = './appstream/' + pkg.name + '.xml'
+            xml = open(xml_output_file, 'w')
+            xml.write("<?xml version=\"1.0\"?>\n")
+            xml.write("<applications version=\"0.1\">\n")
+            for app in valid_apps:
+                app.write(xml)
+            xml.write("</applications>\n")
+            xml.close()
+
+            # create AppStream icon tar
             output_file = "./appstream/%s-icons.tar" % pkg.name
             pkg.log.write(LoggerItem.INFO, "writing %s and %s" % (xml_output_file, output_file))
             tar = tarfile.open(output_file, "w")
