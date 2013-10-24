@@ -358,7 +358,7 @@ class Build:
         if self.has_valid_content:
             xml_output_file = './appstream/' + pkg.name + '.xml'
             xml = open(xml_output_file, 'w')
-            xml.write("<?xml version=\"1.0\"?>\n")
+            xml.write("<?xml version=\"1.0\" encoding='UTF-8'?>\n")
             xml.write("<applications version=\"0.1\">\n")
             for app in valid_apps:
                 app.write(xml)

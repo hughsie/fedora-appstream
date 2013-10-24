@@ -118,11 +118,11 @@ def get_font_metadata(font):
     # extract
     metadata = {}
     for record in font['name'].names:
-        if record.nameID == FONT_SPECIFIER_FONTFAMILY:
+        if record.nameID == FONT_SPECIFIER_FONTFAMILY and 'FontFamily' not in metadata:
             metadata['FontFamily'] = _decode_record(record)
-        elif record.nameID == FONT_SPECIFIER_FONTSUBFAMILY:
+        elif record.nameID == FONT_SPECIFIER_FONTSUBFAMILY and 'FontSubFamily' not in metadata:
             metadata['FontSubFamily'] = _decode_record(record)
-        elif record.nameID == FONT_SPECIFIER_FULLFONTNAME:
+        elif record.nameID == FONT_SPECIFIER_FULLFONTNAME and 'FontFullName' not in metadata:
             metadata['FontFullName'] = _decode_record(record)
     return metadata
 
