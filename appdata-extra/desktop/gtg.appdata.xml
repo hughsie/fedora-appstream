@@ -15,7 +15,10 @@ from small tasks to large projects.
 </description>
 <url type="homepage">https://wiki.gnome.org/gtg/</url>
 <screenshots>
-<screenshot type="default">http://gtgnome.net/screenshots/</screenshot>
+<screenshot type="default">http://gtgnome.net/wp-content/uploads/2013/01/gtg-0.3-browser-1024x640.png</screenshot>
+<screenshot>http://gtgnome.net/wp-content/uploads/2013/01/gtg-0.3-browser-tasks-bgcolor-desc-1024x640.png</screenshot>
+<screenshot>http://gtgnome.net/wp-content/uploads/2013/01/gtg-0.3-tag-editor.png</screenshot>
+<screenshot>http://gtgnome.net/wp-content/uploads/2013/01/gtg-0.3-user-help-1024x640.png</screenshot>
 </screenshots>
 <!-- FIXME: change this to an upstream email address for spec updates
 <updatecontact>someone_who_cares@upstream_project.org</updatecontact>

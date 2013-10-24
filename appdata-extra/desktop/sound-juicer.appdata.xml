@@ -2,7 +2,7 @@
 <application>
   <id type="desktop">sound-juicer.desktop</id>
   <licence>CC0</licence>
-  <summary>CD ripper with a clean interface and simple preferences.</summary>
+  <summary>CD ripper with a clean interface and simple preferences</summary>
   <description>
     <p>
       Sound Juicer is a simple and clean CD ripping tool.
