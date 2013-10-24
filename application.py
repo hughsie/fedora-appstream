@@ -241,7 +241,7 @@ class Application:
                                    ("Name", self.names['C']))
             self.status_html.write("<tr><td>%s</td><td>%s</td></tr>\n" %
                                    ("Comment", self.comments['C']))
-            if 'C' in self.descriptions:
+            if self.descriptions and 'C' in self.descriptions:
                 self.status_html.write("<tr><td>%s</td><td>%s</td></tr>\n" %
                                        ("Description", self.descriptions['C']))
             self.status_html.write("<tr><td>%s</td><td><code>%s</code></td></tr>\n" %
