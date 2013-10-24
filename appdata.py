@@ -42,9 +42,13 @@ class AppData:
         self.filename = None
 
     def extract(self, filename):
-        tree = ET.parse(filename)
+        try:
+            tree = ET.parse(filename)
+        except ET.ParseError, e:
+            return False
         self.root = tree.getroot()
         self.filename = filename
+        return True
 
     def get_id(self):
         tmp = self.root.find("id").text
