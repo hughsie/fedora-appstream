@@ -67,7 +67,7 @@ class Application:
         self.licence = pkg.licence
         self.icon = None
         self.keywords = []
-        self.pkgname = pkg.name
+        self.pkgnames = [pkg.name]
         self.cached_icon = False
         self.cfg = cfg
         self.screenshots = []
@@ -124,7 +124,8 @@ class Application:
     def write(self, f):
         f.write("  <application>\n")
         f.write("    <id type=\"%s\">%s</id>\n" % (self.type_id, self.app_id_full))
-        f.write("    <pkgname>%s</pkgname>\n" % self.pkgname)
+        for pkgname in self.pkgnames:
+            f.write("    <pkgname>%s</pkgname>\n" % pkgname)
         f.write("    <name>%s</name>\n" % quote(self.names['C']))
         for lang in self.names:
             if lang != 'C':
@@ -245,7 +246,7 @@ class Application:
                 self.status_html.write("<tr><td>%s</td><td>%s</td></tr>\n" %
                                        ("Description", self.descriptions['C']))
             self.status_html.write("<tr><td>%s</td><td><code>%s</code></td></tr>\n" %
-                                   ("Package", self.pkgname))
+                                   ("Package", ', '.join(self.pkgnames)))
             if self.categories:
                 self.status_html.write("<tr><td>%s</td><td>%s</td></tr>\n" %
                                        ("Categories", ', '.join(self.categories)))

@@ -67,6 +67,8 @@ class FontFileFilter():
             else:
                 found = font_families[font_family]
                 found.screenshots.append(app.screenshots[0])
+                if app.pkgnames[0] not in found.pkgnames:
+                    found.pkgnames.append(app.pkgnames[0])
 
                 # the lower index name is better
                 if _get_sortable_idx(app.app_id) < _get_sortable_idx(found.app_id):

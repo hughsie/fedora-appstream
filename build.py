@@ -153,7 +153,7 @@ class Build:
         # packages that ship .desktop files in /usr/share/applications
         # *and* /usr/share/applications/kde4 do not need multiple entries
         if app.app_id in self.application_ids:
-            app.log.write(LoggerItem.INFO, "duplicate ID in package %s" % app.pkgname)
+            app.log.write(LoggerItem.INFO, "duplicate ID in package %s" % app.pkgnames[0])
             return False
         self.application_ids.append(app.app_id)
 
