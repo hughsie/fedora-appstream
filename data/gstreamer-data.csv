@@ -57,6 +57,7 @@
 /usr/lib64/gstreamer-1.0/libgstencodebin.so,-,
 /usr/lib64/gstreamer-1.0/libgstentrans.so,-,
 /usr/lib64/gstreamer-1.0/libgstequalizer.so,-,
+/usr/lib64/gstreamer-1.0/libgstespeak.so,eSpeak
 /usr/lib64/gstreamer-1.0/libgstfaad.so,MPEG-4|MPEG-2 AAC,
 /usr/lib64/gstreamer-1.0/libgstfbdevsink.so,-,
 /usr/lib64/gstreamer-1.0/libgstfestival.so,-,
