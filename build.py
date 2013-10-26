@@ -117,6 +117,11 @@ class Build:
         if tmp:
             app.comments = tmp
 
+        # get metadata
+        tmp = data.get_metadata()
+        if tmp:
+            app.metadata.update(tmp)
+
         # get optional bits
         tmp = data.get_urls()
         if tmp:

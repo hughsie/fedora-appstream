@@ -72,6 +72,17 @@ class AppData:
                 continue
             values.append(item.text)
         return values
+    def get_metadata(self):
+        values = {}
+        ss = self.root.find("metadata")
+        if ss is None:
+            return values
+        for item in ss:
+            if item.tag != 'value':
+                continue
+            values[item.get('key')] = item.text
+        return values
+
     def get_compulsory_for_desktop(self):
         values = []
         for item in self.root:
