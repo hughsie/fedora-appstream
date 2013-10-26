@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+    <id type="desktop">revelation.desktop</id>
+    <licence>CC0</licence>
+    <summary>A password manager for GNOME</summary>
+    <description>
+        <p>
+            Revelation is a password manager for the GNOME desktop, released under the GNU GPL license. It stores all your accounts and passwords in a single, secure place, and gives you access to it through a user-friendly graphical interface.
+        </p>
+        <ul>
+            <li>    Store passwords encrypted</li>
+            <li>    Store passwords organizated</li>
+            <li>    Autolock on idle or when desktop locks</li>
+            <li>    Import from and export to different formats</li>
+        </ul>
+    </description>
+    <url type="homepage">http://revelation.olasagasti.info/index.php</url>
+    <screenshots>
+        <screenshot type="default">http://revelation.olasagasti.info/screenshots/revelation-main.png</screenshot>
+        <screenshot>http://revelation.olasagasti.info/screenshots/revelation-search.png</screenshot>
+        <screenshot>http://revelation.olasagasti.info/screenshots/revelation-lock_t.png</screenshot>
+    </screenshots>
+    <updatecontact>revelation-password@googlegroups.com</updatecontact>
+</application>

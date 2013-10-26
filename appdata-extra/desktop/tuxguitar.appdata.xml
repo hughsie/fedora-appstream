@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+    <id type="desktop">tuxguitar.desktop</id>
+    <licence>CC0</licence>
+    <summary>A multitrack tablature editor and player</summary>
+    <description>
+        <ul>
+            <li>Tablature editor</li>
+            <li>Score Viewer</li>
+            <li>Multitrack display</li>
+            <li>Autoscroll while playing</li>
+            <li>Note duration management</li>
+            <li>Various effects (bend, slide, vibrato, hammer-on/pull-off)</li>
+            <li>Support for triplets (5,6,7,9,10,11,12)</li>
+            <li>Repeat open and close</li>
+            <li>Time signature management</li>
+            <li>Tempo management</li>
+            <li>Imports and exports gp3,gp4 and gp5 files</li>
+        </ul>
+
+    </description>
+    <url type="homepage">http://www.tuxguitar.com.ar/</url>
+    <screenshots>
+        <screenshot type="default">http://www.tuxguitar.com.ar/rd.php/gallery/show_picture.do?galid=1&picid=47</screenshot>
+        <screenshot>http://www.tuxguitar.com.ar/rd.php/gallery/show_picture.do?galid=1&picid=46</screenshot>
+    </screenshots>
+</application>
