@@ -84,9 +84,11 @@ class FontFileFilter():
         # these are no longer valid as we're merged them together
         for app in unique_apps:
             if app.type_id == 'font':
-                del app.metadata['FontFamily']
-                del app.metadata['FontFullName']
-                del app.metadata['FontSubFamily']
+                remove = ['FontFamily', 'FontFullName', 'FontSubFamily',
+                          'FontClassifier', 'FontParent']
+                for key in remove:
+                    if key in app.metadata:
+                        del app.metadata[key]
 
         return unique_apps
 
