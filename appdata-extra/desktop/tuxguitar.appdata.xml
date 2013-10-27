@@ -4,6 +4,9 @@
     <licence>CC0</licence>
     <summary>A multitrack tablature editor and player</summary>
     <description>
+        <p>
+            Tuxguitar is a multitrack tablature editor and player. It provides the following features:
+        </p>
         <ul>
             <li>Tablature editor</li>
             <li>Score Viewer</li>
@@ -21,7 +24,7 @@
     </description>
     <url type="homepage">http://www.tuxguitar.com.ar/</url>
     <screenshots>
-        <screenshot type="default">http://www.tuxguitar.com.ar/rd.php/gallery/show_picture.do?galid=1&picid=47</screenshot>
-        <screenshot>http://www.tuxguitar.com.ar/rd.php/gallery/show_picture.do?galid=1&picid=46</screenshot>
+        <screenshot type="default">http://www.tuxguitar.com.ar/rd.php/gallery/show_picture.do?galid=1&amp;picid=47</screenshot>
+        <screenshot>http://www.tuxguitar.com.ar/rd.php/gallery/show_picture.do?galid=1&amp;picid=46</screenshot>
     </screenshots>
 </application>
