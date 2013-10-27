@@ -21,6 +21,7 @@
 #    Richard Hughes <richard@hughsie.com>
 #
 
+import copy
 import sys
 import os
 import operator
@@ -35,7 +36,7 @@ from package import Package
 from screenshot import Screenshot
 from logger import LoggerItem
 
-def _get_sortable_idx(font_str):
+def _get_sortable_full_name(font_str):
     idx = 0
     if font_str.find('Ita') != -1:
         idx += 1
@@ -43,21 +44,29 @@ def _get_sortable_idx(font_str):
         idx += 2
     return idx
 
+def _get_sortable_family(font_str):
+    idx = 0
+    if font_str.find('Lig') != -1:
+        idx += 1
+    if font_str.find('Bla') != -1:
+        idx += 2
+    if font_str.find('Hai') != -1:
+        idx += 4
+    return idx
+
 class FontFileFilter():
 
-    def merge(self, valid_apps):
+    def merge_family(self, valid_apps):
         """
         Merge fonts with the same family name.
         """
         font_families = {}
         unique_apps = []
+
         for app in valid_apps:
             if app.type_id != 'font':
                 unique_apps.append(app)
                 continue
-
-            # sort in a sane way
-            app.screenshots[0].sort_id = _get_sortable_idx(app.metadata['FontSubFamily'])
 
             # steal the screenshot if the family is the same
             font_family = app.metadata['FontFamily']
@@ -71,18 +80,91 @@ class FontFileFilter():
                     found.pkgnames.append(app.pkgnames[0])
 
                 # the lower index name is better
-                if _get_sortable_idx(app.app_id) < _get_sortable_idx(found.app_id):
+                if _get_sortable_full_name(app.app_id) < _get_sortable_full_name(found.app_id):
                     found.set_id(app.app_id_full)
+                    found.add_appdata_file()
                     os.remove("./icons/%s.png" % found.icon)
                     found.icon = app.icon
                 else:
                     os.remove("./icons/%s.png" % app.icon)
 
-                # resort the screenshots
-                found.screenshots = sorted(found.screenshots, key=operator.attrgetter('sort_id'))
+        return unique_apps
+
+    def merge_parent(self, valid_apps):
+        """
+        Merge fonts with the same parent name.
+        """
+
+        font_families = {}
+        unique_apps = []
+        for app in valid_apps:
+
+            if app.type_id != 'font':
+                unique_apps.append(app)
+                continue
+
+            # steal the screenshot if the family is the same
+            if 'FontParent' not in app.metadata:
+                unique_apps.append(app)
+                continue
+            font_family = app.metadata['FontParent']
+            if font_family not in font_families:
+                font_families[font_family] = app
+                unique_apps.append(app)
+            else:
+                found = font_families[font_family]
+                for s in app.screenshots:
+                    found.screenshots.append(s)
+                for pkg in app.pkgnames:
+                    if pkg not in found.pkgnames:
+                        found.pkgnames.append(pkg)
+
+                # the lower index name is better
+                if _get_sortable_family(app.app_id) < _get_sortable_family(found.app_id):
+                    found.set_id(app.app_id_full)
+                    found.add_appdata_file()
+                    os.remove("./icons/%s.png" % found.icon)
+                    found.icon = app.icon
+                else:
+                    os.remove("./icons/%s.png" % app.icon)
+
+        return unique_apps
+
+    def merge(self, apps):
+        """
+        Merge fonts with the same family and parent name.
+        """
+
+        # this is kinda odd, but we need to assign the app metadata with the
+        # screenshot rather than the app
+        for app in apps:
+            if app.type_id == 'font':
+                for s in app.screenshots:
+                    s.metadata = copy.copy(app.metadata)
+
+        # merge by family
+        apps = self.merge_family(apps)
+
+        # merge by parent
+        apps = self.merge_parent(apps)
+
+        # correct screenshot captions
+        for app in apps:
+            if app.type_id == 'font':
+                for s in app.screenshots:
+                    s.caption = s.metadata['FontFamily'] + ' — ' + s.metadata['FontSubFamily']
+
+        # sort the screenshots in a sane way
+        for app in apps:
+            if app.type_id == 'font':
+                for s in app.screenshots:
+                    s.sort_id = len(s.metadata['FontFamily'])
+                    s.sort_id += 100 * _get_sortable_family(s.metadata['FontFamily'])
+                    s.sort_id += _get_sortable_full_name(s.metadata['FontFullName'])
+                app.screenshots = sorted(app.screenshots, key=operator.attrgetter('sort_id'))
 
         # these are no longer valid as we're merged them together
-        for app in unique_apps:
+        for app in apps:
             if app.type_id == 'font':
                 remove = ['FontFamily', 'FontFullName', 'FontSubFamily',
                           'FontClassifier', 'FontParent']
@@ -90,7 +172,7 @@ class FontFileFilter():
                     if key in app.metadata:
                         del app.metadata[key]
 
-        return unique_apps
+        return apps
 
 def autocrop(im, alpha):
     if alpha:
