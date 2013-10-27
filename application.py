@@ -22,12 +22,14 @@
 #
 
 import os
+import subprocess
 import sys
 import urllib
 
 from PIL import Image
 
 # internal
+from appdata import AppData
 from logger import LoggerItem
 from package import Package
 from screenshot import Screenshot
@@ -77,6 +79,94 @@ class Application:
         self.requires_appdata = False
         self.thumbnail_screenshots = True
         self.status_html = None
+
+    def add_appdata_file(self):
+
+        # do we have an AppData file?
+        filename = './tmp/usr/share/appdata/' + self.app_id + '.appdata.xml'
+        fn_extra = '../appdata-extra/' + self.type_id + '/' + self.app_id + '.appdata.xml'
+        if os.path.exists(filename) and os.path.exists(fn_extra):
+            self.log.write(LoggerItem.INFO,
+                           "deleting %s as upstream AppData file exists" % fn_extra)
+            os.remove(fn_extra)
+
+        # just use the extra file in places of the missing upstream one
+        if os.path.exists(fn_extra):
+            filename = fn_extra
+
+        # need to extract details
+        if not os.path.exists(filename):
+            return False
+
+        data = AppData()
+        if not data.extract(filename):
+            self.log.write(LoggerItem.WARNING,
+                           "AppData file '%s' could not be parsed" % filename)
+            return False
+
+        # check AppData file validates
+        if os.path.exists('/usr/bin/appdata-validate'):
+            env = os.environ
+            p = subprocess.Popen(['/usr/bin/appdata-validate',
+                                  '--relax', filename],
+                                 cwd='.', env=env, stdout=subprocess.PIPE)
+            p.wait()
+            if p.returncode:
+                for line in p.stdout:
+                    line = line.replace('\n', '')
+                    self.log.write(LoggerItem.WARNING,
+                                   "AppData did not validate: %s" % line)
+
+        # check the id matches
+        if data.get_id() != self.app_id and data.get_id() != self.app_id_full:
+            self.log.write(LoggerItem.WARNING,
+                           "The AppData id does not match: " + self.app_id)
+            return False
+
+        # check the licence is okay
+        if data.get_licence() not in self.cfg.get_content_licences():
+            self.log.write(LoggerItem.WARNING,
+                           "The AppData licence is not okay for " +
+                           self.app_id + ': \'' +
+                           data.get_licence() + '\'')
+            return False
+
+        # if we have an override, use it for all languages
+        tmp = data.get_names()
+        if tmp:
+            self.names = tmp
+
+        # if we have an override, use it for all languages
+        tmp = data.get_summaries()
+        if tmp:
+            self.comments = tmp
+
+        # get metadata
+        tmp = data.get_metadata()
+        if tmp:
+            self.metadata.update(tmp)
+
+        # get optional bits
+        tmp = data.get_urls()
+        if tmp:
+            for key in tmp:
+                self.urls[key] = tmp[key]
+        tmp = data.get_project_group()
+        if tmp:
+            self.project_group = tmp
+        self.descriptions = data.get_descriptions()
+
+        # get screenshots
+        tmp = data.get_screenshots()
+        for image in tmp:
+            self.log.write(LoggerItem.INFO, "downloading %s" % image)
+            self.add_screenshot_url(image)
+
+        # get compulsory_for_desktop
+        for c in data.get_compulsory_for_desktop():
+            if c not in self.compulsory_for_desktop:
+                self.compulsory_for_desktop.append(c)
+        return True
 
     def add_screenshot_filename(self, filename, caption=None):
 

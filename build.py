@@ -36,7 +36,6 @@ from gi.repository import Gio
 # internal
 from logger import LoggerItem
 from package import Package
-from appdata import AppData
 from config import Config
 from desktop_file import DesktopFile
 from font_file import FontFile, FontFileFilter
@@ -73,76 +72,6 @@ class Build:
         self.has_valid_content = False
         self.status_html = None
 
-    def add_use_appdata_file(self, app, filename):
-        data = AppData()
-        if not data.extract(filename):
-            app.log.write(LoggerItem.WARNING,
-                          "AppData file '%s' could not be parsed" % filename)
-            return
-
-        # check AppData file validates
-        if os.path.exists('/usr/bin/appdata-validate'):
-            env = os.environ
-            p = subprocess.Popen(['/usr/bin/appdata-validate',
-                                  '--relax', filename],
-                                 cwd='.', env=env, stdout=subprocess.PIPE)
-            p.wait()
-            if p.returncode:
-                for line in p.stdout:
-                    line = line.replace('\n', '')
-                    app.log.write(LoggerItem.WARNING,
-                                  "AppData did not validate: %s" % line)
-
-        # check the id matches
-        if data.get_id() != app.app_id and data.get_id() != app.app_id_full:
-            app.log.write(LoggerItem.WARNING,
-                          "The AppData id does not match: " + app.app_id)
-            return
-
-        # check the licence is okay
-        if data.get_licence() not in self.cfg.get_content_licences():
-            app.log.write(LoggerItem.WARNING,
-                          "The AppData licence is not okay for " +
-                          app.app_id + ': \'' +
-                          data.get_licence() + '\'')
-            return
-
-        # if we have an override, use it for all languages
-        tmp = data.get_names()
-        if tmp:
-            app.names = tmp
-
-        # if we have an override, use it for all languages
-        tmp = data.get_summaries()
-        if tmp:
-            app.comments = tmp
-
-        # get metadata
-        tmp = data.get_metadata()
-        if tmp:
-            app.metadata.update(tmp)
-
-        # get optional bits
-        tmp = data.get_urls()
-        if tmp:
-            for key in tmp:
-                app.urls[key] = tmp[key]
-        tmp = data.get_project_group()
-        if tmp:
-            app.project_group = tmp
-        app.descriptions = data.get_descriptions()
-
-        # get screenshots
-        tmp = data.get_screenshots()
-        for image in tmp:
-            app.log.write(LoggerItem.INFO, "downloading %s" % image)
-            app.add_screenshot_url(image)
-
-        # get compulsory_for_desktop
-        for c in data.get_compulsory_for_desktop():
-            if c not in app.compulsory_for_desktop:
-                app.compulsory_for_desktop.append(c)
-
     def add_application(self, app):
 
         # application is blacklisted
@@ -162,21 +91,8 @@ class Build:
             return False
         self.application_ids.append(app.app_id)
 
-        # do we have an AppData file?
-        appdata_file = './tmp/usr/share/appdata/' + app.app_id + '.appdata.xml'
-        appdata_extra_file = '../appdata-extra/' + app.type_id + '/' + app.app_id + '.appdata.xml'
-        if os.path.exists(appdata_file) and os.path.exists(appdata_extra_file):
-            app.log.write(LoggerItem.INFO, "deleting %s as upstream AppData file exists" % appdata_extra_file)
-            os.remove(appdata_extra_file)
-
-        # just use the extra file in places of the missing upstream one
-        if os.path.exists(appdata_extra_file):
-            appdata_file = appdata_extra_file
-
-        # need to extract details
-        if os.path.exists(appdata_file):
-            self.add_use_appdata_file(app, appdata_file)
-        elif app.requires_appdata:
+        # add AppData
+        if not app.add_appdata_file() and app.requires_appdata:
             app.log.write(LoggerItem.INFO, "%s requires AppData" % app.app_id_full)
             return False
 
