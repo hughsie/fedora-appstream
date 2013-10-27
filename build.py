@@ -71,6 +71,7 @@ class Build:
         self.application_ids = []
         self.has_valid_content = False
         self.status_html = None
+        self.completed = {}
 
     def add_application(self, app):
 
@@ -175,6 +176,13 @@ class Build:
 
         return True
 
+    def add_completed(self, pkg, app):
+        key = pkg.sourcerpm.replace('.src.rpm', '')
+        if key in self.completed:
+            self.completed[key].append(app)
+        else:
+            self.completed[key] = [app]
+
     def build(self, filename):
 
         # check the package has .desktop files
@@ -225,14 +233,13 @@ class Build:
 
         # check for duplicate apps in the package
         self.has_valid_content = False
-        valid_apps = []
 
         # check for codecs
         if pkg.name.startswith('gstreamer'):
             app = Codec(pkg, self.cfg)
             if app.parse_files(files):
                 if self.add_application(app):
-                    valid_apps.append(app)
+                    self.add_completed(pkg, app)
         else:
             # process each desktop file in the original package
             for f in files:
@@ -269,16 +276,21 @@ class Build:
 
                 # write the application
                 if self.add_application(app):
-                    valid_apps.append(app)
+                    self.add_completed(pkg, app)
 
-        # group fonts of the same family
-        fltr = FontFileFilter()
-        valid_apps = fltr.merge(valid_apps)
+    def write_appstream(self):
 
-        # create AppStream XML
-        if self.has_valid_content:
-            xml_output_file = './appstream/' + pkg.name + '.xml'
-            xml = open(xml_output_file, 'w')
+        valid_apps = []
+        for key in self.completed:
+            valid_apps = self.completed[key]
+
+            # group fonts of the same family
+            fltr = FontFileFilter()
+            valid_apps = fltr.merge(valid_apps)
+
+            # create AppStream XML
+            filename = './appstream/' + key + '.xml'
+            xml = open(filename, 'w')
             xml.write("<?xml version=\"1.0\" encoding='UTF-8'?>\n")
             xml.write("<applications version=\"0.1\">\n")
             for app in valid_apps:
@@ -287,12 +299,14 @@ class Build:
             xml.close()
 
             # create AppStream icon tar
-            output_file = "./appstream/%s-icons.tar" % pkg.name
-            pkg.log.write(LoggerItem.INFO, "writing %s and %s" % (xml_output_file, output_file))
+            output_file = "./appstream/%s-icons.tar" % key
+            log = LoggerItem(key)
+            log.write(LoggerItem.INFO, "writing %s and %s" % (filename, output_file))
             tar = tarfile.open(output_file, "w")
-            files = glob.glob("./icons/*.png")
-            for f in files:
-                tar.add(f, arcname=f.split('/')[-1])
+            for app in valid_apps:
+                filename = app.app_id + '.png'
+                if os.path.exists('./icons/' + filename):
+                    tar.add('./icons/' + filename, arcname=filename)
             tar.close()
 
         # remove tmp
@@ -304,6 +318,7 @@ def main():
     job = Build()
     for fn in sys.argv[1:]:
         job.build(fn)
+    job.write_appstream()
     sys.exit(0)
 
 if __name__ == "__main__":

@@ -81,6 +81,7 @@ class Package:
         self.arch = hdr.arch
         self.summary = hdr.summary
         self.licence = hdr.license
+        self.sourcerpm = hdr.sourcerpm
         self.homepage_url = hdr['url']
         os.close(fd)
         self.log = LoggerItem(os.path.basename(filename))

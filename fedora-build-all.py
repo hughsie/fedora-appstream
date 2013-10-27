@@ -107,6 +107,7 @@ def main():
             job.build(f)
         except Exception as e:
             log.write(LoggerItem.WARNING, str(e))
+    job.write_appstream()
 
     job.status_html.write('</body>\n')
     job.status_html.write('</html>\n')
