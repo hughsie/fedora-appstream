@@ -13,8 +13,8 @@
     </description>
     <url type="homepage">https://wiki.gnome.org/Apps/Dia</url>
     <screenshots>
-        <screenshot type="default">https://wiki.gnome.org/Apps/Dia/Screenshots?action=AttachFile&do=get&target=dia-0.97-integrated-ui.png</screenshot>
-        <screenshot>https://wiki.gnome.org/Apps/Dia/Screenshots?action=AttachFile&do=get&target=UML+properties.png</screenshot>
+        <screenshot type="default">https://wiki.gnome.org/Apps/Dia/Screenshots?action=AttachFile&amp;do=get&amp;target=dia-0.97-integrated-ui.png</screenshot>
+        <screenshot>https://wiki.gnome.org/Apps/Dia/Screenshots?action=AttachFile&amp;do=get&amp;target=UML+properties.png</screenshot>
     </screenshots>
     <updatecontact>dia-list@gnome.org</updatecontact>
 </application>
