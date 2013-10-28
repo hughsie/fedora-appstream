@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+    <id type="desktop">rafkill.desktop</id>
+    <licence>CC0</licence>
+    <description>
+        <p>
+            Rafkill is a vertical scrolling shoot-em up game. You can collect powerups
+            during gameplay and you can goto the store with your spaceship and buy
+            powerups or even a complete new ship with the points you've earned sofar.
+        </p>
+    </description>
+    <url type="homepage">http://raptorv2.sourceforge.net/index.php</url>
+    <screenshots>
+        <screenshot type="default">http://raptorv2.sourceforge.net/images/title.png</screenshot>
+        <screenshot>http://raptorv2.sourceforge.net/images/snapshot1.png</screenshot>
+        <screenshot>http://raptorv2.sourceforge.net/images/buy.png</screenshot>
+    </screenshots>
+    <updatecontact>kazzmir@users.sf.net</updatecontact>
+</application>
