@@ -105,7 +105,8 @@ class Application:
             return False
 
         # check AppData file validates
-        if os.path.exists('/usr/bin/appdata-validate'):
+        enable_validation = self.type_id != 'font'
+        if enable_validation and os.path.exists('/usr/bin/appdata-validate'):
             env = os.environ
             p = subprocess.Popen(['/usr/bin/appdata-validate',
                                   '--relax', filename],
