@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="font">DarkGarden.ttf</id>
+  <licence>CC0</licence>
+  <name>Dark Garden</name>
+  <summary>Dark Garden is a decorative outline font of unusual shape</summary>
+  <metadata>
+    <value key="FontClassifier">Regular</value>
+    <value key="FontParent">DarkGarden.ttf</value>
+  </metadata>
+</application>

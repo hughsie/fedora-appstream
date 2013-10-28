@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="font">SourceCodePro-Regular.otf</id>
+  <licence>CC0</licence>
+  <name>Source Code</name>
+  <summary>A set of mono-spaced fonts designed for coding environments</summary>
+  <metadata>
+    <value key="FontClassifier">Mono Regular</value>
+    <value key="FontParent">Source Code Pro</value>
+  </metadata>
+</application>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="font">phranzysko_-_Digna_s_Handwriting.ttf</id>
+  <licence>CC0</licence>
+  <name>Digna's Handwriting</name>
+  <summary>Phranzysko's sister handwriting</summary>
+  <metadata>
+    <value key="FontClassifier">Cursive</value>
+    <value key="FontParent">phranzysko_-_Digna_s_Handwriting.ttf</value>
+  </metadata>
+</application>

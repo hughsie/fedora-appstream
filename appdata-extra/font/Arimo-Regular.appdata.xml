@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="font">Arimo-Regular.ttf</id>
+  <licence>CC0</licence>
+  <name>Arimo</name>
+  <summary>The croscore Arimo family fonts</summary>
+  <metadata>
+    <value key="FontClassifier">Regular</value>
+    <value key="FontParent">Arimo-Regular.ttf</value>
+  </metadata>
+</application>

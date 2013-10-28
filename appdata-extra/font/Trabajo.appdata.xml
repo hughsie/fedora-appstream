@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="font">Trabajo.otf</id>
+  <licence>CC0</licence>
+  <name>Trabajo</name>
+  <summary>Latin Serif font that supports Shavian alphabet</summary>
+  <metadata>
+    <value key="FontClassifier">Serif</value>
+    <value key="FontParent">Trabajo.otf</value>
+  </metadata>
+</application>

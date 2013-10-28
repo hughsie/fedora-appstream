@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="font">VeraMoBI.ttf</id>
+  <licence>CC0</licence>
+  <name>Bitstream Vera</name>
+  <summary>High quality Latin fonts by Bitstream</summary>
+  <metadata>
+    <value key="FontClassifier">Sans Mono</value>
+    <value key="FontParent">Bitstream Vera</value>
+  </metadata>
+</application>

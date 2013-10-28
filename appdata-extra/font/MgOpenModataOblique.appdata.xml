@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="font">MgOpenModataOblique.ttf</id>
+  <licence>CC0</licence>
+  <name>MgOpen Modata</name>
+  <summary>A set of fixed-stroke-width sans serif font faces</summary>
+  <metadata>
+    <value key="FontClassifier">Sans</value>
+    <value key="FontParent">MgOpen Modata</value>
+  </metadata>
+</application>

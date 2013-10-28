@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="font">mngltitleotf.ttf</id>
+  <licence>CC0</licence>
+  <name>Mongolian Title</name>
+  <summary>Mongolian title font</summary>
+  <metadata>
+    <value key="FontClassifier">Regular</value>
+    <value key="FontParent">mngltitleotf.ttf</value>
+  </metadata>
+</application>

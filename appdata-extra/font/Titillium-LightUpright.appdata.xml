@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="font">Titillium-LightUpright.otf</id>
+  <licence>CC0</licence>
+  <name>Titillium</name>
+  <summary>A sans-serif font designed inside Campi Visivi's Type Design course</summary>
+  <metadata>
+    <value key="FontClassifier">Sans Upright</value>
+    <value key="FontParent">Titillium</value>
+  </metadata>
+</application>

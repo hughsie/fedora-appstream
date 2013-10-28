@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="font">BrettFont1.1.ttf</id>
+  <licence>CC0</licence>
+  <name>Brett</name>
+  <summary>A handwriting font</summary>
+  <metadata>
+    <value key="FontClassifier">Regular</value>
+    <value key="FontParent">BrettFont1.1.ttf</value>
+  </metadata>
+</application>

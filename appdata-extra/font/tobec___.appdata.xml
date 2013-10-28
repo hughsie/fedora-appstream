@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="font">tobec___.ttf</id>
+  <licence>CC0</licence>
+  <name>To Be Continued</name>
+  <summary>Decorative Sans Serif font</summary>
+  <metadata>
+    <value key="FontClassifier">Sans</value>
+    <value key="FontParent">tobec___.ttf</value>
+  </metadata>
+</application>

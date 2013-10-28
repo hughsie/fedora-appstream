@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="font">SourceSansPro-Semibold.otf</id>
+  <licence>CC0</licence>
+  <name>Source Sans</name>
+  <summary>A set of fonts designed for user interfaces</summary>
+  <metadata>
+    <value key="FontClassifier">Sans Semibold</value>
+    <value key="FontParent">Source Sans Pro</value>
+  </metadata>
+</application>

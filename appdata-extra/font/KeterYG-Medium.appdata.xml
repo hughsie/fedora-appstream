@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="font">KeterYG-Medium.ttf</id>
+  <licence>CC0</licence>
+  <name>Keter YG</name>
+  <summary>A set of fonts for Hebrew from Culmus project</summary>
+  <metadata>
+    <value key="FontClassifier">Regular</value>
+    <value key="FontParent">KeterYG-Medium.ttf</value>
+  </metadata>
+</application>

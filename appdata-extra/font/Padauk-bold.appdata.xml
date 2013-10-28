@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="font">Padauk-bold.ttf</id>
+  <licence>CC0</licence>
+  <name>Padauk</name>
+  <summary>A font for Burmese and the Myanmar script</summary>
+  <metadata>
+    <value key="FontClassifier">Bold</value>
+    <value key="FontParent">Padauk</value>
+  </metadata>
+</application>

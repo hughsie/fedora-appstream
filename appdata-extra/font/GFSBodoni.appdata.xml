@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="font">GFSBodoni.otf</id>
+  <licence>CC0</licence>
+  <name>Bodoni</name>
+  <summary>GFS Bodoni fonts</summary>
+  <metadata>
+    <value key="FontClassifier">Regular</value>
+    <value key="FontParent">GFSBodoni.otf</value>
+  </metadata>
+</application>

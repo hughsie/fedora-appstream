@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="font">GenBasB.ttf</id>
+  <licence>CC0</licence>
+  <name>Gentium Book Basic</name>
+  <summary>SIL Gentium fonts</summary>
+  <metadata>
+    <value key="FontClassifier">Regular</value>
+    <value key="FontParent">GentiumMain</value>
+  </metadata>
+</application>

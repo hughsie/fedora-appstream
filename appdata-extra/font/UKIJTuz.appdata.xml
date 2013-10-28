@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="font">UKIJTuz.ttf</id>
+  <licence>CC0</licence>
+  <name>UKIJ Tuz</name>
+  <summary>Uyghur Computer Science Association (UKIJ) fonts</summary>
+  <metadata>
+    <value key="FontClassifier">Regular</value>
+    <value key="FontParent">UKIJTuz.ttf</value>
+  </metadata>
+</application>

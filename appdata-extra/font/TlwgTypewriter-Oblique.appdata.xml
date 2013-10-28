@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="font">TlwgTypewriter-Oblique.ttf</id>
+  <licence>CC0</licence>
+  <name>Thai Tlwg</name>
+  <summary>A set of Thai fonts from the Thai Linux Working Group</summary>
+  <metadata>
+    <value key="FontClassifier">Typewriter</value>
+    <value key="FontParent">Thai Tlwg</value>
+  </metadata>
+</application>

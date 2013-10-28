@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="font">Waree-Oblique.ttf</id>
+  <licence>CC0</licence>
+  <name>Waree</name>
+  <summary>A serif Latin font that is designed to have good readability</summary>
+  <metadata>
+    <value key="FontClassifier">Regular</value>
+    <value key="FontParent">Waree-Oblique.ttf</value>
+  </metadata>
+</application>

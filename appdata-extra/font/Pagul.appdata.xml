@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="font">Pagul.ttf</id>
+  <licence>CC0</licence>
+  <name>Pagul</name>
+  <summary>A font for Saurashtra script</summary>
+  <metadata>
+    <value key="FontClassifier">Regular</value>
+    <value key="FontParent">Pagul.ttf</value>
+  </metadata>
+</application>

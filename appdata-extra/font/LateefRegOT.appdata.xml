@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="font">LateefRegOT.ttf</id>
+  <licence>CC0</licence>
+  <name>Lateef</name>
+  <summary>An Arabic script font</summary>
+  <metadata>
+    <value key="FontClassifier">Regular</value>
+    <value key="FontParent">LateefRegOT.ttf</value>
+  </metadata>
+</application>

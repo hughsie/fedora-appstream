@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="font">MusiQwik.ttf</id>
+  <licence>CC0</licence>
+  <name>Musi</name>
+  <summary>A musical notation font family intended for writing lines of actual music</summary>
+  <metadata>
+    <value key="FontClassifier">Quik</value>
+    <value key="FontParent">Musi</value>
+  </metadata>
+</application>

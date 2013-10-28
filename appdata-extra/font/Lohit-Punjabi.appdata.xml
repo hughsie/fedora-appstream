@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="font">Lohit-Punjabi.ttf</id>
+  <licence>CC0</licence>
+  <name>Lohit</name>
+  <summary>A set of Indian language fonts</summary>
+  <metadata>
+    <value key="FontClassifier">Regular</value>
+    <value key="FontParent">Lohit</value>
+    <value key="ExtraPackages">lohit-assamese-fonts,lohit-bengali-fonts,lohit-devanagari-fonts,lohit-gujarati-fonts,lohit-kannada-fonts,lohit-malayalam-fonts,lohit-marathi-fonts,lohit-nepali-fonts,lohit-oriya-fonts,lohit-tamil-fonts,lohit-tamil-classical-fonts,lohit-telugu-fonts</value>
+  </metadata>
+</application>

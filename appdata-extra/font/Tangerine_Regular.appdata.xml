@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="font">Tangerine_Regular.ttf</id>
+  <licence>CC0</licence>
+  <name>Tangerine</name>
+  <summary>Tangerine is a calligraphy font inspired by many italic chancery hands</summary>
+  <metadata>
+    <value key="FontClassifier">Calligraphy</value>
+    <value key="FontParent">Tangerine_Regular.ttf</value>
+  </metadata>
+</application>

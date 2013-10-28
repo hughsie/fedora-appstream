@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="font">ManchuFont2005.ttf</id>
+  <licence>CC0</licence>
+  <name>Manchu</name>
+  <summary>A Manchu font</summary>
+  <metadata>
+    <value key="FontClassifier">Regular</value>
+    <value key="FontParent">ManchuFont2005.ttf</value>
+  </metadata>
+</application>

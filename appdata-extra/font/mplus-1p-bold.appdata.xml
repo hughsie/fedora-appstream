@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="font">mplus-1p-bold.ttf</id>
+  <licence>CC0</licence>
+  <name>M+ P</name>
+  <summary>A font which is aimed as sophisticated and relaxed design</summary>
+  <metadata>
+    <value key="FontClassifier">Bold</value>
+    <value key="FontParent">M+1P</value>
+  </metadata>
+</application>

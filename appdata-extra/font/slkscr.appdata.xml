@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="font">slkscr.ttf</id>
+  <licence>CC0</licence>
+  <name>Silkscreen</name>
+  <summary>Silkscreen four member type family</summary>
+  <metadata>
+    <value key="FontClassifier">Regular</value>
+    <value key="FontParent">Silkscreen</value>
+  </metadata>
+</application>

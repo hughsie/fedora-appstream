@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="font">KhmerOS_muolpali.ttf</id>
+  <licence>CC0</licence>
+  <name>Khmer OS</name>
+  <summary>A set of Cambodian fonts</summary>
+  <metadata>
+    <value key="FontClassifier">Regular</value>
+    <value key="FontParent">Khmer OS</value>
+  </metadata>
+</application>

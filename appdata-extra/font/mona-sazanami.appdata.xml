@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="font">mona-sazanami.ttf</id>
+  <licence>CC0</licence>
+  <name>Mona Sazanami</name>
+  <summary>True Type Japanese font for text arts based on Sazanami</summary>
+  <metadata>
+    <value key="FontClassifier">Regular</value>
+    <value key="FontParent">mona-sazanami.ttf</value>
+  </metadata>
+</application>

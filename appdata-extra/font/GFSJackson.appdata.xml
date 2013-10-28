@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="font">GFSJackson.otf</id>
+  <licence>CC0</licence>
+  <name>Jackson</name>
+  <summary>GFS Jackson majuscule Greek font</summary>
+  <metadata>
+    <value key="FontClassifier">Regular</value>
+    <value key="FontParent">GFSJackson.otf</value>
+  </metadata>
+</application>

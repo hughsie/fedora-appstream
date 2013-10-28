@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="font">UnDinaru.ttf</id>
+  <licence>CC0</licence>
+  <name>UnDinaru</name>
+  <summary>Un Core fonts - UnDinaru</summary>
+  <metadata>
+    <value key="FontClassifier">Regular</value>
+    <value key="FontParent">UnDinaru.ttf</value>
+  </metadata>
+</application>

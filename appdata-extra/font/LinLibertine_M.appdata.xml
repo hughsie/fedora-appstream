@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="font">LinLibertine_M.otf</id>
+  <licence>CC0</licence>
+  <name>Libertine</name>
+  <summary>Linux Libertine Open fonts</summary>
+  <metadata>
+    <value key="FontClassifier">Mono</value>
+    <value key="FontParent">Libertine</value>
+  </metadata>
+</application>

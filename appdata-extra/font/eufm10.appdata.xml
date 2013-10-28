@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="font">eufm10.ttf</id>
+  <licence>CC0</licence>
+  <name>Lyx/MathML</name>
+  <summary>Lyx/MathML fonts</summary>
+  <metadata>
+    <value key="FontClassifier">Regular</value>
+    <value key="FontParent">LyxMathML</value>
+  </metadata>
+</application>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="font">WarenderBibliothek.otf</id>
+  <licence>CC0</licence>
+  <name>Warender Bibliothek</name>
+  <summary>A fantasy font by Peter Schwanemann</summary>
+  <metadata>
+    <value key="FontClassifier">Regular</value>
+    <value key="FontParent">WarenderBibliothek.otf</value>
+  </metadata>
+</application>

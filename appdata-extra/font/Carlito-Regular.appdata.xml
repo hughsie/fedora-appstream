@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="font">Carlito-Regular.ttf</id>
+  <licence>CC0</licence>
+  <name>Carlito</name>
+  <summary>Sans-serif font metric-compatible with Calibri font</summary>
+  <metadata>
+    <value key="FontClassifier">Regular</value>
+    <value key="FontParent">Carlito-Regular.ttf</value>
+  </metadata>
+</application>

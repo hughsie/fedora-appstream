@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="font">NotCourierSans.ttf</id>
+  <licence>CC0</licence>
+  <name>NotCourier Sans</name>
+  <summary>NotCourier Sans is a re-interpretation of Nimbus Mono</summary>
+  <metadata>
+    <value key="FontClassifier">Sans</value>
+    <value key="FontParent">NotCourierSans.ttf</value>
+  </metadata>
+</application>

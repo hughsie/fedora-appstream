@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="font">Perizia.ttf</id>
+  <licence>CC0</licence>
+  <name>Perizia</name>
+  <summary>An English asymmetric font</summary>
+  <metadata>
+    <value key="FontClassifier">Regular</value>
+    <value key="FontParent">Perizia.ttf</value>
+  </metadata>
+</application>

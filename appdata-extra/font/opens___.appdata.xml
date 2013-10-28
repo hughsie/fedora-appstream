@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="font">opens___.ttf</id>
+  <licence>CC0</licence>
+  <name>Open Symbol</name>
+  <summary>A font containing common symbols</summary>
+  <metadata>
+    <value key="FontClassifier">Regular</value>
+    <value key="FontParent">opens___.ttf</value>
+  </metadata>
+</application>

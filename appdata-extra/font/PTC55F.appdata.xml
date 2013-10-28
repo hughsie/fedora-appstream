@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="font">PTC55F.ttf</id>
+  <licence>CC0</licence>
+  <name>PT Sans</name>
+  <summary>A pan-Cyrillic font</summary>
+  <metadata>
+    <value key="FontClassifier">Sans Caption</value>
+    <value key="FontParent">PT Sans</value>
+  </metadata>
+</application>

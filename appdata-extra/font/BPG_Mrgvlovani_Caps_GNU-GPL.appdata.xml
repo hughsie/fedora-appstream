@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="font">BPG_Mrgvlovani_Caps_GNU-GPL.ttf</id>
+  <licence>CC0</licence>
+  <name>BPG Mrgvlovani</name>
+  <summary>Mrgvlovani family of BPG Georgian fonts</summary>
+  <metadata>
+    <value key="FontClassifier">Caps</value>
+    <value key="FontParent">BPG Mrgvlovani</value>
+  </metadata>
+</application>

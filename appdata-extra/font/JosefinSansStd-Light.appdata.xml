@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="font">JosefinSansStd-Light.otf</id>
+  <licence>CC0</licence>
+  <name>Josefin</name>
+  <summary>A latin font that is geometric, elegant, and kind of vintage</summary>
+  <metadata>
+    <value key="FontClassifier">Sans</value>
+    <value key="FontParent">Josefin</value>
+  </metadata>
+</application>

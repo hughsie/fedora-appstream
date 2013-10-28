@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="font">Anonymous Pro B.ttf</id>
+  <licence>CC0</licence>
+  <name>Anonymous Pro</name>
+  <summary>A coding-friendly monospace font</summary>
+  <metadata>
+    <value key="FontClassifier">Mono</value>
+    <value key="FontParent">Anonymous Pro B.ttf</value>
+  </metadata>
+</application>

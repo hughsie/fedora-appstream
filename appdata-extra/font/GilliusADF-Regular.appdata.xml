@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="font">GilliusADF-Regular.otf</id>
+  <licence>CC0</licence>
+  <name>Gillius</name>
+  <summary>Gillius ADF sans-serif font family</summary>
+  <metadata>
+    <value key="FontClassifier">Regular</value>
+    <value key="FontParent">Gillius</value>
+  </metadata>
+</application>

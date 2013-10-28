@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="font">Alegreya-Black.otf</id>
+  <licence>CC0</licence>
+  <name>Alegreya</name>
+  <summary>A font originally intended for literature</summary>
+  <metadata>
+    <value key="FontClassifier">Regular</value>
+    <value key="FontParent">Alegreya</value>
+  </metadata>
+</application>

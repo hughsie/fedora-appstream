@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="font">mm3.ttf</id>
+  <licence>CC0</licence>
+  <name>Myanmar3</name>
+  <summary>A Myanmar font</summary>
+  <metadata>
+    <value key="FontClassifier">Regular</value>
+    <value key="FontParent">mm3.ttf</value>
+  </metadata>
+</application>

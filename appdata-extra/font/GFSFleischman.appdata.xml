@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="font">GFSFleischman.otf</id>
+  <licence>CC0</licence>
+  <name>Fleischman</name>
+  <summary>GFS Fleischman majuscule Greek font</summary>
+  <metadata>
+    <value key="FontClassifier">Regular</value>
+    <value key="FontParent">GFSFleischman.otf</value>
+  </metadata>
+</application>

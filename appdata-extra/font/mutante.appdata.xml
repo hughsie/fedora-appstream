@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="font">mutante.ttf</id>
+  <licence>CC0</licence>
+  <name>MutantE</name>
+  <summary>Mutante font used by the HUD in cave9 game</summary>
+  <metadata>
+    <value key="FontClassifier">Regular</value>
+    <value key="FontParent">mutante.ttf</value>
+  </metadata>
+</application>

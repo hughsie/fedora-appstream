@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="font">BonvenoCF-Light.ttf</id>
+  <licence>CC0</licence>
+  <name>BonvenoCF</name>
+  <summary>A fun font by Barry Schwartz</summary>
+  <metadata>
+    <value key="FontClassifier">Regular</value>
+    <value key="FontParent">BonvenoCF-Light.ttf</value>
+  </metadata>
+</application>

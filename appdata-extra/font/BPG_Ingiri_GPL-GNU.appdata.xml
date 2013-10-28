@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="font">BPG_Ingiri_GPL-GNU.ttf</id>
+  <licence>CC0</licence>
+  <name>BPG Ingiri</name>
+  <summary>Ingiri family of BPG Georgian fonts</summary>
+  <metadata>
+    <value key="FontClassifier">Regular</value>
+    <value key="FontParent">BPG_Ingiri_GPL-GNU.ttf</value>
+  </metadata>
+</application>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="font">Asana-Math.otf</id>
+  <licence>CC0</licence>
+  <name>Asana Math</name>
+  <summary>An font with a MATH table</summary>
+  <metadata>
+    <value key="FontClassifier">Regular</value>
+    <value key="FontParent">Asana-Math.otf</value>
+  </metadata>
+</application>

@@ -145,6 +145,12 @@ class Application:
         # get metadata
         tmp = data.get_metadata()
         if tmp:
+            # and extra packages we want to add in?
+            if 'ExtraPackages' in tmp:
+                for pkg in tmp['ExtraPackages'].split(','):
+                    if pkg not in self.pkgnames:
+                        self.pkgnames.append(pkg)
+                del tmp['ExtraPackages']
             self.metadata.update(tmp)
 
         # get optional bits

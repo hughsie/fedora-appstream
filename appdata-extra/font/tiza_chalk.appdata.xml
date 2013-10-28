@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="font">tiza_chalk.ttf</id>
+  <licence>CC0</licence>
+  <name>Tiza</name>
+  <summary>Chalky slab-serif fonts</summary>
+  <metadata>
+    <value key="FontClassifier">Slab-serif</value>
+    <value key="FontParent">tiza_chalk.ttf</value>
+  </metadata>
+</application>

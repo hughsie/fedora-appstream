@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="font">NotoSans-Regular.ttf</id>
+  <licence>CC0</licence>
+  <name>Noto</name>
+  <summary> Remove tofu from the web by providing fonts for all supported scripts</summary>
+  <metadata>
+    <value key="FontClassifier">Sans</value>
+    <value key="FontParent">Noto</value>
+  </metadata>
+</application>

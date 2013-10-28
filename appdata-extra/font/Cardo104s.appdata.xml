@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="font">Cardo104s.ttf</id>
+  <licence>CC0</licence>
+  <name>Cardo</name>
+  <summary>A font for scholarly use in classical and medieval languages</summary>
+  <metadata>
+    <value key="FontClassifier">Regular</value>
+    <value key="FontParent">Cardo104s.ttf</value>
+  </metadata>
+</application>
