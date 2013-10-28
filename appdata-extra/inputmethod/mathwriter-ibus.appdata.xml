@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <application>
-<id type="inputmethod">ibus-wubi-jidian86.db</id>
+<id type="inputmethod">mathwriter-ibus.db</id>
 <licence>CC0</licence>
-<name>Jidian Wubi 86</name>
-<summary>Simplified Chinese input method</summary>
+<name>Mathwriter</name>
+<summary>Math symbols input method</summary>
 <description>
 <p>
-The Jidian Wubi 86 input method is designed for entering Simplified Chinese text.
+The input method is designed for entering mathematical symbols.
 </p>
 <p>
 Input methods are typing systems allowing users to input complex languages.
@@ -14,5 +14,5 @@ They are necessary because these contain too many characters to simply be laid
 out on a traditional keyboard.
 </p>
 </description>
-<url type="homepage">http://code.google.com/p/ibus/</url>
+<url type="homepage">https://github.com/mike-fabian/ibus-table-others</url>
 </application>

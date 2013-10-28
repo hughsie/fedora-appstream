@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <application>
-<id type="inputmethod">ibus-kkc.xml</id>
+<id type="inputmethod">kkc.xml</id>
 <licence>CC0</licence>
 <name>Kana Kanji</name>
 <summary>Japanese input method</summary>

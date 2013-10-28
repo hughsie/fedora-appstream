@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <application>
-<id type="inputmethod">ibus-mathwriter-ibus.db</id>
+<id type="inputmethod">stroke5.db</id>
 <licence>CC0</licence>
-<name>Mathwriter</name>
-<summary>Math symbols input method</summary>
+<name>Stroke 5</name>
+<summary>Chinese input method</summary>
 <description>
 <p>
-The input method is designed for entering mathematical symbols.
+Stroke 5 is a very simple stroke-based Chinese input method.
+It was designed specifically for people with limited hand mobility or computer
+literacy, like the elderly or disabled.
 </p>
 <p>
 Input methods are typing systems allowing users to input complex languages.
@@ -14,5 +16,7 @@ They are necessary because these contain too many characters to simply be laid
 out on a traditional keyboard.
 </p>
 </description>
-<url type="homepage">https://github.com/mike-fabian/ibus-table-others</url>
+<!--
+<url type="homepage">FIXME</url>
+-->
 </application>

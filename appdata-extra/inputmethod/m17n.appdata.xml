@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <application>
-<id type="inputmethod">ibus-libpinyin.xml</id>
+<id type="inputmethod">m17n.xml</id>
 <licence>CC0</licence>
-<name>Pinyin</name>
-<summary>Chinese Pinyin and Zhuyin input method</summary>
+<name>Multilingualization</name>
+<summary>Multilingualization input method</summary>
 <description>
 <p>
-The Pinyin input method is designed for entering Chinese text by
-using Pinyin or Zhuyin.
+The multilingualization input method allows entering many languages using the
+tables from the m17n library.
 </p>
 <p>
 Input methods are typing systems allowing users to input complex languages.
@@ -15,5 +15,5 @@ They are necessary because these contain too many characters to simply be laid
 out on a traditional keyboard.
 </p>
 </description>
-<url type="homepage">https://github.com/libpinyin/ibus-libpinyin</url>
+<url type="homepage">https://github.com/ibus/ibus-m17n</url>
 </application>

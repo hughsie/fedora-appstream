@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <application>
-<id type="inputmethod">ibus-hangul.xml</id>
+<id type="inputmethod">input-pad.xml</id>
 <licence>CC0</licence>
-<name>Hangul</name>
-<summary>Korean input method</summary>
+<name>Input Pad</name>
+<summary>Input Pad input method</summary>
 <description>
 <p>
-The Hangul input method is designed for entering Korean text.
+The Input Pad input method is designed for entering special symbols.
 </p>
 <p>
 Input methods are typing systems allowing users to input complex languages.

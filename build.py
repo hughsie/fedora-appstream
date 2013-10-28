@@ -266,9 +266,8 @@ class Build:
                     pkg.log.write(LoggerItem.INFO, "content type %s not supported" % content_type)
                     continue
 
-                # the ID is the filename unless specified otherwise
-                if app.app_id is None:
-                    app.set_id(f.split('/')[-1])
+                # the ID is the filename
+                app.set_id(f.split('/')[-1])
 
                 # parse file
                 if not app.parse_file(f):

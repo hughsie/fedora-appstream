@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <application>
-<id type="inputmethod">ibus-handwrite-jp.xml</id>
+<id type="inputmethod">libpinyin.xml</id>
 <licence>CC0</licence>
-<name>Japanese Handwriting</name>
-<summary>Japanese handwriting input method</summary>
+<name>Pinyin</name>
+<summary>Chinese Pinyin and Zhuyin input method</summary>
 <description>
 <p>
-The handwriting input method is designed for entering Japanese text.
+The Pinyin input method is designed for entering Chinese text by
+using Pinyin or Zhuyin.
 </p>
 <p>
 Input methods are typing systems allowing users to input complex languages.
@@ -14,5 +15,5 @@ They are necessary because these contain too many characters to simply be laid
 out on a traditional keyboard.
 </p>
 </description>
-<url type="homepage">http://code.google.com/p/ibus-handwrite/</url>
+<url type="homepage">https://github.com/libpinyin/ibus-libpinyin</url>
 </application>

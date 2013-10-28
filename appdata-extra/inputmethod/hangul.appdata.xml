@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <application>
-<id type="inputmethod">ibus-sayura.xml</id>
+<id type="inputmethod">hangul.xml</id>
 <licence>CC0</licence>
-<name>Sayura</name>
-<summary>Sihali input method</summary>
+<name>Hangul</name>
+<summary>Korean input method</summary>
 <description>
 <p>
-The Sayura input method is designed for entering Sinhala text.
+The Hangul input method is designed for entering Korean text.
 </p>
 <p>
 Input methods are typing systems allowing users to input complex languages.
@@ -14,5 +14,5 @@ They are necessary because these contain too many characters to simply be laid
 out on a traditional keyboard.
 </p>
 </description>
-<url type="homepage">https://fedorahosted.org/ibus-sayura/</url>
+<url type="homepage">http://code.google.com/p/ibus/</url>
 </application>
