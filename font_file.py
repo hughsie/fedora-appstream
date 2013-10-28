@@ -52,6 +52,11 @@ def _get_sortable_family(font_str):
         idx += 2
     if font_str.find('Hai') != -1:
         idx += 4
+    values = ['Keyboard', 'Kufi', 'Tamil', 'Hebrew', 'Arabic', 'Fallback', 'Devanagari' ]
+    for value in values:
+        if font_str.find(value) != -1:
+            idx += 8
+            break
     return idx
 
 class FontFileFilter():
@@ -219,6 +224,7 @@ class FontFile(Application):
         self.type_id = 'font'
         self.categories = [ 'Addons', 'Fonts' ]
         self.thumbnail_screenshots = False
+        self.requires_appdata = True
 
     def get_font_chars(self, font):
 
