@@ -81,6 +81,28 @@ class Application:
         self.thumbnail_screenshots = True
         self.status_html = None
 
+    def __str__(self):
+        s = {}
+        s['app-id'] = self.app_id_full
+        s['type_id'] = self.type_id
+        s['names'] = self.names
+        s['comments'] = self.comments
+        s['categories'] = self.categories
+        s['descriptions'] = self.descriptions
+        s['mimetypes'] = self.mimetypes
+        s['urls'] = self.urls
+        s['metadata'] = self.metadata
+        s['licence'] = self.licence
+        s['pkgnames'] = self.pkgnames
+        s['icon'] = self.icon
+        s['keywords'] = self.keywords
+        s['cached_icon'] = self.cached_icon
+        s['screenshots'] = self.screenshots
+        s['compulsory_for_desktop'] = self.compulsory_for_desktop
+        s['project_group'] = self.project_group
+        s['requires_appdata'] = self.requires_appdata
+        return str(s)
+
     def add_appdata_file(self):
 
         # do we have an AppData file?
