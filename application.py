@@ -64,12 +64,13 @@ class Application:
         self.mimetypes = None
         self.urls = {}
         self.metadata = {}
-        if pkg.homepage_url:
-            self.urls['homepage'] = pkg.homepage_url
-        self.licence = pkg.licence
+        if pkg:
+            self.licence = pkg.licence
+            self.pkgnames = [pkg.name]
+            if pkg.homepage_url:
+                self.urls['homepage'] = pkg.homepage_url
         self.icon = None
         self.keywords = []
-        self.pkgnames = [pkg.name]
         self.cached_icon = False
         self.cfg = cfg
         self.screenshots = []
