@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<applications version="0.1">
+
+  <application>
+    <!-- Copyright 2013, Facebook Inc. -->
+    <id type="webapp">epiphany-facebook.desktop</id>
+    <name>Facebook</name>
+    <summary>Give people the power to share</summary>
+    <icon type="remote">https://www.facebook.com/images/fb_icon_325x325.png</icon>
+    <appcategories>
+      <appcategory>Network</appcategory>
+      <appcategory>InstantMessaging</appcategory>
+    </appcategories>
+    <keywords>
+      <keyword>facebook</keyword>
+    </keywords>
+    <licence>Proprietary</licence>
+    <url type="homepage">http://www.facebook.com/</url>
+    <description>
+      <p>
+        Facebook is the world's most popular social networking website.
+        It makes it easy for you to connect and share with your family and
+        friends online.
+      </p>
+      <p>
+        To use Facebook you need a Facebook login and be over the age of 13.
+      </p>
+    </description>
+  </application>
+
+</applications>

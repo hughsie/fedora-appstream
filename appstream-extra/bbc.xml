@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<applications version="0.1">
+
+  <application>
+    <!-- Copyright 2013, BBC -->
+    <id type="webapp">epiphany-bbciplayer.desktop</id>
+    <name>BBC iPlayer</name>
+    <summary>Catch up on BBC TV and Radio programmes, or watch/listen live</summary>
+    <icon type="remote">http://www.bbc.co.uk/terms/images/stock/bbciplayer_logo_black.jpg</icon>
+    <appcategories>
+      <appcategory>Video</appcategory>
+      <appcategory>TV</appcategory>
+    </appcategories>
+    <keywords>
+      <keyword>iplayer</keyword>
+      <keyword>drama</keyword>
+      <keyword>news</keyword>
+      <keyword>entertainment</keyword>
+    </keywords>
+    <licence>Proprietary</licence>
+    <url type="homepage">http://www.bbc.co.uk/iplayer/bigscreen</url>
+    <description>
+      <p>
+        Watch live BBC channels, listen to BBC radios, or catch up on programmes
+        from the last 7 days.
+        Drama, soaps, news, sport and currents affairs, or comedy, whatever your
+        mood, you will find a BBC programme to suit you.
+      </p>
+      <p>
+        To use BBC iPlayer you must be located in the UK and pay a TV licence.
+      </p>
+    </description>
+    <!-- needs dark theme -->
+    <!-- needs Flash -->
+  </application>
+
+</applications>

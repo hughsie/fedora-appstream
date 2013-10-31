@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<applications version="0.1">
+
+  <application>
+    <!-- Copyright 2013, Amazon.com, Inc. -->
+    <id type="webapp">epiphany-kindlecloud.desktop</id>
+    <name>Kindle Cloud Reader</name>
+    <summary>Read instantly in your browser</summary>
+    <icon type="remote">http://g-ecx.images-amazon.com/images/G/01/kindle/www/ariel/kindle-icon-kcp120._SL90_.png</icon>
+    <appcategories>
+      <appcategory>Education</appcategory>
+      <appcategory>Literature</appcategory>
+    </appcategories>
+    <keywords>
+      <keyword>reader</keyword>
+      <keyword>ebook</keyword>
+      <keyword>book</keyword>
+    </keywords>
+    <licence>Proprietary</licence>
+    <url type="homepage">https://read.amazon.com</url>
+    <description>
+      <p>
+        Buy Once, Read Everywhere: You don't need to own a Kindle device to
+        enjoy Kindle books.
+        Automatically save and synchronize your furthest page read, bookmarks,
+        notes, and highlights across all your devices.
+        That means you can start reading a book on one device, and pick up where
+        you left off on another device.
+      </p>
+      <p>
+        Read the first chapter of a book before you decide whether to buy it.
+        Read thousands of free books with a Kindle app, including popular
+        classics like The Adventures of Sherlock Holmes, Pride and Prejudice,
+        and Treasure Island.
+      </p>
+      <p>
+        To use the Kindle Cloud reader you must have Amazon.com account.
+      </p>
+    </description>
+    <!-- needs dark theme -->
+  </application>
+
+</applications>
