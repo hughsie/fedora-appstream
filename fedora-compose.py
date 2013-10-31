@@ -55,13 +55,43 @@ class Compose:
 
     def run(self):
 
-        files = glob.glob("./appstream/*.xml")
-        files.sort()
-
         # setup the output XML
         master_root = ET.Element("applications")
         master_root.set("version", "0.1")
         master_tree = ET.ElementTree(master_root)
+
+        # find any extra appstream files
+        files = glob.glob("../appstream-extra/*.xml")
+        for f in files:
+            tree = ET.parse(f)
+            root = tree.getroot()
+            self.log.update_key(os.path.basename(f))
+            for app in root:
+                app_id = app.find('id')
+                if app_id is None:
+                    self.log.write(LoggerItem.WARNING, "appstream id not found")
+                    continue
+
+                # add everything
+                new = ET.SubElement(master_root, 'application')
+                for elem in app:
+                    new.append(elem)
+
+                # check for screenshots in ../screenshots-extra/${id}/*
+                tmp = Application(None, self.cfg)
+                tmp.set_id(app_id.text)
+                self.log.write(LoggerItem.INFO, "adding %s" % tmp.app_id_full)
+                overrides = glob.glob("../screenshots-extra/%s/*.png" % tmp.app_id)
+                if len(overrides) > 0:
+                    self.log.write(LoggerItem.INFO,
+                                   "adding %i screenshot overrides" % len(overrides))
+                for ss_fn in overrides:
+                    tmp.add_screenshot_filename(ss_fn)
+                tmp.build_xml_screenshots(new)
+
+        # add the generated appstream files
+        files = glob.glob("./appstream/*.xml")
+        files.sort()
 
         recognised_types = ['desktop', 'codec', 'font', 'inputmethod']
         for filename in files:
