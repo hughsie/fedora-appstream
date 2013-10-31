@@ -184,7 +184,11 @@ class Application:
         tmp = data.get_project_group()
         if tmp:
             self.project_group = tmp
-        self.descriptions = data.get_descriptions()
+        try:
+            self.descriptions = data.get_descriptions()
+        except StandardError, e:
+            self.log.write(LoggerItem.WARNING,
+                           "failed to add description: %s" % str(e))
 
         # get screenshots
         tmp = data.get_screenshots()
