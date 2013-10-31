@@ -38,6 +38,16 @@ class Screenshot:
         self.basename += hashlib.md5(img.tostring()).hexdigest()
         self.basename += '.png'
 
+    def __str__(self):
+        s = {}
+        s['sort-id'] = self.sort_id
+        s['metadata'] = self.metadata
+        s['caption'] = self.caption
+        s['width'] = self.width
+        s['height'] = self.height
+        s['basename'] = self.basename
+        return str(s)
+
     def dump_to_file(self, pathname, size=(0, 0)):
         if size[0] > 0:
             #img = self._img.resize(size, Image.ANTIALIAS)
