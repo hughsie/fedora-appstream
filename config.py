@@ -32,7 +32,7 @@ class Config:
 
         self._config = GLib.KeyFile()
         self._config.load_from_file(filename, GLib.KeyFileFlags.NONE)
-        self._group_name = 'fedora-appstream'
+        self._group_name = u'fedora-appstream'
         self.icon_size = self._config.get_integer(self._group_name, 'IconSize')
         self.min_icon_size = self._config.get_integer(self._group_name, 'MinIconSize')
 

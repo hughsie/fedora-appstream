@@ -32,6 +32,7 @@ import xml.etree.ElementTree as ET
 
 import config
 from logger import Logger, LoggerItem
+from application import Application
 
 timestamp = datetime.datetime.now().strftime('%Y%m%d')
 sys.stdout = Logger("compose-%s.txt" % timestamp)

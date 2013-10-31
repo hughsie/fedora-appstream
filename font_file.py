@@ -157,7 +157,7 @@ class FontFileFilter():
         for app in apps:
             if app.type_id == 'font':
                 for s in app.screenshots:
-                    s.caption = s.metadata['FontFamily'] + ' — ' + s.metadata['FontSubFamily']
+                    s.caption = s.metadata['FontFamily'] + u' — ' + s.metadata['FontSubFamily']
 
         # sort the screenshots in a sane way
         for app in apps:
@@ -193,9 +193,9 @@ def autocrop(im, alpha):
 def _decode_record(record):
     text = ''
     if '\000' in record.string:
-        text = unicode(record.string, 'utf-16-be').encode('utf-8')
+        text = unicode(record.string, 'utf-16-be')
     else:
-        text = record.string
+        text = record.string.decode('utf-8')
     return text
 
 def get_font_metadata(font):
@@ -221,8 +221,8 @@ class FontFile(Application):
 
     def __init__(self, pkg, cfg):
         Application.__init__(self, pkg, cfg)
-        self.type_id = 'font'
-        self.categories = [ 'Addons', 'Fonts' ]
+        self.type_id = u'font'
+        self.categories = [ u'Addons', u'Fonts' ]
         self.thumbnail_screenshots = False
         self.requires_appdata = True
 
@@ -231,9 +231,9 @@ class FontFile(Application):
         # get two UTF-8 chars that are present in the set
         glyphs = font['hmtx'].metrics
         if all(glyph in glyphs for glyph in ['A', 'a']):
-            return 'Aa'
+            return u'Aa'
         if all(glyph in glyphs for glyph in ['one', 'two']):
-            return "12"
+            return u"12"
         if all(glyph in glyphs for glyph in ['mail', 'thumbs-down']):
             return u"📤👎"
         if all(glyph in glyphs for glyph in ['Lambda', 'Sigma']):
@@ -285,7 +285,7 @@ class FontFile(Application):
 
         # these fonts take AAAGGES to decompile
         if self.app_id in [ 'batang', 'dotum', 'gulim', 'hline'] :
-            chars = 'Aa'
+            chars = u'Aa'
         else:
             chars = self.get_font_chars(tt)
         if not chars:
@@ -318,7 +318,7 @@ class FontFile(Application):
         border_width = 5
         basewidth = self.cfg.get_int('FontScreenshotWidth')
 
-        text = 'How quickly daft jumping zebras vex.'
+        text = u'How quickly daft jumping zebras vex.'
         im_temp = Image.new("RGBA", img_size_temp, bg_color)
         draw = ImageDraw.Draw(im_temp)
         font = ImageFont.truetype(font_file, 40)
@@ -354,9 +354,9 @@ class FontFile(Application):
         tt = ttLib.TTFont(f, recalcBBoxes=False)
         metadata = get_font_metadata(tt)
         self.metadata.update(metadata)
-        self.names['C'] = metadata['FontFamily']
-        self.comments['C'] = "A font from " + metadata['FontFamily']
-        icon_fullpath = './icons/' + self.app_id + '.png'
+        self.names['C'] = metadata[u'FontFamily']
+        self.comments['C'] = u'A font from ' + metadata[u'FontFamily']
+        icon_fullpath = u'./icons/' + self.app_id + u'.png'
 
         # generate a preview icon
         if not self.create_icon(f, tt, icon_fullpath):

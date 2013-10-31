@@ -25,6 +25,7 @@ import os
 import subprocess
 import sys
 import urllib
+import xml.etree.ElementTree as ET
 
 from PIL import Image
 
@@ -40,16 +41,6 @@ def _to_utf8(txt, errors='replace'):
     if isinstance(txt, unicode):
         return txt.encode('utf-8', errors=errors)
     return str(txt)
-
-# NOTE; we could use escape() from xml.sax.saxutils import escape but that seems
-# like a big dep for such trivial functionality
-def quote(text):
-    text = text.replace("&", "&amp;")
-    text = text.replace("<", "&lt;")
-    text = text.replace(">", "&gt;")
-    text = text.replace("\"", "&#34;")
-    text = text.replace("\'", "&#39;")
-    return _to_utf8(text)
 
 class Application:
 
@@ -68,7 +59,7 @@ class Application:
             self.licence = pkg.licence
             self.pkgnames = [pkg.name]
             if pkg.homepage_url:
-                self.urls['homepage'] = pkg.homepage_url
+                self.urls[u'homepage'] = pkg.homepage_url
         self.icon = None
         self.keywords = []
         self.cached_icon = False
@@ -137,7 +128,7 @@ class Application:
             p.wait()
             if p.returncode:
                 for line in p.stdout:
-                    line = line.replace('\n', '')
+                    line = line.replace('\n', '').decode('utf-8')
                     self.log.write(LoggerItem.WARNING,
                                    "AppData did not validate: %s" % line)
 
@@ -245,34 +236,115 @@ class Application:
         if desktops:
             self.compulsory_for_desktop.extend(desktops)
 
-    def write(self, f):
-        f.write("  <application>\n")
-        f.write("    <id type=\"%s\">%s</id>\n" % (self.type_id, self.app_id_full))
-        for pkgname in self.pkgnames:
-            f.write("    <pkgname>%s</pkgname>\n" % pkgname)
-        f.write("    <name>%s</name>\n" % quote(self.names['C']))
-        for lang in self.names:
-            if lang != 'C':
-                f.write("    <name xml:lang=\"%s\">%s</name>\n" %
-                        (quote(lang), quote(self.names[lang])))
-        f.write("    <summary>%s</summary>\n" % quote(self.comments['C']))
-        for lang in self.comments:
-            if lang != 'C':
-                f.write("    <summary xml:lang=\"%s\">%s</summary>\n" %
-                        (quote(lang), quote(self.comments[lang])))
-        if self.icon:
-            if self.cached_icon:
-                f.write("    <icon type=\"cached\">%s.png</icon>\n" % self.app_id)
+    def build_xml_screenshots(self, root):
+
+        # any screenshots
+        mirror_url = self.cfg.get_screenshot_mirror_url()
+        if not mirror_url:
+            return
+        if len(self.screenshots) == 0:
+            return
+
+        screenshots = ET.SubElement(root, 'screenshots')
+        screenshots.tail = u'\n'
+        for s in self.screenshots:
+
+            screenshot = ET.SubElement(screenshots, 'screenshot')
+            screenshot.tail = u'\n'
+            if s == self.screenshots[0]:
+                screenshot.set(u'type', u'default')
             else:
-                f.write("    <icon type=\"stock\">%s</icon>\n" % self.icon)
+                screenshot.set(u'type', u'normal')
+
+            if s.caption:
+                caption = ET.SubElement(screenshot, u'caption')
+                caption.text = s.caption
+                caption.tail = u'\n'
+
+            # write the full size source image
+            image = ET.SubElement(screenshot, u'image')
+            image.set(u'type', u'source')
+            image.set(u'width', unicode(s.width))
+            image.set(u'height', unicode(s.height))
+            image.text = mirror_url + 'source/' + s.basename
+            image.tail = u'\n'
+            s.dump_to_file('./screenshots/source')
+
+            # write all the thumbnail sizes too
+            if self.thumbnail_screenshots:
+                for width, height in self.cfg.get_screenshot_thumbnail_sizes():
+                    size_str = unicode(width) + 'x' + unicode(height)
+                    image = ET.SubElement(screenshot, 'image')
+                    image.set(u'type', u'thumbnail')
+                    image.set(u'width', str(width))
+                    image.set(u'height', str(height))
+                    image.text = mirror_url + size_str + '/' + s.basename
+                    image.tail = u'\n'
+                    s.dump_to_file('./screenshots/' + size_str, (width, height))
+
+    def build_xml(self, root):
+
+        application = ET.SubElement(root, 'application')
+        application.tail = u'\n'
+
+        # write id
+        elem = ET.SubElement(application, 'id')
+        elem.set(u'type', self.type_id)
+        elem.text = self.app_id_full
+        elem.tail = u'\n'
+
+        # write pkgnames
+        for pkgname in self.pkgnames:
+            elem = ET.SubElement(application, 'pkgname')
+            elem.text = pkgname
+            elem.tail = u'\n'
+
+        # write name
+        elem = ET.SubElement(application, 'name')
+        elem.text = self.names['C']
+        elem.tail = u'\n'
+        for lang in self.names:
+            if lang == 'C':
+                continue
+            elem = ET.SubElement(application, 'name')
+            elem.set(u'xml:lang', lang)
+            elem.text = self.names[lang]
+            elem.tail = u'\n'
+
+        # write summary
+        elem = ET.SubElement(application, 'summary')
+        elem.text = self.comments['C']
+        elem.tail = u'\n'
+        for lang in self.comments:
+            if lang == 'C':
+                continue
+            elem = ET.SubElement(application, 'summary')
+            elem.set(u'xml:lang', lang)
+            elem.text = self.comments[lang]
+            elem.tail = u'\n'
+
+        # write icon
+        if self.icon:
+            elem = ET.SubElement(application, 'icon')
+            elem.tail = u'\n'
+            if self.cached_icon:
+                elem.set(u'type', 'cached')
+                elem.text = self.app_id + '.png'
+            else:
+                elem.set(u'type', 'stock')
+                elem.text = self.icon
+
+        # write categories
         if self.categories:
-            f.write("    <appcategories>\n")
+            elem = ET.SubElement(application, 'appcategories')
+            elem.tail = u'\n'
+
             # check for a common problem
             if 'AudioVideo' in self.categories:
                 if not 'Audio' in self.categories and not 'Video' in self.categories:
                     self.log.write(LoggerItem.WARNING,
                                    "has AudioVideo but not Audio or Video")
-                    self.categories.extend(['Audio', 'Video'])
+                    self.categories.extend([u'Audio', u'Video'])
             for cat in self.categories:
                 if cat in self.cfg.get_category_ignore_list():
                     continue
@@ -280,114 +352,123 @@ class Application:
                     continue
                 # simple substitution
                 if cat == 'Feed':
-                    cat = 'News'
-                f.write("      <appcategory>%s</appcategory>\n" % cat)
-            f.write("    </appcategories>\n")
+                    cat = u'News'
+                elem2 = ET.SubElement(elem, 'appcategory')
+                elem2.text = cat
+                elem2.tail = u'\n'
+
+        # write keywords
         if len(self.keywords) > 0:
-            f.write("    <keywords>\n")
+            elem = ET.SubElement(application, 'keywords')
+            elem.tail = u'\n'
             for keyword in self.keywords:
-                f.write("      <keyword>%s</keyword>\n" % quote(keyword))
-            f.write("    </keywords>\n")
+                elem2 = ET.SubElement(elem, 'keyword')
+                elem2.text = keyword
+                elem2.tail = u'\n'
+
+        # write mimetypes
         if self.mimetypes:
-            f.write("    <mimetypes>\n")
+            elem = ET.SubElement(application, 'mimetypes')
+            elem.tail = u'\n'
             for mimetype in self.mimetypes:
-                f.write("      <mimetype>%s</mimetype>\n" % quote(mimetype))
-            f.write("    </mimetypes>\n")
+                elem2 = ET.SubElement(elem, 'mimetype')
+                elem2.text = mimetype
+                elem2.tail = u'\n'
+
+        # write licence
         if self.licence:
-            f.write("    <licence>%s</licence>\n" % quote(self.licence))
+            elem = ET.SubElement(application, 'licence')
+            elem.text = self.licence
+            elem.tail = u'\n'
+
+        # write urls
         for key in self.urls:
-            f.write("    <url type=\"%s\">%s</url>\n" % (key, quote(self.urls[key])))
+            elem = ET.SubElement(application, 'url')
+            elem.set(u'type', key)
+            elem.text = self.urls[key]
+            elem.tail = u'\n'
+
+        # write project_group
         if self.project_group:
-            f.write("    <project_group>%s</project_group>\n" % quote(self.project_group))
+            elem = ET.SubElement(application, 'project_group')
+            elem.text = self.project_group
+            elem.tail = u'\n'
+
+        # write description
         if self.descriptions and 'C' in self.descriptions:
-            f.write("    <description>%s</description>\n" % quote(self.descriptions['C']))
+            elem = ET.SubElement(application, 'description')
+            elem.text = self.descriptions['C']
+            elem.tail = u'\n'
             for lang in self.descriptions:
-                if lang != 'C':
-                    f.write("    <description xml:lang=\"%s\">%s</description>\n" %
-                            (quote(lang), quote(self.descriptions[lang])))
+                if lang == 'C':
+                    continue
+                continue
+                elem = ET.SubElement(application, 'description')
+                elem.set(u'xml:lang', lang)
+                elem.text = self.descriptions[lang]
+                elem.tail = u'\n'
 
         # compulsory for any specific desktop?
         if len(self.compulsory_for_desktop) > 0:
             for c in self.compulsory_for_desktop:
-                f.write("    <compulsory_for_desktop>%s</compulsory_for_desktop>\n"% c)
+                elem = ET.SubElement(application, 'compulsory_for_desktop')
+                elem.text = c
+                elem.tail = u'\n'
 
-        # any screenshots
-        mirror_url = self.cfg.get_screenshot_mirror_url()
-        if mirror_url and len(self.screenshots) > 0:
-            f.write("    <screenshots>\n")
-            for s in self.screenshots:
-                if s == self.screenshots[0]:
-                    f.write("      <screenshot type=\"default\">\n")
-                else:
-                    f.write("      <screenshot type=\"normal\">\n")
-
-                # write caption
-                if s.caption:
-                    f.write("        <caption>%s</caption>\n" % s.caption)
-
-                # write the full size source image
-                url = mirror_url + 'source/' + s.basename
-                f.write("        <image type=\"source\" width=\"%s\" "
-                        "height=\"%s\">%s</image>\n" %
-                        (s.width, s.height, url))
-
-                # write all the thumbnail sizes too
-                if self.thumbnail_screenshots:
-                    for size in self.cfg.get_screenshot_thumbnail_sizes():
-                        size_str = str(size[0]) + 'x' + str(size[1])
-                        url = mirror_url + size_str + '/' + s.basename
-                        s.dump_to_file('./screenshots/' + size_str, size)
-                        f.write("        <image type=\"thumbnail\" width=\"%s\" "
-                                "height=\"%s\">%s</image>\n" %
-                                (size[0], size[1], url))
-                f.write("      </screenshot>\n")
-                s.dump_to_file('./screenshots/source')
-            f.write("    </screenshots>\n")
+        # write screenshots
+        self.build_xml_screenshots(application)
 
         # any metadata
         for m in self.metadata:
-            f.write("    <X-%s>%s</X-%s>\n" % (m, self.metadata[m], m))
+            elem = ET.SubElement(application, 'X-' + m)
+            elem.text = self.metadata[m]
+            elem.tail = u'\n'
 
-        f.write("  </application>\n")
-
+    def write_status(self):
         # write to the status file
-        if self.status_html and self.type_id != 'font':
-            self.status_html.write("<h2>%s</h2>\n" % self.app_id)
-            if mirror_url and len(self.screenshots) > 0:
-                for s in self.screenshots:
-                    url = mirror_url + '624x351/' + s.basename
-                    thumb_url = mirror_url + '112x63/' + s.basename
+        if not self.status_html:
+            return
+        self.status_html.write("<h2>%s</h2>\n" % self.app_id)
+        mirror_url = self.cfg.get_screenshot_mirror_url()
+        if mirror_url and len(self.screenshots) > 0:
+            for s in self.screenshots:
+                url = mirror_url + u'624x351/' + s.basename
+                thumb_url = mirror_url + u'112x63/' + s.basename
+                if s.caption:
                     self.status_html.write("<a href=\"%s\"><img src=\"%s\" alt=\"%s\"/></a>\n" %
-                                           (url, thumb_url, s.caption))
-            self.status_html.write("<table>\n")
-            self.status_html.write("<tr><td>%s</td><td><code>%s</code></td></tr>\n" %
-                                   ("Type", self.type_id))
+                                           (url, thumb_url, _to_utf8(s.caption)))
+                else:
+                    self.status_html.write("<a href=\"%s\"><img src=\"%s\"/></a>\n" %
+                                           (url, thumb_url))
+        self.status_html.write("<table>\n")
+        self.status_html.write("<tr><td>%s</td><td><code>%s</code></td></tr>\n" %
+                               ("Type", self.type_id))
+        self.status_html.write("<tr><td>%s</td><td>%s</td></tr>\n" %
+                               ("Name", _to_utf8(self.names['C'])))
+        self.status_html.write("<tr><td>%s</td><td>%s</td></tr>\n" %
+                               ("Comment", _to_utf8(self.comments['C'])))
+        if self.descriptions and 'C' in self.descriptions:
             self.status_html.write("<tr><td>%s</td><td>%s</td></tr>\n" %
-                                   ("Name", self.names['C']))
+                                   ("Description", _to_utf8(self.descriptions['C'])))
+        self.status_html.write("<tr><td>%s</td><td><code>%s</code></td></tr>\n" %
+                               ("Package", ', '.join(self.pkgnames)))
+        if self.categories:
             self.status_html.write("<tr><td>%s</td><td>%s</td></tr>\n" %
-                                   ("Comment", self.comments['C']))
-            if self.descriptions and 'C' in self.descriptions:
-                self.status_html.write("<tr><td>%s</td><td>%s</td></tr>\n" %
-                                       ("Description", self.descriptions['C']))
-            self.status_html.write("<tr><td>%s</td><td><code>%s</code></td></tr>\n" %
-                                   ("Package", ', '.join(self.pkgnames)))
-            if self.categories:
-                self.status_html.write("<tr><td>%s</td><td>%s</td></tr>\n" %
-                                       ("Categories", ', '.join(self.categories)))
-            if len(self.keywords):
-                self.status_html.write("<tr><td>%s</td><td>%s</td></tr>\n" %
-                                       ("Keywords", ', '.join(self.keywords)))
-            if 'homepage' in self.urls:
-                self.status_html.write("<tr><td>%s</td><td>%s</td></tr>\n" %
-                                       ("Homepage", self.urls['homepage']))
-            if self.project_group:
-                self.status_html.write("<tr><td>%s</td><td>%s</td></tr>\n" %
-                                       ("Project", self.project_group))
-            if len(self.compulsory_for_desktop):
-                self.status_html.write("<tr><td>%s</td><td>%s</td></tr>\n" %
-                                       ("Compulsory", ', '.join(self.compulsory_for_desktop)))
-            self.status_html.write("</table>\n")
-            self.status_html.flush()
+                                   ("Categories", ', '.join(self.categories)))
+        if len(self.keywords):
+            self.status_html.write("<tr><td>%s</td><td>%s</td></tr>\n" %
+                                   ("Keywords", ', '.join(self.keywords)))
+        if 'homepage' in self.urls:
+            self.status_html.write("<tr><td>%s</td><td>%s</td></tr>\n" %
+                                   ("Homepage", self.urls['homepage']))
+        if self.project_group:
+            self.status_html.write("<tr><td>%s</td><td>%s</td></tr>\n" %
+                                   ("Project", self.project_group))
+        if len(self.compulsory_for_desktop):
+            self.status_html.write("<tr><td>%s</td><td>%s</td></tr>\n" %
+                                   ("Compulsory", ', '.join(self.compulsory_for_desktop)))
+        self.status_html.write("</table>\n")
+        self.status_html.flush()
 
 def main():
     pkg = Package(sys.argv[1])

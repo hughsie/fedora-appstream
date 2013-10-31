@@ -35,6 +35,22 @@ from logger import LoggerItem
 from application import Application
 from package import Package
 
+def get_string_unicode(config, group, key):
+    tmp = config.get_string(group, key).decode('utf-8')
+    tmp = tmp.strip()
+    if len(tmp) == 0:
+        return None
+    return tmp
+
+def get_string_list_unicode(config, group, key):
+    tmp = config.get_string_list(group, key)
+    values = []
+    for t in tmp:
+        values.append(t.decode('utf-8'))
+    if len(values) == 0:
+        return None
+    return values
+
 class AppdataException(Exception):
     pass
 
@@ -42,7 +58,7 @@ class DesktopFile(Application):
 
     def __init__(self, pkg, cfg):
         Application.__init__(self, pkg, cfg)
-        self.type_id = 'desktop'
+        self.type_id = u'desktop'
 
     def resize_icon(self, icon, filename):
 
@@ -90,7 +106,7 @@ class DesktopFile(Application):
             ctx.scale(float(64) / handler.props.width,
                       float(size) / handler.props.height)
             handler.render_cairo(ctx)
-            img.write_to_png(filename)
+            img.write_to_png(filename.encode('utf-8'))
             return
         return
 
@@ -150,42 +166,45 @@ class DesktopFile(Application):
                 is_application = True
             elif k.startswith(GLib.KEY_FILE_DESKTOP_KEY_NAME):
                 m = re.match(GLib.KEY_FILE_DESKTOP_KEY_NAME + '\[([^\]]+)\]', k)
-                if m:
-                    self.names[m.group(1)] = config.get_string(DG, k)
-                else:
-                    self.names['C'] = config.get_string(DG, k)
-            elif k.startswith(GLib.KEY_FILE_DESKTOP_KEY_COMMENT):
-                m = re.match(GLib.KEY_FILE_DESKTOP_KEY_COMMENT + '\[([^\]]+)\]', k)
-                value = config.get_string(DG, k)
-                if len(value) == 0:
+                tmp = get_string_unicode(config, DG, k)
+                if not tmp:
                     continue
                 if m:
-                    self.comments[m.group(1)] = value
+                    self.names[m.group(1)] = tmp
                 else:
-                    self.comments['C'] = value
+                    self.names['C'] = tmp
+            elif k.startswith(GLib.KEY_FILE_DESKTOP_KEY_COMMENT):
+                m = re.match(GLib.KEY_FILE_DESKTOP_KEY_COMMENT + '\[([^\]]+)\]', k)
+                tmp = get_string_unicode(config, DG, k)
+                if not tmp:
+                    continue
+                if m:
+                    self.comments[m.group(1)] = tmp
+                else:
+                    self.comments['C'] = tmp
             elif k == GLib.KEY_FILE_DESKTOP_KEY_ICON:
-                icon = config.get_string(DG, k)
-                if icon:
-                    self.icon = icon.strip()
+                value = get_string_unicode(config, DG, k)
+                if value:
+                    self.icon = value
             elif k == GLib.KEY_FILE_DESKTOP_KEY_CATEGORIES:
-                self.categories = config.get_string_list(DG, k)
+                self.categories = get_string_list_unicode(config, DG, k)
             elif k == 'Keywords':
-                self.keywords = config.get_string_list(DG, k)
+                self.keywords = get_string_list_unicode(config, DG, k)
             elif k == 'MimeType':
-                self.mimetypes = config.get_string_list(DG, k)
+                self.mimetypes = get_string_list_unicode(config, DG, k)
             elif k == 'X-GNOME-Bugzilla-Product':
-                self.project_group = 'GNOME'
+                self.project_group = u'GNOME'
             elif k == 'X-MATE-Bugzilla-Product':
-                self.project_group = 'MATE'
+                self.project_group = u'MATE'
             elif k == 'X-KDE-StartupNotify':
-                self.project_group = 'KDE'
+                self.project_group = u'KDE'
             elif k == GLib.KEY_FILE_DESKTOP_KEY_EXEC:
                 tmp = config.get_string(DG, k)
                 if tmp.startswith('xfce4-'):
-                    self.project_group = 'XFCE'
+                    self.project_group = u'XFCE'
             elif k == GLib.KEY_FILE_DESKTOP_KEY_ONLY_SHOW_IN:
                 # if an app has only one entry, it's tied to that desktop
-                tmp = config.get_string_list(DG, k)
+                tmp = get_string_list_unicode(config, DG, k)
                 if len(tmp) == 1:
                     self.project_group = tmp[0]
         if not is_application:
@@ -228,7 +247,7 @@ class DesktopFile(Application):
 
         # check icon exists
         if self.icon and self.icon not in self.cfg.get_stock_icons():
-            icon_fullpath = './icons/' + self.app_id + '.png'
+            icon_fullpath = u'./icons/' + self.app_id + u'.png'
             try:
                 self.write_appstream_icon(self.icon, icon_fullpath)
             except AppdataException as e:

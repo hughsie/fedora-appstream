@@ -31,6 +31,7 @@ import subprocess
 import sys
 import tarfile
 import fnmatch
+import xml.etree.ElementTree as ET
 from gi.repository import Gio
 
 # internal
@@ -108,35 +109,35 @@ class Build:
                              'http://gnome-*.sourceforge.net/']
             for m in project_urls:
                 if fnmatch.fnmatch(homepage_url, m):
-                    app.project_group = "GNOME"
+                    app.project_group = u'GNOME'
 
             # KDE
             project_urls = [ 'http*://*.kde.org*',
                             'http://*kde-apps.org/*' ]
             for m in project_urls:
                 if fnmatch.fnmatch(homepage_url, m):
-                    app.project_group = "KDE"
+                    app.project_group = u'KDE'
 
             # XFCE
             project_urls = [ 'http://*xfce.org*' ]
             for m in project_urls:
                 if fnmatch.fnmatch(homepage_url, m):
-                    app.project_group = "XFCE"
+                    app.project_group = u'XFCE'
 
             # LXDE
             project_urls = [ 'http://lxde.org*',
                              'http://lxde.sourceforge.net/*' ]
             for m in project_urls:
                 if fnmatch.fnmatch(homepage_url, m):
-                    app.project_group = "LXDE"
+                    app.project_group = u'LXDE'
 
             # MATE
             project_urls = [ 'http://*mate-desktop.org*' ]
             for m in project_urls:
                 if fnmatch.fnmatch(homepage_url, m):
-                    app.project_group = "MATE"
+                    app.project_group = u'MATE'
 
-            # print that we auto-added it
+            # log that we auto-added it
             if app.project_group:
                 app.log.write(LoggerItem.INFO, "assigned %s" % app.project_group)
 
@@ -267,7 +268,8 @@ class Build:
                     continue
 
                 # the ID is the filename
-                app.set_id(f.split('/')[-1])
+                app_id = os.path.basename(f).decode('utf-8')
+                app.set_id(app_id)
 
                 # parse file
                 if not app.parse_file(f):
@@ -281,32 +283,47 @@ class Build:
 
         valid_apps = []
         for key in self.completed:
+            log = LoggerItem(key)
             valid_apps = self.completed[key]
 
             # group fonts of the same family
             fltr = FontFileFilter()
             valid_apps = fltr.merge(valid_apps)
 
-            # create AppStream XML
+            # create AppStream XML and icons
             filename = './appstream/' + key + '.xml'
-            xml = open(filename, 'w')
-            xml.write("<?xml version=\"1.0\" encoding='UTF-8'?>\n")
-            xml.write("<applications version=\"0.1\">\n")
+            filename_icons = "./appstream/%s-icons.tar" % key
+            root = ET.Element("applications")
+            root.set("version", "0.1")
             for app in valid_apps:
-                app.write(xml)
-            xml.write("</applications>\n")
-            xml.close()
-
-            # create AppStream icon tar
-            output_file = "./appstream/%s-icons.tar" % key
-            log = LoggerItem(key)
-            log.write(LoggerItem.INFO, "writing %s and %s" % (filename, output_file))
-            tar = tarfile.open(output_file, "w")
-            for app in valid_apps:
-                filename = app.app_id + '.png'
-                if os.path.exists('./icons/' + filename):
-                    tar.add('./icons/' + filename, arcname=filename)
-            tar.close()
+                try:
+                    app.build_xml(root)
+                    #app.write_status()
+                except UnicodeEncodeError, e:
+                    log.write(LoggerItem.WARNING,
+                              "Failed to build %s: %s" % (app.app_id, str(e)))
+                    continue
+                except TypeError, e:
+                    log.write(LoggerItem.WARNING,
+                              "Failed to build %s: %s" % (app.app_id, str(e)))
+                    continue
+            log.write(LoggerItem.INFO,
+                      "writing %s and %s" % (filename, filename_icons))
+            try:
+                ET.ElementTree(root).write(filename,
+                                           encoding='UTF-8',
+                                           xml_declaration=True)
+            except UnicodeDecodeError, e:
+                log.write(LoggerItem.WARNING,
+                          "Failed to write %s: %s" % (filename, str(e)))
+            else:
+                # create AppStream icon tar
+                tar = tarfile.open(filename_icons, "w")
+                for app in valid_apps:
+                    filename = app.app_id + '.png'
+                    if os.path.exists('./icons/' + filename):
+                        tar.add('./icons/' + filename, arcname=filename)
+                tar.close()
 
         # remove tmp
         if not os.getenv('APPSTREAM_DEBUG'):

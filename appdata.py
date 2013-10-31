@@ -28,13 +28,6 @@ import xml.etree.ElementTree as ET
 
 XML_LANG = '{http://www.w3.org/XML/1998/namespace}lang'
 
-def _to_utf8(txt, errors='replace'):
-    if isinstance(txt, str):
-        return txt
-    if isinstance(txt, unicode):
-        return txt.encode('utf-8', errors=errors)
-    return str(txt)
-
 class AppData:
 
     def __init__(self):
@@ -58,9 +51,9 @@ class AppData:
     def get_licence(self):
         tmp = self.root.find("licence").text
         if tmp == 'CC BY':
-            tmp = 'CC-BY'
+            tmp = u'CC-BY'
         elif tmp == 'CC BY-SA':
-            tmp = 'CC-BY-SA'
+            tmp = u'CC-BY-SA'
         return tmp
     def get_screenshots(self):
         values = []
@@ -80,7 +73,10 @@ class AppData:
         for item in ss:
             if item.tag != 'value':
                 continue
-            values[item.get('key')] = item.text
+            if isinstance(item.text, unicode):
+                values[item.get('key')] = item.text
+            else:
+                values[item.get('key')] = item.text.decode('utf-8')
         return values
 
     def get_compulsory_for_desktop(self):
@@ -91,7 +87,7 @@ class AppData:
         return values
     def _append_for_lang(self, descriptions, lang, content):
         if not lang:
-            lang = 'C'
+            lang = u'C'
 
         if lang in descriptions:
             descriptions[lang] = descriptions[lang] + content
@@ -105,24 +101,24 @@ class AppData:
             return
         for item in ss:
             if item.tag == 'p':
-                para = _to_utf8(item.text)
+                para = item.text
                 para = para.lstrip()
                 para = para.replace('\n', ' ')
                 para = re.sub('\ +', ' ', para)
-                self._append_for_lang(descriptions, item.get(XML_LANG), para + '\n\n')
+                self._append_for_lang(descriptions, item.get(XML_LANG), para + u'\n\n')
             elif item.tag == 'ul':
                 for li in item:
-                    txt = _to_utf8(li.text)
+                    txt = li.text
                     txt = txt.replace('\n', ' ')
                     txt = re.sub('\ +', ' ', txt)
-                    self._append_for_lang(descriptions, item.get(XML_LANG), ' • ' + txt + '\n')
+                    self._append_for_lang(descriptions, item.get(XML_LANG), u' • ' + txt + u'\n')
             elif item.tag == 'ol':
                 cnt = 1
                 for li in item:
-                    txt = _to_utf8(li.text)
+                    txt = li.text
                     txt = txt.replace('\n', ' ')
                     txt = re.sub('\ +', ' ', txt)
-                    self._append_for_lang(descriptions, item.get(XML_LANG), ' ' + str(cnt) + '. ' + txt + '\n')
+                    self._append_for_lang(descriptions, item.get(XML_LANG), u' ' + str(cnt) + u'. ' + txt + u'\n')
                     cnt = cnt + 1
             else:
                 raise StandardError('Do not know how to parse' + item.tag + ' for ' + self.filename)
@@ -151,7 +147,10 @@ class AppData:
                 lang = item.get(XML_LANG)
                 if not lang:
                     lang = 'C'
-                values[lang] = item.text
+                if isinstance(item.text, unicode):
+                    values[lang] = item.text
+                else:
+                    values[lang] = item.text.decode('utf-8')
         if len(values) == 0:
             return None
         return values

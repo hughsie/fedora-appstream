@@ -69,20 +69,24 @@ class Package:
     def __init__(self, filename):
         self.filename = filename
         self.name = None
+        self.homepage_url = None
         self._default_wildcards = []
 
         # open the rpm file
         fd = os.open(filename, os.O_RDONLY)
         hdr = _ts.hdrFromFdno(fd)
-        self.name = hdr.name
+        if hdr.name:
+            self.name = hdr.name.decode('utf-8')
         self.epoch = hdr.epoch
-        self.version = hdr.version
-        self.release = hdr.release
-        self.arch = hdr.arch
-        self.summary = hdr.summary
-        self.licence = hdr.license
-        self.sourcerpm = hdr.sourcerpm
-        self.homepage_url = hdr['url']
+        self.version = hdr.version.decode('utf-8')
+        self.release = hdr.release.decode('utf-8')
+        self.arch = hdr.arch.decode('utf-8')
+        self.summary = hdr.summary.decode('utf-8')
+        if hdr.license:
+            self.licence = hdr.license.decode('utf-8')
+        self.sourcerpm = hdr.sourcerpm.decode('utf-8')
+        if hdr['url']:
+            self.homepage_url = hdr['url'].decode('utf-8')
         os.close(fd)
         self.log = LoggerItem(os.path.basename(filename))
 

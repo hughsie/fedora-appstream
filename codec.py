@@ -36,13 +36,13 @@ class Codec(Application):
 
     def __init__(self, pkg, cfg):
         Application.__init__(self, pkg, cfg)
-        self.type_id = 'codec'
+        self.type_id = u'codec'
         self.requires_appdata = True
         self.categories = []
         self.cached_icon = False
         self.icon = 'application-x-executable'
-        self.categories.append('Addons')
-        self.categories.append('Codecs')
+        self.categories.append(u'Addons')
+        self.categories.append(u'Codecs')
 
         # use the pkgname as the id
         app_id = pkg.name
