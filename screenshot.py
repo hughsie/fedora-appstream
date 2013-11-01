@@ -31,12 +31,16 @@ class Screenshot:
         self.sort_id = 0
         self.metadata = {}
         self.caption = caption
-        self.width = img.size[0]
-        self.height = img.size[1]
-        self.basename = app_id
-        self.basename += '-'
-        self.basename += hashlib.md5(img.tostring()).hexdigest()
-        self.basename += '.png'
+        self.width = -1
+        self.height = -1
+        self.basename = None
+        if img:
+            self.width = img.size[0]
+            self.height = img.size[1]
+            self.basename = app_id
+            self.basename += '-'
+            self.basename += hashlib.md5(img.tostring()).hexdigest()
+            self.basename += '.png'
 
     def __str__(self):
         s = {}

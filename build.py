@@ -71,7 +71,6 @@ class Build:
         self.cfg = Config()
         self.application_ids = []
         self.has_valid_content = False
-        self.status_html = None
         self.completed = {}
 
     def add_application(self, app):
@@ -169,11 +168,6 @@ class Build:
         # we got something useful
         if not self.has_valid_content:
             self.has_valid_content = True
-
-        # write the status HTML page if enabled
-        if not self.status_html:
-            self.status_html = open('logs/status.html', 'w')
-        app.status_html = self.status_html
 
         return True
 

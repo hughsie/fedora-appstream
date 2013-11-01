@@ -35,13 +35,6 @@ from logger import LoggerItem
 from package import Package
 from screenshot import Screenshot
 
-def _to_utf8(txt, errors='replace'):
-    if isinstance(txt, str):
-        return txt
-    if isinstance(txt, unicode):
-        return txt.encode('utf-8', errors=errors)
-    return str(txt)
-
 class Application:
 
     def __init__(self, pkg, cfg):
@@ -49,11 +42,13 @@ class Application:
         self.app_id = None
         self.app_id_full = None
         self.names = {}
-        self.categories = None
+        self.categories = []
         self.descriptions = {}
         self.comments = {}
         self.mimetypes = None
         self.urls = {}
+        self.licence = None
+        self.pkgnames = []
         self.metadata = {}
         if pkg:
             self.licence = pkg.licence
@@ -70,7 +65,6 @@ class Application:
         self.project_group = None
         self.requires_appdata = False
         self.thumbnail_screenshots = True
-        self.status_html = None
 
     def __str__(self):
         s = {}
@@ -423,52 +417,6 @@ class Application:
             elem = ET.SubElement(application, 'X-' + m)
             elem.text = self.metadata[m]
             elem.tail = u'\n'
-
-    def write_status(self):
-        # write to the status file
-        if not self.status_html:
-            return
-        self.status_html.write("<h2>%s</h2>\n" % self.app_id)
-        mirror_url = self.cfg.get_screenshot_mirror_url()
-        if mirror_url and len(self.screenshots) > 0:
-            for s in self.screenshots:
-                url = mirror_url + u'624x351/' + s.basename
-                thumb_url = mirror_url + u'112x63/' + s.basename
-                if s.caption:
-                    self.status_html.write("<a href=\"%s\"><img src=\"%s\" alt=\"%s\"/></a>\n" %
-                                           (url, thumb_url, _to_utf8(s.caption)))
-                else:
-                    self.status_html.write("<a href=\"%s\"><img src=\"%s\"/></a>\n" %
-                                           (url, thumb_url))
-        self.status_html.write("<table>\n")
-        self.status_html.write("<tr><td>%s</td><td><code>%s</code></td></tr>\n" %
-                               ("Type", self.type_id))
-        self.status_html.write("<tr><td>%s</td><td>%s</td></tr>\n" %
-                               ("Name", _to_utf8(self.names['C'])))
-        self.status_html.write("<tr><td>%s</td><td>%s</td></tr>\n" %
-                               ("Comment", _to_utf8(self.comments['C'])))
-        if self.descriptions and 'C' in self.descriptions:
-            self.status_html.write("<tr><td>%s</td><td>%s</td></tr>\n" %
-                                   ("Description", _to_utf8(self.descriptions['C'])))
-        self.status_html.write("<tr><td>%s</td><td><code>%s</code></td></tr>\n" %
-                               ("Package", ', '.join(self.pkgnames)))
-        if self.categories:
-            self.status_html.write("<tr><td>%s</td><td>%s</td></tr>\n" %
-                                   ("Categories", ', '.join(self.categories)))
-        if len(self.keywords):
-            self.status_html.write("<tr><td>%s</td><td>%s</td></tr>\n" %
-                                   ("Keywords", ', '.join(self.keywords)))
-        if 'homepage' in self.urls:
-            self.status_html.write("<tr><td>%s</td><td>%s</td></tr>\n" %
-                                   ("Homepage", self.urls['homepage']))
-        if self.project_group:
-            self.status_html.write("<tr><td>%s</td><td>%s</td></tr>\n" %
-                                   ("Project", self.project_group))
-        if len(self.compulsory_for_desktop):
-            self.status_html.write("<tr><td>%s</td><td>%s</td></tr>\n" %
-                                   ("Compulsory", ', '.join(self.compulsory_for_desktop)))
-        self.status_html.write("</table>\n")
-        self.status_html.flush()
 
 def main():
     pkg = Package(sys.argv[1])
