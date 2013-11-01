@@ -52,7 +52,7 @@ can store all the temporary files. You'll want to do this on a SSD if possible.
 
 You'll need to have the following packages installed before starting:
 
- * python-pillow
+ * python-pillow, optipng
 
 You may also need the fonttools package installed if you are going to generate
 metadata for any font packages.

@@ -26,6 +26,7 @@ import sys
 import re
 import fnmatch
 import cairo
+import subprocess
 
 from PIL import Image, ImageOps
 from gi.repository import GdkPixbuf, GLib, Rsvg
@@ -60,6 +61,21 @@ class DesktopFile(Application):
         Application.__init__(self, pkg, cfg)
         self.type_id = u'desktop'
 
+    def _repair_icon(self, filename):
+        #try to run optipng -fix on the file
+        self.log.write(LoggerItem.INFO,
+                       "trying to repear icon using optipng")
+        env = os.environ
+        p = subprocess.Popen(['/usr/bin/optipng',
+                              '-quiet', '-fix', filename],
+                             cwd='.', env=env, stdout=subprocess.PIPE)
+        p.wait()
+        if p.returncode:
+            for line in p.stdout:
+                line = line.replace('\n', '').decode('utf-8')
+                self.log.write(LoggerItem.WARNING,
+                               "optipng could not repair: %s" % line)
+
     def resize_icon(self, icon, filename):
 
         # get ending
@@ -80,7 +96,17 @@ class DesktopFile(Application):
         # use PIL to resize PNG files
         pil_exts = [ 'png', 'gif' ]
         if ext in pil_exts:
-            im = Image.open(icon)
+            try:
+                im = Image.open(icon)
+            except IOError, e:
+                if ext == 'png':
+                    try:
+                        self._repair_icon(icon)
+                        im = Image.open(icon)
+                    except IOError, e:
+                        raise AppdataException("Failed to repair icon: %s" % e)
+                else:
+                    raise AppdataException("Failed to open icon: %s" % e)
             width, height = im.size
             if width < min_size or height < min_size:
                 raise AppdataException('Icon too small to process (' +
@@ -251,7 +277,7 @@ class DesktopFile(Application):
             try:
                 self.write_appstream_icon(self.icon, icon_fullpath)
             except AppdataException as e:
-                self.log.write(LoggerItem.INFO, "icon %s is corrupt: %s" % (icon_fullpath, str(e)))
+                self.log.write(LoggerItem.INFO, "failed to load icon %s: %s" % (icon_fullpath, str(e)))
                 return False
             if not os.path.exists(icon_fullpath):
                 self.log.write(LoggerItem.INFO, "icon %s does not exist" % icon_fullpath)
