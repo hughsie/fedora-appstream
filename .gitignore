@@ -1,7 +1,12 @@
+*.gz
 *.pyc
 *.pyo
-*.gz
 *.txt
 appstream
-packages
 extract-package
+icons
+logs
+packages
+screenshot-cache
+screenshots
+tmp
