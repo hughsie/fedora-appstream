@@ -219,6 +219,10 @@ def main():
     for app in apps:
         if app.type_id == 'font':
             continue
+        if app.type_id == 'inputmethod':
+            continue
+        if app.type_id == 'codec':
+            continue
         log.update_key(app.app_id_full)
         log.write(LoggerItem.INFO, "writing")
         try:
