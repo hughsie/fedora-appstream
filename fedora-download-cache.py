@@ -176,6 +176,11 @@ def update():
                 os.remove(existing[pkg.name])
         downloaded[pkg.name] = True
 
+    if len(downloaded) == 0:
+        log.update_key()
+        log.write(LoggerItem.INFO, "no packages downloaded for %s" % cfg.distro_tag)
+        return
+
     # have any packages been removed?
     log.update_key()
     for i in existing:
