@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <application>
-    <id type="desktop">hotot.desktop</id>
+    <id type="desktop">hotot-qt.desktop</id>
     <licence>CC0</licence>
-    <summary>GTK front end to Hotot: a lightweight &amp; open source micro blogging client</summary>
+    <summary>QT frontend to hotot: a lightweight &amp; open source micro blogging client</summary>
     <description>
         <p>
             Hotot, is a lightweight &amp; open source micro blogging client with a
@@ -23,7 +23,7 @@
         </ul>
 
         <p>
-            This is the GTK frontend.
+            This is the QT frontend.
         </p>
 
     </description>
