@@ -224,6 +224,11 @@ class DesktopFile(Application):
                 self.project_group = u'MATE'
             elif k == 'X-KDE-StartupNotify':
                 self.project_group = u'KDE'
+            elif k == 'X-DocPath':
+                tmp = get_string_unicode(config, DG, k)
+                if tmp.startswith(u'http://userbase.kde.org/'):
+                    self.project_group = u'KDE'
+                self.project_group = u'KDE'
             elif k == GLib.KEY_FILE_DESKTOP_KEY_EXEC:
                 tmp = config.get_string(DG, k)
                 if tmp.startswith('xfce4-'):
