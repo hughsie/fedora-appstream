@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+    <id type="desktop">hotot.desktop</id>
+    <licence>CC0</licence>
+    <summary>GTK front end to Hotot: a lightweight &amp; open source micro blogging client</summary>
+    <description>
+        <p>
+            Hotot, is a lightweight &amp; open source micro blogging client with a
+            minimalistic yet stylish interface. Available for Gtk and QT, it is quite 
+            feature rich:
+        </p>
+        <ul>
+            <li>Extensions support</li>
+            <li>Preview images and videos</li>
+            <li>Image service integration</li>
+            <li>Theme support</li>
+            <li>Threaded conversations</li>
+            <li>View geo-information</li>
+            <li>Kismet firewall</li>
+            <li>Notification system</li>
+            <li>Multi-column view</li>
+            <li>Real-time updates</li>
+        </ul>
+
+        <p>
+            This is the GTK frontend.
+        </p>
+
+    </description>
+    <url type="homepage">http://hotot.org/</url>
+    <screenshots>
+        <screenshot type="default">http://s3.amazonaws.com/imgly_production/1382389/original.png</screenshot>
+    </screenshots>
+<!-- FIXME: change this to an upstream email address for spec updates
+<updatecontact>someone_who_cares@upstream_project.org</updatecontact>
+ -->
+</application>
