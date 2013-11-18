@@ -110,6 +110,11 @@ def update():
         basearch_list = [basearch]
     basearch_list.append('noarch')
 
+    # ensure all the repos are enabled
+    for repo_id in cfg.repo_ids:
+        repo = yb.repos.getRepo(repo_id)
+        repo.enable()
+
     # find all packages
     downloaded = {}
     try:
