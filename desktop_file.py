@@ -37,14 +37,22 @@ from application import Application
 from package import Package
 
 def get_string_unicode(config, group, key):
-    tmp = config.get_string(group, key).decode('utf-8')
+    try:
+        tmp = config.get_string(group, key).decode('utf-8')
+    except GLib.GError as e:
+        print str(e)
+        return None
     tmp = tmp.strip()
     if len(tmp) == 0:
         return None
     return tmp
 
 def get_string_list_unicode(config, group, key):
-    tmp = config.get_string_list(group, key)
+    try:
+        tmp = config.get_string_list(group, key)
+    except GLib.GError as e:
+        print str(e)
+        return None
     values = []
     for t in tmp:
         values.append(t.decode('utf-8'))
