@@ -22,10 +22,10 @@
   </description>
   <url type="homepage">http://www.blender.org/</url>
   <screenshots>
-    <screenshot type="default">http://www.blender.org/typo3temp/pics/fadca10eac.jpg</screenshot>
-    <screenshot>http://www.blender.org/typo3temp/pics/899748c24f.jpg</screenshot>
-    <screenshot>http://www.blender.org/typo3temp/pics/cdce116d09.jpg</screenshot>
-    <screenshot>http://www.blender.org/typo3temp/pics/33fbe4aa14.jpg</screenshot>
+      <screenshot type="default">http://www.blender.org/wp-content/uploads/2012/11/rendering.jpg</screenshot>
+      <screenshot>http://www.blender.org/wp-content/uploads/2012/11/Modelling1.png</screenshot>
+      <screenshot>http://www.blender.org/wp-content/uploads/2012/11/materials_screenshot.png</screenshot>
+      <screenshot>http://www.blender.org/wp-content/uploads/2012/11/rigging_resized.jpg</screenshot>
   </screenshots>
   <!-- FIXME: change this to an upstream email address for spec updates
   <updatecontact>someone_who_cares@upstream_project.org</updatecontact>
