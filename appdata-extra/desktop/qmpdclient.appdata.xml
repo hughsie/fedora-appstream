@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+    <id type="desktop">qmpdclient.desktop</id>
+    <licence>CC0</licence>
+    <summary>A QT4 based MPD client</summary>
+    <description>
+        <p>
+            QMPDClient is Qt4 based mpd client, originally developed by Håvard Tautra Knutsen.
+            Set of patches developed by community was then called "QMPDClient-ne". 
+            Now it became mainline.
+
+        </p>
+        <p>
+            Features:
+        </p>
+        <ul>
+            <li>Covers' display</li>
+            <li>Lyrics' display</li>
+            <li>Tag guessing</li>
+            <li>Internet radio</li>
+            <li>Storing &amp; using playlists</li>
+            <li>Last.fm track submission</li>
+            <li>Tray notifications (Freedesktop too)</li>
+            <li>Skinnable interface with iconsets</li>
+            <li>Shoutcast directory browsing</li>
+        </ul>
+    </description>
+    <url type="homepage">http://bitcheese.net/wiki/QMPDClient/</url>
+    <screenshots>
+        <screenshot type="default">http://dump.bitcheese.net/images/ezedave/QMPDClient.png</screenshot>
+        <screenshot>http://dump.bitcheese.net/images/qmpdclient.png</screenshot>
+    </screenshots>
+</application>
