@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+    <id type="desktop">sonata.desktop</id>
+    <licence>CC0</licence>
+    <description>
+        <p>
+            Sonata is an elegant GTK+ music client for the Music Player Daemon (MPD). The latest version is 1.6.2.1.
+
+            Sonata is licensed by the GPL and is free software. It has been
+            forked from the unmaintained Pygmy project in order to fix bugs,
+            introduce new features, and proceed down a different path. 
+        </p>
+        <p>
+            Features:
+        </p>
+        <ul>
+            <li>Expanded and collapsed views</li>
+            <li>Automatic remote and local album art</li>
+            <li>Library browsing by folders, or by genre/artist/album</li>
+            <li>User-configurable columns</li>
+            <li>Automatic fetching of lyrics</li>
+            <li>Playlist and stream support</li>
+            <li>Support for editing song tags</li>
+            <li>Drag and drop to copy files</li>
+            <li>Popup notification</li>
+            <li>Library and playlist searching, filter as you type</li>
+            <li>Audioscrobbler (last.fm) 1.2 support</li>
+            <li>Multiple MPD profiles</li>
+            <li>Keyboard friendly</li>
+            <li>Support for multimedia keys</li>
+            <li>Commandline control</li>
+            <li>Available in 24 languages</li>
+        </ul>
+    </description>
+    <url type="homepage">http://sonata.berlios.de/</url>
+    <screenshots>
+        <screenshot type="default">http://sonata.berlios.de/images/sonata1.png</screenshot>
+        <screenshot>http://sonata.berlios.de/images/sonata2.png</screenshot>
+        <screenshot>http://sonata.berlios.de/images/sonata3.png</screenshot>
+    </screenshots>
+    <updatecontact>Tuukka.Hastrup@iki.fi</updatecontact>
+</application>
