@@ -175,7 +175,7 @@ def update():
             repo.getPackage(pkg)
 
             # do we have an old version of this?
-            if existing.has_key(pkg.name):
+            if existing.has_key(pkg.name) and os.path.exists(existing[pkg.name]):
                 log.update_key(os.path.basename(existing[pkg.name]))
                 log.write(LoggerItem.INFO, "deleting")
                 os.remove(existing[pkg.name])
