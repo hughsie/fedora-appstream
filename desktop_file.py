@@ -29,7 +29,7 @@ import cairo
 import subprocess
 
 from PIL import Image, ImageOps
-from gi.repository import GdkPixbuf, GLib, Rsvg
+from gi.repository import GLib, Rsvg
 
 # internal
 from logger import LoggerItem
@@ -91,16 +91,6 @@ class DesktopFile(Application):
         size = self.cfg.icon_size
         min_size = self.cfg.min_icon_size
 
-        # use GDK to process XPM files
-        gdk_exts = [ 'xpm', 'ico' ]
-        if ext in gdk_exts:
-            pixbuf = GdkPixbuf.Pixbuf.new_from_file(icon)
-            if pixbuf.get_width() < min_size or pixbuf.get_height() < min_size:
-                raise AppdataException('Icon too small to process')
-            pixbuf = GdkPixbuf.Pixbuf.new_from_file_at_size(icon, size, size)
-            pixbuf.savev(filename, "png", [], [])
-            return
-
         # use PIL to resize PNG files
         pil_exts = [ 'png', 'gif' ]
         if ext in pil_exts:
@@ -147,7 +137,7 @@ class DesktopFile(Application):
     def write_appstream_icon(self, icon, filename):
 
         # we can handle these sorts of files
-        supported_ext = [ '.png', '.svg', '.xpm' ]
+        supported_ext = [ '.png', '.svg' ]
 
         # remove any extension we recognise
         if not icon.startswith('/'):
