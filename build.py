@@ -220,11 +220,12 @@ class Build:
         # the builders
         for c in self.cfg.get_package_data_list():
             if fnmatch.fnmatch(pkg.name, c[0]):
-                extra_files = glob.glob("./packages/%s*.rpm" % c[1])
-                for f in extra_files:
-                    extra_pkg = Package(f)
-                    pkg.log.write(LoggerItem.INFO, "adding extra package %s" % extra_pkg.name)
-                    package_decompress(extra_pkg)
+                if c[1] != pkg.name:
+                    extra_files = glob.glob("./packages/%s*.rpm" % c[1])
+                    for f in extra_files:
+                        extra_pkg = Package(f)
+                        pkg.log.write(LoggerItem.INFO, "adding extra package %s" % extra_pkg.name)
+                        package_decompress(extra_pkg)
 
         # check for duplicate apps in the package
         self.has_valid_content = False
