@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<applications version="0.1">
+
+  <application>
+   <id type="source">rpmfusion-free-release</id>
+   <pkgname>rpmfusion-free-release</pkgname>
+    <name>RPM Fusion Free</name>
+    <summary>RPM Fusion Repository Configuration</summary>
+  </application>
+
+  <application>
+   <id type="source">rpmfusion-nonfree-release</id>
+   <pkgname>rpmfusion-nonfree-release</pkgname>
+    <name>RPM Fusion Non-Free</name>
+    <summary>RPM Fusion Repository Configuration</summary>
+  </application>
+
+  <application>
+   <id type="source">livna-release</id>
+   <pkgname>livna-release</pkgname>
+    <name>Livna</name>
+    <summary>Livna Repository Configuration</summary>
+  </application>
+
+  <application>
+   <id type="source">adobe-release-x86_64</id>
+   <pkgname>adobe-release-x86_64</pkgname>
+    <name>Adobe</name>
+    <summary>Adobe Repository Configuration</summary>
+  </application>
+
+  <application>
+   <id type="source">bjnplugin</id>
+   <pkgname>bjnplugin</pkgname>
+    <name>Blue Jeans</name>
+    <summary>Blue Jeans Repository Configuration</summary>
+  </application>
+
+  <application>
+   <id type="source">google-earth-stable</id>
+   <pkgname>google-earth-stable</pkgname>
+    <name>Google Earth</name>
+    <summary>Google Earth Repository Configuration</summary>
+  </application>
+
+  <application>
+   <id type="source">google-musicmanager-beta</id>
+   <pkgname>google-musicmanager-beta</pkgname>
+    <name>Google MusicManager</name>
+    <summary>Google MusicManager Repository Configuration</summary>
+  </application>
+
+  <application>
+   <id type="source">google-talkplugin</id>
+   <pkgname>google-talkplugin</pkgname>
+    <name>Google Talk</name>
+    <summary>Google Talk Repository Configuration</summary>
+  </application>
+
+  <application>
+   <id type="source">google-chrome</id>
+   <pkgname>google-chrome</pkgname>
+    <name>Google Chrome</name>
+    <summary>Google Chrome Repository Configuration</summary>
+  </application>
+
+  <application>
+   <id type="source">nautilus-dropbox</id>
+   <pkgname>nautilus-dropbox</pkgname>
+    <name>Dropbox</name>
+    <summary>Dropbox Repository Configuration</summary>
+  </application>
+
+</applications>
