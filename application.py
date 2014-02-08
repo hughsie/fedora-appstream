@@ -225,11 +225,6 @@ class Application:
         # update the log name
         self.log.update_key(self.app_id_full)
 
-        # is this app compulsory for any specific desktop?
-        desktops = self.cfg.get_compulsory_for_desktop_for_id(self.app_id)
-        if desktops:
-            self.compulsory_for_desktop.extend(desktops)
-
     def build_xml_screenshots(self, root):
 
         # any screenshots

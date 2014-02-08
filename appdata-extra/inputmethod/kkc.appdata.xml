@@ -17,4 +17,5 @@ out on a traditional keyboard.
 </p>
 </description>
 <url type="homepage">https://bitbucket.org/libkkc/libkkc/</url>
+<compulsory_for_desktop>GNOME</compulsory_for_desktop>
 </application>

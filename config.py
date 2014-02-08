@@ -162,15 +162,6 @@ class Config:
             pass
         return add
 
-    def get_compulsory_for_desktop_for_id(self, id):
-        # get additional categories for a specific application id
-        add = []
-        try:
-            add = self._config.get_string_list(self._group_name, 'CompulsoryForDesktop(' + id + ')')
-        except Exception as e:
-            pass
-        return add
-
     def get_project_group_for_id(self, id):
         # get project group for a specific application id
         value = None

@@ -16,4 +16,5 @@ out on a traditional keyboard.
 </p>
 </description>
 <url type="homepage">https://github.com/ibus/ibus-m17n</url>
+<compulsory_for_desktop>GNOME</compulsory_for_desktop>
 </application>

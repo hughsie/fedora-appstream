@@ -15,4 +15,5 @@ out on a traditional keyboard.
 </p>
 </description>
 <url type="homepage">http://code.google.com/p/ibus/</url>
+<compulsory_for_desktop>GNOME</compulsory_for_desktop>
 </application>
