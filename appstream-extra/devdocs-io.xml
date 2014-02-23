@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<applications version="0.1">
+
+  <application>
+    <id type="webapp">devdocs-io.desktop</id>
+    <name>Devdocs.io</name>
+    <summary>Easily view and search developer documenation</summary>
+    <icon type="remote">http://devdocs.io/images/webapp-icon-256.png</icon>
+    <keywords>
+      <keyword>developer</keyword>
+      <keyword>documenation</keyword>
+      <keyword>programming</keyword>
+    </keywords>
+    <appcategories>
+      <appcategory>Development</appcategory>
+    </appcategories>
+    <licence>Mozilla Public License v2.0</licence>
+    <url type="homepage">http://devdocs.io/</url>
+    <description>
+      <p>
+        Devdocs.io is a small application that allows you to quickly search and view
+        developer documenation for various programming langauges and libraries. 
+      </p>
+    </description>
+  </application>
+
+</applications>
