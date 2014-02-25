@@ -366,6 +366,10 @@ class Application:
 
         # write licence
         if self.licence:
+            elem = ET.SubElement(application, 'project_license')
+            elem.text = self.licence
+            elem.tail = u'\n'
+            # write the deprecated tag too; FIXME: remove this after 2015
             elem = ET.SubElement(application, 'licence')
             elem.text = self.licence
             elem.tail = u'\n'
