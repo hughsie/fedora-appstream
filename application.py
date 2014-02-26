@@ -49,6 +49,7 @@ class Application:
         self.urls = {}
         self.licence = None
         self.pkgnames = []
+        self.languages = {}
         self.metadata = {}
         if pkg:
             self.licence = pkg.licence
@@ -410,6 +411,16 @@ class Application:
 
         # write screenshots
         self.build_xml_screenshots(application)
+
+        # write languages
+        if len(self.languages) > 0:
+            elem_langs = ET.SubElement(application, u'languages')
+            elem_langs.tail = u'\n'
+            for m in self.languages:
+                elem = ET.SubElement(elem_langs, u'lang')
+                elem.set(u'percentage', self.languages[m])
+                elem.text = m
+                elem.tail = u'\n'
 
         # any metadata
         for m in self.metadata:

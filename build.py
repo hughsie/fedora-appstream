@@ -270,6 +270,20 @@ class Build:
                 if not app.parse_file(f):
                     continue
 
+                # get the locale info
+                if os.path.exists('../extract-gettext'):
+                    p = subprocess.Popen(['../extract-gettext', './tmp'],
+                                         stdout=subprocess.PIPE,
+                                         stderr=subprocess.PIPE)
+                    p.wait()
+                    out, err = p.communicate()
+                    if p.returncode == 0:
+                        for locale in out.split('\n'):
+                            data = locale.split('\t')
+                            if len(data) != 2:
+                                continue
+                            app.languages[data[0]] = data[1]
+
                 # write the application
                 if self.add_application(app):
                     self.add_completed(pkg, app)
