@@ -50,20 +50,6 @@ def package_decompress(pkg):
         p.wait()
         if p.returncode:
             raise StandardError('Cannot extract package: ' + p.stdout)
-    else:
-        wildcards = []
-        if not os.getenv('APPSTREAM_DEBUG'):
-            wildcards.append('./usr/share/applications/*.desktop')
-            wildcards.append('./usr/share/applications/kde4/*.desktop')
-            wildcards.append('./usr/share/appdata/*.xml')
-            wildcards.append('./usr/share/icons/hicolor/*/apps/*')
-            wildcards.append('./usr/share/pixmaps/*.*')
-            wildcards.append('./usr/share/icons/*.*')
-            wildcards.append('./usr/share/*/images/*')
-            pkg.extract('./tmp', wildcards)
-        else:
-            wildcards.append('./*/*.*')
-            pkg.extract('./tmp', wildcards)
 
 class Build:
 

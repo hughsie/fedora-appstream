@@ -19,15 +19,11 @@
 
 # Copyright (C) 2013
 #    Richard Hughes <richard@hughsie.com>
-#    Florian Festi <ffesti@redhat.com>
 #
 
 import os
 import sys
 import rpm
-import lzma
-import cpio
-import fnmatch
 
 # internal
 from logger import LoggerItem
@@ -36,33 +32,6 @@ import rpmUtils.miscutils
 
 _ts = rpm.ts()
 _ts.setVSFlags(0x7FFFFFFF)
-
-def extract_file_from_cpio(directory, cpioarchive):
-    path = os.path.join(directory, os.path.dirname(cpioarchive.filename))
-    if not os.path.exists(path):
-        os.makedirs(path)
-    output_file = os.path.join(directory, cpioarchive.filename)
-    f = open(output_file, "w")
-    f.write(cpioarchive.read())
-    f.close()
-
-class LZMA:
-    def __init__(self, f):
-        self._f = f
-        self.decomp = lzma.LZMADecompressor()
-        self.leftover = ""
-
-    def read(self, size):
-        # highly inefficient
-        while not size < len(self.leftover):
-            c = self._f.read(size)
-            if not c:
-                break
-            d = self.decomp.decompress(c)
-            self.leftover += d
-        result = self.leftover[:size]
-        self.leftover = self.leftover[size:]
-        return result
 
 class Package:
 
@@ -98,29 +67,9 @@ class Package:
             rc = rpmUtils.miscutils.compareEVR((e1, v1, r1), (e2, v2, r2))
         return rc
 
-    def extract(self, targetpath, wildcards):
-
-        # reopen
-        fd = os.open(self.filename, os.O_RDONLY)
-        hdr = _ts.hdrFromFdno(fd)
-        fi = hdr.fiFromHeader()
-        f = os.fdopen(fd)
-        lf = LZMA(f)
-        cpioarchive = cpio.CpioArchive(lf)
-        files = []
-        for filename in cpioarchive:
-            for w in wildcards:
-                if fnmatch.fnmatch(filename, w):
-                    extract_file_from_cpio(targetpath, cpioarchive)
-                    files.append(filename)
-                    break
-        f.close()
-        return files
-
 def main():
     pkg = Package(sys.argv[1])
     print 'name:\t\t', pkg.name
-    print 'decompressed:\t', pkg.extract('/tmp', [ './usr/share/applications/*.desktop' ])
     sys.exit(0)
 
 if __name__ == "__main__":
