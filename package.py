@@ -33,12 +33,23 @@ import rpmUtils.miscutils
 _ts = rpm.ts()
 _ts.setVSFlags(0x7FFFFFFF)
 
+class PackageBuild:
+    def __init__(self):
+        self.timestamp = 0
+        self.packager_name = None
+        self.version = None
+        self.releases = []
+        self.changelog = None
+
 class Package:
 
     def __init__(self, filename):
         self.filename = filename
         self.name = None
         self.homepage_url = None
+        self.deps = {}
+        self.filelist = []
+        self.builds = []
         self._default_wildcards = []
 
         # open the rpm file
@@ -56,8 +67,104 @@ class Package:
         self.sourcerpm = hdr.sourcerpm.decode('utf-8')
         if hdr['url']:
             self.homepage_url = hdr['url'].decode('utf-8')
+
+        # add requires
+        for dep in hdr[rpm.RPMTAG_REQUIRENAME]:
+            name = dep.split('(')[0]
+            if name == 'rpmlib':
+                continue
+            if name == '/bin/sh':
+                continue
+            self.deps[name] = True
+        for f in hdr[rpm.RPMTAG_FILENAMES]:
+            self.filelist.append(f)
+
+        # add any release information we know
+        self.add_builds(hdr[rpm.RPMTAG_CHANGELOGTEXT],
+                        hdr[rpm.RPMTAG_CHANGELOGTIME],
+                        hdr[rpm.RPMTAG_CHANGELOGNAME]);
+
         os.close(fd)
         self.log = LoggerItem(os.path.basename(filename))
+
+    def add_builds(self, cl_text, cl_time, cl_name):
+        for i in range(len(cl_time)):
+            r = PackageBuild()
+            r.timestamp = cl_time[i]
+
+            # parse cl_name which can be in a few forms:
+            # * "Richard Hughes <rhughes@redhat.com> - 3.11.1-1"
+            # * "Richard Hughes <richard@hughsie.com> 0.1-3"
+            # * "richard@hughsie.com - 0.1-3"
+            # * "Richard Hughes <richard at hughsie com> - 0.1-3"
+            # * "Richard Hughes <richard at hughsie com>"
+            # * "Richard Hughes <richard at hughsie com> -0.1-3"
+            # * "<richard at hughsie.com>"
+            temp = cl_name[i]
+
+            # get packager name
+            idx = temp.find('<')
+            if idx >= 0:
+                # has a <> section
+                r.packager_name = temp[:idx-1]
+
+                # get packager email address
+                idx2 = temp.find('>', idx)
+                if idx2 < 0:
+                    print("Failed to get packager email from '%s'" % cl_name[i])
+                    continue
+                r.packager_email = temp[idx+1:idx2-1]
+                temp = temp[idx2+2:]
+            else:
+                # has no <> section
+                idx2 = temp.find(' ')
+                if idx2 < 0:
+                    print("Failed to get packager email from '%s'" % cl_name[i])
+                    continue
+                r.packager_name = None
+                r.packager_email = temp[:idx2]
+                temp = temp[idx2+1:]
+
+            # get version and release
+            if temp.startswith('- '):
+                temp = temp[2:]
+            if temp.startswith('-'):
+                temp = temp[1:]
+            if len(temp):
+                vr = temp.split('-')
+                if len(vr) == 1:
+                    r.version = vr[0]
+                elif len(vr) == 2:
+                    r.version = vr[0]
+                    r.releases = [vr[1]]
+                else:
+                    print("Failed to get version-release from '%s'" % cl_name[i])
+                    continue
+            r.changelog = cl_text[i]
+
+            # add every release to the array
+            self.builds.append(r)
+
+        # deduplicate releases with the same version
+        for r in self.builds:
+            for r2 in self.builds:
+                if r == r2:
+                    continue
+                if r.version == r2.version:
+
+                    # add the release
+                    r.releases.extend(r2.releases)
+
+                    # just join the changelog
+                    if r2.changelog:
+                        r.changelog += '\n' + r2.changelog
+
+                    # choose the earlier timestamp to ignore auto-rebuilds
+                    # with just a bumped soname
+                    if r2.timestamp < r.timestamp:
+                        r.timestamp = r2.timestamp
+                    self.builds.remove(r2)
+                    break
 
     def verCMP(self, other):
         rc = cmp(self.name, other.name)
