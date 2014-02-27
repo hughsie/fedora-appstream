@@ -72,6 +72,19 @@ def _to_html(app):
         doc += u"<tr><td>%s</td><td>%s</td></tr>\n" % ("Project", app.project_group)
     if len(app.compulsory_for_desktop):
         doc += u"<tr><td>%s</td><td>%s</td></tr>\n" % ("Compulsory", ', '.join(app.compulsory_for_desktop))
+
+    # add all possible Kudo's for desktop files
+    if app.type_id == 'desktop':
+        possible_kudos = []
+        possible_kudos.append('X-Kudo-SearchProvider')
+        possible_kudos.append('X-Kudo-InstallsUserDocs')
+        possible_kudos.append('X-Kudo-UsesAppMenu')
+        possible_kudos.append('X-Kudo-GTK3')
+        possible_kudos.append('X-Kudo-RecentRelease')
+        possible_kudos.append('X-Kudo-UsesNotifications')
+        for kudo in possible_kudos:
+            doc += u"<tr><td>%s</td><td>%s</td></tr>\n" % (kudo, kudo in app.metadata)
+
     doc += u"</table>\n"
     doc += u"<hr/>\n"
     return doc
@@ -127,6 +140,9 @@ def main():
                 else:
                     description = elem.text
                 a.descriptions['C'] = ensure_unicode(description)
+            elif elem.tag == 'metadata':
+                for elem2 in elem:
+                    a.metadata[elem2.get('key')] = elem2.text
             elif elem.tag == 'screenshots':
                 if a.type_id == 'font':
                     continue
