@@ -35,6 +35,12 @@ from logger import LoggerItem
 from package import Package
 from screenshot import Screenshot
 
+class Release:
+
+    def __init__(self):
+        self.timestamp = 0
+        self.version = None
+
 class Application:
 
     def __init__(self, pkg, cfg):
@@ -49,6 +55,7 @@ class Application:
         self.urls = {}
         self.licence = None
         self.pkgnames = []
+        self.releases = []
         self.languages = {}
         self.metadata = {}
         if pkg:
@@ -430,6 +437,18 @@ class Application:
                 elem = ET.SubElement(elem_md, u'value')
                 elem.set(u'key', m)
                 elem.text = self.metadata[m]
+                elem.tail = u'\n'
+
+        # any releases
+        if len(self.releases) > 0:
+            elem_r = ET.SubElement(application, u'releases')
+            elem_r.tail = u'\n'
+            for rel in self.releases[:3]:
+                if not rel.version:
+                    continue
+                elem = ET.SubElement(elem_r, u'release')
+                elem.set(u'timestamp', str(rel.timestamp))
+                elem.set(u'version', rel.version)
                 elem.tail = u'\n'
 
 def main():

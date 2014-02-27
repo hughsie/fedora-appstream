@@ -35,6 +35,7 @@ import xml.etree.ElementTree as ET
 from gi.repository import Gio
 
 # internal
+from application import Release
 from logger import LoggerItem
 from package import Package
 from config import Config
@@ -269,6 +270,14 @@ class Build:
                             if len(data) != 2:
                                 continue
                             app.languages[data[0]] = data[1]
+
+                # add the last three releases
+                if not len(app.releases):
+                    for b in pkg.builds[:3]:
+                        release = Release()
+                        release.version = b.version
+                        release.timestamp = b.timestamp
+                        app.releases.append(release)
 
                 # write the application
                 if self.add_application(app):
