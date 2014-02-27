@@ -216,6 +216,8 @@ class DesktopFile(Application):
                 self.keywords = get_string_list_unicode(config, DG, k)
             elif k == 'MimeType':
                 self.mimetypes = get_string_list_unicode(config, DG, k)
+            elif k == 'X-GNOME-UsesNotifications':
+                self.metadata['X-Kudo-UsesNotifications'] = ''
             elif k == 'X-GNOME-Bugzilla-Product':
                 self.project_group = u'GNOME'
             elif k == 'X-MATE-Bugzilla-Product':

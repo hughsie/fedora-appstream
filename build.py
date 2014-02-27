@@ -29,6 +29,7 @@ import os
 import shutil
 import subprocess
 import sys
+import time
 import tarfile
 import fnmatch
 import xml.etree.ElementTree as ET
@@ -278,6 +279,24 @@ class Build:
                         release.version = b.version
                         release.timestamp = b.timestamp
                         app.releases.append(release)
+
+                # get any additional kudos
+                for f in pkg.filelist:
+                    if f.startswith('/usr/share/gnome-shell/search-providers/'):
+                        app.metadata['X-Kudo-SearchProvider'] = ''
+                        break
+                for f in pkg.filelist:
+                    if f.startswith('/usr/share/help/'):
+                        app.metadata['X-Kudo-InstallsUserDocs'] = ''
+                        break
+                for d in pkg.deps:
+                    if d == 'libgtk-3.so.0':
+                        app.metadata['X-Kudo-GTK3'] = ''
+                for r in app.releases:
+                    days = (time.time() - int(r.timestamp)) / (60 * 60 * 24)
+                    if days < 365:
+                        app.metadata['X-Kudo-RecentRelease'] = ''
+                        break
 
                 # write the application
                 if self.add_application(app):
