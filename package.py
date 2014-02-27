@@ -100,29 +100,27 @@ class Package:
             # * "Richard Hughes <richard at hughsie com>"
             # * "Richard Hughes <richard at hughsie com> -0.1-3"
             # * "<richard at hughsie.com>"
-            temp = cl_name[i]
+            temp = cl_name[i].decode('utf-8')
 
             # get packager name
             idx = temp.find('<')
             if idx >= 0:
                 # has a <> section
-                r.packager_name = temp[:idx-1].decode('utf-8')
+                r.packager_name = temp[:idx-1]
 
                 # get packager email address
                 idx2 = temp.find('>', idx)
                 if idx2 < 0:
-                    print("Failed to get packager email from '%s'" % cl_name[i])
                     continue
-                r.packager_email = temp[idx+1:idx2-1].decode('utf-8')
+                r.packager_email = temp[idx+1:idx2-1]
                 temp = temp[idx2+2:]
             else:
                 # has no <> section
                 idx2 = temp.find(' ')
                 if idx2 < 0:
-                    print("Failed to get packager email from '%s'" % cl_name[i])
                     continue
                 r.packager_name = None
-                r.packager_email = temp[:idx2].decode('utf-8')
+                r.packager_email = temp[:idx2]
                 temp = temp[idx2+1:]
 
             # get version and release
@@ -135,10 +133,9 @@ class Package:
                 if len(vr) == 1:
                     r.version = vr[0]
                 elif len(vr) == 2:
-                    r.version = vr[0].decode('utf-8')
-                    r.releases = [vr[1].decode('utf-8')]
+                    r.version = vr[0]
+                    r.releases = [vr[1]]
                 else:
-                    print("Failed to get version-release from '%s'" % cl_name[i])
                     continue
             r.changelog = cl_text[i].decode('utf-8')
 
