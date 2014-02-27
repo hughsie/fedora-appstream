@@ -106,14 +106,14 @@ class Package:
             idx = temp.find('<')
             if idx >= 0:
                 # has a <> section
-                r.packager_name = temp[:idx-1]
+                r.packager_name = temp[:idx-1].decode('utf-8')
 
                 # get packager email address
                 idx2 = temp.find('>', idx)
                 if idx2 < 0:
                     print("Failed to get packager email from '%s'" % cl_name[i])
                     continue
-                r.packager_email = temp[idx+1:idx2-1]
+                r.packager_email = temp[idx+1:idx2-1].decode('utf-8')
                 temp = temp[idx2+2:]
             else:
                 # has no <> section
@@ -122,7 +122,7 @@ class Package:
                     print("Failed to get packager email from '%s'" % cl_name[i])
                     continue
                 r.packager_name = None
-                r.packager_email = temp[:idx2]
+                r.packager_email = temp[:idx2].decode('utf-8')
                 temp = temp[idx2+1:]
 
             # get version and release
@@ -135,12 +135,12 @@ class Package:
                 if len(vr) == 1:
                     r.version = vr[0]
                 elif len(vr) == 2:
-                    r.version = vr[0]
-                    r.releases = [vr[1]]
+                    r.version = vr[0].decode('utf-8')
+                    r.releases = [vr[1].decode('utf-8')]
                 else:
                     print("Failed to get version-release from '%s'" % cl_name[i])
                     continue
-            r.changelog = cl_text[i]
+            r.changelog = cl_text[i].decode('utf-8')
 
             # add every release to the array
             self.builds.append(r)
