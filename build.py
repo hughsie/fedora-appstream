@@ -53,6 +53,19 @@ def package_decompress(pkg):
         if p.returncode:
             raise StandardError('Cannot extract package: ' + p.stdout)
 
+def check_for_symbol(filename, symbol_name):
+    p = subprocess.Popen(['/usr/bin/nm', '-D', filename],
+                         stdout=subprocess.PIPE,
+                         stderr=subprocess.PIPE)
+    out, err = p.communicate()
+    p.wait()
+    if p.returncode != 0:
+        return False
+    for line in out.split('\n'):
+        if line.find(symbol_name) >= 0:
+            return True
+    return False
+
 class Build:
 
     def __init__(self):
@@ -288,6 +301,10 @@ class Build:
                 for f in pkg.filelist:
                     if f.startswith('/usr/share/help/'):
                         app.metadata['X-Kudo-InstallsUserDocs'] = ''
+                        break
+                for f in pkg.filelist:
+                    if f.startswith('/usr/bin/') and check_for_symbol('./tmp' + f, 'gtk_application_set_app_menu'):
+                        app.metadata['X-Kudo-UsesAppMenu'] = ''
                         break
                 for d in pkg.deps:
                     if d == 'libgtk-3.so.0':
