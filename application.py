@@ -423,10 +423,14 @@ class Application:
                 elem.tail = u'\n'
 
         # any metadata
-        for m in self.metadata:
-            elem = ET.SubElement(application, 'X-' + m)
-            elem.text = self.metadata[m]
-            elem.tail = u'\n'
+        if len(self.metadata) > 0:
+            elem_md = ET.SubElement(application, u'metadata')
+            elem_md.tail = u'\n'
+            for m in self.metadata:
+                elem = ET.SubElement(elem_md, u'value')
+                elem.set(u'key', m)
+                elem.text = self.metadata[m]
+                elem.tail = u'\n'
 
 def main():
     pkg = Package(sys.argv[1])

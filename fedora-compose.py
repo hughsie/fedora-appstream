@@ -119,11 +119,9 @@ class Compose:
                               "duplicate ID found in %s and %s" % (filename, found))
                     continue
 
-                # add everything that isn't private
+                # add everything
                 new = ET.SubElement(master_root, 'application')
                 for elem in app:
-                    if elem.tag.startswith("X-"):
-                        continue
                     new.append(elem)
 
                 # success
