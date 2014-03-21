@@ -94,4 +94,33 @@
     </description>
   </application>
 
+  <application>
+    <!-- Copyright 2014, Google Inc. -->
+    <id type="codec">libnpgoogletalk.so</id>
+    <name>Google Talk</name>
+    <summary>Bring your conversations to life with video calls for free</summary>
+    <pkgname>google-talkplugin</pkgname>
+    <icon type="stock">application-x-executable</icon>
+    <keywords>
+      <keyword>google</keyword>
+      <keyword>talk</keyword>
+    </keywords>
+    <licence>Proprietary</licence>
+    <url type="homepage">https://www.google.com/tools/dlpage/hangoutplugin</url>
+    <description>
+      <p>
+        Have voice and video conversations from your computer.
+        The plugin is free and installs in seconds.
+      </p>
+      <p>
+        Send photos or emoji, see when people are engaged in the Hangout and
+        message friends anytime, even if they're not connected right now.
+      </p>
+      <p>
+        Hangouts works on computers, Android and Apple devices, so you can
+        connect with everyone, and no one gets left out.
+      </p>
+    </description>
+  </application>
+
 </applications>
