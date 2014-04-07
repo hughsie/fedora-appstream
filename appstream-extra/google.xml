@@ -15,7 +15,6 @@
       <keyword>google</keyword>
       <keyword>plus</keyword>
     </keywords>
-    <licence>Proprietary</licence>
     <url type="homepage">http://plus.google.com/</url>
     <description>
       <p>
@@ -40,7 +39,6 @@
     <keywords>
       <keyword>drive</keyword>
     </keywords>
-    <licence>Proprietary</licence>
     <url type="homepage">http://drive.google.com/</url>
     <description>
       <p>
@@ -76,7 +74,6 @@
     <keywords>
       <keyword>directions</keyword>
     </keywords>
-    <licence>Proprietary</licence>
     <url type="homepage">https://www.google.com/maps</url>
     <description>
       <p>
@@ -105,7 +102,6 @@
       <keyword>google</keyword>
       <keyword>talk</keyword>
     </keywords>
-    <licence>Proprietary</licence>
     <url type="homepage">https://www.google.com/tools/dlpage/hangoutplugin</url>
     <description>
       <p>
