@@ -24,6 +24,9 @@
         To use Dropbox you need to be over the age of 13.
       </p>
     </description>
+    <metadata>
+      <value key="X-Kudo-Popular"/>
+    </metadata>
   </application>
 
 </applications>

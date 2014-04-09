@@ -29,8 +29,11 @@
         To use BBC iPlayer you must be located in the UK and pay a TV licence.
       </p>
     </description>
-    <!-- needs dark theme -->
-    <!-- needs Flash -->
+    <metadata>
+      <value key="X-Kudo-Popular"/>
+      <value key="X-Needs-Flash"/>
+      <value key="X-Needs-Dark-Theme"/>
+    </metadata>
   </application>
 
 </applications>

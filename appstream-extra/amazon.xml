@@ -36,7 +36,10 @@
         To use the Kindle Cloud reader you must have Amazon.com account.
       </p>
     </description>
-    <!-- needs dark theme -->
+    <metadata>
+      <value key="X-Kudo-Popular"/>
+      <value key="X-Needs-Dark-Theme"/>
+    </metadata>
   </application>
 
 </applications>

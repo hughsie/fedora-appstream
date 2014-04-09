@@ -33,8 +33,11 @@
         and share the music you love with the people who might love it next.
       </p>
     </description>
-    <!-- needs dark theme -->
-    <!-- needs Flash -->
+    <metadata>
+      <value key="X-Kudo-Popular"/>
+      <value key="X-Needs-Flash"/>
+      <value key="X-Needs-Dark-Theme"/>
+    </metadata>
   </application>
 
 </applications>

@@ -25,6 +25,9 @@
         To use Twitter you need a twitter account and be over the age of 13.
       </p>
     </description>
+    <metadata>
+      <value key="X-Kudo-Popular"/>
+    </metadata>
   </application>
 
 </applications>

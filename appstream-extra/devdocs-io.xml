@@ -22,6 +22,9 @@
         developer documenation for various programming langauges and libraries. 
       </p>
     </description>
+    <metadata>
+      <value key="X-Kudo-Popular"/>
+    </metadata>
   </application>
 
 </applications>
