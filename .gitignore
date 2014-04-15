@@ -1,12 +1,2 @@
-*.gz
 *.pyc
-*.pyo
-*.txt
-appstream
-extract-package
-icons
-logs
-packages
-screenshot-cache
-screenshots
-tmp
+fedora-*
