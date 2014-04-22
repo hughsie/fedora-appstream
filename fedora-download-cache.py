@@ -32,10 +32,8 @@ import datetime
 
 # internal
 from config import Config
-from logger import Logger, LoggerItem
 
 timestamp = datetime.datetime.now().strftime('%Y%m%d')
-sys.stdout = Logger("download-cache-%s.txt" % timestamp)
 
 _ts = rpm.ts()
 _ts.setVSFlags(0x7FFFFFFF)
@@ -65,8 +63,6 @@ def _do_newest_filtering(pkglist):
 
 def update():
 
-    log = LoggerItem()
-
     # create if we're starting from nothing
     if not os.path.exists('./packages'):
         os.makedirs('./packages')
@@ -90,7 +86,7 @@ def update():
         else:
             existing[hdr.name] = f
         os.close(fd)
-    log.write(LoggerItem.INFO, "found %i existing packages for %s" % (len(existing), cfg.distro_tag))
+    print("INFO: found %i existing packages for %s" % (len(existing), cfg.distro_tag))
 
     # setup yum
     yb = yum.YumBase()
@@ -120,13 +116,11 @@ def update():
     try:
         pkgs = yb.pkgSack
     except yum.Errors.NoMoreMirrorsRepoError as e:
-        log.write(LoggerItem.FAILED, str(e))
+        print("FAILED:" % str(e))
         sys.exit(1)
     newest_packages = _do_newest_filtering(pkgs)
     newest_packages.sort()
     for pkg in newest_packages:
-
-        log.update_key(pkg.nvra)
 
         # not our repo
         if pkg.repoid not in cfg.repo_ids:
@@ -164,33 +158,29 @@ def update():
         # is in cache?
         path = './packages/' + relativepath
         if os.path.exists(path) and os.path.getsize(path) == int(pkg.returnSimple('packagesize')):
-            log.write(LoggerItem.INFO, "up to date")
+            print("INFO: %s up to date" % pkg.nvra)
             downloaded[pkg.name] = True
         else:
             pkg.localpath = path
 
             # download now
-            log.update_key(os.path.basename(path))
-            log.write(LoggerItem.INFO, "downloading")
+            print("INFO: downloading %s" % os.path.basename(path))
             repo.getPackage(pkg)
 
             # do we have an old version of this?
             if existing.has_key(pkg.name) and os.path.exists(existing[pkg.name]):
-                log.update_key(os.path.basename(existing[pkg.name]))
-                log.write(LoggerItem.INFO, "deleting")
+                print("INFO: deleting %s" % os.path.basename(existing[pkg.name]))
                 os.remove(existing[pkg.name])
         downloaded[pkg.name] = True
 
     if len(downloaded) == 0:
-        log.update_key()
-        log.write(LoggerItem.INFO, "no packages downloaded for %s" % cfg.distro_tag)
+        print("INFO: no packages downloaded for %s" % cfg.distro_tag)
         return
 
     # have any packages been removed?
-    log.update_key()
     for i in existing:
         if not downloaded.has_key(i):
-            log.write(LoggerItem.INFO, "deleting %s" % existing[i])
+            print("INFO: deleting %s" % existing[i])
             os.remove(existing[i])
 
 def main():
