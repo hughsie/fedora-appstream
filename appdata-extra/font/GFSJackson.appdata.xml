@@ -4,8 +4,4 @@
   <licence>CC0</licence>
   <name>Jackson</name>
   <summary>GFS Jackson majuscule Greek font</summary>
-  <metadata>
-    <value key="FontClassifier">Regular</value>
-    <value key="FontParent">GFSJackson.otf</value>
-  </metadata>
 </application>

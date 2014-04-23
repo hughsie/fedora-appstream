@@ -4,8 +4,4 @@
   <licence>CC0</licence>
   <name>Open Dyslexic</name>
   <summary>A font designed for dyslexics with high readability</summary>
-  <metadata>
-    <value key="FontClassifier">Regular</value>
-    <value key="FontParent">OpenDyslexic-Regular.otf</value>
-  </metadata>
 </application>

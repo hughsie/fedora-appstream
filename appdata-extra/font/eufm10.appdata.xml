@@ -5,7 +5,6 @@
   <name>Lyx/MathML</name>
   <summary>Lyx/MathML fonts</summary>
   <metadata>
-    <value key="FontClassifier">Regular</value>
     <value key="FontParent">LyxMathML</value>
   </metadata>
 </application>

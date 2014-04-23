@@ -4,8 +4,4 @@
   <licence>CC0</licence>
   <name>Eustace</name>
   <summary>GFS Eustace majuscule Greek font</summary>
-  <metadata>
-    <value key="FontClassifier">Regular</value>
-    <value key="FontParent">GFSEustace.otf</value>
-  </metadata>
 </application>

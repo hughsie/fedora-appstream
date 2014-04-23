@@ -4,8 +4,4 @@
   <licence>CC0</licence>
   <name>Sniglet</name>
   <summary>A rounded, sans-serif font useful for headlines</summary>
-  <metadata>
-    <value key="FontClassifier">Regular</value>
-    <value key="FontParent">Sniglet.ttf</value>
-  </metadata>
 </application>

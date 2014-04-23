@@ -4,8 +4,4 @@
   <licence>CC0</licence>
   <name>Prociono</name>
   <summary>A text roman with standard and discretionary ligatures</summary>
-  <metadata>
-    <value key="FontClassifier">Regular</value>
-    <value key="FontParent">Prociono-Regular.ttf</value>
-  </metadata>
 </application>

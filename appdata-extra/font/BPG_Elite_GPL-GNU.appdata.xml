@@ -4,8 +4,4 @@
   <licence>CC0</licence>
   <name>BPG Elite</name>
   <summary>Elite family of BPG Georgian fonts</summary>
-  <metadata>
-    <value key="FontClassifier">Regular</value>
-    <value key="FontParent">BPG_Elite_GPL-GNU.ttf</value>
-  </metadata>
 </application>

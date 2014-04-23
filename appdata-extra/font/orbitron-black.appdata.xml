@@ -4,8 +4,4 @@
   <licence>CC0</licence>
   <name>Orbitron</name>
   <summary>Geometric sans-serif font</summary>
-  <metadata>
-    <value key="FontClassifier">Regular</value>
-    <value key="FontParent">orbitron-black.otf</value>
-  </metadata>
 </application>

@@ -4,8 +4,4 @@
   <licence>CC0</licence>
   <name>Garaldus</name>
   <summary>GFS Garaldus majuscule Greek font</summary>
-  <metadata>
-    <value key="FontClassifier">Regular</value>
-    <value key="FontParent">GFSGaraldus.otf</value>
-  </metadata>
 </application>

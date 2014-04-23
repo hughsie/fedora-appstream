@@ -4,8 +4,4 @@
   <licence>CC0</licence>
   <name>Unikurd</name>
   <summary>A widely used Kurdish font for Arabic-like scripts and Latin</summary>
-  <metadata>
-    <value key="FontClassifier">Regular</value>
-    <value key="FontParent">Unikuweb.ttf</value>
-  </metadata>
 </application>

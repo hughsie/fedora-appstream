@@ -4,8 +4,4 @@
   <licence>CC0</licence>
   <name>Scheherazade</name>
   <summary>An Arabic script font</summary>
-  <metadata>
-    <value key="FontClassifier">Regular</value>
-    <value key="FontParent">Scheherazade-R.ttf</value>
-  </metadata>
 </application>

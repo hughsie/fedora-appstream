@@ -4,8 +4,4 @@
   <licence>CC0</licence>
   <name>Crimson</name>
   <summary>A latin font for the production of technical books and papers</summary>
-  <metadata>
-    <value key="FontClassifier">Regular</value>
-    <value key="FontParent">Crimson-Roman.ttf</value>
-  </metadata>
 </application>

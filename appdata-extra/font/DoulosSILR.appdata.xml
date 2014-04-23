@@ -4,8 +4,4 @@
   <licence>CC0</licence>
   <name>Doulos</name>
   <summary>Doulos SIL fonts</summary>
-  <metadata>
-    <value key="FontClassifier">Regular</value>
-    <value key="FontParent">DoulosSILR.ttf</value>
-  </metadata>
 </application>

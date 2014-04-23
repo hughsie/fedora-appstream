@@ -4,8 +4,4 @@
   <licence>CC0</licence>
   <name>Meetei Mayek</name>
   <summary>A font for Meetei Mayek script</summary>
-  <metadata>
-    <value key="FontClassifier">Regular</value>
-    <value key="FontParent">eeyek.ttf</value>
-  </metadata>
 </application>

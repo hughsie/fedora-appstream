@@ -4,8 +4,4 @@
   <licence>CC0</licence>
   <name>Ignacio</name>
   <summary>A majuscule Greek font</summary>
-  <metadata>
-    <value key="FontClassifier">Regular</value>
-    <value key="FontParent">GFSIgnacio.otf</value>
-  </metadata>
 </application>

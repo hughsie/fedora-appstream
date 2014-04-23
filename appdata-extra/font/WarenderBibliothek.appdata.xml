@@ -4,8 +4,4 @@
   <licence>CC0</licence>
   <name>Warender Bibliothek</name>
   <summary>A fantasy font by Peter Schwanemann</summary>
-  <metadata>
-    <value key="FontClassifier">Regular</value>
-    <value key="FontParent">WarenderBibliothek.otf</value>
-  </metadata>
 </application>

@@ -4,8 +4,4 @@
   <licence>CC0</licence>
   <name>Bodoni</name>
   <summary>GFS Bodoni fonts</summary>
-  <metadata>
-    <value key="FontClassifier">Regular</value>
-    <value key="FontParent">GFSBodoni.otf</value>
-  </metadata>
 </application>

@@ -4,8 +4,4 @@
   <licence>CC0</licence>
   <name>Arimo</name>
   <summary>The croscore Arimo family fonts</summary>
-  <metadata>
-    <value key="FontClassifier">Regular</value>
-    <value key="FontParent">Arimo-Regular.ttf</value>
-  </metadata>
 </application>

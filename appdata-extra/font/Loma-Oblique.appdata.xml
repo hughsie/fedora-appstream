@@ -4,8 +4,4 @@
   <licence>CC0</licence>
   <name>Loma</name>
   <summary>Thai Loma fonts</summary>
-  <metadata>
-    <value key="FontClassifier">Regular</value>
-    <value key="FontParent">Loma-Oblique.ttf</value>
-  </metadata>
 </application>

@@ -4,8 +4,4 @@
   <licence>CC0</licence>
   <name>Century Schoolbook</name>
   <summary>LilyPond is an automated music engraving system</summary>
-  <metadata>
-    <value key="FontClassifier">Regular</value>
-    <value key="FontParent">CenturySchL-Roma.otf</value>
-  </metadata>
 </application>

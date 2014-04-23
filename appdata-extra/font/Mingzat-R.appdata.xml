@@ -4,8 +4,4 @@
   <licence>CC0</licence>
   <name>Mingzat</name>
   <summary>A font for Lepcha script</summary>
-  <metadata>
-    <value key="FontClassifier">Regular</value>
-    <value key="FontParent">Mingzat-R.ttf</value>
-  </metadata>
 </application>

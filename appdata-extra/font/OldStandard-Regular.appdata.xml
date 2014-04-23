@@ -4,8 +4,4 @@
   <licence>CC0</licence>
   <name>Old Standard</name>
   <summary>Old Standard fonts</summary>
-  <metadata>
-    <value key="FontClassifier">Regular</value>
-    <value key="FontParent">OldStandard-Regular.ttf</value>
-  </metadata>
 </application>

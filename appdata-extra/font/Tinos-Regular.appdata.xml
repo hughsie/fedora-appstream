@@ -5,7 +5,6 @@
   <name>Tinos</name>
   <summary>The croscore Tinos family fonts</summary>
   <metadata>
-    <value key="FontClassifier">Regular</value>
-    <value key="FontParent">Tinos-Regular.ttf</value>
+    <value key="FontClassifier">-</value>
   </metadata>
 </application>

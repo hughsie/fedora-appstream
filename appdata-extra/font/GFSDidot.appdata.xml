@@ -4,8 +4,4 @@
   <licence>CC0</licence>
   <name>Didot</name>
   <summary>GFS Didot fonts</summary>
-  <metadata>
-    <value key="FontClassifier">Regular</value>
-    <value key="FontParent">Didot</value>
-  </metadata>
 </application>

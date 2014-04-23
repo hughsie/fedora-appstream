@@ -4,8 +4,4 @@
   <licence>CC0</licence>
   <name>Denemo</name>
   <summary>Denemo Denemo fonts</summary>
-  <metadata>
-    <value key="FontClassifier">Regular</value>
-    <value key="FontParent">Denemo.ttf</value>
-  </metadata>
 </application>

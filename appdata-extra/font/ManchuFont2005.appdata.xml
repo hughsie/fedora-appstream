@@ -4,8 +4,4 @@
   <licence>CC0</licence>
   <name>Manchu</name>
   <summary>A Manchu font</summary>
-  <metadata>
-    <value key="FontClassifier">Regular</value>
-    <value key="FontParent">ManchuFont2005.ttf</value>
-  </metadata>
 </application>

@@ -5,7 +5,6 @@
   <name>Miriam</name>
   <summary>A set of fonts for Hebrew from Culmus project</summary>
   <metadata>
-    <value key="FontClassifier">Regular</value>
     <value key="FontParent">Miriam</value>
   </metadata>
 </application>

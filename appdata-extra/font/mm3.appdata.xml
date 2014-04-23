@@ -4,8 +4,4 @@
   <licence>CC0</licence>
   <name>Myanmar3</name>
   <summary>A Myanmar font</summary>
-  <metadata>
-    <value key="FontClassifier">Regular</value>
-    <value key="FontParent">mm3.ttf</value>
-  </metadata>
 </application>

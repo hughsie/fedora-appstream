@@ -4,8 +4,4 @@
   <licence>CC0</licence>
   <name>Delphine</name>
   <summary>A handwriting font</summary>
-  <metadata>
-    <value key="FontClassifier">Regular</value>
-    <value key="FontParent">Delphine.ttf</value>
-  </metadata>
 </application>

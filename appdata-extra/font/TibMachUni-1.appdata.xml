@@ -4,8 +4,4 @@
   <licence>CC0</licence>
   <name>Tibetan Machine Uni</name>
   <summary>Tibetan Machine Uni font for Tibetan, Dzongkha and Ladakhi</summary>
-  <metadata>
-    <value key="FontClassifier">Regular</value>
-    <value key="FontParent">TibMachUni-1.901b.ttf</value>
-  </metadata>
 </application>

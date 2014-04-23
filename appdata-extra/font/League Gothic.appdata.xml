@@ -4,8 +4,4 @@
   <licence>CC0</licence>
   <name>League Gothic</name>
   <summary>A sans serif gothic font</summary>
-  <metadata>
-    <value key="FontClassifier">Regular</value>
-    <value key="FontParent">League Gothic.otf</value>
-  </metadata>
 </application>

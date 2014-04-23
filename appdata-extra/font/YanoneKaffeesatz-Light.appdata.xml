@@ -4,8 +4,4 @@
   <licence>CC0</licence>
   <name>Yanone Kaffeesatz</name>
   <summary>Yanone Kaffeesatz decorative fonts</summary>
-  <metadata>
-    <value key="FontClassifier">Regular</value>
-    <value key="FontParent">YanoneKaffeesatz-Light.otf</value>
-  </metadata>
 </application>

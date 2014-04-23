@@ -4,8 +4,4 @@
   <licence>CC0</licence>
   <name>Comfortaa</name>
   <summary>Modern style true type font</summary>
-  <metadata>
-    <value key="FontClassifier">Regular</value>
-    <value key="FontParent">Comfortaa-Light.ttf</value>
-  </metadata>
 </application>

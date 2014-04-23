@@ -4,8 +4,4 @@
   <licence>CC0</licence>
   <name>Garuda</name>
   <summary>Thai Garuda fonts</summary>
-  <metadata>
-    <value key="FontClassifier">Regular</value>
-    <value key="FontParent">Garuda-Oblique.ttf</value>
-  </metadata>
 </application>

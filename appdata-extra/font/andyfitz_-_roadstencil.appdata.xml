@@ -4,8 +4,4 @@
   <licence>CC0</licence>
   <name>Road Stencil</name>
   <summary>A font based on painted street markings</summary>
-  <metadata>
-    <value key="FontClassifier">Regular</value>
-    <value key="FontParent">andyfitz_-_roadstencil.otf</value>
-  </metadata>
 </application>

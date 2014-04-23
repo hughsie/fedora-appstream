@@ -4,8 +4,4 @@
   <licence>CC0</licence>
   <name>STIX</name>
   <summary>Scientific and engineering fonts</summary>
-  <metadata>
-    <value key="FontClassifier">Regular</value>
-    <value key="FontParent">STIX-Regular.otf</value>
-  </metadata>
 </application>

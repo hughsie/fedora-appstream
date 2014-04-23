@@ -4,8 +4,4 @@
   <licence>CC0</licence>
   <name>BPG Courier</name>
   <summary>Courier family of BPG Georgian fonts</summary>
-  <metadata>
-    <value key="FontClassifier">Regular</value>
-    <value key="FontParent">BPG_Courier_GPL-GNU.ttf</value>
-  </metadata>
 </application>

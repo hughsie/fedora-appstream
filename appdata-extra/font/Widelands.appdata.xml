@@ -4,8 +4,4 @@
   <licence>CC0</licence>
   <name>Widelands</name>
   <summary>A Latin font inspired by feudal calligraphy</summary>
-  <metadata>
-    <value key="FontClassifier">Regular</value>
-    <value key="FontParent">Widelands.otf</value>
-  </metadata>
 </application>

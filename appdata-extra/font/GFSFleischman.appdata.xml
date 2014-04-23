@@ -4,8 +4,4 @@
   <licence>CC0</licence>
   <name>Fleischman</name>
   <summary>GFS Fleischman majuscule Greek font</summary>
-  <metadata>
-    <value key="FontClassifier">Regular</value>
-    <value key="FontParent">GFSFleischman.otf</value>
-  </metadata>
 </application>

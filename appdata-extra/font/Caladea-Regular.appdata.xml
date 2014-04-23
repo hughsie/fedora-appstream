@@ -4,8 +4,4 @@
   <licence>CC0</licence>
   <name>Caladea</name>
   <summary>Sans-serif font metric-compatible with Cambria font</summary>
-  <metadata>
-    <value key="FontClassifier">Regular</value>
-    <value key="FontParent">Caladea-Regular.ttf</value>
-  </metadata>
 </application>

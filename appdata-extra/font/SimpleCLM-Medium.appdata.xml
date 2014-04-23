@@ -4,8 +4,4 @@
   <licence>CC0</licence>
   <name>Simple CLM</name>
   <summary>A fonts for Hebrew from Culmus project</summary>
-  <metadata>
-    <value key="FontClassifier">Regular</value>
-    <value key="FontParent">SimpleCLM-Medium.ttf</value>
-  </metadata>
 </application>

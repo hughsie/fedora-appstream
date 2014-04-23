@@ -4,8 +4,4 @@
   <licence>CC0</licence>
   <name>Suruma</name>
   <summary>fonts for Malayalam script</summary>
-  <metadata>
-    <value key="FontClassifier">Regular</value>
-    <value key="FontParent">Suruma.ttf</value>
-  </metadata>
 </application>

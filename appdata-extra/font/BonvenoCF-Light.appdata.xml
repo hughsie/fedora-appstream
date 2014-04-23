@@ -4,8 +4,4 @@
   <licence>CC0</licence>
   <name>BonvenoCF</name>
   <summary>A fun font by Barry Schwartz</summary>
-  <metadata>
-    <value key="FontClassifier">Regular</value>
-    <value key="FontParent">BonvenoCF-Light.ttf</value>
-  </metadata>
 </application>

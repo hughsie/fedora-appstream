@@ -4,8 +4,4 @@
   <licence>CC0</licence>
   <name>Ambrosia</name>
   <summary>GFS Ambrosia majuscule Greek font</summary>
-  <metadata>
-    <value key="FontClassifier">Regular</value>
-    <value key="FontParent">GFSAmbrosia.otf</value>
-  </metadata>
 </application>

@@ -3,9 +3,5 @@
   <id type="font">Dyuthi.ttf</id>
   <licence>CC0</licence>
   <name>Dyuthi</name>
-  <summary>fonts for Malayalam script</summary>
-  <metadata>
-    <value key="FontClassifier">Regular</value>
-    <value key="FontParent">Dyuthi.ttf</value>
-  </metadata>
+  <summary>A font for Malayalam script</summary>
 </application>

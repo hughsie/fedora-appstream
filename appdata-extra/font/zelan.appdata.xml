@@ -5,7 +5,6 @@
   <name>Ethiopic</name>
   <summary>A font for the Geʼez (Ethiopic) script</summary>
   <metadata>
-    <value key="FontClassifier">Regular</value>
     <value key="FontParent">Ethiopic</value>
   </metadata>
 </application>

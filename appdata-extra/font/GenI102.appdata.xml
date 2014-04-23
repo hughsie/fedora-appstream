@@ -2,10 +2,6 @@
 <application>
   <id type="font">GenI102.ttf</id>
   <licence>CC0</licence>
-  <name>Gentium Alternate</name>
+  <name>Gentium</name>
   <summary>SIL Gentium fonts</summary>
-  <metadata>
-    <value key="FontClassifier">Regular</value>
-    <value key="FontParent">Gentium</value>
-  </metadata>
 </application>

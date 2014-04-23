@@ -4,8 +4,4 @@
   <licence>CC0</licence>
   <name>Abyssinica</name>
   <summary>font used for writing the languages of Ethiopia and Eritrea</summary>
-  <metadata>
-    <value key="FontClassifier">Regular</value>
-    <value key="FontParent">AbyssinicaSIL-R.ttf</value>
-  </metadata>
 </application>

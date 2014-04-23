@@ -4,8 +4,4 @@
   <licence>CC0</licence>
   <name>Xaporho</name>
   <summary>A Latin font that is sharp and angular</summary>
-  <metadata>
-    <value key="FontClassifier">Regular</value>
-    <value key="FontParent">Xaporho.otf</value>
-  </metadata>
 </application>

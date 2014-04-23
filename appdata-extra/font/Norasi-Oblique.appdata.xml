@@ -4,8 +4,4 @@
   <licence>CC0</licence>
   <name>Norasi</name>
   <summary>Thai Norasi fonts</summary>
-  <metadata>
-    <value key="FontClassifier">Regular</value>
-    <value key="FontParent">Norasi-Oblique.ttf</value>
-  </metadata>
 </application>

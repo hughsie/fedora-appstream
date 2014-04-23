@@ -4,8 +4,4 @@
   <licence>CC0</licence>
   <name>Mongolian Title</name>
   <summary>Mongolian title font</summary>
-  <metadata>
-    <value key="FontClassifier">Regular</value>
-    <value key="FontParent">mngltitleotf.ttf</value>
-  </metadata>
 </application>

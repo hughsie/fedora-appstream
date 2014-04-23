@@ -4,8 +4,4 @@
   <licence>CC0</licence>
   <name>Vemana</name>
   <summary>A font for Telugu</summary>
-  <metadata>
-    <value key="FontClassifier">Regular</value>
-    <value key="FontParent">Vemana2000.ttf</value>
-  </metadata>
 </application>

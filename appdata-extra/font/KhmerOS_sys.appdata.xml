@@ -5,7 +5,6 @@
   <name>Khmer OS</name>
   <summary>A set of Cambodian fonts</summary>
   <metadata>
-    <value key="FontClassifier">Regular</value>
     <value key="FontParent">Khmer OS</value>
   </metadata>
 </application>

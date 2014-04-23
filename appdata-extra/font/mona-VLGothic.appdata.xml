@@ -4,8 +4,4 @@
   <licence>CC0</licence>
   <name>Mona VLGothic</name>
   <summary>True Type Japanese font for text arts based on VLGothic</summary>
-  <metadata>
-    <value key="FontClassifier">Regular</value>
-    <value key="FontParent">mona-VLGothic.ttf</value>
-  </metadata>
 </application>

@@ -4,8 +4,4 @@
   <licence>CC0</licence>
   <name>Riordon Fancy</name>
   <summary>A stylized font</summary>
-  <metadata>
-    <value key="FontClassifier">Regular</value>
-    <value key="FontParent">RiordonFancy.ttf</value>
-  </metadata>
 </application>

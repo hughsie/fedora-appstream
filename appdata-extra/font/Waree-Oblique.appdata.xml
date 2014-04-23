@@ -4,8 +4,4 @@
   <licence>CC0</licence>
   <name>Waree</name>
   <summary>A serif Latin font that is designed to have good readability</summary>
-  <metadata>
-    <value key="FontClassifier">Regular</value>
-    <value key="FontParent">Waree-Oblique.ttf</value>
-  </metadata>
 </application>

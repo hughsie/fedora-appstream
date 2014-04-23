@@ -4,8 +4,4 @@
   <licence>CC0</licence>
   <name>Kinnari</name>
   <summary>Thai Kinnari fonts</summary>
-  <metadata>
-    <value key="FontClassifier">Regular</value>
-    <value key="FontParent">Kinnari-Oblique.ttf</value>
-  </metadata>
 </application>

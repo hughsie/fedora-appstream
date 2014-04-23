@@ -4,8 +4,4 @@
   <licence>CC0</licence>
   <name>BPG DedaEna Block</name>
   <summary>DedaEna Block family of BPG Georgian fonts</summary>
-  <metadata>
-    <value key="FontClassifier">Regular</value>
-    <value key="FontParent">BPG_DedEena_Block_GPL-GNU.ttf</value>
-  </metadata>
 </application>

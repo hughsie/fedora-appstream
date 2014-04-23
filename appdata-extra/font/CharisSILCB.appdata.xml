@@ -3,9 +3,5 @@
   <id type="font">CharisSILCB.ttf</id>
   <licence>CC0</licence>
   <name>Charis Compact</name>
-  <summary>None</summary>
-  <metadata>
-    <value key="FontClassifier">Regular</value>
-    <value key="FontParent">CharisSILCB.ttf</value>
-  </metadata>
+  <summary>A serif smart font similar to Bitstream Charter</summary>
 </application>

@@ -4,8 +4,4 @@
   <licence>CC0</licence>
   <name>Symbols Sans</name>
   <summary>VDR symbol fonts</summary>
-  <metadata>
-    <value key="FontClassifier">Regular</value>
-    <value key="FontParent">VDRSymbolsSans.ttf</value>
-  </metadata>
 </application>

@@ -4,8 +4,4 @@
   <licence>CC0</licence>
   <name>BPG DejaVu Sans</name>
   <summary>DejaVu Sans with BPG Georgian changes</summary>
-  <metadata>
-    <value key="FontClassifier">Regular</value>
-    <value key="FontParent">BPG_DejaVu_Sans_2011_GPL-GNU.ttf</value>
-  </metadata>
 </application>

@@ -4,8 +4,4 @@
   <licence>CC0</licence>
   <name>Philostratos</name>
   <summary>A revival of the “Griechische Antiqua” Greek font</summary>
-  <metadata>
-    <value key="FontClassifier">Regular</value>
-    <value key="FontParent">GFSPhilostratos.otf</value>
-  </metadata>
 </application>

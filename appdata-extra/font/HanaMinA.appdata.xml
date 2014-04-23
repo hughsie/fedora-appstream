@@ -4,8 +4,4 @@
   <licence>CC0</licence>
   <name>Hanazono Mincho</name>
   <summary>Japanese Mincho font</summary>
-  <metadata>
-    <value key="FontClassifier">Regular</value>
-    <value key="FontParent">HanaMinA.ttf</value>
-  </metadata>
 </application>

@@ -4,8 +4,4 @@
   <licence>CC0</licence>
   <name>Andika Basic</name>
   <summary>A font for literacy and beginning readers</summary>
-  <metadata>
-    <value key="FontClassifier">Regular</value>
-    <value key="FontParent">AndBasR.ttf</value>
-  </metadata>
 </application>

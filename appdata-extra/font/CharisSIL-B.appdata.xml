@@ -4,8 +4,4 @@
   <licence>CC0</licence>
   <name>Charis</name>
   <summary>A serif smart font similar to Bitstream Charter</summary>
-  <metadata>
-    <value key="FontClassifier">Regular</value>
-    <value key="FontParent">CharisSIL-B.ttf</value>
-  </metadata>
 </application>

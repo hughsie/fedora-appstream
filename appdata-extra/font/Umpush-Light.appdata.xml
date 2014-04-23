@@ -4,8 +4,4 @@
   <licence>CC0</licence>
   <name>Umpush</name>
   <summary>Thai Umpush fonts</summary>
-  <metadata>
-    <value key="FontClassifier">Regular</value>
-    <value key="FontParent">Umpush-Light.ttf</value>
-  </metadata>
 </application>

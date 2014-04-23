@@ -4,8 +4,4 @@
   <licence>CC0</licence>
   <name>Shofar</name>
   <summary>A font for Hebrew from Culmus project</summary>
-  <metadata>
-    <value key="FontClassifier">Regular</value>
-    <value key="FontParent">ShofarRegular.ttf</value>
-  </metadata>
 </application>
