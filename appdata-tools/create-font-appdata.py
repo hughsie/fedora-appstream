@@ -24,93 +24,63 @@
 import csv
 import sys
 
-class FontCollection:
-
-    def __init__(self):
-        self.fonts = [] # (id, classifier)
-        self.parent_id = None
-        self.name = None
-        self.summary = None
-        self.description = None
-
-    def add_font(self, font_id, classifier):
-        self.fonts.append((font_id, classifier))
-
 def main():
 
     csvfile = open('./fonts.csv', 'r')
     data = csv.reader(csvfile)
 
-    fonts = {}
+    old_name = None
+    old_summary = None
 
     for row in data:
 
-        if row[1].startswith('All the content'):
-            continue
-        if row[1].startswith('AppStream ID'):
+        if row[0].startswith('AppStream ID'):
             continue
 
-        font = FontCollection()
-        font_id = row[1]
-        parent_id = row[3]
-        classifier = row[4]
-        name = row[5]
-        summary = row[6]
-        description = row[7]
-
-        if name == '-':
-            continue
+        #font = FontCollection()
+        font_id = row[0]
+        parent = row[1]
+        classifier = row[2]
+        name = row[3]
+        summary = row[4]
 
         if len(name) == 0:
-            print "WARNING", font_id, "missing name using", row[1]
-            name = row[1]
+            print "WARNING", font_id, "missing name using", font_id
+            continue
         if len(summary) == 0:
             print "WARNING", font_id, "missing summary"
-        if len(classifier) == 0 or classifier == '-':
-            classifier = 'Regular'
-        if len(parent_id) == 0 or parent_id == '-':
-            parent_id = font_id
+            continue
 
-        if parent_id in fonts:
-            font = fonts[parent_id]
+        # save
+        if name == '^':
+            name = old_name
         else:
-            # add to collection
-            font = FontCollection()
-            font.parent_id = parent_id
-            fonts[parent_id] = font
+            old_name = name
+        if summary == '^':
+            summary = old_summary
+        else:
+            old_summary = summary
 
-        font.add_font(font_id, classifier)
-        if name != "^":
-            if font.name:
-                print "WARNING: already set", font.name, "overwriting with", name
-            font.name = name
-        if summary != "^":
-            if font.summary:
-                print "WARNING: already set", font.summary, "overwriting with", summary
-            font.summary = summary
-            #font.description = description
-
-    for key in fonts:
-        fc = fonts[key]
-
-        # create metadata appdata files
-        for font_id, classifier in fc.fonts:
-
-            filename = '../appdata-extra/font/' + font_id.rsplit('.', 2)[0] + '.appdata.xml'
-            txt = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"
-            txt += "<application>\n"
-            txt += "  <id type=\"font\">%s</id>\n" % font_id
-            txt += "  <licence>CC0</licence>\n"
-            txt += "  <name>%s</name>\n" % fc.name
-            txt += "  <summary>%s</summary>\n" % fc.summary
+        filename = '../appdata-extra/font/' + font_id.rsplit('.', 2)[0] + '.appdata.xml'
+        txt = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"
+        txt += "<application>\n"
+        txt += "  <id type=\"font\">%s</id>\n" % font_id
+        txt += "  <licence>CC0</licence>\n"
+        if len(name) > 0:
+            txt += "  <name>%s</name>\n" % name
+        if len(summary) > 0:
+            txt += "  <summary>%s</summary>\n" % summary
+        if len(classifier) > 0 or len(parent) > 0:
             txt += "  <metadata>\n"
-            txt += "    <value key=\"FontClassifier\">%s</value>\n" % classifier
-            txt += "    <value key=\"FontParent\">%s</value>\n" % fc.parent_id
+            if len(classifier) > 0:
+                txt += "    <value key=\"FontClassifier\">%s</value>\n" % classifier
+            if len(parent) > 0:
+                txt += "    <value key=\"FontParent\">%s</value>\n" % parent
             txt += "  </metadata>\n"
-            txt += "</application>\n"
-            f = open(filename, 'w')
-            f.write(txt)
-            f.close()
+        txt += "</application>\n"
+        f = open(filename, 'w')
+        f.write(txt)
+        f.close()
 
     csvfile.close()
     sys.exit(0)
