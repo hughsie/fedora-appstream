@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <applications version="0.1">
-  <priority>-1</priority>
   <application>
+    <priority>-1</priority>
     <id type="codec">gstreamer-bad-freeworld</id>
     <pkgname>gstreamer1-plugins-bad-freeworld</pkgname>
     <name>GStreamer Multimedia Codecs - Non Free</name>
@@ -31,6 +31,7 @@ These codecs can be used to encode and decode media files where the format is pa
 A codec decodes audio and video for for playback or editing and is also used for transmission or storage. Different codecs are used in video-conferencing, streaming media and video editing applications.</description>
   </application>
   <application>
+    <priority>-1</priority>
     <id type="codec">gstreamer-ugly</id>
     <pkgname>gstreamer1-plugins-ugly</pkgname>
     <name>GStreamer Multimedia Codecs - License Issues</name>
