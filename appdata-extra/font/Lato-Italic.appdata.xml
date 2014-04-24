@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="font">Lato-Italic.ttf</id>
+  <licence>CC0</licence>
+  <summary>A classical sans-serif font family</summary>
+  <metadata>
+    <value key="FontParent">Lato</value>
+  </metadata>
+</application>
