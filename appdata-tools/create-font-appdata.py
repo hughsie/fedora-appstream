@@ -63,7 +63,7 @@ def main():
         elif len(summary) == 0:
             old_summary = None
 
-        filename = '../appdata-extra/font/' + font_id.rsplit('.', 2)[0] + '.appdata.xml'
+        filename = '../appdata-extra/font/' + font_id.rsplit('.', 1)[0] + '.appdata.xml'
         txt = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"
         txt += "<application>\n"
         txt += "  <id type=\"font\">%s</id>\n" % font_id
