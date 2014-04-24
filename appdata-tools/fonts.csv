@@ -48,7 +48,7 @@ dotum.ttf,Baekmuk,Dotum,^,^
 gulim.ttf,Baekmuk,Gulim,^,^
 hline.ttf,Baekmuk,Headline,^,^
 Beteckna.otf,Beteckna,Sans Regular,,Beteckna sans-serif fonts
-BetecknaSmallCaps.otf,Beteckna,Sans Small Caps,^,^
+BetecknaSmallCaps.otf,Beteckna,Sans Small Caps,Beteckna,^
 BetecknaLowerCase.otf,Beteckna,Sans Lower Case,^,^
 Vera.ttf,Bitstream Vera,Sans,Bitstream Vera,High quality Latin fonts by Bitstream
 VeraMoBI.ttf,Bitstream Vera,Sans Mono,^,^
@@ -96,7 +96,7 @@ DroidSansMono.ttf,Droid,Sans Mono,^,^
 DroidSansTamil-Regular.ttf,Droid,Sans,^,^
 DroidSerif-Regular.ttf,Droid,Serif,^,^
 Dustismo.ttf,Dustismo,Sans,,General purpose fonts
-Dustismo_Roman.ttf,Dustismo,Serif,^,^
+Dustismo_Roman.ttf,Dustismo,Serif,Dustismo,^
 Dyuthi.ttf,,,,A font for Malayalam script
 ec_cour.ttf,Ecolier court,Cursive,Écolier court,Schoolchildren cursive fonts
 ecl_cour.ttf,Ecolier court,Cursive with lines,^,^
@@ -326,7 +326,7 @@ opens___.ttf,,,Open Symbol,A font containing common symbols
 orbitron-black.otf,,,,Geometric sans-serif font
 Overpass_Regular.ttf,,Sans,,A font based on U.S. interstate highway road signage
 PTS55F.ttf,PT Sans,Sans,,A pan-Cyrillic font
-PTC55F.ttf,PT Sans,Sans Caption,^,^
+PTC55F.ttf,PT Sans,Sans Caption,PT Sans,^
 PTN57F.ttf,PT Sans,Sans Narrow,^,^
 Padauk-bold.ttf,Padauk,Bold,,A font for Burmese and the Myanmar script
 Padauk-book.ttf,Padauk,Book,Padauk,^
@@ -339,7 +339,7 @@ Prociono-Regular.ttf,,,,A text roman with standard and discretionary ligatures
 ProggyTinySZ.ttf,,,Proggy Tiny,Proggy Tiny with slashed zero programming font
 Purisa-Oblique.ttf,,,,Thai Purisa fonts
 Rachana.ttf,,Serif,,Rachana Malayalam traditional lipi font
-RaghuMalayalamSans.ttf,,,^,^
+RaghuMalayalamSans.ttf,,,,^
 RiordonFancy.ttf,,,Riordon Fancy,A stylized font
 Rockets.ttf,,,,"Thibault.org font, vaguely space themed"
 SMonohand.ttf,,Mono,,A handwritten monospace font
@@ -353,7 +353,7 @@ SerafettinCartoonCondensed.ttf,,Sans,Serafettin Cartoon,^
 ShadowedBlack.ttf,,,Shadowed Black,A gothic font with drop shadows
 ShofarRegular.ttf,,,,A font for Hebrew from Culmus project
 slkscr.ttf,Silkscreen,Regular,,Silkscreen four member type family
-slkscre.ttf,Silkscreen,Expanded,^,^
+slkscre.ttf,Silkscreen,Expanded,Silkscreen,^
 SimpleCLM-Medium.ttf,,,,A fonts for Hebrew from Culmus project
 Sniglet.ttf,,,,"A rounded, sans-serif font useful for headlines"
 GoudyStM.otf,,,,Goudy Oldstyle and Italic fonts

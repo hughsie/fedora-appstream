@@ -37,7 +37,6 @@ def main():
         if row[0].startswith('AppStream ID'):
             continue
 
-        #font = FontCollection()
         font_id = row[0]
         parent = row[1]
         classifier = row[2]
@@ -46,13 +45,23 @@ def main():
 
         # save
         if name == '^':
+            if not old_name:
+                print("WARNING: No old name for %s" % font_id)
+                continue
             name = old_name
         elif len(name) > 0:
             old_name = name
+        elif len(name) == 0:
+            old_name = None
         if summary == '^':
+            if not old_summary:
+                print("WARNING: No old summary for %s" % font_id)
+                continue
             summary = old_summary
         elif len(summary) > 0:
             old_summary = summary
+        elif len(summary) == 0:
+            old_summary = None
 
         filename = '../appdata-extra/font/' + font_id.rsplit('.', 2)[0] + '.appdata.xml'
         txt = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"
