@@ -2,6 +2,5 @@
 <application>
   <id type="font">mutante.ttf</id>
   <licence>CC0</licence>
-  <name>MutantE</name>
   <summary>Mutante font used by the HUD in cave9 game</summary>
 </application>

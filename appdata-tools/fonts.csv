@@ -1,74 +1,74 @@
 AppStream ID,Parent,Classifier,Name,Summary
-AbyssinicaSIL-R.ttf,,,Abyssinica,font used for writing the languages of Ethiopia and Eritrea
+AbyssinicaSIL-R.ttf,,,,A font used for writing the languages of Ethiopia and Eritrea
 AccanthisADFStd-Regular.otf,Accanthis,Number 1,Accanthis,A “modernized” garaldic serif font
 AccanthisADFStdNo2-Regular.otf,Accanthis,Number 2,^,^
 AccanthisADFStdNo3-Regular.otf,Accanthis,Number 3,^,^
-Alegreya-Black.otf,,,Alegreya,A font originally intended for literature
-AlegreyaSC-Black.otf,Alegreya,,^,^
-AndBasR.ttf,,,Andika Basic,A font for literacy and beginning readers
+Alegreya-Black.otf,,,,A font originally intended for literature
+AlegreyaSC-Black.otf,Alegreya,,,^
+AndBasR.ttf,,,,A font for literacy and beginning readers
 AnjaliOldLipi.ttf,,,Anjali OldLipi,fonts for Malayalam script
-Anonymous Pro B.ttf,,Mono,Anonymous Pro,A coding-friendly monospace font
-Arimo-Regular.ttf,,,Arimo,The croscore Arimo family fonts
+Anonymous Pro B.ttf,,Mono,,A coding-friendly monospace font
+Arimo-Regular.ttf,,,,The croscore Arimo family fonts
 ArundinaSans-Oblique.ttf,Arundina,Sans,Arundina,A Thai Arundina font
 ArundinaSansMono-Oblique.ttf,Arundina,Sans Mono,^,^
 ArundinaSerif.ttf,Arundina,Serif,^,^
-Asana-Math.otf,,,Asana Math,An font with a MATH table
-BPG_Algeti_GPL-GNU.ttf,,,BPG Algeti,Algeti Family of BPG Georgian fonts
-BPG_Chveulebrivi_GPL-GNU.ttf,,,BPG Chveulebrivi,Chveulebrivi family of BPG Georgian fonts
-BPG_Classic_GPL-GNU.otf,,,BPG Classic,Classic family of BPG Georgian fonts
-BPG_Courier_GPL-GNU.ttf,,,BPG Courier,Courier family of BPG Georgian fonts
-BPG_Courier_S_GPL-GNU.ttf,,,BPG Courier S,Courier S family of BPG Georgian fonts
-BPG_DedEena_Block_GPL-GNU.ttf,,,BPG DedaEna Block,DedaEna Block family of BPG Georgian fonts
+Asana-Math.otf,,,,An font with a MATH table
+BPG_Algeti_GPL-GNU.ttf,,,,Algeti Family of BPG Georgian fonts
+BPG_Chveulebrivi_GPL-GNU.ttf,,,,Chveulebrivi family of BPG Georgian fonts
+BPG_Classic_GPL-GNU.otf,,,,Classic family of BPG Georgian fonts
+BPG_Courier_GPL-GNU.ttf,,,,Courier family of BPG Georgian fonts
+BPG_Courier_S_GPL-GNU.ttf,,,,Courier S family of BPG Georgian fonts
+BPG_DedEena_Block_GPL-GNU.ttf,,,,DedaEna Block family of BPG Georgian fonts
 BPG_DejaVu_Sans_2011_GPL-GNU.ttf,,,BPG DejaVu Sans,DejaVu Sans with BPG Georgian changes
-BPG_Elite_GPL-GNU.ttf,,,BPG Elite,Elite family of BPG Georgian fonts
+BPG_Elite_GPL-GNU.ttf,,,,Elite family of BPG Georgian fonts
 BPG_Excelsior_Caps_GPL-GNU.ttf,BPG Excelsior,Caps,BPG Excelsior,Excelsior family of BPG Georgian fonts
 BPG_Excelsior_Condenced_GPL-GNU.ttf,BPG Excelsior,Condensed,^,^
-BPG_Excelsior_GPL-GNU.ttf,BPG Excelsior,Regular,^,^
-BPG_Glaho_GPL-GNU.ttf,,,BPG Glaho,Glaho family of BPG Georgian fonts
-BPG_Gorda_GNU-GPL.ttf,,,BPG Gorda,Gorda family of BPG Georgian fonts
-BPG_Ingiri_GPL-GNU.ttf,,,BPG Ingiri,Ingiri family of BPG Georgian fonts
-BPG_Irubaqidze_GPL-GNU.otf,,,BPG Irubaqidze,Irubaqidze family of BPG Georgian fonts
-BPG_Mikhail_Stephan_GPL-GNU.otf,,,BPG Mikheil Stefane,Mikhail Stephan family of BPG Georgian fonts
+BPG_Excelsior_GPL-GNU.ttf,BPG Excelsior,Regular,,^
+BPG_Glaho_GPL-GNU.ttf,,,,Glaho family of BPG Georgian fonts
+BPG_Gorda_GNU-GPL.ttf,,,,Gorda family of BPG Georgian fonts
+BPG_Ingiri_GPL-GNU.ttf,,,,Ingiri family of BPG Georgian fonts
+BPG_Irubaqidze_GPL-GNU.otf,,,,Irubaqidze family of BPG Georgian fonts
+BPG_Mikhail_Stephan_GPL-GNU.otf,,,,Mikhail Stephan family of BPG Georgian fonts
 BPG_Mrgvlovani_Caps_GNU-GPL.ttf,BPG Mrgvlovani,Caps,BPG Mrgvlovani,Mrgvlovani family of BPG Georgian fonts
-BPG_Mrgvlovani_GPL-GNU.ttf,BPG Mrgvlovani,Regular,^,^
+BPG_Mrgvlovani_GPL-GNU.ttf,BPG Mrgvlovani,Regular,,^
 BPG_Nateli_Caps_GPL-GNU.ttf,BPG Nateli,Caps,BPG Nateli,Nateli family of BPG Georgian fonts
 BPG_Nateli_Condenced_GPL-GNU.ttf,BPG Nateli,Condensed,^,^
-BPG_Nateli_GPL-GNU.ttf,BPG Nateli,Regular,^,^
+BPG_Nateli_GPL-GNU.ttf,BPG Nateli,Regular,,^
 BPG_Nino_Medium_Cond_GPL-GNU.ttf,BPG Nino Medium,Condensed,BPG Nino Medium,Nino Medium family of BPG Georgian fonts
-BPG_Nino_Medium_GPL-GNU.ttf,BPG Nino Medium,Regular,^,^
-BPG_Sans_GPL-GNU.ttf,BPG Sans,Sans,BPG Sans,Sans family of BPG Georgian fonts
-BPG_Sans_Medium_GPL-GNU.ttf,BPG Sans,Sans Medium,^,^
+BPG_Nino_Medium_GPL-GNU.ttf,BPG Nino Medium,Regular,,^
+BPG_Sans_GPL-GNU.ttf,BPG Sans,Sans,,Sans family of BPG Georgian fonts
+BPG_Sans_Medium_GPL-GNU.ttf,BPG Sans,Sans Medium,BPG Sans,^
 BPG_Sans_Modern_GPL-GNU.ttf,BPG Sans,Sans Modern,^,^
 BPG_Sans_Regular_GPL-GNU.ttf,BPG Sans,Sans Regular,^,^
-BPG_Serif_GPL-GNU.ttf,BPG Serif,Serif,BPG Serif,Serif family of BPG Georgian fonts
-BPG_Serif_Modern_GPL-GNU.ttf,BPG Serif,Serif Modern,^,^
-BPG_Ucnobi_GPL-GNU.otf,,,BPG Ucnobi,Ucnobi family of BPG Georgian fonts
+BPG_Serif_GPL-GNU.ttf,BPG Serif,Serif,,Serif family of BPG Georgian fonts
+BPG_Serif_Modern_GPL-GNU.ttf,BPG Serif,Serif Modern,BPG Serif,^
+BPG_Ucnobi_GPL-GNU.otf,,,,Ucnobi family of BPG Georgian fonts
 batang.ttf,Baekmuk,Batang,Baekmuk,A set of Korean Baekmuk fonts
 dotum.ttf,Baekmuk,Dotum,^,^
 gulim.ttf,Baekmuk,Gulim,^,^
 hline.ttf,Baekmuk,Headline,^,^
-Beteckna.otf,Beteckna,Sans Regular,Beteckna,Beteckna sans-serif fonts
+Beteckna.otf,Beteckna,Sans Regular,,Beteckna sans-serif fonts
 BetecknaSmallCaps.otf,Beteckna,Sans Small Caps,^,^
 BetecknaLowerCase.otf,Beteckna,Sans Lower Case,^,^
 Vera.ttf,Bitstream Vera,Sans,Bitstream Vera,High quality Latin fonts by Bitstream
 VeraMoBI.ttf,Bitstream Vera,Sans Mono,^,^
 VeraSe.ttf,Bitstream Vera,Serif,^,^
-bola.ttf,,,Bola,Chunky Geometric fonts
-BonvenoCF-Light.ttf,,,BonvenoCF,A fun font by Barry Schwartz
+bola.ttf,,,,Chunky Geometric fonts
+BonvenoCF-Light.ttf,,,,A fun font by Barry Schwartz
 BrettFont1.1.ttf,,,Brett,A handwriting font
-Caladea-Regular.ttf,,,Caladea,Sans-serif font metric-compatible with Cambria font
-Cantarell-Regular.otf,,,Cantarell,A Humanist sans-serif font family
-Cardo104s.ttf,,,Cardo,A font for scholarly use in classical and medieval languages
-Carlito-Regular.ttf,,,Carlito,Sans-serif font metric-compatible with Calibri font
+Caladea-Regular.ttf,,,,Sans-serif font metric-compatible with Cambria font
+Cantarell-Regular.otf,,,,A Humanist sans-serif font family
+Cardo104s.ttf,,,,A font for scholarly use in classical and medieval languages
+Carlito-Regular.ttf,,,,Sans-serif font metric-compatible with Calibri font
 CenturySchL-Roma.otf,,,Century Schoolbook,LilyPond is an automated music engraving system
-CharisSIL-B.ttf,,,Charis,A serif smart font similar to Bitstream Charter
+CharisSIL-B.ttf,,,,A serif smart font similar to Bitstream Charter
 CharisSILCB.ttf,,,Charis Compact,^
-Comfortaa-Light.ttf,,,Comfortaa,Modern style true type font
-Conakry.ttf,,,Conakry,A N'Ko font
-Cousine-Regular.ttf,,,Cousine,The croscore Cousine family fonts
-Crimson-Roman.ttf,,,Crimson,A latin font for the production of technical books and papers
-DarkGarden.ttf,,,Dark Garden,Dark Garden is a decorative outline font of unusual shape
-DavidCLM-Medium.ttf,,,David,A set of fonts for Hebrew from Culmus project
+Comfortaa-Light.ttf,,,,Modern style true type font
+Conakry.ttf,,,,A N'Ko font
+Cousine-Regular.ttf,,,,The croscore Cousine family fonts
+Crimson-Roman.ttf,,,,A latin font for the production of technical books and papers
+DarkGarden.ttf,,,,Dark Garden is a decorative outline font of unusual shape
+DavidCLM-Medium.ttf,,,,A set of fonts for Hebrew from Culmus project
 DejaVuLGCSans-Oblique.ttf,DejaVuLGC,Sans,DejaVu Latin Greek and Cyrillic,"A set of sans-serif font faces, Latin-Greek-Cyrillic subset"
 DejaVuLGCSansCondensed-Oblique.ttf,DejaVuLGC,Sans Condensed,^,^
 DejaVuLGCSans-ExtraLight.ttf,DejaVuLGC,Sans Light,^,^
@@ -81,11 +81,11 @@ DejaVuSans-ExtraLight.ttf,DejaVu,Sans Light,^,^
 DejaVuSansMono-Oblique.ttf,DejaVu,Sans Mono,^,^
 DejaVuSerif.ttf,DejaVu,Serif,^,^
 DejaVuSerifCondensed.ttf,DejaVu,Serif Condensed,^,^
-Delphine.ttf,,,Delphine,A handwriting font
-Denemo.ttf,,,Denemo,Denemo Denemo fonts
-phranzysko_-_Digna_s_Handwriting.ttf,,Cursive,Digna's Handwriting,Phranzysko's sister handwriting
-Domestic_Manners.ttf,,Cursive,Domestic Manners,A handwriting font by Dustin Norlander
-DoulosSILR.ttf,,,Doulos,Doulos SIL fonts
+Delphine.ttf,,,,A handwriting font
+Denemo.ttf,,,,Denemo Denemo fonts
+phranzysko_-_Digna_s_Handwriting.ttf,,Cursive,,Phranzysko's sister handwriting
+Domestic_Manners.ttf,,Cursive,,A handwriting font by Dustin Norlander
+DoulosSILR.ttf,,,,Doulos SIL fonts
 DroidKufi-Regular.ttf,Droid,Sans,Droid,A humanist sans serif font
 DroidNaskh-Regular.ttf,Droid,Serif,^,^
 DroidSans.ttf,Droid,Sans,^,^
@@ -95,12 +95,12 @@ DroidSansHebrew-Regular.ttf,Droid,Sans,^,^
 DroidSansMono.ttf,Droid,Sans Mono,^,^
 DroidSansTamil-Regular.ttf,Droid,Sans,^,^
 DroidSerif-Regular.ttf,Droid,Serif,^,^
-Dustismo.ttf,Dustismo,Sans,Dustismo,General purpose fonts
+Dustismo.ttf,Dustismo,Sans,,General purpose fonts
 Dustismo_Roman.ttf,Dustismo,Serif,^,^
-Dyuthi.ttf,,,Dyuthi,A font for Malayalam script
+Dyuthi.ttf,,,,A font for Malayalam script
 ec_cour.ttf,Ecolier court,Cursive,Écolier court,Schoolchildren cursive fonts
 ecl_cour.ttf,Ecolier court,Cursive with lines,^,^
-Edrip-Regular.ttf,,Sans,Edrip,A decorative contrast sans-serif font
+Edrip-Regular.ttf,,Sans,,A decorative contrast sans-serif font
 Essays1743.ttf,,,Essays 1743,Thibault.org Montaigne's Essays font font
 jiret.ttf,Ethiopic,,Ethiopic,A font for the Geʼez (Ethiopic) script
 fantuwua.ttf,Ethiopic,,^,^
@@ -113,45 +113,45 @@ yebse.ttf,Ethiopic,,^,^
 goffer.ttf,Ethiopic,,^,^
 yigezubisratgothic.ttf,Ethiopic,,^,^
 zelan.ttf,Ethiopic,,^,^
-FrankRuehlCLM-Medium.ttf,,,Frank Ruehl,A set of fonts for Hebrew from Culmus project
+FrankRuehlCLM-Medium.ttf,,,,A set of fonts for Hebrew from Culmus project
 FreeMono.ttf,Freefont,Mono,GNU Freefont,GNU Freefont
 FreeSans.ttf,Freefont,Sans,^,^
 FreeSerif.ttf,Freefont,Serif,^,^
-GFSAmbrosia.otf,,,Ambrosia,GFS Ambrosia majuscule Greek font
-GFSArtemisia.otf,,,Artemisia,GFS Artemisia fonts
-GFSBaskerville.otf,,,Baskerville,GFS Baskerville Greek font
-GFSBodoni.otf,,,Bodoni,GFS Bodoni fonts
-GFSDidot.otf,,,Didot,GFS Didot fonts
-GFSEustace.otf,,,Eustace,GFS Eustace majuscule Greek font
-GFSFleischman.otf,,,Fleischman,GFS Fleischman majuscule Greek font
-GFSGaraldus.otf,,,Garaldus,GFS Garaldus majuscule Greek font
-GFSIgnacio.otf,,,Ignacio,A majuscule Greek font
-GFSJackson.otf,,,Jackson,GFS Jackson majuscule Greek font
-GFSNeohellenic.otf,,,Neohellenic,A 20th century Greek font
-GFSNicefore.otf,,,Nicefore,GFS Nicefore majuscule Greek font
-GFSPhilostratos.otf,,,Philostratos,A revival of the “Griechische Antiqua” Greek font
-GFSTheokritos.otf,,,Theokritos,GFS Theokritos decorative font
-Garuda-Oblique.ttf,,,Garuda,Thai Garuda fonts
-GenI102.ttf,,,Gentium,SIL Gentium fonts
+GFSAmbrosia.otf,,,,GFS Ambrosia majuscule Greek font
+GFSArtemisia.otf,,,,GFS Artemisia fonts
+GFSBaskerville.otf,,,,GFS Baskerville Greek font
+GFSBodoni.otf,,,,GFS Bodoni fonts
+GFSDidot.otf,,,,GFS Didot fonts
+GFSEustace.otf,,,,GFS Eustace majuscule Greek font
+GFSFleischman.otf,,,,GFS Fleischman majuscule Greek font
+GFSGaraldus.otf,,,,GFS Garaldus majuscule Greek font
+GFSIgnacio.otf,,,,A majuscule Greek font
+GFSJackson.otf,,,,GFS Jackson majuscule Greek font
+GFSNeohellenic.otf,,,,A 20th century Greek font
+GFSNicefore.otf,,,,GFS Nicefore majuscule Greek font
+GFSPhilostratos.otf,,,,A revival of the “Griechische Antiqua” Greek font
+GFSTheokritos.otf,,,,GFS Theokritos decorative font
+Garuda-Oblique.ttf,,,,Thai Garuda fonts
+GenI102.ttf,,,,SIL Gentium fonts
 GenBasB.ttf,GentiumMain,,Gentium,SIL Gentium fonts
-GenBkBasB.ttf,GentiumMain,Book,Gentium Book Basic,SIL Gentium fonts
+GenBkBasB.ttf,GentiumMain,Book,,SIL Gentium fonts
 GenAI102.ttf,Gentium,Alternate,Gentium Alternate,SIL Gentium fonts
-GilliusADF-Regular.otf,Gillius,Regular,Gillius,Gillius ADF sans-serif font family
-GilliusADF-Cond.otf,Gillius,Condensed,^,^
-GilliusADFNo2-Regular.otf,Gillius,No2 Regular,^,^
+GilliusADF-Regular.otf,Gillius,Regular,,Gillius ADF sans-serif font family
+GilliusADF-Cond.otf,Gillius,Condensed,,^
+GilliusADFNo2-Regular.otf,Gillius,No2 Regular,Gillius,^
 GilliusADFNo2-Cond.otf,Gillius,No2 Consensed,^,^
-GoudyBookletter1911.otf,,Serif,Goudy Bookletter 1911,Clean serif font based on Kennerly Old Style
-HadasimCLM-Regular.ttf,,,Hadasim,A set of fonts for Hebrew from Culmus project
+GoudyBookletter1911.otf,,Serif,,Clean serif font based on Kennerly Old Style
+HadasimCLM-Regular.ttf,,,,A set of fonts for Hebrew from Culmus project
 HanaMinA.ttf,,,Hanazono Mincho,Japanese Mincho font
 Heuristica-Regular.ttf,,Serif,Heuristica,A serif latin & cyrillic font
-asyropoulos_-_Icelandic.otf,,,Icelandic,Icelandic Magical Staves
-Imperator.ttf,,,Imperator,A gothic font
-Inconsolata.ttf,,,Inconsolata,Inconsolata fonts
-inkboy_ofl.ttf,,,Inkboyfont,A clean and usable latin fantasy font
-Isabella.ttf,,,Isabella,Thibault.org Isabella Breviary calligraphic font
-Jomolhari-alpha3c-0605331.ttf,,,Jomolhari,Jomolhari a Bhutanese style font for Tibetan and Dzongkha
+asyropoulos_-_Icelandic.otf,,,,Icelandic Magical Staves
+Imperator.ttf,,,,A gothic font
+Inconsolata.ttf,,,,Inconsolata fonts
+inkboy_ofl.ttf,,,,A clean and usable latin fantasy font
+Isabella.ttf,,,,Thibault.org Isabella Breviary calligraphic font
+Jomolhari-alpha3c-0605331.ttf,,,,Jomolhari a Bhutanese style font for Tibetan and Dzongkha
 JosefinSansStd-Light.otf,,Sans,Josefin,"A latin font that is geometric, elegant, and kind of vintage"
-junction.otf,,,Junction,A humanist sans serif font
+junction.otf,,,,A humanist sans serif font
 KacstArt.ttf,Kacst,Art,Kacst,Fonts for arabic from arabeyes project
 KacstBook.ttf,Kacst,Book,^,^
 KacstDecorative.ttf,Kacst,Decorative,^,^
@@ -166,12 +166,12 @@ KacstQurn.ttf,Kacst,Qurn,^,^
 KacstScreen.ttf,Kacst,Screen,^,^
 KacstTitle.ttf,Kacst,Title,^,^
 KacstTitleL.ttf,Kacst,Title Light,^,^
-Kalapi.ttf,,Sans,Kalapi,A sans-serif font for Gujarati script
-Kalyani.ttf,,,Kalyani,A set of fonts for Malayalam script
+Kalapi.ttf,,Sans,,A sans-serif font for Gujarati script
+Kalyani.ttf,,,,A set of fonts for Malayalam script
 KanjiStrokeOrders_v3.000.ttf,,,Kanji Stroke Orders,A font to view stroke order diagrams for Kanji and Kana
-KeterYG-Medium.ttf,,,Keter YG,A set of fonts for Hebrew from Culmus project
-KhmerOS.ttf,,,Khmer OS,A set of Cambodian fonts
-KhmerOS_battambang.ttf,Khmer OS,,^,^
+KeterYG-Medium.ttf,,,,A set of fonts for Hebrew from Culmus project
+KhmerOS.ttf,,,,A set of Cambodian fonts
+KhmerOS_battambang.ttf,Khmer OS,,Khmer OS,^
 KhmerOS_bokor.ttf,Khmer OS,,^,^
 KhmerOS_content.ttf,Khmer OS,,^,^
 KhmerOS_fasthand.ttf,Khmer OS,,^,^
@@ -182,16 +182,16 @@ KhmerOS_muollight.ttf,Khmer OS,,^,^
 KhmerOS_muolpali.ttf,Khmer OS,,^,^
 KhmerOS_siemreap.ttf,Khmer OS,,^,^
 KhmerOS_sys.ttf,Khmer OS,,^,^
-Kinnari-Oblique.ttf,,,Kinnari,Thai Kinnari fonts
-Laconic_Shadow.otf,,Shadow,Laconic,An artistic and minimal sans-serif font family
-Laconic_Light.otf,,Light,^,^
-LateefRegOT.ttf,,Regular,Lateef,An Arabic script font
-Lato-Reg.otf,Lato,Regular,Lato,A classical sans-serif font family
-Lato-Bla.otf,Lato,Black,^,^
-Lato-Hai.otf,Lato,Hairline,^,^
-Lato-Lig.otf,Lato,Light,^,^
-League Gothic.otf,,,League Gothic,A sans serif gothic font
-LettersLaughingDissectionandDestruction.ttf,,,Letters Laughing,Letters Laughing is a decorative/LED sans-serif font
+Kinnari-Oblique.ttf,,,,Thai Kinnari fonts
+Laconic_Shadow.otf,,Shadow,,An artistic and minimal sans-serif font family
+Laconic_Light.otf,,Light,,^
+LateefRegOT.ttf,,Regular,,An Arabic script font
+Lato-Reg.otf,Lato,Regular,,A classical sans-serif font family
+Lato-Bla.otf,Lato,Black,,^
+Lato-Hai.otf,Lato,Hairline,,^
+Lato-Lig.otf,Lato,Light,,^
+League Gothic.otf,,,,A sans serif gothic font
+LettersLaughingDissectionandDestruction.ttf,,,,Letters Laughing is a decorative/LED sans-serif font
 LiberationMono-Regular.ttf,Liberation,Mono,Liberation,Open source versions of several commecial fonts
 LiberationSans-Regular.ttf,Liberation,Sans,^,^
 LiberationSansNarrow-Regular.ttf,Liberation,Sans Narrow,^,^
@@ -213,7 +213,7 @@ Lohit-Nepali.ttf,Lohit,,^,^
 Lohit-Punjabi.ttf,Lohit,,^,^
 Lohit-Tamil.ttf,Lohit,,^,^
 Lohit-Tamil-Classical.ttf,Lohit,,^,^
-Loma-Oblique.ttf,,,Loma,Thai Loma fonts
+Loma-Oblique.ttf,,,,Thai Loma fonts
 mplus-1c-black.ttf,,Black,M+ C,A font which is optimized to be proportioned
 mplus-1c-bold.ttf,,Bold,^,^
 mplus-1c-heavy.ttf,,Heavy,^,^
@@ -258,29 +258,29 @@ mplus-2p-medium.ttf,,Medium,^,^
 mplus-2p-regular.ttf,,Regular,^,^
 mplus-2p-thin.ttf,,Thin,^,^
 ManchuFont2005.ttf,,,Manchu,A Manchu font
-Meera.ttf,,Sans,Meera,Meera Malayalam traditional lipi font
+Meera.ttf,,Sans,,Meera Malayalam traditional lipi font
 eeyek.ttf,,,Meetei Mayek,A font for Meetei Mayek script
-MgOpenCanonicaRegular.ttf,,Serif,MgOpen Canonica,A variable-stroke-width serif font faces
-MgOpenCosmeticaOblique.ttf,,Sans,MgOpen Cosmetica,A variable-stroke-width sans serif font
-MgOpenModataOblique.ttf,,Sans,MgOpen Modata,A set of fixed-stroke-width sans serif font faces
-MgOpenModernaOblique.ttf,,Sans,MgOpen Moderna,A set of fixed-stroke-width sans serif font faces
-Mingzat-R.ttf,,,Mingzat,A font for Lepcha script
-MiriamCLM-Book.ttf,Miriam,,Miriam,A set of fonts for Hebrew from Culmus project
-MiriamMonoCLM-Book.ttf,Miriam,Mono,^,^
-Molengo-Regular.ttf,,,Molengo,A Latin font for documents
+MgOpenCanonicaRegular.ttf,,Serif,,A variable-stroke-width serif font faces
+MgOpenCosmeticaOblique.ttf,,Sans,,A variable-stroke-width sans serif font
+MgOpenModataOblique.ttf,,Sans,,A set of fixed-stroke-width sans serif font faces
+MgOpenModernaOblique.ttf,,Sans,,A set of fixed-stroke-width sans serif font faces
+Mingzat-R.ttf,,,,A font for Lepcha script
+MiriamCLM-Book.ttf,Miriam,,,A set of fonts for Hebrew from Culmus project
+MiriamMonoCLM-Book.ttf,Miriam,Mono,Miriam,^
+Molengo-Regular.ttf,,,,A Latin font for documents
 mona-VLGothic.ttf,,,Mona VLGothic,True Type Japanese font for text arts based on VLGothic
 mona-sazanami.ttf,,,Mona Sazanami,True Type Japanese font for text arts based on Sazanami
-mngltitleotf.ttf,,,Mongolian Title,Mongolian title font
+mngltitleotf.ttf,,,,Mongolian title font
 MTLc3m.ttf,Motoya,Cedar,Motoya,A set of Japanese Gothic-font fonts
 MTLmr3m.ttf,Motoya,Maru,^,^
-mscore-MuseJazz.ttf,,,MuseJazz,MuseScore fonts
-MuseumFourteen.otf,Museum,Regular,Museum,Based on historical metal Centaur fonts
-MuseumBible.otf,Museum,Bible,^,^
-MuseumFoundry.otf,Museum,Foundry,^,^
+mscore-MuseJazz.ttf,,,,MuseScore fonts
+MuseumFourteen.otf,Museum,Regular,,Based on historical metal Centaur fonts
+MuseumBible.otf,Museum,Bible,Museum,^
+MuseumFoundry.otf,Museum,Foundry,Museum,^
 MusiQwik.ttf,Musi,Quik,Musi,A musical notation font family intended for writing lines of actual music
 MusiSync.ttf,Musi,Sync,^,^
-mutante.ttf,,,MutantE,Mutante font used by the HUD in cave9 game
-mm3.ttf,,,Myanmar3,A Myanmar font
+mutante.ttf,,,,Mutante font used by the HUD in cave9 game
+mm3.ttf,,,,A Myanmar font
 NafeesNastaleeq.ttf,Nafees,Nastaleeq,Nafees,Nafees nastaleeq font for writing Urdu in the Nastaleeq script
 NafeesTehreerNaskh.ttf,Nafees,Tahreer Naskh,^,^
 NafeesWeb.ttf,Nafees,Web Naskh,^,^
@@ -291,9 +291,9 @@ NanumGothicLight.ttf,Nanum,Gothic Light,^,^
 NanumGothic.ttf,Nanum,Gothic,^,^
 NanumGothic_Coding.ttf,Nanum,Gothic Coding,^,^
 NanumMyeongjo.ttf,Nanum,Myeongjo,^,^
-Navilu.ttf,,Serif,Navilu,A Kannada sans-serif font
+Navilu.ttf,,Serif,,A Kannada sans-serif font
 newathu.ttf,,,New Athena,A multilingual font
-Norasi-Oblique.ttf,,,Norasi,Thai Norasi fonts
+Norasi-Oblique.ttf,,,,Thai Norasi fonts
 NotCourierSans.ttf,,Sans,NotCourier Sans,NotCourier Sans is a re-interpretation of Nimbus Mono
 NotoSans-Regular.ttf,Noto,Sans,Noto, Remove tofu from the web by providing fonts for all supported scripts
 NotoSansBengali-Regular.ttf,Noto,Sans,^,^
@@ -319,44 +319,44 @@ NotoSansTeluguUI-Regular.ttf,Noto,Sans,^,^
 NotoSansUI-Regular.ttf,Noto,Sans,^,^
 NotoSerif-Regular.ttf,Noto,Serif,^,^
 NotoSerifLao-Regular.ttf,Noto,Serif,^,^
-NuosuSIL.ttf,,,Nuosu,The Nuosu SIL font
-OldStandard-Regular.ttf,,,Old Standard,Old Standard fonts
+NuosuSIL.ttf,,,,The Nuosu SIL font
+OldStandard-Regular.ttf,,,,Old Standard fonts
 OpenDyslexic-Regular.otf,,,Open Dyslexic,A font designed for dyslexics with high readability
 opens___.ttf,,,Open Symbol,A font containing common symbols
-orbitron-black.otf,,,Orbitron,Geometric sans-serif font
-Overpass_Regular.ttf,,Sans,Overpass,A font based on U.S. interstate highway road signage
-PTS55F.ttf,PT Sans,Sans,PT Sans,A pan-Cyrillic font
+orbitron-black.otf,,,,Geometric sans-serif font
+Overpass_Regular.ttf,,Sans,,A font based on U.S. interstate highway road signage
+PTS55F.ttf,PT Sans,Sans,,A pan-Cyrillic font
 PTC55F.ttf,PT Sans,Sans Caption,^,^
 PTN57F.ttf,PT Sans,Sans Narrow,^,^
-Padauk-bold.ttf,Padauk,Bold,Padauk,A font for Burmese and the Myanmar script
-Padauk-book.ttf,Padauk,Book,^,^
-Pagul.ttf,,,Pagul,A font for Saurashtra script
+Padauk-bold.ttf,Padauk,Bold,,A font for Burmese and the Myanmar script
+Padauk-book.ttf,Padauk,Book,Padauk,^
+Pagul.ttf,,,,A font for Saurashtra script
 PaperCuts_outline.ttf,PaperCuts,Outline,PaperCuts,PaperCuts 2.0 font
 PaperCuts20.ttf,PaperCuts,Regular,^,^
-Perizia.ttf,,,Perizia,An English asymmetric font
+Perizia.ttf,,,,An English asymmetric font
 Pothana2000.ttf,,,Pothana 2000,A font for Telugu
-Prociono-Regular.ttf,,,Prociono,A text roman with standard and discretionary ligatures
+Prociono-Regular.ttf,,,,A text roman with standard and discretionary ligatures
 ProggyTinySZ.ttf,,,Proggy Tiny,Proggy Tiny with slashed zero programming font
-Purisa-Oblique.ttf,,,Purisa,Thai Purisa fonts
-Rachana.ttf,,Serif,Rachana,Rachana Malayalam traditional lipi font
+Purisa-Oblique.ttf,,,,Thai Purisa fonts
+Rachana.ttf,,Serif,,Rachana Malayalam traditional lipi font
 RaghuMalayalamSans.ttf,,,^,^
 RiordonFancy.ttf,,,Riordon Fancy,A stylized font
-Rockets.ttf,,,Rockets,"Thibault.org font, vaguely space themed"
-SMonohand.ttf,,Mono,SMonoHand,A handwritten monospace font
-STIX-Regular.otf,,,STIX,Scientific and engineering fonts
-Samyak-Oriya.ttf,,,Samyak Oriya,fonts for Oriya script
-Sarai_07.ttf,,,Sarai,Free Sarai Hindi font
-Sawasdee-Oblique.ttf,,,Sawasdee,Thai Sawasdee fonts
-Scheherazade-R.ttf,,,Scheherazade,An Arabic script font
-SerafettinCartoon-ExtraLight.ttf,,Sans,Serafettin Cartoon,Sans-serif Cartoon fonts
-SerafettinCartoonCondensed.ttf,,Sans,^,^
+Rockets.ttf,,,,"Thibault.org font, vaguely space themed"
+SMonohand.ttf,,Mono,,A handwritten monospace font
+STIX-Regular.otf,,,,Scientific and engineering fonts
+Samyak-Oriya.ttf,,,,fonts for Oriya script
+Sarai_07.ttf,,,,Free Sarai Hindi font
+Sawasdee-Oblique.ttf,,,,Thai Sawasdee fonts
+Scheherazade-R.ttf,,,,An Arabic script font
+SerafettinCartoon-ExtraLight.ttf,,Sans,,Sans-serif Cartoon fonts
+SerafettinCartoonCondensed.ttf,,Sans,Serafettin Cartoon,^
 ShadowedBlack.ttf,,,Shadowed Black,A gothic font with drop shadows
-ShofarRegular.ttf,,,Shofar,A font for Hebrew from Culmus project
-slkscr.ttf,Silkscreen,Regular,Silkscreen,Silkscreen four member type family
+ShofarRegular.ttf,,,,A font for Hebrew from Culmus project
+slkscr.ttf,Silkscreen,Regular,,Silkscreen four member type family
 slkscre.ttf,Silkscreen,Expanded,^,^
-SimpleCLM-Medium.ttf,,,Simple CLM,A fonts for Hebrew from Culmus project
-Sniglet.ttf,,,Sniglet,"A rounded, sans-serif font useful for headlines"
-GoudyStM.otf,,,Sorts Mill Goudy,Goudy Oldstyle and Italic fonts
+SimpleCLM-Medium.ttf,,,,A fonts for Hebrew from Culmus project
+Sniglet.ttf,,,,"A rounded, sans-serif font useful for headlines"
+GoudyStM.otf,,,,Goudy Oldstyle and Italic fonts
 SourceCodePro-Regular.otf,,Mono Regular,Source Code,A set of mono-spaced fonts designed for coding environments
 SourceCodePro-Black.otf,,Mono Black,^,^
 SourceCodePro-ExtraLight.otf,,Mono Extra Light,^,^
@@ -368,16 +368,16 @@ SourceSansPro-Black.otf,,Sans Black,^,^
 SourceSansPro-ExtraLight.otf,,Sans Extralight,^,^
 SourceSansPro-Light.otf,,Sans Light,^,^
 SourceSansPro-Semibold.otf,,Sans Semibold,^,^
-Sportrop.ttf,,-,Sportrop,A multiline decorative font
+Sportrop.ttf,,-,,A multiline decorative font
 StamAshkenazCLM.ttf,Stam,Ashkenaz,Stam,A set of fonts for Hebrew from Culmus project
 StamSefaradCLM.ttf,Stam,Sefarad,^,^
-StayPuft.ttf,,,StayPuft,"Thibault.org font, rounded and marshmellowy"
-SteveHand.ttf,,Cursive,Steve,A handwriting font
-Suruma.ttf,,,Suruma,fonts for Malayalam script
-Symbola.ttf,,-,Symbola,A symbol font
-Tangerine_Regular.ttf,,Calligraphy,Tangerine,Tangerine is a calligraphy font inspired by many italic chancery hands
+StayPuft.ttf,,,,"Thibault.org font, rounded and marshmellowy"
+SteveHand.ttf,,Cursive,,A handwriting font
+Suruma.ttf,,,,A set of fonts for Malayalam script
+Symbola.ttf,,,,A symbol font
+Tangerine_Regular.ttf,,Calligraphy,,Tangerine is a calligraphy font inspired by many italic chancery hands
 TibMachUni-1.901b.ttf,,,Tibetan Machine Uni,"Tibetan Machine Uni font for Tibetan, Dzongkha and Ladakhi"
-Tinos-Regular.ttf,,-,Tinos,The croscore Tinos family fonts
+Tinos-Regular.ttf,,,,The croscore Tinos family fonts
 Tiresias Infofont.ttf,Tiresias,Info,Tiresias,Specialized fonts for use by the visually impaired
 TIRESIAS INFOFONTZ.ttf,Tiresias,Info No-crossed-zero,^,^
 TIREKV__.ttf,Tiresias,Key,^,^
@@ -386,38 +386,38 @@ Tiresias PCfont.ttf,Tiresias,PC,^,^
 TIRESIAS PCFONTZ.ttf,Tiresias,PC No-crossed-zero,^,^
 Tiresias Signfont.ttf,Tiresias,Signs,^,^
 TIRESIAS SIGNFONTZ.ttf,Tiresias,Signs No-crossed-zero,^,^
-Titillium-Regular.otf,,Sans Regular,Titillium,A sans-serif font designed inside Campi Visivi's Type Design course
-Titillium-Black.otf,,Sans Bold,^,^
-Titillium-Light.otf,,Sans Light,^,^
-Titillium-LightUpright.otf,,Sans Upright,^,^
-tiza_chalk.ttf,,Slab-serif,Tiza,Chalky slab-serif fonts
+Titillium-Regular.otf,,Sans Regular,,A sans-serif font designed inside Campi Visivi's Type Design course
+Titillium-Black.otf,,Sans Bold,,^
+Titillium-Light.otf,,Sans Light,,^
+Titillium-LightUpright.otf,,Sans Upright,,^
+tiza_chalk.ttf,,Slab-serif,,Chalky slab-serif fonts
 TlwgTypist-Oblique.ttf,Thai Tlwg,Typist,Thai Tlwg,A set of Thai fonts from the Thai Linux Working Group
 TlwgTypo-Oblique.ttf,Thai Tlwg,Typo,^,^
 TlwgMono-Oblique.ttf,Thai Tlwg,Mono,^,^
 TlwgTypewriter-Oblique.ttf,Thai Tlwg,Typewriter,^,^
-tobec___.ttf,,Sans,To Be Continued,Decorative Sans Serif font
-Trabajo.otf,,Serif,Trabajo,Latin Serif font that supports Shavian alphabet
+tobec___.ttf,,Sans,,Decorative Sans Serif font
+Trabajo.otf,,Serif,,Latin Serif font that supports Shavian alphabet
 TribunADFStd-Regular.ttf,Tribun,Regular,Tribun,A newsprint-like serif font
 TribunADFStd-Cond.ttf,Tribun,Condensed,^,^
 TribunADFStd-Med.ttf,Tribun,Medium,^,^
 TribunADFStd-CondBoldItalic.ttf,Tribun,Condensed Bold italic,^,^
-Tuffy.ttf,,Sans,Tuffy,Generic sans font
-UKIJTuz.ttf,,,UKIJ Tuz,Uyghur Computer Science Association (UKIJ) fonts
+Tuffy.ttf,,Sans,,Generic sans font
+UKIJTuz.ttf,,,,Uyghur Computer Science Association (UKIJ) fonts
 Ubuntu-Title.ttf,,,Ubuntu Title,A titling decorative font to create the lettering of the Ubuntu logo
-Umpush-Light.ttf,,,Umpush,Thai Umpush fonts
-UnDinaru.ttf,,,UnDinaru,Un Core fonts - UnDinaru
+Umpush-Light.ttf,,,,Thai Umpush fonts
+UnDinaru.ttf,,,,Un Core fonts - UnDinaru
 Unikuweb.ttf,,,Unikurd,A widely used Kurdish font for Arabic-like scripts and Latin
 VDRSymbolsSans.ttf,,,Symbols Sans,VDR symbol fonts
-VL-Gothic-Regular.ttf,VL Gothic,Regular,VL Gothic,A Japanese font
-VL-PGothic-Regular.ttf,VL Gothic,Proportional,^,^
+VL-Gothic-Regular.ttf,VL Gothic,Regular,,A Japanese font
+VL-PGothic-Regular.ttf,VL Gothic,Proportional,VL Gothic,^
 Vemana2000.ttf,,,Vemana,A font for Telugu
-Vollkorn-Regular.ttf,,Serif,Vollkorn,Serif Latin font with a focus on good readability
-Waree-Oblique.ttf,,,Waree,A serif Latin font that is designed to have good readability
-WarenderBibliothek.otf,,,Warender Bibliothek,A fantasy font by Peter Schwanemann
-Widelands.otf,,,Widelands,A Latin font inspired by feudal calligraphy
-Xaporho.otf,,,Xaporho,A Latin font that is sharp and angular
-YanoneKaffeesatz-Light.otf,,,Yanone Kaffeesatz,Yanone Kaffeesatz decorative fonts
-YanoneTagesschrift.ttf,,Serif,Yanone Tagesschrift,A serif decorative latin font
+Vollkorn-Regular.ttf,,Serif,,Serif Latin font with a focus on good readability
+Waree-Oblique.ttf,,,,A serif Latin font that is designed to have good readability
+WarenderBibliothek.otf,,,,A fantasy font by Peter Schwanemann
+Widelands.otf,,,,A Latin font inspired by feudal calligraphy
+Xaporho.otf,,,,A Latin font that is sharp and angular
+YanoneKaffeesatz-Light.otf,,,,Yanone Kaffeesatz decorative fonts
+YanoneTagesschrift.ttf,,Serif,,A serif decorative latin font
 cmmi10.ttf,LyxMathML,,Lyx/MathML,Lyx/MathML fonts
 cmr10.ttf,LyxMathML,,^,^
 cmsy10.ttf,LyxMathML,,^,^

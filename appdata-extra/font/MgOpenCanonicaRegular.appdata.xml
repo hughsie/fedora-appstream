@@ -2,7 +2,6 @@
 <application>
   <id type="font">MgOpenCanonicaRegular.ttf</id>
   <licence>CC0</licence>
-  <name>MgOpen Canonica</name>
   <summary>A variable-stroke-width serif font faces</summary>
   <metadata>
     <value key="FontClassifier">Serif</value>

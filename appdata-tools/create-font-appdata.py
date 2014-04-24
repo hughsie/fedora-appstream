@@ -44,21 +44,14 @@ def main():
         name = row[3]
         summary = row[4]
 
-        if len(name) == 0:
-            print "WARNING", font_id, "missing name using", font_id
-            continue
-        if len(summary) == 0:
-            print "WARNING", font_id, "missing summary"
-            continue
-
         # save
         if name == '^':
             name = old_name
-        else:
+        elif len(name) > 0:
             old_name = name
         if summary == '^':
             summary = old_summary
-        else:
+        elif len(summary) > 0:
             old_summary = summary
 
         filename = '../appdata-extra/font/' + font_id.rsplit('.', 2)[0] + '.appdata.xml'

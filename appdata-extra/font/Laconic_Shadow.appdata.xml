@@ -2,7 +2,6 @@
 <application>
   <id type="font">Laconic_Shadow.otf</id>
   <licence>CC0</licence>
-  <name>Laconic</name>
   <summary>An artistic and minimal sans-serif font family</summary>
   <metadata>
     <value key="FontClassifier">Shadow</value>

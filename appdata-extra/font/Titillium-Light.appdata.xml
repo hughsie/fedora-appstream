@@ -2,7 +2,6 @@
 <application>
   <id type="font">Titillium-Light.otf</id>
   <licence>CC0</licence>
-  <name>Titillium</name>
   <summary>A sans-serif font designed inside Campi Visivi's Type Design course</summary>
   <metadata>
     <value key="FontClassifier">Sans Light</value>

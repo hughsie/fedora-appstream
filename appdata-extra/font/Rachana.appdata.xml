@@ -2,7 +2,6 @@
 <application>
   <id type="font">Rachana.ttf</id>
   <licence>CC0</licence>
-  <name>Rachana</name>
   <summary>Rachana Malayalam traditional lipi font</summary>
   <metadata>
     <value key="FontClassifier">Serif</value>

@@ -2,7 +2,6 @@
 <application>
   <id type="font">LateefRegOT.ttf</id>
   <licence>CC0</licence>
-  <name>Lateef</name>
   <summary>An Arabic script font</summary>
   <metadata>
     <value key="FontClassifier">Regular</value>

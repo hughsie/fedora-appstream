@@ -2,7 +2,6 @@
 <application>
   <id type="font">Domestic_Manners.ttf</id>
   <licence>CC0</licence>
-  <name>Domestic Manners</name>
   <summary>A handwriting font by Dustin Norlander</summary>
   <metadata>
     <value key="FontClassifier">Cursive</value>

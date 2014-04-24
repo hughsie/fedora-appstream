@@ -2,7 +2,6 @@
 <application>
   <id type="font">GoudyBookletter1911.otf</id>
   <licence>CC0</licence>
-  <name>Goudy Bookletter 1911</name>
   <summary>Clean serif font based on Kennerly Old Style</summary>
   <metadata>
     <value key="FontClassifier">Serif</value>

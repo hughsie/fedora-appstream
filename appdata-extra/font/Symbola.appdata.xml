@@ -2,9 +2,5 @@
 <application>
   <id type="font">Symbola.ttf</id>
   <licence>CC0</licence>
-  <name>Symbola</name>
   <summary>A symbol font</summary>
-  <metadata>
-    <value key="FontClassifier">-</value>
-  </metadata>
 </application>
