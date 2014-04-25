@@ -5,7 +5,7 @@
   <name>BPG Excelsior</name>
   <summary>Excelsior family of BPG Georgian fonts</summary>
   <metadata>
-    <value key="FontClassifier">Condensed</value>
+    <value key="FontSubFamily">Condensed</value>
     <value key="FontParent">BPG Excelsior</value>
   </metadata>
 </application>

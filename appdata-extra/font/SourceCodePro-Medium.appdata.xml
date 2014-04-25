@@ -5,6 +5,6 @@
   <name>Source Code</name>
   <summary>A set of mono-spaced fonts designed for coding environments</summary>
   <metadata>
-    <value key="FontClassifier">Mono Medium</value>
+    <value key="FontSubFamily">Mono Medium</value>
   </metadata>
 </application>

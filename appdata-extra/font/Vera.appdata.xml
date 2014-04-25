@@ -5,7 +5,7 @@
   <name>Bitstream Vera</name>
   <summary>High quality Latin fonts by Bitstream</summary>
   <metadata>
-    <value key="FontClassifier">Sans</value>
+    <value key="FontSubFamily">Sans</value>
     <value key="FontParent">Bitstream Vera</value>
   </metadata>
 </application>

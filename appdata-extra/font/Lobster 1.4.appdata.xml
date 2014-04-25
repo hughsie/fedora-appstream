@@ -5,6 +5,6 @@
   <name>Lobster</name>
   <summary>A bold condensed script fully loaded with ligatures and alternates</summary>
   <metadata>
-    <value key="FontClassifier">Bold</value>
+    <value key="FontSubFamily">Bold</value>
   </metadata>
 </application>

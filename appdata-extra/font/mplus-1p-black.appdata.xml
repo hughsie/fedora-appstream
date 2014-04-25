@@ -5,6 +5,6 @@
   <name>M+ P</name>
   <summary>A font which is aimed as sophisticated and relaxed design</summary>
   <metadata>
-    <value key="FontClassifier">Black</value>
+    <value key="FontSubFamily">Black</value>
   </metadata>
 </application>

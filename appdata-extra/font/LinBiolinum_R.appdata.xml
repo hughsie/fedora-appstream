@@ -5,7 +5,7 @@
   <name>Biolinum</name>
   <summary>Sans-serif fonts from Linux Libertine Open fonts</summary>
   <metadata>
-    <value key="FontClassifier">Sans</value>
+    <value key="FontSubFamily">Sans</value>
     <value key="FontParent">Biolinum</value>
   </metadata>
 </application>

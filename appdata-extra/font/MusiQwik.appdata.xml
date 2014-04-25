@@ -5,7 +5,7 @@
   <name>Musi</name>
   <summary>A musical notation font family intended for writing lines of actual music</summary>
   <metadata>
-    <value key="FontClassifier">Quik</value>
+    <value key="FontSubFamily">Quik</value>
     <value key="FontParent">Musi</value>
   </metadata>
 </application>

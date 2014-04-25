@@ -5,7 +5,7 @@
   <name>Écolier court</name>
   <summary>Schoolchildren cursive fonts</summary>
   <metadata>
-    <value key="FontClassifier">Cursive</value>
+    <value key="FontSubFamily">Cursive</value>
     <value key="FontParent">Ecolier court</value>
   </metadata>
 </application>

@@ -5,7 +5,7 @@
   <name>Liberation</name>
   <summary>Open source versions of several commecial fonts</summary>
   <metadata>
-    <value key="FontClassifier">Serif</value>
+    <value key="FontSubFamily">Serif</value>
     <value key="FontParent">Liberation</value>
   </metadata>
 </application>

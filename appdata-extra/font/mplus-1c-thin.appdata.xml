@@ -5,6 +5,6 @@
   <name>M+ C</name>
   <summary>A font which is optimized to be proportioned</summary>
   <metadata>
-    <value key="FontClassifier">Thin</value>
+    <value key="FontSubFamily">Thin</value>
   </metadata>
 </application>

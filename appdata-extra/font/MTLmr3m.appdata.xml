@@ -5,7 +5,7 @@
   <name>Motoya</name>
   <summary>A set of Japanese Gothic-font fonts</summary>
   <metadata>
-    <value key="FontClassifier">Maru</value>
+    <value key="FontSubFamily">Maru</value>
     <value key="FontParent">Motoya</value>
   </metadata>
 </application>

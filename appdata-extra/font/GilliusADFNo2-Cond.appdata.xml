@@ -5,7 +5,7 @@
   <name>Gillius</name>
   <summary>Gillius ADF sans-serif font family</summary>
   <metadata>
-    <value key="FontClassifier">No2 Consensed</value>
+    <value key="FontSubFamily">No2 Consensed</value>
     <value key="FontParent">Gillius</value>
   </metadata>
 </application>

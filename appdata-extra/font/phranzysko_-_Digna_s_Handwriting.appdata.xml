@@ -4,6 +4,6 @@
   <licence>CC0</licence>
   <summary>Phranzysko's sister handwriting</summary>
   <metadata>
-    <value key="FontClassifier">Cursive</value>
+    <value key="FontSubFamily">Cursive</value>
   </metadata>
 </application>

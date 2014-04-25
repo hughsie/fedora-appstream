@@ -5,7 +5,7 @@
   <name>Nanum</name>
   <summary>A collection of Myeongjo and Gothic Korean font families</summary>
   <metadata>
-    <value key="FontClassifier">Brush</value>
+    <value key="FontSubFamily">Brush</value>
     <value key="FontParent">Nanum</value>
   </metadata>
 </application>

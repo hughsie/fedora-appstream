@@ -4,6 +4,6 @@
   <licence>CC0</licence>
   <summary>A sans-serif font for Gujarati script</summary>
   <metadata>
-    <value key="FontClassifier">Sans</value>
+    <value key="FontSubFamily">Sans</value>
   </metadata>
 </application>

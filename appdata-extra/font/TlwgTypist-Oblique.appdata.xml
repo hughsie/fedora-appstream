@@ -5,7 +5,7 @@
   <name>Thai Tlwg</name>
   <summary>A set of Thai fonts from the Thai Linux Working Group</summary>
   <metadata>
-    <value key="FontClassifier">Typist</value>
+    <value key="FontSubFamily">Typist</value>
     <value key="FontParent">Thai Tlwg</value>
   </metadata>
 </application>

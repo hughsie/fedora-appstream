@@ -5,7 +5,7 @@
   <name>Arundina</name>
   <summary>A Thai Arundina font</summary>
   <metadata>
-    <value key="FontClassifier">Sans Mono</value>
+    <value key="FontSubFamily">Sans Mono</value>
     <value key="FontParent">Arundina</value>
   </metadata>
 </application>

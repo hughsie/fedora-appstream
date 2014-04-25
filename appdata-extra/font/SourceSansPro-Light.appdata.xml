@@ -5,6 +5,6 @@
   <name>Source Sans</name>
   <summary>A set of fonts designed for user interfaces</summary>
   <metadata>
-    <value key="FontClassifier">Sans Light</value>
+    <value key="FontSubFamily">Sans Light</value>
   </metadata>
 </application>

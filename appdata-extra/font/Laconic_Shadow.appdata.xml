@@ -4,6 +4,6 @@
   <licence>CC0</licence>
   <summary>An artistic and minimal sans-serif font family</summary>
   <metadata>
-    <value key="FontClassifier">Shadow</value>
+    <value key="FontSubFamily">Shadow</value>
   </metadata>
 </application>

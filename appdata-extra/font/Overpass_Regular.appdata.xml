@@ -4,6 +4,6 @@
   <licence>CC0</licence>
   <summary>A font based on U.S. interstate highway road signage</summary>
   <metadata>
-    <value key="FontClassifier">Sans</value>
+    <value key="FontSubFamily">Sans</value>
   </metadata>
 </application>

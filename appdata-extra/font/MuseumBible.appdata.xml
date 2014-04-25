@@ -5,7 +5,7 @@
   <name>Museum</name>
   <summary>Based on historical metal Centaur fonts</summary>
   <metadata>
-    <value key="FontClassifier">Bible</value>
+    <value key="FontSubFamily">Bible</value>
     <value key="FontParent">Museum</value>
   </metadata>
 </application>

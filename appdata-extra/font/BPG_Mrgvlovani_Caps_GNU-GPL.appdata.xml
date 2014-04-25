@@ -5,7 +5,7 @@
   <name>BPG Mrgvlovani</name>
   <summary>Mrgvlovani family of BPG Georgian fonts</summary>
   <metadata>
-    <value key="FontClassifier">Caps</value>
+    <value key="FontSubFamily">Caps</value>
     <value key="FontParent">BPG Mrgvlovani</value>
   </metadata>
 </application>

@@ -5,7 +5,7 @@
   <name>Gentium Alternate</name>
   <summary>SIL Gentium fonts</summary>
   <metadata>
-    <value key="FontClassifier">Alternate</value>
+    <value key="FontSubFamily">Alternate</value>
     <value key="FontParent">Gentium</value>
   </metadata>
 </application>

@@ -5,7 +5,7 @@
   <name>Libertine</name>
   <summary>Linux Libertine Open fonts</summary>
   <metadata>
-    <value key="FontClassifier">Regular</value>
+    <value key="FontSubFamily">Regular</value>
     <value key="FontParent">Libertine</value>
   </metadata>
 </application>

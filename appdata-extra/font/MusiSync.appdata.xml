@@ -5,7 +5,7 @@
   <name>Musi</name>
   <summary>A musical notation font family intended for writing lines of actual music</summary>
   <metadata>
-    <value key="FontClassifier">Sync</value>
+    <value key="FontSubFamily">Sync</value>
     <value key="FontParent">Musi</value>
   </metadata>
 </application>

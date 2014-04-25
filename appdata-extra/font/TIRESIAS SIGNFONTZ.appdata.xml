@@ -5,7 +5,7 @@
   <name>Tiresias</name>
   <summary>Specialized fonts for use by the visually impaired</summary>
   <metadata>
-    <value key="FontClassifier">Signs No-crossed-zero</value>
+    <value key="FontSubFamily">Signs No-crossed-zero</value>
     <value key="FontParent">Tiresias</value>
   </metadata>
 </application>

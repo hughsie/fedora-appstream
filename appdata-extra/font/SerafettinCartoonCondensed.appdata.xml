@@ -5,6 +5,6 @@
   <name>Serafettin Cartoon</name>
   <summary>Sans-serif Cartoon fonts</summary>
   <metadata>
-    <value key="FontClassifier">Sans</value>
+    <value key="FontSubFamily">Sans</value>
   </metadata>
 </application>

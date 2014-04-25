@@ -4,6 +4,6 @@
   <licence>CC0</licence>
   <summary>A sans-serif font designed inside Campi Visivi's Type Design course</summary>
   <metadata>
-    <value key="FontClassifier">Sans Regular</value>
+    <value key="FontSubFamily">Sans Regular</value>
   </metadata>
 </application>

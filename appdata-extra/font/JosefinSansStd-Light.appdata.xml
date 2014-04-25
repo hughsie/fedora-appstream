@@ -5,6 +5,6 @@
   <name>Josefin</name>
   <summary>A latin font that is geometric, elegant, and kind of vintage</summary>
   <metadata>
-    <value key="FontClassifier">Sans</value>
+    <value key="FontSubFamily">Sans</value>
   </metadata>
 </application>

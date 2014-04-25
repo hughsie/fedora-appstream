@@ -4,6 +4,6 @@
   <licence>CC0</licence>
   <summary>A variable-stroke-width sans serif font</summary>
   <metadata>
-    <value key="FontClassifier">Sans</value>
+    <value key="FontSubFamily">Sans</value>
   </metadata>
 </application>

@@ -5,7 +5,7 @@
   <name>Nanum</name>
   <summary>A collection of Myeongjo and Gothic Korean font families</summary>
   <metadata>
-    <value key="FontClassifier">Myeongjo</value>
+    <value key="FontSubFamily">Myeongjo</value>
     <value key="FontParent">Nanum</value>
   </metadata>
 </application>

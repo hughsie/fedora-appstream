@@ -4,6 +4,6 @@
   <licence>CC0</licence>
   <summary>Chalky slab-serif fonts</summary>
   <metadata>
-    <value key="FontClassifier">Slab-serif</value>
+    <value key="FontSubFamily">Slab-serif</value>
   </metadata>
 </application>

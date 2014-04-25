@@ -4,7 +4,7 @@
   <licence>CC0</licence>
   <summary>Sans family of BPG Georgian fonts</summary>
   <metadata>
-    <value key="FontClassifier">Sans</value>
+    <value key="FontSubFamily">Sans</value>
     <value key="FontParent">BPG Sans</value>
   </metadata>
 </application>

@@ -4,6 +4,6 @@
   <licence>CC0</licence>
   <summary>An artistic and minimal sans-serif font family</summary>
   <metadata>
-    <value key="FontClassifier">Light</value>
+    <value key="FontSubFamily">Light</value>
   </metadata>
 </application>

@@ -5,7 +5,7 @@
   <name>DejaVu Latin Greek and Cyrillic</name>
   <summary>A set of sans-serif font faces, Latin-Greek-Cyrillic subset</summary>
   <metadata>
-    <value key="FontClassifier">Sans</value>
+    <value key="FontSubFamily">Sans</value>
     <value key="FontParent">DejaVuLGC</value>
   </metadata>
 </application>

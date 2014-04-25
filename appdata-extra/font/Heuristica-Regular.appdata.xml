@@ -5,6 +5,6 @@
   <name>Heuristica</name>
   <summary>A serif latin & cyrillic font</summary>
   <metadata>
-    <value key="FontClassifier">Serif</value>
+    <value key="FontSubFamily">Serif</value>
   </metadata>
 </application>

@@ -5,7 +5,7 @@
   <name>Baekmuk</name>
   <summary>A set of Korean Baekmuk fonts</summary>
   <metadata>
-    <value key="FontClassifier">Dotum</value>
+    <value key="FontSubFamily">Dotum</value>
     <value key="FontParent">Baekmuk</value>
   </metadata>
 </application>

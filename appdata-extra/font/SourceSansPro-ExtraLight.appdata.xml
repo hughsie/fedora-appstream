@@ -5,6 +5,6 @@
   <name>Source Sans</name>
   <summary>A set of fonts designed for user interfaces</summary>
   <metadata>
-    <value key="FontClassifier">Sans Extralight</value>
+    <value key="FontSubFamily">Sans Extralight</value>
   </metadata>
 </application>

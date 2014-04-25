@@ -5,6 +5,6 @@
   <name>M+ 2M</name>
   <summary>A font which emphasizes the balance of natural letterform with high legibility</summary>
   <metadata>
-    <value key="FontClassifier">Medium</value>
+    <value key="FontSubFamily">Medium</value>
   </metadata>
 </application>

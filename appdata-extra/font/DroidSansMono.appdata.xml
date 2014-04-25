@@ -5,7 +5,7 @@
   <name>Droid</name>
   <summary>A humanist sans serif font</summary>
   <metadata>
-    <value key="FontClassifier">Sans Mono</value>
+    <value key="FontSubFamily">Sans Mono</value>
     <value key="FontParent">Droid</value>
   </metadata>
 </application>

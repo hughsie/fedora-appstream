@@ -4,6 +4,6 @@
   <licence>CC0</licence>
   <summary>Tangerine is a calligraphy font inspired by many italic chancery hands</summary>
   <metadata>
-    <value key="FontClassifier">Calligraphy</value>
+    <value key="FontSubFamily">Calligraphy</value>
   </metadata>
 </application>

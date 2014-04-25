@@ -5,7 +5,7 @@
   <name>Noto</name>
   <summary> Remove tofu from the web by providing fonts for all supported scripts</summary>
   <metadata>
-    <value key="FontClassifier">Sans</value>
+    <value key="FontSubFamily">Sans</value>
     <value key="FontParent">Noto</value>
   </metadata>
 </application>

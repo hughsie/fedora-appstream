@@ -5,7 +5,7 @@
   <name>BPG Nateli</name>
   <summary>Nateli family of BPG Georgian fonts</summary>
   <metadata>
-    <value key="FontClassifier">Condensed</value>
+    <value key="FontSubFamily">Condensed</value>
     <value key="FontParent">BPG Nateli</value>
   </metadata>
 </application>

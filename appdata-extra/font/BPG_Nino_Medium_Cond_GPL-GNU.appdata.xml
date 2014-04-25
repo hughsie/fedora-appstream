@@ -5,7 +5,7 @@
   <name>BPG Nino Medium</name>
   <summary>Nino Medium family of BPG Georgian fonts</summary>
   <metadata>
-    <value key="FontClassifier">Condensed</value>
+    <value key="FontSubFamily">Condensed</value>
     <value key="FontParent">BPG Nino Medium</value>
   </metadata>
 </application>

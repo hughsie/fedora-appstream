@@ -5,7 +5,7 @@
   <name>Baekmuk</name>
   <summary>A set of Korean Baekmuk fonts</summary>
   <metadata>
-    <value key="FontClassifier">Gulim</value>
+    <value key="FontSubFamily">Gulim</value>
     <value key="FontParent">Baekmuk</value>
   </metadata>
 </application>

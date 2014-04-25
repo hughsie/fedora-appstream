@@ -5,7 +5,7 @@
   <name>Baekmuk</name>
   <summary>A set of Korean Baekmuk fonts</summary>
   <metadata>
-    <value key="FontClassifier">Batang</value>
+    <value key="FontSubFamily">Batang</value>
     <value key="FontParent">Baekmuk</value>
   </metadata>
 </application>

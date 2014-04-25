@@ -4,7 +4,7 @@
   <licence>CC0</licence>
   <summary>Silkscreen four member type family</summary>
   <metadata>
-    <value key="FontClassifier">Regular</value>
+    <value key="FontSubFamily">Regular</value>
     <value key="FontParent">Silkscreen</value>
   </metadata>
 </application>

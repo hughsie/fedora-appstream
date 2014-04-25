@@ -5,7 +5,7 @@
   <name>Motoya</name>
   <summary>A set of Japanese Gothic-font fonts</summary>
   <metadata>
-    <value key="FontClassifier">Cedar</value>
+    <value key="FontSubFamily">Cedar</value>
     <value key="FontParent">Motoya</value>
   </metadata>
 </application>

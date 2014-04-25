@@ -4,7 +4,7 @@
   <licence>CC0</licence>
   <summary>Serif family of BPG Georgian fonts</summary>
   <metadata>
-    <value key="FontClassifier">Serif</value>
+    <value key="FontSubFamily">Serif</value>
     <value key="FontParent">BPG Serif</value>
   </metadata>
 </application>

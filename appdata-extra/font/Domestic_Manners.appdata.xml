@@ -4,6 +4,6 @@
   <licence>CC0</licence>
   <summary>A handwriting font by Dustin Norlander</summary>
   <metadata>
-    <value key="FontClassifier">Cursive</value>
+    <value key="FontSubFamily">Cursive</value>
   </metadata>
 </application>

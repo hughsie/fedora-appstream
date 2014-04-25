@@ -4,6 +4,6 @@
   <licence>CC0</licence>
   <summary>An Arabic script font</summary>
   <metadata>
-    <value key="FontClassifier">Regular</value>
+    <value key="FontSubFamily">Regular</value>
   </metadata>
 </application>

@@ -5,7 +5,7 @@
   <name>PT Sans</name>
   <summary>A pan-Cyrillic font</summary>
   <metadata>
-    <value key="FontClassifier">Sans Caption</value>
+    <value key="FontSubFamily">Sans Caption</value>
     <value key="FontParent">PT Sans</value>
   </metadata>
 </application>

@@ -5,7 +5,7 @@
   <name>VL Gothic</name>
   <summary>A Japanese font</summary>
   <metadata>
-    <value key="FontClassifier">Proportional</value>
+    <value key="FontSubFamily">Proportional</value>
     <value key="FontParent">VL Gothic</value>
   </metadata>
 </application>

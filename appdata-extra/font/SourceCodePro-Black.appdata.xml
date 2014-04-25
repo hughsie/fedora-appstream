@@ -5,6 +5,6 @@
   <name>Source Code</name>
   <summary>A set of mono-spaced fonts designed for coding environments</summary>
   <metadata>
-    <value key="FontClassifier">Mono Black</value>
+    <value key="FontSubFamily">Mono Black</value>
   </metadata>
 </application>

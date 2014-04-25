@@ -4,6 +4,6 @@
   <licence>CC0</licence>
   <summary>A coding-friendly monospace font</summary>
   <metadata>
-    <value key="FontClassifier">Mono</value>
+    <value key="FontSubFamily">Mono</value>
   </metadata>
 </application>

@@ -5,7 +5,7 @@
   <name>Silkscreen</name>
   <summary>Silkscreen four member type family</summary>
   <metadata>
-    <value key="FontClassifier">Expanded</value>
+    <value key="FontSubFamily">Expanded</value>
     <value key="FontParent">Silkscreen</value>
   </metadata>
 </application>

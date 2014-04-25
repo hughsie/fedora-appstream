@@ -4,6 +4,6 @@
   <licence>CC0</licence>
   <summary>A decorative contrast sans-serif font</summary>
   <metadata>
-    <value key="FontClassifier">Sans</value>
+    <value key="FontSubFamily">Sans</value>
   </metadata>
 </application>

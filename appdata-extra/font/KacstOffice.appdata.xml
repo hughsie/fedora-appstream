@@ -5,7 +5,7 @@
   <name>Kacst</name>
   <summary>Fonts for arabic from arabeyes project</summary>
   <metadata>
-    <value key="FontClassifier">Office</value>
+    <value key="FontSubFamily">Office</value>
     <value key="FontParent">Kacst</value>
   </metadata>
 </application>

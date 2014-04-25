@@ -5,7 +5,7 @@
   <name>Kacst</name>
   <summary>Fonts for arabic from arabeyes project</summary>
   <metadata>
-    <value key="FontClassifier">Book</value>
+    <value key="FontSubFamily">Book</value>
     <value key="FontParent">Kacst</value>
   </metadata>
 </application>

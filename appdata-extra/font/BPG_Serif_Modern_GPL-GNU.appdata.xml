@@ -5,7 +5,7 @@
   <name>BPG Serif</name>
   <summary>Serif family of BPG Georgian fonts</summary>
   <metadata>
-    <value key="FontClassifier">Serif Modern</value>
+    <value key="FontSubFamily">Serif Modern</value>
     <value key="FontParent">BPG Serif</value>
   </metadata>
 </application>

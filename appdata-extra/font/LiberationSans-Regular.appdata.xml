@@ -5,7 +5,7 @@
   <name>Liberation</name>
   <summary>Open source versions of several commecial fonts</summary>
   <metadata>
-    <value key="FontClassifier">Sans</value>
+    <value key="FontSubFamily">Sans</value>
     <value key="FontParent">Liberation</value>
   </metadata>
 </application>

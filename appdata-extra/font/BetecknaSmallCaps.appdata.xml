@@ -5,7 +5,7 @@
   <name>Beteckna</name>
   <summary>Beteckna sans-serif fonts</summary>
   <metadata>
-    <value key="FontClassifier">Sans Small Caps</value>
+    <value key="FontSubFamily">Sans Small Caps</value>
     <value key="FontParent">Beteckna</value>
   </metadata>
 </application>

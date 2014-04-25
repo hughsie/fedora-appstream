@@ -5,6 +5,6 @@
   <name>NotCourier Sans</name>
   <summary>NotCourier Sans is a re-interpretation of Nimbus Mono</summary>
   <metadata>
-    <value key="FontClassifier">Sans</value>
+    <value key="FontSubFamily">Sans</value>
   </metadata>
 </application>

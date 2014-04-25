@@ -75,7 +75,7 @@ def main():
         if len(classifier) > 0 or len(parent) > 0:
             txt += "  <metadata>\n"
             if len(classifier) > 0:
-                txt += "    <value key=\"FontClassifier\">%s</value>\n" % classifier
+                txt += "    <value key=\"FontSubFamily\">%s</value>\n" % classifier
             if len(parent) > 0:
                 txt += "    <value key=\"FontParent\">%s</value>\n" % parent
             txt += "  </metadata>\n"
