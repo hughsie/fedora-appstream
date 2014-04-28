@@ -4,7 +4,6 @@
   <licence>CC0</licence>
   <summary>A classical sans-serif font family</summary>
   <metadata>
-    <value key="FontSubFamily">Black</value>
     <value key="FontParent">Lato</value>
   </metadata>
 </application>

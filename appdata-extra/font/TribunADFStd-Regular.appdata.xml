@@ -5,7 +5,6 @@
   <name>Tribun</name>
   <summary>A newsprint-like serif font</summary>
   <metadata>
-    <value key="FontSubFamily">Regular</value>
     <value key="FontParent">Tribun</value>
   </metadata>
 </application>

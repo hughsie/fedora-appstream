@@ -4,7 +4,6 @@
   <licence>CC0</licence>
   <summary>SIL Gentium fonts</summary>
   <metadata>
-    <value key="FontSubFamily">Book</value>
     <value key="FontParent">GentiumMain</value>
   </metadata>
 </application>

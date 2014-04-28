@@ -5,7 +5,6 @@
   <name>Tiresias</name>
   <summary>Specialized fonts for use by the visually impaired</summary>
   <metadata>
-    <value key="FontSubFamily">Large print</value>
     <value key="FontParent">Tiresias</value>
   </metadata>
 </application>

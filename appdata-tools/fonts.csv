@@ -23,19 +23,19 @@ BPG_DejaVu_Sans_2011_GPL-GNU.ttf,,,BPG DejaVu Sans,DejaVu Sans with BPG Georgian
 BPG_Elite_GPL-GNU.ttf,,,,Elite family of BPG Georgian fonts
 BPG_Excelsior_Caps_GPL-GNU.ttf,BPG Excelsior,Caps,BPG Excelsior,Excelsior family of BPG Georgian fonts
 BPG_Excelsior_Condenced_GPL-GNU.ttf,BPG Excelsior,Condensed,^,^
-BPG_Excelsior_GPL-GNU.ttf,BPG Excelsior,Regular,,^
+BPG_Excelsior_GPL-GNU.ttf,BPG Excelsior,,,^
 BPG_Glaho_GPL-GNU.ttf,,,,Glaho family of BPG Georgian fonts
 BPG_Gorda_GNU-GPL.ttf,,,,Gorda family of BPG Georgian fonts
 BPG_Ingiri_GPL-GNU.ttf,,,,Ingiri family of BPG Georgian fonts
 BPG_Irubaqidze_GPL-GNU.otf,,,,Irubaqidze family of BPG Georgian fonts
 BPG_Mikhail_Stephan_GPL-GNU.otf,,,,Mikhail Stephan family of BPG Georgian fonts
 BPG_Mrgvlovani_Caps_GNU-GPL.ttf,BPG Mrgvlovani,Caps,BPG Mrgvlovani,Mrgvlovani family of BPG Georgian fonts
-BPG_Mrgvlovani_GPL-GNU.ttf,BPG Mrgvlovani,Regular,,^
+BPG_Mrgvlovani_GPL-GNU.ttf,BPG Mrgvlovani,,,^
 BPG_Nateli_Caps_GPL-GNU.ttf,BPG Nateli,Caps,BPG Nateli,Nateli family of BPG Georgian fonts
 BPG_Nateli_Condenced_GPL-GNU.ttf,BPG Nateli,Condensed,^,^
-BPG_Nateli_GPL-GNU.ttf,BPG Nateli,Regular,,^
+BPG_Nateli_GPL-GNU.ttf,BPG Nateli,,,^
 BPG_Nino_Medium_Cond_GPL-GNU.ttf,BPG Nino Medium,Condensed,BPG Nino Medium,Nino Medium family of BPG Georgian fonts
-BPG_Nino_Medium_GPL-GNU.ttf,BPG Nino Medium,Regular,,^
+BPG_Nino_Medium_GPL-GNU.ttf,BPG Nino Medium,,,^
 BPG_Sans_GPL-GNU.ttf,BPG Sans,Sans,,Sans family of BPG Georgian fonts
 BPG_Sans_Medium_GPL-GNU.ttf,BPG Sans,Sans Medium,BPG Sans,^
 BPG_Sans_Modern_GPL-GNU.ttf,BPG Sans,Sans Modern,^,^
@@ -134,9 +134,9 @@ GFSTheokritos.otf,,,,GFS Theokritos decorative font
 Garuda-Oblique.ttf,,,,Thai Garuda fonts
 GenI102.ttf,,,,SIL Gentium fonts
 GenBasB.ttf,GentiumMain,,Gentium,SIL Gentium fonts
-GenBkBasB.ttf,GentiumMain,Book,,SIL Gentium fonts
+GenBkBasB.ttf,GentiumMain,,,SIL Gentium fonts
 GenAI102.ttf,Gentium,Alternate,Gentium Alternate,SIL Gentium fonts
-GilliusADF-Regular.otf,Gillius,Regular,,Gillius ADF sans-serif font family
+GilliusADF-Regular.otf,Gillius,,,Gillius ADF sans-serif font family
 GilliusADF-Cond.otf,Gillius,Condensed,,^
 GilliusADFNo2-Regular.otf,Gillius,No2 Regular,Gillius,^
 GilliusADFNo2-Cond.otf,Gillius,No2 Consensed,^,^
@@ -183,11 +183,11 @@ KhmerOS_muolpali.ttf,Khmer OS,,^,^
 KhmerOS_siemreap.ttf,Khmer OS,,^,^
 KhmerOS_sys.ttf,Khmer OS,,^,^
 Kinnari-Oblique.ttf,,,,Thai Kinnari fonts
-Laconic_Shadow.otf,,Shadow,,An artistic and minimal sans-serif font family
-Laconic_Light.otf,,Light,,^
-LateefRegOT.ttf,,Regular,,An Arabic script font
-Lato-Reg.otf,Lato,Regular,,A classical sans-serif font family
-Lato-Bla.otf,Lato,Black,,^
+Laconic_Shadow.otf,,,,An artistic and minimal sans-serif font family
+Laconic_Light.otf,,,,^
+LateefRegOT.ttf,,,,An Arabic script font
+Lato-Reg.otf,Lato,,,A classical sans-serif font family
+Lato-Bla.otf,Lato,,,^
 Lato-Hai.otf,Lato,Hairline,,^
 Lato-Lig.otf,Lato,Light,,^
 League Gothic.otf,,,,A sans serif gothic font
@@ -199,9 +199,9 @@ LiberationSerif-Regular.ttf,Liberation,Serif,^,^
 LinBiolinum_K.otf,Biolinum,Sans Keyboard,Biolinum,Sans-serif fonts from Linux Libertine Open fonts
 LinBiolinum_R.otf,Biolinum,Sans,^,^
 LinLibertine_DR.otf,Libertine,Display,Libertine,Linux Libertine Open fonts
-LinLibertine_I.otf,Libertine,Initials,^,^
-LinLibertine_M.otf,Libertine,Mono,^,^
-LinLibertine_R.otf,Libertine,Regular,^,^
+LinLibertine_I.otf,Libertine,,^,^
+LinLibertine_M.otf,Libertine,,^,^
+LinLibertine_R.otf,Libertine,,^,^
 Lobster 1.4.otf,,Bold,Lobster,A bold condensed script fully loaded with ligatures and alternates
 Lohit-Assamese.ttf,Lohit,,Lohit,A set of Indian language fonts
 Lohit-Bengali.ttf,Lohit,,^,^
@@ -215,47 +215,47 @@ Lohit-Tamil.ttf,Lohit,,^,^
 Lohit-Tamil-Classical.ttf,Lohit,,^,^
 Loma-Oblique.ttf,,,,Thai Loma fonts
 mplus-1c-black.ttf,,Black,M+ C,A font which is optimized to be proportioned
-mplus-1c-bold.ttf,,Bold,^,^
+mplus-1c-bold.ttf,,,^,^
 mplus-1c-heavy.ttf,,Heavy,^,^
 mplus-1c-light.ttf,,Light,^,^
 mplus-1c-medium.ttf,,Medium,^,^
-mplus-1c-regular.ttf,,Regular,^,^
+mplus-1c-regular.ttf,,,^,^
 mplus-1c-thin.ttf,,Thin,^,^
-mplus-1m-bold.ttf,,Bold,M+ 1M,A font which emphasizes the balance of natural letterform with high legibility
+mplus-1m-bold.ttf,,,M+ 1M,A font which emphasizes the balance of natural letterform with high legibility
 mplus-1m-light.ttf,,Light,^,^
 mplus-1m-medium.ttf,,Medium,^,^
-mplus-1m-regular.ttf,,Regular,^,^
+mplus-1m-regular.ttf,,,^,^
 mplus-1m-thin.ttf,,Thin,^,^
-mplus-1mn-bold.ttf,,Bold,M +MN,A font which emphasizes the balance of natural letterform with high legibility
+mplus-1mn-bold.ttf,,,M +MN,A font which emphasizes the balance of natural letterform with high legibility
 mplus-1mn-light.ttf,,Light,^,^
 mplus-1mn-medium.ttf,,Medium,^,^
-mplus-1mn-regular.ttf,,Regular,^,^
+mplus-1mn-regular.ttf,,,^,^
 mplus-1mn-thin.ttf,,Thin,^,^
 mplus-1p-black.ttf,,Black,M+ P,A font which is aimed as sophisticated and relaxed design
-mplus-1p-bold.ttf,,Bold,^,^
+mplus-1p-bold.ttf,,,^,^
 mplus-1p-heavy.ttf,,Heavy,^,^
 mplus-1p-light.ttf,,Light,^,^
 mplus-1p-medium.ttf,,Medium,^,^
-mplus-1p-regular.ttf,,Regular,^,^
+mplus-1p-regular.ttf,,,^,^
 mplus-1p-thin.ttf,,Thin,^,^
 mplus-2c-black.ttf,,Black,M+ C,A font which is optimized to be proportioned
-mplus-2c-bold.ttf,,Bold,^,^
+mplus-2c-bold.ttf,,,^,^
 mplus-2c-heavy.ttf,,Heavy,^,^
 mplus-2c-light.ttf,,Light,^,^
 mplus-2c-medium.ttf,,Medium,^,^
-mplus-2c-regular.ttf,,Regular,^,^
+mplus-2c-regular.ttf,,,^,^
 mplus-2c-thin.ttf,,Thin,^,^
-mplus-2m-bold.ttf,,Bold,M+ 2M,A font which emphasizes the balance of natural letterform with high legibility
+mplus-2m-bold.ttf,,,M+ 2M,A font which emphasizes the balance of natural letterform with high legibility
 mplus-2m-light.ttf,,Light,^,^
 mplus-2m-medium.ttf,,Medium,^,^
-mplus-2m-regular.ttf,,Regular,^,^
+mplus-2m-regular.ttf,,,^,^
 mplus-2m-thin.ttf,,Thin,^,^
 mplus-2p-black.ttf,,Black,M+ P,A font with a sophisticated and relaxed design
-mplus-2p-bold.ttf,,Bold,^,^
+mplus-2p-bold.ttf,,,^,^
 mplus-2p-heavy.ttf,,Heavy,^,^
 mplus-2p-light.ttf,,Light,^,^
 mplus-2p-medium.ttf,,Medium,^,^
-mplus-2p-regular.ttf,,Regular,^,^
+mplus-2p-regular.ttf,,,^,^
 mplus-2p-thin.ttf,,Thin,^,^
 ManchuFont2005.ttf,,,Manchu,A Manchu font
 Meera.ttf,,Sans,,Meera Malayalam traditional lipi font
@@ -328,7 +328,7 @@ Overpass_Regular.ttf,,Sans,,A font based on U.S. interstate highway road signage
 PTS55F.ttf,PT Sans,Sans,,A pan-Cyrillic font
 PTC55F.ttf,PT Sans,Sans Caption,PT Sans,^
 PTN57F.ttf,PT Sans,Sans Narrow,^,^
-Padauk-bold.ttf,Padauk,Bold,,A font for Burmese and the Myanmar script
+Padauk-bold.ttf,Padauk,,,A font for Burmese and the Myanmar script
 Padauk-book.ttf,Padauk,Book,Padauk,^
 Pagul.ttf,,,,A font for Saurashtra script
 pc_outline.ttf,PaperCuts,Outline,PaperCuts,PaperCuts 2.0 font
@@ -368,7 +368,7 @@ SourceSansPro-Black.otf,,Sans Black,^,^
 SourceSansPro-ExtraLight.otf,,Sans Extralight,^,^
 SourceSansPro-Light.otf,,Sans Light,^,^
 SourceSansPro-Semibold.otf,,Sans Semibold,^,^
-Sportrop.ttf,,-,,A multiline decorative font
+Sportrop.ttf,,,,A multiline decorative font
 StamAshkenazCLM.ttf,Stam,Ashkenaz,Stam,A set of fonts for Hebrew from Culmus project
 StamSefaradCLM.ttf,Stam,Sefarad,^,^
 StayPuft.ttf,,,,"Thibault.org font, rounded and marshmellowy"
@@ -381,8 +381,8 @@ Tinos-Regular.ttf,,,,The croscore Tinos family fonts
 Tiresias Infofont.ttf,Tiresias,Info,Tiresias,Specialized fonts for use by the visually impaired
 TIRESIAS INFOFONTZ.ttf,Tiresias,Info No-crossed-zero,^,^
 TIREKV__.ttf,Tiresias,Key,^,^
-Tiresias LPfont bold.ttf,Tiresias,Large print,^,^
-Tiresias PCfont.ttf,Tiresias,PC,^,^
+Tiresias LPfont bold.ttf,Tiresias,,^,^
+Tiresias PCfont.ttf,Tiresias,,^,^
 TIRESIAS PCFONTZ.ttf,Tiresias,PC No-crossed-zero,^,^
 Tiresias Signfont.ttf,Tiresias,Signs,^,^
 TIRESIAS SIGNFONTZ.ttf,Tiresias,Signs No-crossed-zero,^,^
@@ -396,12 +396,12 @@ TlwgTypo-Oblique.ttf,Thai Tlwg,Typo,^,^
 TlwgMono-Oblique.ttf,Thai Tlwg,Mono,^,^
 TlwgTypewriter-Oblique.ttf,Thai Tlwg,Typewriter,^,^
 tobec___.ttf,,Sans,,Decorative Sans Serif font
-Trabajo.otf,,Serif,,Latin Serif font that supports Shavian alphabet
-TribunADFStd-Regular.ttf,Tribun,Regular,Tribun,A newsprint-like serif font
+Trabajo.otf,,,,Latin Serif font that supports Shavian alphabet
+TribunADFStd-Regular.ttf,Tribun,,Tribun,A newsprint-like serif font
 TribunADFStd-Cond.ttf,Tribun,Condensed,^,^
 TribunADFStd-Med.ttf,Tribun,Medium,^,^
 TribunADFStd-CondBoldItalic.ttf,Tribun,Condensed Bold italic,^,^
-Tuffy.ttf,,Sans,,Generic sans font
+Tuffy.ttf,,,,Generic sans font
 UKIJTuz.ttf,,,,Uyghur Computer Science Association (UKIJ) fonts
 Ubuntu-Title.ttf,,,Ubuntu Title,A titling decorative font to create the lettering of the Ubuntu logo
 Umpush-Light.ttf,,,,Thai Umpush fonts
@@ -411,7 +411,7 @@ VDRSymbolsSans.ttf,,,Symbols Sans,VDR symbol fonts
 VL-Gothic-Regular.ttf,VL Gothic,Regular,,A Japanese font
 VL-PGothic-Regular.ttf,VL Gothic,Proportional,VL Gothic,^
 Vemana2000.ttf,,,Vemana,A font for Telugu
-Vollkorn-Regular.ttf,,Serif,,Serif Latin font with a focus on good readability
+Vollkorn-Regular.ttf,,,,Serif Latin font with a focus on good readability
 Waree-Oblique.ttf,,,,A serif Latin font that is designed to have good readability
 WarenderBibliothek.otf,,,,A fantasy font by Peter Schwanemann
 Widelands.otf,,,,A Latin font inspired by feudal calligraphy
@@ -427,18 +427,18 @@ gargi.ttf,,,Gargi,A Devanagari font
 andyfitz_-_roadstencil.otf,,,Road Stencil,A font based on painted street markings
 Lato-BlackItalic.ttf,Lato,Black Italic,,A classical sans-serif font family
 Lato-Black.ttf,Lato,Black,,A classical sans-serif font family
-Lato-BoldItalic.ttf,Lato,Bold Italic,,A classical sans-serif font family
+Lato-BoldItalic.ttf,Lato,,,A classical sans-serif font family
 Lato-Bold.ttf,Lato,,,A classical sans-serif font family
 Lato-HairlineItalic.ttf,Lato,Hairline Italic,,A classical sans-serif font family
 Lato-Hairline.ttf,Lato,Hairline,,A classical sans-serif font family
 Lato-HeavyItalic.ttf,Lato,Heavy Italic,,A classical sans-serif font family
 Lato-Heavy.ttf,Lato,Heavy,,A classical sans-serif font family
-Lato-Italic.ttf,Lato,Italic,,A classical sans-serif font family
+Lato-Italic.ttf,Lato,,,A classical sans-serif font family
 Lato-LightItalic.ttf,Lato,Light Italic,,A classical sans-serif font family
 Lato-Light.ttf,Lato,Light,,A classical sans-serif font family
 Lato-MediumItalic.ttf,Lato,Medium Italic,,A classical sans-serif font family
 Lato-Medium.ttf,Lato,Medium,,A classical sans-serif font family
-Lato-Regular.ttf,Lato,Regular,,A classical sans-serif font family
+Lato-Regular.ttf,Lato,,,A classical sans-serif font family
 Lato-SemiboldItalic.ttf,Lato,Semibold Italic,,A classical sans-serif font family
 Lato-Semibold.ttf,Lato,Semibold,,A classical sans-serif font family
 Lato-ThinItalic.ttf,Lato,Thin Italic,,A classical sans-serif font family
