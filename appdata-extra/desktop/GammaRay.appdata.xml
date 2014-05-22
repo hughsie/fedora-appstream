@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2014 Richard Hughes <richard@hughsie.com> -->
+<application>
+  <id type="desktop">GammaRay.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-2.0+</project_license>
+  <description>
+    <p>
+     GammaRay is a tool for examining the internals of a Qt application
+     and to some extent also manipulate it.
+     GammaRay uses injection methods to hook into an application at
+     runtime and provide access to a wide variety of interesting information.
+     It provides easy ways of navigating through the complex internal
+     structures you find in some Qt frameworks, such as QGraphicsView,
+     model/view, QTextDocument, state machines and more.
+    </p>
+    <p>
+     GammaRay augments your conventional debugger by providing
+     domain-specific debugging aids on a much higher level.
+     It provides easy ways of navigating through the complex internal
+     structures you find in some Qt frameworks, such as QGraphicsView,
+     model/view, QTextDocument, state machines and more.
+     Unlike the debugger, GammaRay understands those internal structures
+     and can present them in a meaningful way.
+     GammaRay should not be missing in any Qt developer’s toolbox.
+     GammaRay is available both stand-alone and integrated in Qt Creator
+     and allows both inspection of Qt applications right from the start
+     as well as attaching to a running Qt application later on.
+    </p>
+  </description>
+  <screenshots>
+    <screenshot type="default">http://www.kdab.com/wp-content/uploads/stories/software/gammaray2.png</screenshot>
+    <screenshot>http://www.kdab.com/wp-content/uploads/stories/software/gammaray1.png</screenshot>
+    <screenshot>http://www.kdab.com/wp-content/uploads/stories/software/gammaray4_text.png</screenshot>
+    <screenshot>http://www.kdab.com/wp-content/uploads/stories/software/gammaray-traffic-light.png</screenshot>
+  </screenshots>
+  <url type="homepage">https://www.kdab.com/kdab-products/gammaray/</url>
+</application>
