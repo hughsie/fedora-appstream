@@ -17,7 +17,7 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
 
-# Copyright (C) 2009-2013
+# Copyright (C) 2009-2014
 #    Richard Hughes <richard@hughsie.com>
 #
 
@@ -29,14 +29,23 @@ import sys
 import yum
 import fnmatch
 import datetime
-
-# internal
-from config import Config
+import ConfigParser
 
 timestamp = datetime.datetime.now().strftime('%Y%m%d')
 
 _ts = rpm.ts()
 _ts.setVSFlags(0x7FFFFFFF)
+
+class Config:
+
+    def __init__(self):
+
+        # get the project defaults
+        self.cfg_project = ConfigParser.ConfigParser()
+        self.cfg_project.read('./project.conf')
+        self.distro_name = self.cfg_project.get('AppstreamProject', 'DistroName')
+        self.distro_tag = self.cfg_project.get('AppstreamProject', 'DistroTag')
+        self.repo_ids = self.cfg_project.get('AppstreamProject', 'RepoIds').split(',')
 
 def _do_newest_filtering(pkglist):
     '''
@@ -61,6 +70,26 @@ def _do_newest_filtering(pkglist):
         newest[key] = pkg
     return newest.values()
 
+def search_package_list(pkg):
+    for instfile in pkg.returnFileEntries():
+        if fnmatch.fnmatch(instfile, '/usr/share/applications/*.desktop'):
+            return True
+        if fnmatch.fnmatch(instfile, '/usr/share/applications/kde4/*.desktop'):
+            return True
+        if fnmatch.fnmatch(instfile, '/usr/share/fonts/*/*.otf'):
+            return True
+        if fnmatch.fnmatch(instfile, '/usr/share/fonts/*/*.ttf'):
+            return True
+        if fnmatch.fnmatch(instfile, '/usr/share/ibus/component/*.xml'):
+            return True
+        if fnmatch.fnmatch(instfile, '/usr/share/ibus-table/tables/*.db'):
+            return True
+        if fnmatch.fnmatch(instfile, '/usr/lib64/gstreamer-1.0/libgst*.so'):
+            return True
+        if fnmatch.fnmatch(instfile, '/usr/share/appdata/*.metainfo.xml'):
+            return True
+    return False
+
 def update():
 
     # create if we're starting from nothing
@@ -70,8 +99,23 @@ def update():
     # get extra packages needed for some applications
     cfg = Config()
     extra_packages = []
-    for e in cfg.get_package_data_list():
-        extra_packages.append(e[1])
+    extra_packages.append('alliance')
+    extra_packages.append('calligra-core')
+    extra_packages.append('coq')
+    extra_packages.append('efte-common')
+    extra_packages.append('fcitx-data')
+    extra_packages.append('gcin-data')
+    extra_packages.append('hotot-common')
+    extra_packages.append('java-1.7.0-openjdk')
+    extra_packages.append('kchmviewer')
+    extra_packages.append('libprojectM-qt')
+    extra_packages.append('libreoffice-core')
+    extra_packages.append('nntpgrab-core')
+    extra_packages.append('scummvm')
+    extra_packages.append('speed-dreams-robots-base')
+    extra_packages.append('switchdesk')
+    extra_packages.append('transmission-common')
+    extra_packages.append('vegastrike-data')
 
     # find out what we've got already
     files = glob.glob("./packages/*.rpm")
@@ -94,10 +138,6 @@ def update():
     yb.doConfigSetup(errorlevel=-1, debuglevel=-1)
     yb.conf.cache = 0
 
-    # reget the metadata every day
-    for repo in yb.repos.listEnabled():
-        repo.metadata_expire = 60 * 60 * 24  # 24 hours
-
     # what is native for this arch
     basearch = rpmUtils.arch.getBaseArch()
     if basearch == 'i386':
@@ -110,6 +150,10 @@ def update():
     for repo_id in cfg.repo_ids:
         repo = yb.repos.getRepo(repo_id)
         repo.enable()
+
+    # reget the metadata every day
+    for repo in yb.repos.listEnabled():
+        repo.metadata_expire = 60 * 60 * 12  # 12 hours
 
     # find all packages
     downloaded = {}
@@ -130,23 +174,11 @@ def update():
         if pkg.arch not in basearch_list:
             continue
 
-        # don't download blacklisted packages
-        if pkg.name in cfg.get_package_blacklist():
-            continue
-
         # make sure the metadata exists
         repo = yb.repos.getRepo(pkg.repoid)
 
-        # find out if any of the files ship a desktop file
-        interesting_files = []
-        for instfile in pkg.returnFileEntries():
-            for match in cfg.get_interesting_installed_files():
-                if fnmatch.fnmatch(instfile, match):
-                    interesting_files.append(instfile)
-                    break
-
         # don't download packages without desktop files
-        if len(interesting_files) == 0 and pkg.name not in extra_packages:
+        if not search_package_list(pkg) and pkg.name not in extra_packages:
             continue
 
         # get base name without the slash
@@ -158,7 +190,7 @@ def update():
         # is in cache?
         path = './packages/' + relativepath
         if os.path.exists(path) and os.path.getsize(path) == int(pkg.returnSimple('packagesize')):
-            print("INFO: %s up to date" % pkg.nvra)
+            #print("INFO: %s up to date" % pkg.nvra)
             downloaded[pkg.name] = True
         else:
             pkg.localpath = path
