@@ -43,7 +43,6 @@ class Config:
         # get the project defaults
         self.cfg_project = ConfigParser.ConfigParser()
         self.cfg_project.read('./project.conf')
-        self.distro_name = self.cfg_project.get('AppstreamProject', 'DistroName')
         self.distro_tag = self.cfg_project.get('AppstreamProject', 'DistroTag')
         self.repo_ids = self.cfg_project.get('AppstreamProject', 'RepoIds').split(',')
 
