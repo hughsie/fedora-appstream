@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="desktop">GNUSim8085.desktop</id>
+  <licence>CC0</licence>
+  <summary>Intel 8085 microprocessor simulator</summary>
+  <description>
+    <p>
+      GNUSim8085 is a simulator for that emulates the Intel 8085 -- an 8 bit microprocessor that was first released in 1977. This simulator features a keypad for writing assembly code with ease, as well as stack, memory and port viewers which are useful for debugging 8085 assembly code.
+    </p>
+  </description>
+  <url type="homepage">http://gnusim8085.org/</url>
+  <screenshots>
+    <screenshot type="default">http://gnusim8085.org/screenshots/breakpoints.png</screenshot>
+  </screenshots>
+<!-- FIXME: change this to an upstream email address for spec updates
+<updatecontact>someone_who_cares@upstream_project.org</updatecontact>
+ -->
+</application>
