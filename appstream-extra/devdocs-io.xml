@@ -4,11 +4,11 @@
   <application>
     <id type="webapp">devdocs-io.desktop</id>
     <name>Devdocs.io</name>
-    <summary>Easily view and search developer documenation</summary>
+    <summary>Easily view and search developer documentation</summary>
     <icon type="remote">http://devdocs.io/images/webapp-icon-256.png</icon>
     <keywords>
       <keyword>developer</keyword>
-      <keyword>documenation</keyword>
+      <keyword>documentation</keyword>
       <keyword>programming</keyword>
     </keywords>
     <appcategories>
@@ -19,7 +19,7 @@
     <description>
       <p>
         Devdocs.io is a small application that allows you to quickly search and view
-        developer documenation for various programming langauges and libraries. 
+        developer documentation for various programming langauges and libraries. 
       </p>
     </description>
     <metadata>
