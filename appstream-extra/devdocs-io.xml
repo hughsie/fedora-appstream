@@ -22,6 +22,11 @@
         developer documentation for various programming langauges and libraries. 
       </p>
     </description>
+    <screenshots>
+      <screenshot type="default">
+        <image type="source">https://raw.githubusercontent.com/hughsie/fedora-appstream/master/screenshots-extra/devdocs-io/a.png</image>
+      </screenshot>
+    </screenshots>
     <metadata>
       <value key="X-Kudo-Popular"/>
     </metadata>
