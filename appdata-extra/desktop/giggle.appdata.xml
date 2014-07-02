@@ -1,0 +1,22 @@
+<!--App data from upstream, but they havent had a release yet, so putting it here 
+in the meantime
+https://git.gnome.org/browse/giggle/tree/data/giggle.appdata.xml
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="desktop">giggle.desktop</id>
+  <licence>CC0</licence>
+  <description>
+    <p>
+      Giggle is a graphical frontend for the git directory tracker.
+    </p>
+    <p>
+      It currently features a history viewer much like gitk and a commit GUI like git gui
+    </p>
+  </description>
+  <screenshots>
+    <screenshot type="default" width="1034" height="742">https://wiki.gnome.org/Apps/giggle?action=AttachFile&#x26;do=view&#x26;target=giggle-history.png</screenshot>
+  </screenshots>
+  <url type="homepage">https://wiki.gnome.org/Apps/giggle</url>
+  <updatecontact>jjardon_at_gnome.org</updatecontact>
+</application>
