@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <application>
   <id type="desktop">gnome-ekiga.desktop</id>
-  <licence>CC0</licence>
+  <metadata_license>CC0-1.0</metadata_license>
   <description>
     <p>
       Ekiga is a softphone, video conferencing and instant messenger application

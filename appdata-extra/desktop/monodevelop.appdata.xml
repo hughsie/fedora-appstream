@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <application>
   <id type="desktop">monodevelop.desktop</id>
-  <licence>CC0</licence>
+  <metadata_license>CC0-1.0</metadata_license>
   <description>
     <p>
       MonoDevelop is a cross-platform IDE primarily designed for C# and other

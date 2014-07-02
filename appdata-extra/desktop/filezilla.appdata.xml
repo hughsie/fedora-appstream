@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <application>
     <id type="desktop">filezilla.desktop</id>
-    <licence>CC0</licence>
+    <metadata_license>CC0-1.0</metadata_license>
     <description>
         <p>
             FileZilla 3 is the next generation (S)FTP-client from the FileZilla project. It is platform independent and supports operating systems like Microsoft Windows, GNU/Linux, *BSD and Mac OS X. </p>

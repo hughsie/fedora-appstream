@@ -2,7 +2,7 @@
 <!-- Copyright 2013 Richard Hughes <richard@hughsie.com> -->
 <application>
   <id type="codec">gstreamer-bad-free</id>
-  <licence>CC0</licence>
+  <metadata_license>CC0</metadata_license>
   <name>GStreamer Multimedia Codecs - Extra</name>
   <description>
     <p>

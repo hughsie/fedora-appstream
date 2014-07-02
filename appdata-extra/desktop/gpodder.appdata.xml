@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <application>
   <id type="desktop">gpodder.desktop</id>
-  <licence>CC0</licence>
+  <metadata_license>CC0-1.0</metadata_license>
   <name>gPodder</name>
   <summary>Manage and download podcasts</summary>
   <description>
@@ -10,7 +10,7 @@
       and download episodes to your devices.
     </p>
     <p>
-      You can also take advantage of the service http://gpodder.net, which lets
+      You can also take advantage of the service gpodder.net, which lets
       you sync subscriptions, playback progress and starred episodes.
     </p>
   </description>

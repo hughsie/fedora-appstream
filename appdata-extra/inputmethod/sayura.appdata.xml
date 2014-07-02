@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <application>
 <id type="inputmethod">sayura.xml</id>
-<licence>CC0</licence>
+<metadata_license>CC0</metadata_license>
 <name>Sayura</name>
 <summary>Sihali input method</summary>
 <description>

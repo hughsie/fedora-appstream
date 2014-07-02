@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <application>
 <id type="inputmethod">mathwriter-ibus.db</id>
-<licence>CC0</licence>
+<metadata_license>CC0</metadata_license>
 <name>Mathwriter</name>
 <summary>Math symbols input method</summary>
 <description>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <application>
 <id type="desktop">gtranslator.desktop</id>
-<licence>CC0</licence>
+<metadata_license>CC0-1.0</metadata_license>
 <description>
 <p>
 Gtranslator is an enhanced gettext po file editor for the GNOME desktop environment. It handles all forms of gettext po files and include very useful features like find/replace, translation memory, different translator profiles, messages mable (for having an overview of the translations/messages in the po file), easy navigation and editing of translation messages and comments of the translation where accurate.

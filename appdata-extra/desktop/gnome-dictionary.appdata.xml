@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <application>
 <id type="desktop">gnome-dictionary.desktop</id>
-<licence>CC0</licence>
+<metadata_license>CC0-1.0</metadata_license>
 <description>
 <p>
 GNOME Dictionary is a simple dictionary application that looks up definitions of words online.

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <application>
     <id type="desktop">gobby.desktop</id>
-    <licence>CC0</licence>
+    <metadata_license>CC0-1.0</metadata_license>
     <description>
         <p>
             Gobby is a free collaborative editor supporting multiple documents in one session and a multi-user chat. 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <application>
     <id type="desktop">freemedforms.desktop</id>
-    <licence>CC0</licence>
+    <metadata_license>CC0-1.0</metadata_license>
     <name>FreeMedForms EMR</name>
     <summary>The FreeMedForms Electronic Medical Record Manager</summary>
     <description>

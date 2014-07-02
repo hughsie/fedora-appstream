@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <application>
 <id type="inputmethod">stroke5.db</id>
-<licence>CC0</licence>
+<metadata_license>CC0</metadata_license>
 <name>Stroke 5</name>
 <summary>Chinese input method</summary>
 <description>

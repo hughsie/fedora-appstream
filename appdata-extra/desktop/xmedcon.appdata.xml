@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <application>
     <id type="desktop">xmedcon.desktop</id>
-    <licence>CC0</licence>
+    <metadata_license>CC0-1.0</metadata_license>
     <name>Xmedcon</name>
     <summary>A medical image conversion utility and library</summary>
     <description>
