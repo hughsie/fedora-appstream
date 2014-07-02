@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="desktop">setroubleshoot.desktop</id>
+  <metadata_license>CC0</metadata_license>
+  <summary>	Troubleshoot SELinux policy and access denials</summary>
+  <description>
+    <p>
+      The SELinux Troubleshooter provides a graphical user interface to help diagnose SELinux policy issues. When Access Vector Cache (AVC) denial messages are logged by SELinux, the SELinux Troubleshooter generates a desktop notification containing information about the problem and allows the user to launch the troubleshooting interface to help track down the cause of the denial.
+
+    </p>
+  </description>
+  <url type="homepage">https://fedorahosted.org/setroubleshoot/</url>
+  <screenshots>
+    <screenshot type="default">https://fedorahosted.org/setroubleshoot/raw-attachment/wiki/WikiStart/setroubleshoot.png</screenshot>
+  </screenshots>
+<!-- FIXME: change this to an upstream email address for spec updates
+<updatecontact>someone_who_cares@upstream_project.org</updatecontact>
+ -->
+</application>
