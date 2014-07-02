@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <application>
   <id type="desktop">GNUSim8085.desktop</id>
-  <licence>CC0</licence>
+  <metadata_license>CC0</metadata_license>
   <summary>Intel 8085 microprocessor simulator</summary>
   <description>
     <p>
