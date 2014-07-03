@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="desktop">groovy.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <summary>Interactive console for the Groovy programming language</summary>
+  <description>
+    <p>
+      Groovy is a dynamic programming language that is commonly used as a 
+      scripting language for the Java platform. This application provides an
+      interactive console for evaluating scripts in the Groovy language.
+    </p>
+  </description>
+  <url type="homepage">http://groovy.codehaus.org/</url>
+  <screenshots>
+    <screenshot type="default">http://groovy.codehaus.org/download/attachments/36800/GroovyConsole.gif</screenshot>
+  </screenshots>
+<!-- FIXME: change this to an upstream email address for spec updates
+<updatecontact>someone_who_cares@upstream_project.org</updatecontact>
+ -->
+</application>
