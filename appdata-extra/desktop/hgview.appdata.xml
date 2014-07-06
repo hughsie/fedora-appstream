@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="desktop">hgview.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <summary>Graphical tree viewer for Mecurial repositories</summary>
+  <description>
+    <p>
+     hgview is a tool to visually navigate the tree and history of a Mecurial repository. hgview has a wide range of features for browsing and interacting with a Mecurial repository graphically, including: 
+    <ul>
+      <li>key-based navigation of the revisions history of a repository</li>
+      <li>automatic refresh of the revision graph when the repository is modified</li>
+      <li>display of the current working directory as a special node in the graph</li>
+    </ul>
+    </p>
+  </description>
+  <url type="homepage">http://www.logilab.org/project/hgview</url>
+  <screenshots>
+    <screenshot type="default">http://www.logilab.org/file/246256?vid=download</screenshot>
+  </screenshots>
+<!-- FIXME: change this to an upstream email address for spec updates
+<updatecontact>someone_who_cares@upstream_project.org</updatecontact>
+ -->
+</application>
