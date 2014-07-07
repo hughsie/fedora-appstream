@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+ <id type="desktop">gambas.desktop</id>
+ <metadata_license>CC0-1.0</metadata_license>
+ <summary>IDE for the Gambas development environment</summary>
+ <description>
+    <p>
+   	Gambas is a development environment based on a Basic interpreter, similar to Visual Basic. This application provides a graphical IDE to assist in the creation of programs with Gambas.
+    </p>
+ </description>
+ <screenshots>
+  <screenshot type="default">http://gambas.sourceforge.net/2012-01-01.png</screenshot>
+ </screenshots>
+ <url type="homepage">http://gambas.sourceforge.net/</url>
+</application>
