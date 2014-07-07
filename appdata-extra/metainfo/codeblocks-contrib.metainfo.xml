@@ -4,6 +4,7 @@
   <extends>codeblocks.desktop</extends>
   <name>Code::Blocks Plugins</name>
   <summary>Additional plugins for the Code::Blocks IDE</summary>
+  <pkgname>codeblocks-contrib</pkgname>
   <description>
     <p>
       Contains over 40 additional plugins for the Code::Blocks IDE, including:
