@@ -12,4 +12,7 @@
   <screenshot type="default">http://gambas.sourceforge.net/2012-01-01.png</screenshot>
  </screenshots>
  <url type="homepage">http://gambas.sourceforge.net/</url>
+<!-- FIXME: change this to an upstream email address for spec updates
+<updatecontact>someone_who_cares@upstream_project.org</updatecontact>
+ -->
 </application>
