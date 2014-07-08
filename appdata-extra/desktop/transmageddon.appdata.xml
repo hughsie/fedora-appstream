@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+ <id type="desktop">transmageddon.desktop</id>
+ <metadata_license>CC-BY-3.0</metadata_license>
+ <project_license>LGPL-2.1+</project_license>
+ <name>Transmageddon Media Transcoder</name>
+ <summary>Easy to use audio and video transcoding application</summary>
+ <description>
+  <p>Transmageddon is an application for converting audio and video files between different formats. It allows you to either manually choose the formats you want to convert between or alternatively you can choose a predefined target and the selections will be made for you. Transmageddon supports a very wide range of formats and can also optionally function as a DVD ripping tool.</p>
+  <p xml:lang="cs">Transmageddon je aplikace sloužící k převodu zvukových souborů a videosouborů mezi různými formáty. Můžete si buď ručně vybrat formát, do kterého chcete převést, nebo případně jen zvolit cílové zařízení a vyběr bude proveden za vás. Transmageddon podporuje širokou škálu formátů a volitelně umí provádět i extrahování z DVD.</p>
+  <p xml:lang="es">Transmageddon es una aplicación para convertir archivos de sonido y vídeo a diferentes formatos. Le permite elegir manualmente los formatos entre los que quiere convertir o puede elegir un objetivo predeterminado y la selección se hará automáticamente. Transmageddon soporta una amplia variedad de formatos y también puede usarse como herramienta para extraer DVD.</p>
+  <p xml:lang="fr">Transmageddon est une application pour convertir les fichiers audio et vidéo entre différents formats. Elle permet de choisir manuellement les formats entre lesquels vous voulez faire la conversion, ou de choisir une cible prédéfinie et les réglages seront faits pour vous. Transmageddon prend en charge une grande gamme de formats et peut optionnellement fonctionner comme outil d'extraction de DVD.</p>
+  <p xml:lang="lt">Transmageddon yra programa garso ir vaizdo konvertavimui iš vieno formato į kitą. Ji leidžia pasirinkti formatus arba nustatyti paskirtį ir formatai bus parinkti automatiškai. Transmageddon palaiko labai daug formatų bei gali būti naudojama kaip DVD nuskaitymo įrankis.</p>
+  <p xml:lang="pl">Transmageddon jest programem do konwertowania plików dźwiękowych i wideo między różnymi formatami. Umożliwia ręczne wybranie formatów, między którymi konwertować, albo wybranie wcześniej określonych ustawień. Program Transmageddon obsługuje szeroki zakres formatów, oraz może służyć za narzędzie do zgrywania płyt DVD.</p>
+  <p xml:lang="ro">Transmageddon este o aplicație pentru convertirea fișierelor audio și video în diferite formate. Permite alegerea manuală a formatelor pe care doriți să le convertiți sau alternativ puteți alege un format țintă predefinit și selecțiile vor fi făcute automat pentru dumneavoastră. Transmageddon suportă o gamă largă de formate și poate funcționa deasemenea ca unealtă de extragere de pe DVD.</p>
+  <p xml:lang="tr">Transmageddon, ses ve video dosyalarını farklı biçimlere dönüştürmeye yarayan bir uygulamadır. Birbiri arasında dönüşüm yapılacak biçimleri elle seçebileceğiniz gibi, önceden  tanımlanmış bir hedef belirleyerek bu seçimlerin sizin yerinize otomatik olarak yapılmasını da sağlayabilirsiniz. Transmageddon çok geniş bir yelpazedeki biçimleri destekler ve isteğe bağlı olarak bir DVD kopyalama aracı olarak da kullanılabilir.</p>
+  <p>Feature list:</p>
+  <p xml:lang="cs">Seznam funkcí a vlastností:</p>
+  <p xml:lang="es">Lista de características:</p>
+  <p xml:lang="fr">Liste des fonctionnalités :</p>
+  <p xml:lang="lt">Galimybių sąrašas:</p>
+  <p xml:lang="pl">Lista funkcji:</p>
+  <p xml:lang="ro">Lista funcționalităților:</p>
+  <p xml:lang="tr">Özellik listesi:</p>
+  <ul>
+   <li>Wide range of media codecs</li>
+   <li xml:lang="cs">Široká nabídka multimediálních kodeků</li>
+   <li xml:lang="es">Amplia variedad de codificadores multimedia</li>
+   <li xml:lang="fr">Dispose d'une grande gamme de codecs</li>
+   <li xml:lang="lt">Didelis medijos kodekų pasirinkimas</li>
+   <li xml:lang="pl">Szeroki zakres kodeków multimedialnych</li>
+   <li xml:lang="ro">Gamă largă de codecuri media</li>
+   <li xml:lang="tr">Geniş bir ortam kod çözücü yelpazesi</li>
+   <li>Allows extracting audio or video streams separately</li>
+   <li xml:lang="cs">Umožňuje extrahovat odděleně zvuk a video</li>
+   <li xml:lang="es">Permite extraer flujos de sonido y de vídeo por separado</li>
+   <li xml:lang="fr">Permet d'extraire séparément les flux audio et vidéo</li>
+   <li xml:lang="lt">Leidžia atskirai išgauti garso ir vaizdo srautus</li>
+   <li xml:lang="pl">Umożliwia oddzielne zgrywanie strumieni dźwięku i obrazu</li>
+   <li xml:lang="ro">Permite extragerea separată a fluxurilor audio și video</li>
+   <li xml:lang="tr">Ses veya video akışlarının ayrı ayrı çıkarılmasına olanak tanır</li>
+   <li>Alows ripping of DVD if needed software libraries are available</li>
+   <li xml:lang="cs">Umožňuje extrahovat DVD (předpokládá přítomnost potřebných knihoven)</li>
+   <li xml:lang="es">Permite extraer un DVD si las bibliotecas software necesarias están disponibles</li>
+   <li xml:lang="fr">Permet d'extraire les DVD si les bibliothèques nécessaires sont installées</li>
+   <li xml:lang="lt">Leidžia nuskaityti DVD, jei yra reikiamos bibliotekos</li>
+   <li xml:lang="pl">Umożliwia zgrywanie płyt DVD, jeśli wymagane biblioteki są dostępne</li>
+   <li xml:lang="ro">Permite extragerea DVD-urilor dacă bibliotecile software necesare sunt disponibile</li>
+   <li xml:lang="tr">İhtiyaç duyulan yazılım kütüphaneleri mevcutsa, DVD kopyalama olanağı sağlar.</li>
+   <li>Supports named device presets</li>
+   <li xml:lang="cs">Podporuje předdefinovaná zařízení podle názvu</li>
+   <li xml:lang="es">Soporte configuraciones de dispositivos con nombre</li>
+   <li xml:lang="fr">Prend en charge des pré-réglages de périphériques nommés</li>
+   <li xml:lang="lt">Palaiko nustatymus pagal įrenginio pavadinimą</li>
+   <li xml:lang="pl">Obsługuje nazwane ustawienia urządzeń</li>
+   <li xml:lang="ro">Suportă prestabiliri pentru dispozitivele cunoscute</li>
+   <li xml:lang="tr">Adlandırılmış cihaz önayarlarını destekler</li>
+   <li>Lets you add language metadata if missing</li>
+   <li xml:lang="cs">Umožňuje přidat jazyková metadata (v případě, že schází)</li>
+   <li xml:lang="es">Le permite añadir su idioma como metadato si no existe</li>
+   <li xml:lang="fr">Permet d'ajouter des méta-informations de langue si elles sont manquantes</li>
+   <li xml:lang="lt">Leidžia į metaduomenis pridėti kalbą, jei trūksta</li>
+   <li xml:lang="pl">Umożliwia dodawanie metadanych języka, jeśli ich brakuje</li>
+   <li xml:lang="ro">Permite adăugarea unui fișier de limbă dacă lipsește</li>
+   <li xml:lang="tr">Eğer eksikse, dil üst verilerini eklemenize olanak tanır</li>
+   <li>Can change orientation of video if necessary</li>
+   <li xml:lang="cs">Můžete měnit otočení videa, když je potřeba</li>
+   <li xml:lang="es">Puede cambiar la orientación del vídeo si es necesario</li>
+   <li xml:lang="fr">Peut changer l'orientation de la vidéo si nécessaire</li>
+   <li xml:lang="lt">Jei reikia, gali pakeisti vaizdo orientaciją</li>
+   <li xml:lang="pl">Można zmieniać orientację obrazu, jeśli to potrzebne</li>
+   <li xml:lang="ro">Poate schimba orientația videoului dacă este necesar</li>
+   <li xml:lang="tr">Eğer gerekirse, video yönelimini değiştirebilir</li>
+   <li>Supports files with multiple audio streams</li>
+   <li xml:lang="cs">Podporuje soubory s více zvukovými stopami</li>
+   <li xml:lang="es">Soporta archivos con varios flujos de sonido</li>
+   <li xml:lang="fr">Prend en charge les fichiers avec plusieurs flux audio</li>
+   <li xml:lang="lt">Palaiko failus su daugeliu garso srautų</li>
+   <li xml:lang="pl">Obsługuje pliki z wieloma strumieniami dźwięku</li>
+   <li xml:lang="ro">Suportă fișiere cu fluxuri audio multiple</li>
+   <li xml:lang="tr">Çoklu ses akışına sahip dosyaları destekler</li>
+  </ul>
+  <p>You might want to install this application if your need to convert media files between different formats due to for example having hardware that only supports a limited range of formats.</p>
+  <p xml:lang="cs">Aplikace se vám bude hodit, když budete potřebovat převést multimediální soubory mezi různými formáty v situaci, kdy některý hardware podporuje jen omezených pár formátů.</p>
+  <p xml:lang="es">ES posible que quiera instalar esta aplicación si necesita convertir archivos multimedia a diferentes formatos, por ejemplo porque tenga un hardware que sólo soporta un determinado conjunto de formatos.</p>
+  <p xml:lang="fr">Cette application peut vous être utile si vous avez besoin de convertir des fichiers média entre différents formats, par exemple si vous disposez de matériel qui ne prend en charge qu'un nombre limité de formats.</p>
+  <p xml:lang="lt">Galite įdiegti šią programą, jei jums reikia konvertuoti garso failus iš vieno formato į kitą, kadangi turite įrangą, kuri palaiko tik tam tikrus formatus.</p>
+  <p xml:lang="pl">Warto zainstalować ten program, jeśli potrzebna konwertować pliki multimedialne między różnymi formatami dla urządzeń, które obsługują ograniczoną liczbę formatów.</p>
+  <p xml:lang="ro">Probabil că doriți să instalați această aplicație dacă doriți să convertiți fișiere media în diferite formate de exemplu din cauza deținerii a diverselor aparate care suportă doar o gamă limitată de formate.</p>
+  <p xml:lang="tr">Eğer, örneğin sadece kısıtlı bir yelpazedeki biçimleri destekleyen donanıma sahip olduğunuz için, ortam dosyalarını farklı biçimler arasında dönüştürmeniz gerekiyorsa, bu uygulamayı kurmak isteyebilirsiniz. </p>
+ </description>
+ <screenshots>
+  <screenshot type="default">https://git.gnome.org/browse/transmageddon/plain/appdata/transmageddon.png</screenshot>
+ </screenshots>
+ <url type="homepage">http://www.linuxrising.org/</url>
+ <updatecontact>uraeus@linuxrising.org</updatecontact>
+ <project_group>GStreamer</project_group>
+</application>
