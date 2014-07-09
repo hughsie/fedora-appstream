@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2014 Richard Hughes <richard@hughsie.com> -->
+<component>
+  <metadata_license>CC0-1.0</metadata_license>
+  <id>git-dag.desktop</id>
+  <metadata>
+    <value key="X-Merge-With-Parent">git-cola.desktop</value>
+  </metadata>
+</component>
