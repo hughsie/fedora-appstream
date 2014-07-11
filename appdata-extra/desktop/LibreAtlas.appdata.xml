@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="desktop">LibreAtlas.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <summary>Digital Atlas</summary>
+  <description>
+    <p>
+      LibreAtlas is an open source geography application for viewing and browsing digital atlases. 
+      LibreAtlas opens digital atlases in the libreatlas database format. The upstream LibreAtlas homepage
+      has a list of compatible atlases available for download at http://www.gaia-gis.it/gaia-sins/libreatlas-resources/
+    </p>
+  </description>
+  <url type="homepage">https://www.gaia-gis.it/fossil/libreatlas/home</url>
+  <screenshots>
+    <screenshot type="default">http://www.gaia-gis.it/gaia-sins/LibreAtlas-sample.png</screenshot>
+  </screenshots>
+<!-- FIXME: change this to an upstream email address for spec updates
+<updatecontact>someone_who_cares@upstream_project.org</updatecontact>
+ -->
+</application>
