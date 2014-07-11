@@ -10,6 +10,7 @@
     </p>
   </description>
   <url type="homepage">http://gnusim8085.org/</url>
+  <url type="bugtracker">https://bugs.launchpad.net/gnusim8085</url>
   <screenshots>
     <screenshot type="default">http://gnusim8085.org/screenshots/breakpoints.png</screenshot>
   </screenshots>
