@@ -3,7 +3,7 @@
 <application>
   <id type="desktop">BlockOutII.desktop</id>
   <metadata_license>CC0-1.0</metadata_license>
-  <summary>Additive software sound synthesizer</summary>
+  <summary>A free adaptation of the original BlockOut game</summary>
   <description>
     <p>
       BlockOut II is a game where the player moves and rotate 3D polycubes 
