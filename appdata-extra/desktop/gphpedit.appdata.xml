@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2014 Ryan Lerch <rlerch@redhat.com> -->
+<application>
+  <id type="desktop">gphpedit.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <summary>Text editor for PHP files</summary>
+  <description>
+    <p>
+      gphpedit is a text editor specifically designed for editing PHP files 
+      and files that typically are used in PHP projects (HTML and CSS files).
+      It has support for syntax highlighting, code folding, function lists, 
+      parameter popups and a class browser.
+    </p>
+  </description>
+  <url type="homepage">http://www.gphpedit.org/</url>
+  <screenshots>
+    <screenshot type="default">https://raw.githubusercontent.com/hughsie/fedora-appstream/master/screenshots-extra/gphpedit/a.png</screenshot>
+  </screenshots>
+<!-- FIXME: change this to an upstream email address for spec updates
+<updatecontact>someone_who_cares@upstream_project.org</updatecontact>
+ -->
+</application>
