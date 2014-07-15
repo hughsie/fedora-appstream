@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component type="desktop">
+  <id>kwordquiz.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-2.0+</project_license>
+  <name>KWordQuiz</name>
+  <name xml:lang="cs">KWordQuiz</name>
+  <name xml:lang="es">KWordQuiz</name>
+  <name xml:lang="fi">KWordQuiz</name>
+  <name xml:lang="nds">KWordQuiz</name>
+  <name xml:lang="nl">KWordQuiz</name>
+  <name xml:lang="pl">KWordQuiz</name>
+  <name xml:lang="pt">KWordQuiz</name>
+  <name xml:lang="pt-BR">KWordQuiz</name>
+  <name xml:lang="sk">KWordQuiz</name>
+  <name xml:lang="sv">KWordQuiz</name>
+  <name xml:lang="uk">KWordQuiz</name>
+  <name xml:lang="x-test">xxKWordQuizxx</name>
+  <summary>Flash Card Trainer</summary>
+  <summary xml:lang="cs">Procvičování slovní zásoby s kartičkami</summary>
+  <summary xml:lang="fi">Sanaston harjoittelu kysymyskorteilla</summary>
+  <summary xml:lang="nds">Koorten-Lehrprogramm</summary>
+  <summary xml:lang="nl">Woorden oefenen</summary>
+  <summary xml:lang="pl">Ćwiczenie z fiszkami</summary>
+  <summary xml:lang="pt">Treinador de Cartões</summary>
+  <summary xml:lang="pt-BR">Treinador de cartões</summary>
+  <summary xml:lang="sk">Precvičovanie slovnej zásoby s kartičkami</summary>
+  <summary xml:lang="sv">Flash Card Trainer</summary>
+  <summary xml:lang="uk">Тренування словникового запасу</summary>
+  <summary xml:lang="x-test">xxFlash Card Trainerxx</summary>
+  <description>
+    <p>KWordQuiz is a general purpose flash card program. It can be used for vocabulary learning and many other subjects. It provides an editor and five different flashcard quiz modes. It uses the KVTML file format and contributed files can be downloaded from within the application.</p>
+    <p xml:lang="nds">KWordQuiz is en allmeen Naslakoortprogramm. Du kannst dat för't Öven vun Wöör, man ok to anner Saken bruken. Dat hett en Editor un fief Affraag-Bedriefoorden. As Dateiformaat warrt dat KVTML-Formaat bruukt un vun Brukers bidragen Dateien laat sik binnen dat Programm daalladen.</p>
+    <p xml:lang="nl">KWordQuiz is een draaikaart programma voor algemene doeleinden. Het kan gebruikt worden voor het leren van woordjes en vele andere onderwerpen. Het biedt een editor en vijf verschillende manieren om draaikaarten te gebruiken. Het gebruikt het KVTML bestandsformaat en aanvullende bestanden kunnen gedownload worden vanuit de toepassing.</p>
+    <p xml:lang="pl">KWordQuiz jest programem do ćwiczenia na fiszkach ogólnego przeznaczenia. Dostarcza edytor i pięć różnych trybów quizów na fiszkach. Program używa formatu plików KVTML, a pliki stworzone przez innych użytkowników można pobrać z wewnątrz programu.</p>
+    <p xml:lang="pt">O KWordQuiz é um programa de cartões de uso geral. Poderá ser usado para a aprendizagem de vocabulário e para muitos outros assuntos. Oferece um editor e cinco modos diferentes de questionários por cartões. Ele usa o formato de ficheiros KVTML e os ficheiros contribuídos poderão ser transferidos a partir da aplicação.</p>
+    <p xml:lang="pt-BR">KWordQuiz é um programa de cartões de uso geral. Ele pode ser usado para aprendizagem de vocabulário e muitos outros assuntos. Oferece um editor e cinco modos diferentes de perguntas em forma de cartões. Ele usa o formato de arquivo KVTML e os arquivos disponibilizados por terceiros podem ser baixados a partir do aplicativo.</p>
+    <p xml:lang="sk">KWordQuiz je všeobecný kartový program. Dá sa použiť na učenie slovnej zásoby a na mnoho iných účelov. Obsahuje editor a 5 rôznych režimov kvízov s kartami. Používa formát súborov KVTML a súbory sa dajú stiahnuť priamo z aplikácie.</p>
+    <p xml:lang="sv">Kwordquiz är ett generellt program för snabbkort. Det kan användas för inlärning av ordförråd och många andra ämnen. Det tillhandahåller en editor och fem olika frågemetoder för snabbkort. Det använder filformatet KVTML, och bidragna filer kan laddas ner inne i programmet.</p>
+    <p xml:lang="uk">KWordQuiz — програма для навчання за допомогою карток загального призначення. Нею можна скористатися для поповнення словникового запасу іноземною мовою або вивчення інших дисциплін. У програмі передбачено редактор та п’ть різних режимів навчання за допомогою карток. Для даних використовується формат файлів KVTML, файли даних, створені іншими користувачами, можна отримати безпосередньо за допомогою програми.</p>
+    <p xml:lang="x-test">xxKWordQuiz is a general purpose flash card program. It can be used for vocabulary learning and many other subjects. It provides an editor and five different flashcard quiz modes. It uses the KVTML file format and contributed files can be downloaded from within the application.xx</p>
+  </description>
+  <url type="homepage">http://edu.kde.org/kwordquiz/</url>
+  <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=kwordquiz</url>
+  <url type="help">http://docs.kde.org/stable/en/kdeedu/kwordquiz/index.html</url>
+  <screenshots>
+    <screenshot type="default">
+      <image>http://kde.org/images/screenshots/kwordquiz.png</image>
+    </screenshot>
+  </screenshots>
+  <project_group>KDE</project_group>
+  <provides>
+    <binary>kwordquiz</binary>
+  </provides>
+</component>
