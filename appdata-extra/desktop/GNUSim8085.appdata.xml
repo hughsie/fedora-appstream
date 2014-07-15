@@ -6,7 +6,10 @@
   <summary>Intel 8085 microprocessor simulator</summary>
   <description>
     <p>
-      GNUSim8085 is a simulator for that emulates the Intel 8085 -- an 8 bit microprocessor that was first released in 1977. This simulator features a keypad for writing assembly code with ease, as well as stack, memory and port viewers which are useful for debugging 8085 assembly code.
+      GNUSim8085 is a simulator for that emulates the Intel 8085 -- an 8 bit 
+      microprocessor that was first released in 1977. This simulator features 
+      a keypad for writing assembly code with ease, as well as stack, memory 
+      and port viewers which are useful for debugging 8085 assembly code.
     </p>
   </description>
   <url type="homepage">http://gnusim8085.org/</url>
