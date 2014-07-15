@@ -13,7 +13,7 @@
   </description>
   <url type="homepage">http://alexandria.rubyforge.org/</url>
   <screenshots>
-    <screenshot type="default">https://github.com/hughsie/fedora-appstream/blob/master/screenshots-extra/alexandria/a.png</screenshot>
+    <screenshot type="default">https://raw.githubusercontent.com/hughsie/fedora-appstream/master/screenshots-extra/alexandria/a.png</screenshot>
   </screenshots>
 <!-- FIXME: change this to an upstream email address for spec updates
 <updatecontact>someone_who_cares@upstream_project.org</updatecontact>

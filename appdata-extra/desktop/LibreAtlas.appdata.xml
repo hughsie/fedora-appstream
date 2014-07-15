@@ -6,8 +6,8 @@
   <description>
     <p>
       LibreAtlas is an open source geography application for viewing and browsing digital atlases. 
-      LibreAtlas opens digital atlases in the libreatlas database format. The upstream LibreAtlas homepage
-      has a list of compatible atlases available for download at http://www.gaia-gis.it/gaia-sins/libreatlas-resources/
+      LibreAtlas opens digital atlases in the libreatlas database format.
+      The upstream LibreAtlas homepage has a list of compatible atlases available for download.
     </p>
   </description>
   <url type="homepage">https://www.gaia-gis.it/fossil/libreatlas/home</url>
