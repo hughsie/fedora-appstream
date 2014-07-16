@@ -1,22 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014 Your Name <name@emailaddress.com> -->
+<!-- Copyright 2014 Ryan Lerch <rlerch@redhat.com> -->
 <application>
 	<id type="desktop">xmlcopyeditor.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
 	<summary>
-		<!--Brief summary of application.e.g. for Inkscape "Create and edit Scalable Vector Graphics images"-->
+		Edit XML files
 	</summary>
 	<description>
-		<!-- One or two paras about the application. Only <p> <ul> <ol> and <li> can be used-->
-		<!-- see http://people.freedesktop.org/~hughsient/appdata/#description for style details-->
 		<p>
-			
+			XML Copy Editor is an editor specifically designed for creating and editing
+			XML files. It features XML syntax highlighting, code folding, tag completion,
+			tag locking and tag free editing.It also has the ability to validate your XML 
+			code against DTDs, XML Schema and RELAX NG
 		</p>
 	</description>
 	<url type="homepage">http://xml-copy-editor.sourceforge.net/</url>
 	<screenshots>
-		<screenshot type="default"><!--http://projectname/screenshot.png--></screenshot>
-		<!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
-		<!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
+		<screenshot type="default">http://xml-copy-editor.sourceforge.net/screenshot_ubuntu40.png</screenshot>
 	</screenshots>
 </application>
