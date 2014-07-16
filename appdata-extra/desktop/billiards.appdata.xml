@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2014 Ryan Lerch <rlerch@redhat.com> -->
+<application>
+  <id type="desktop">billiards.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <summary>play billiards and pool</summary>
+  <description>
+    <p>
+      Billiards is a 3D cue sports simulator that allows you to play different variations
+      of billiards and pool. Billiards features the Carom billiards games of straight rail, 
+      balk line and cushion games, as well as eight-ball pool and nine-ball pool. 
+    </p>
+  </description>
+  <url type="homepage">http://www.nongnu.org/billiards/</url>
+  <screenshots>
+    <screenshot type="default">http://www.nongnu.org/billiards/screenshot2.png</screenshot>
+    <screenshot>http://www.nongnu.org/billiards/screenshot1.png</screenshot>
+  </screenshots>
+<!-- FIXME: change this to an upstream email address for spec updates
+<updatecontact>someone_who_cares@upstream_project.org</updatecontact>
+ -->
+</application>
