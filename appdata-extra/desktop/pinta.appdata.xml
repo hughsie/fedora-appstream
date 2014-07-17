@@ -1,22 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014 Your Name <name@emailaddress.com> -->
+<!-- Copyright 2014 Ryan Lerch <rlerch@redhat.com> -->
 <application>
 <id type="desktop">pinta.desktop</id>
 <metadata_license>CC0-1.0</metadata_license>
 <summary>
-<!--Brief summary of application.e.g. for Inkscape "Create and edit Scalable Vector Graphics images"-->
+  edit images and paint digitally
 </summary>
 <description>
-<!-- One or two paras about the application. Only <p> <ul> <ol> and <li> can be used-->
-<!-- see http://people.freedesktop.org/~hughsient/appdata/#description for style details-->
 <p>
-
+  Pinta is a image editing, drawing and painting application with a simple yet powerful interface. Pinta has a wide
+  range of drawing tools, including: freehand, rectangles, circles and lines. It also has over 35 effects to apply
+  to your images, and also has the ability to create unlimited layers to help organize your creativity.
 </p>
 </description>
 <url type="homepage">http://pinta-project.com/</url>
 <screenshots>
-<screenshot type="default"><!--http://projectname/screenshot.png--></screenshot>
-<!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
-<!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
+  <screenshot type="default">http://pinta-project.com/Images/ss1-800.jpg</screenshot>
+  <screenshot>http://pinta-project.com/Images/ss2-800.jpg</screenshot>
 </screenshots>
 </application>
