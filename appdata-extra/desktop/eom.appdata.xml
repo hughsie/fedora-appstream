@@ -5,13 +5,12 @@
 <metadata_license>CC0-1.0</metadata_license>
 <summary>
 <!--Brief summary of application.e.g. for Inkscape "Create and edit Scalable Vector Graphics images"-->
+<p>The MATE Desktop Environment is the continuation of GNOME 2. It provides an intuitive and attractive desktop environment using traditional metaphors for Linux and other Unix-like operating systems.</p>
 </summary>
 <description>
 <!-- One or two paras about the application. Only <p> <ul> <ol> and <li> can be used-->
 <!-- see http://people.freedesktop.org/~hughsient/appdata/#description for style details-->
-<p>
-
-</p>
+<p>MATE is under active development to add support for new technologies while preserving a traditional desktop experience.</p>
 </description>
 <url type="homepage">http://mate-desktop.org/</url>
 <screenshots>
