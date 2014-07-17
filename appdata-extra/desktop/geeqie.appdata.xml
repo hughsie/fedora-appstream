@@ -3,19 +3,24 @@
 <application>
 <id type="desktop">geeqie.desktop</id>
 <metadata_license>CC0-1.0</metadata_license>
-<summary>
+<summary>Geeqie is a lightweight Gtk+ based image viewer for Unix like operating systems.
 <!--Brief summary of application.e.g. for Inkscape "Create and edit Scalable Vector Graphics images"-->
 </summary>
 <description>
 <!-- One or two paras about the application. Only <p> <ul> <ol> and <li> can be used-->
 <!-- see http://people.freedesktop.org/~hughsient/appdata/#description for style details-->
-<p>
+<p>Main features</p>
 
-</p>
+<p>
+EXIF, IPTC and XMP metadata browsing and editing
+interoperability, easy integration with other software.
+geeqie works on files and directories, there is no need to import images.
+Fast preview for many raw image formats.
+Tools for image comparison, sorting and managing photo collection</p>
 </description>
 <url type="homepage">http://geeqie.sourceforge.net/</url>
 <screenshots>
-<screenshot type="default"><!--http://projectname/screenshot.png--></screenshot>
+<screenshot type="default">http://a.fsdn.com/con/app/proj/geeqie/screenshots/235493.jpg<!--http://projectname/screenshot.png--></screenshot>
 <!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
 <!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
 </screenshots>
