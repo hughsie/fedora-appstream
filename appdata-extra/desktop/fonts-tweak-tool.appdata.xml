@@ -3,7 +3,11 @@
 <application>
 <id type="desktop">fonts-tweak-tool.desktop</id>
 <metadata_license>CC0-1.0</metadata_license>
-<summary>
+<summary><p>fonts-tweak-tool provides users a GUI to specific their preferred font families
+for different languages. libeasyfc is used as the backend of fonts-tweak-tool. 
+User can select preferred fonts for sans/serif/monospace/fantasy/cursive for
+any particular languages they choose, and user fontconfig rules will be
+generated to override fonts only for those languages. </p>
 <!--Brief summary of application.e.g. for Inkscape "Create and edit Scalable Vector Graphics images"-->
 </summary>
 <description>
