@@ -3,13 +3,19 @@
 <application>
 <id type="desktop">freecad.desktop</id>
 <metadata_license>CC0-1.0</metadata_license>
-<summary>
+<summary>FreeCAD is a parametric 3D modeler. Parametric modeling allows you to easily modify your design by going back into your model history and changing its parameters. FreeCAD is open source (LGPL license) and completely modular, allowing for very advanced extension and customization.
+
+FreeCAD is multiplatfom, and reads and writes many open file formats such as STEP, IGES, STL and others
 <!--Brief summary of application.e.g. for Inkscape "Create and edit Scalable Vector Graphics images"-->
 </summary>
 <description>
 <!-- One or two paras about the application. Only <p> <ul> <ol> and <li> can be used-->
 <!-- see http://people.freedesktop.org/~hughsient/appdata/#description for style details-->
-<p>
+<p>FreeCAD is a 3D CAD/CAE parametric modeling application. It is primarily made for mechanical design, but also serves all other uses where you need to model 3D objects with precision and control over modeling history.
+
+FreeCAD is still in the early stages of development, so, although it already offers you a large (and growing) list of features, much is still missing, specially comparing it to commercial solutions, and you might not find it developed enough yet for use in production environment. Still, there is a fast-growing community of enthusiastic users, and you can already find many examples of quality projects developed with FreeCAD.
+
+Like all open-source projects, the FreeCAD project is not a one-way work delivered to you by its developers. It depends much on its community to grow, gain features, and stabilize (get bugs fixed). So don't forget this when starting to use FreeCAD, if you like it, you can directly influence and help the project!
 
 </p>
 </description>
