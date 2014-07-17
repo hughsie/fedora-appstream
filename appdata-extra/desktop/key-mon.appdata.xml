@@ -4,18 +4,15 @@
 <id type="desktop">key-mon.desktop</id>
 <metadata_license>CC0-1.0</metadata_license>
 <summary>
-<!--Brief summary of application.e.g. for Inkscape "Create and edit Scalable Vector Graphics images"-->
+Utility to show live keyboard and mouse status for teaching and screencasts. 
 </summary>
 <description>
-<!-- One or two paras about the application. Only <p> <ul> <ol> and <li> can be used-->
-<!-- see http://people.freedesktop.org/~hughsient/appdata/#description for style details-->
-<p>
-
-</p>
+<p>Key-mon is a Utility to show live keyboard and mouse status for teaching and screencasts. 
+This tool will show the keyboard when doing a screen recording including: different key combonations, mouse wheel scrolling, support for 3 button mice, and touch tablet support. </p>
 </description>
 <url type="homepage">http://code.google.com/p/key-mon/</url>
 <screenshots>
-<screenshot type="default"><!--http://projectname/screenshot.png--></screenshot>
+<screenshot type="default">http://key-mon.googlecode.com/hg/docs/2x-no-mouse-meta.png</screenshot>
 <!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
 <!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
 </screenshots>
