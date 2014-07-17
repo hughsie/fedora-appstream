@@ -4,18 +4,19 @@
 <id type="desktop">cbrpager.desktop</id>
 <metadata_license>CC0-1.0</metadata_license>
 <summary>
-<!--Brief summary of application.e.g. for Inkscape "Create and edit Scalable Vector Graphics images"-->
+  read comics
 </summary>
 <description>
-<!-- One or two paras about the application. Only <p> <ul> <ol> and <li> can be used-->
-<!-- see http://people.freedesktop.org/~hughsient/appdata/#description for style details-->
+cbrPager is a simple comic book reader application with the ability to change pages and zoom. 
+It features the ability to open and read cbr, cb7 and cbz comic book archives that contain 
+PNG and JPEG images.
 <p>
 
 </p>
 </description>
 <url type="homepage">http://www.jcoppens.com/soft/cbrpager/index.en.php</url>
 <screenshots>
-<screenshot type="default"><!--http://projectname/screenshot.png--></screenshot>
+<screenshot type="default">http://www.jcoppens.com/soft/cbrpager/img/snap.jpeg</screenshot>
 <!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
 <!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
 </screenshots>
