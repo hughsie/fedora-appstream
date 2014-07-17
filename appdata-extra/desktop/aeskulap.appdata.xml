@@ -8,11 +8,7 @@ medical image viewer
 </summary>
 <description>
 <p>
-aeskulap is a viewer for medical images, and is able to load a series of special images stored in the DICOM format for review. It Supports compressed (lossless, lossy), uncompressed and multiframe DICOM images, 
-C-Find support (query archive nodes),
-C-Move (query / retrieve) support,
-Proper display support for Rescale / Intercept tags,
-and color images.
+aeskulap is a viewer for medical images with support for the DICOM format.
 </p>
 
 </description>
