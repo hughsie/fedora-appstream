@@ -3,19 +3,21 @@
 <application>
 <id type="desktop">extrema.desktop</id>
 <metadata_license>CC0-1.0</metadata_license>
-<summary>
+<summary><p>Extrema is a powerful visualization and data analysis tool that enables researchers to quickly distill their large, complex data sets into meaningful information. Its flexibility, sophistication, and power allow you to easily develop your own commands and create highly customized graphs.</p>
 <!--Brief summary of application.e.g. for Inkscape "Create and edit Scalable Vector Graphics images"-->
 </summary>
 <description>
 <!-- One or two paras about the application. Only <p> <ul> <ol> and <li> can be used-->
 <!-- see http://people.freedesktop.org/~hughsient/appdata/#description for style details-->
-<p>
+<p>All the power and flexibility of Extrema's versatile command language is now available from its rich graphical user interface.</p>
+
+<p>Although Extrema's command language is already known for its intuitive syntax and ease of use, the graphical user interface simplifies the process even further, by displaying all the options available. No need to remember how to get that obscure special effect you need; just click the button and it's done!
 
 </p>
 </description>
 <url type="homepage">http://exsitewebware.com/extrema/</url>
 <screenshots>
-<screenshot type="default"><!--http://projectname/screenshot.png--></screenshot>
+<screenshot type="default">http://exsitewebware.com/extrema/_Library/images/fitexample2.png<!--http://projectname/screenshot.png--></screenshot>
 <!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
 <!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
 </screenshots>
