@@ -3,19 +3,19 @@
 <application>
 <id type="desktop">eqsl.desktop</id>
 <metadata_license>CC0-1.0</metadata_license>
-<summary>
+<summary><p>Aqsis is a cross-platform photorealistic 3D rendering solution, adhering to the RenderMan interface standard defined by Pixar Animation Studios.</p>
 <!--Brief summary of application.e.g. for Inkscape "Create and edit Scalable Vector Graphics images"-->
 </summary>
 <description>
 <!-- One or two paras about the application. Only <p> <ul> <ol> and <li> can be used-->
 <!-- see http://people.freedesktop.org/~hughsient/appdata/#description for style details-->
-<p>
+<p>The Aqsis project itself consists of a number of components, each useful in their own right, but contributing to the larger aims of the project as a whole. At this time, there are two such components: the aqsis rendering tools and the RIBMosaic exporter for Blender.
 
 </p>
 </description>
 <url type="homepage">http://www.aqsis.org/</url>
 <screenshots>
-<screenshot type="default"><!--http://projectname/screenshot.png--></screenshot>
+<screenshot type="default">http://2.bp.blogspot.com/-UFaHDZeFv2w/TeeRniomLRI/AAAAAAAAAGQ/R3ix2MXYHgU/s500/menger_111101101_111010000_111101101.png<!--http://projectname/screenshot.png--></screenshot>
 <!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
 <!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
 </screenshots>
