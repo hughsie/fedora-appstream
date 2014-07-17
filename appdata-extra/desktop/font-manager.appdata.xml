@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2014 Your Name <name@emailaddress.com> -->
+
 <application>
 <id type="desktop">font-manager.desktop</id>
 <metadata_license>CC0-1.0</metadata_license>
-<summary>
+<summary><p>Font Manager is intended to provide a way for average users to easily manage desktop fonts, without having to resort to command line tools or editing configuration files by hand. While designed primarily with the Gnome Desktop Environment in mind, it should work well with other Gtk+ desktop environments.
+
+Font Manager is NOT a professional-grade font management solution. </p>
 <!--Brief summary of application.e.g. for Inkscape "Create and edit Scalable Vector Graphics images"-->
 </summary>
 <description>
@@ -15,7 +18,7 @@
 </description>
 <url type="homepage">http://code.google.com/p/font-manager</url>
 <screenshots>
-<screenshot type="default"><!--http://projectname/screenshot.png--></screenshot>
+<screenshot type="default">http://font-manager.googlecode.com/svn/resources/font-manager.googlecode.com/font-manager.png<!--http://projectname/screenshot.png--></screenshot>
 <!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
 <!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
 </screenshots>
