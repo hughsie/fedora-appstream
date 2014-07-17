@@ -15,7 +15,9 @@
 </description>
 <url type="homepage">http://mate-desktop.org/</url>
 <screenshots>
-<screenshot type="default"><!--http://projectname/screenshot.png--></screenshot>
+<screenshot type="default">http://mate-desktop.org/screens/screenshot.jpg
+
+<!--http://projectname/screenshot.png--></screenshot>
 <!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
 <!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
 </screenshots>
