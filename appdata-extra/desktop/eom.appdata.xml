@@ -1,22 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014 Your Name <name@emailaddress.com> -->
+<!-- Copyright 2014 Ryan Lerch <rlerch@redhat.com> -->
 <application>
 <id type="desktop">eom.desktop</id>
 <metadata_license>CC0-1.0</metadata_license>
+<name>	Eye of MATE</name>
 <summary>
-<!--Brief summary of application.e.g. for Inkscape "Create and edit Scalable Vector Graphics images"-->
+  simple image viewer
 </summary>
 <description>
-<!-- One or two paras about the application. Only <p> <ul> <ol> and <li> can be used-->
-<!-- see http://people.freedesktop.org/~hughsient/appdata/#description for style details-->
 <p>
-
+	Eye of MATE is a simple viewer for browsing images on your computer. 
+	Once an image is loaded, you can zoom and rotate the image, and also view 
+	subsequent images in the directory the image was loaded from.
 </p>
 </description>
 <url type="homepage">http://mate-desktop.org/</url>
 <screenshots>
-<screenshot type="default"><!--http://projectname/screenshot.png--></screenshot>
-<!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
-<!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
+<screenshot type="default">http://mate-desktop.org/gallery/1.8/eom.png</screenshot>
 </screenshots>
 </application>
