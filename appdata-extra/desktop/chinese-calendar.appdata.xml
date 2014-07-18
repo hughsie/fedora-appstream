@@ -4,19 +4,16 @@
 <id type="desktop">chinese-calendar.desktop</id>
 <metadata_license>CC0-1.0</metadata_license>
 <summary>
-<!--Brief summary of application.e.g. for Inkscape "Create and edit Scalable Vector Graphics images"-->
+  Chinese traditional calendar
 </summary>
 <description>
-<!-- One or two paras about the application. Only <p> <ul> <ol> and <li> can be used-->
-<!-- see http://people.freedesktop.org/~hughsient/appdata/#description for style details-->
 <p>
-
+  Chinese Calendar is a calendar application tailored to Chinese users. It allows you to easily
+  find the names and dates of festivals and also query solar terms typically used in China.
 </p>
 </description>
 <url type="homepage">https://launchpad.net/chinese-calendar</url>
 <screenshots>
-<screenshot type="default"><!--http://projectname/screenshot.png--></screenshot>
-<!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
-<!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
+<screenshot type="default">http://assets.ubuntu.com/sites/ubuntu/1138/u/img/desktop/image-chinese-lunar-calendar.png</screenshot>
 </screenshots>
 </application>
