@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014 Your Name <name@emailaddress.com> -->
+<!-- Copyright 2014 Ryan Lerch <rlerch@redhat.com>-->
 <application>
 <id type="desktop">fontmatrix.desktop</id>
 <metadata_license>CC0-1.0</metadata_license>
 <summary>
-<!--Brief summary of application.e.g. for Inkscape "Create and edit Scalable Vector Graphics images"-->
+  manage fonts installed on your system
 </summary>
 <description>
-<!-- One or two paras about the application. Only <p> <ul> <ol> and <li> can be used-->
-<!-- see http://people.freedesktop.org/~hughsient/appdata/#description for style details-->
 <p>
-
+  Font Matrix is an advanced font manager that allows you to view and organise the fonts 
+  installed on your system. It provides a wide range of information about the fonts installed
+  on your system, and allows you to tag them into groups, perform searches on your fonts based
+  on font metadata, and easily compare glyphs of fonts.
 </p>
 </description>
 <url type="homepage">http://fontmatrix.be/node/21</url>
 <screenshots>
-<screenshot type="default"><!--http://projectname/screenshot.png--></screenshot>
-<!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
-<!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
+  <screenshot type="default">https://raw.githubusercontent.com/hughsie/fedora-appstream/graphics/screenshots-extra/fontmatrix/a.png</screenshot>
+  <screenshot type="default">https://raw.githubusercontent.com/hughsie/fedora-appstream/graphics/screenshots-extra/fontmatrix/b.png</screenshot>
 </screenshots>
 </application>
