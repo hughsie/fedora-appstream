@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014 Your Name <name@emailaddress.com> -->
+<!-- Copyright 2014 Ryan Lerch <rlerch@redhat.com> -->
 <application>
 <id type="desktop">fonts-tweak-tool.desktop</id>
 <metadata_license>CC0-1.0</metadata_license>
 <summary>
-<!--Brief summary of application.e.g. for Inkscape "Create and edit Scalable Vector Graphics images"-->
+  advanced settings for font display on the desktop
 </summary>
 <description>
-<!-- One or two paras about the application. Only <p> <ul> <ol> and <li> can be used-->
-<!-- see http://people.freedesktop.org/~hughsient/appdata/#description for style details-->
 <p>
-
+  The Fonts Tweak Tool is a utility application that allows you to further change the
+  font configuration on your system. GNOME Tweak Tool allows you to configure and change
+  the default font on your system, but the Fonts Tweak Tool goes further. It allows you to 
+  set specific default fonts for different lanugaues, set hinting and font rendering options
+  on a per-font basis, and specify global font substitutions.
 </p>
 </description>
 <url type="homepage">https://bitbucket.org/tagoh/fonts-tweak-tool/</url>
 <screenshots>
-<screenshot type="default"><!--http://projectname/screenshot.png--></screenshot>
-<!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
-<!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
+<screenshot type="default">https://raw.githubusercontent.com/hughsie/fedora-appstream/master/screenshots-extra/fonts-tweak-tool/a.png</screenshot></screenshot>
+  <screenshot>https://raw.githubusercontent.com/hughsie/fedora-appstream/master/screenshots-extra/fonts-tweak-tool/a.png</screenshot>
 </screenshots>
 </application>
