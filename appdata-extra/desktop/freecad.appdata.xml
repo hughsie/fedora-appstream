@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014 Your Name <name@emailaddress.com> -->
+<!-- Copyright 2014 Ryan Lerch <rlerch@redhat.com> -->
 <application>
 <id type="desktop">freecad.desktop</id>
 <metadata_license>CC0-1.0</metadata_license>
 <summary>
-<!--Brief summary of application.e.g. for Inkscape "Create and edit Scalable Vector Graphics images"-->
+  3D Computer Aided Design (CAD)
 </summary>
 <description>
-<!-- One or two paras about the application. Only <p> <ul> <ol> and <li> can be used-->
-<!-- see http://people.freedesktop.org/~hughsient/appdata/#description for style details-->
 <p>
-
+  FreeCAD is a 3D Computer Aided Design (CAD) application that focuses on Parametric modeling -- 
+  where the user specifies the geometric size, position and rotation of objects. FreeCAD can import
+  and export to a wide range of formats, including STEP, IGES, OBJ, STL, DXF, SVG, STL, DAE, IFC, 
+  OFF, and NASTRAN, and can also export for 3D printer formats. It also features a modular architecture 
+  so you can easily script tasks, a sketcher with a constant solver, robot simulation, drawing sheets,
+  and a 3D Renderer.
 </p>
 </description>
 <url type="homepage">http://sourceforge.net/apps/mediawiki/free-cad/</url>
 <screenshots>
-<screenshot type="default"><!--http://projectname/screenshot.png--></screenshot>
-<!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
-<!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
+<screenshot type="default">http://www.freecadweb.org/wiki/images/2/2a/Freecad_default.jpg</screenshot>
 </screenshots>
 </application>
