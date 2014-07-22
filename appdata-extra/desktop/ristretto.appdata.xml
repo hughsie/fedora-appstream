@@ -1,22 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014 Your Name <name@emailaddress.com> -->
+<!-- Copyright 2014 Ryan Lerch <rlerch@redhat.com> -->
 <application>
 <id type="desktop">ristretto.desktop</id>
 <metadata_license>CC0-1.0</metadata_license>
 <summary>
-<!--Brief summary of application.e.g. for Inkscape "Create and edit Scalable Vector Graphics images"-->
+  simple image viewer
 </summary>
 <description>
-<!-- One or two paras about the application. Only <p> <ul> <ol> and <li> can be used-->
-<!-- see http://people.freedesktop.org/~hughsient/appdata/#description for style details-->
 <p>
-
+  Ristretto is a simple application for viewing, zooming and rotating images. It also
+  has the ability to set an image as your desktop background.
 </p>
 </description>
 <url type="homepage">http://goodies.xfce.org/projects/applications/ristretto/</url>
 <screenshots>
-<screenshot type="default"><!--http://projectname/screenshot.png--></screenshot>
-<!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
-<!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
+<screenshot type="default">http://goodies.xfce.org/_media/projects/applications/ristretto-screenshot.png</screenshot>
+<screenshot>http://goodies.xfce.org/_media/projects/applications/ristretto-screenshot-1.png</screenshot>
+<screenshot>http://goodies.xfce.org/_media/projects/applications/ristretto-screenshot-2.png</screenshot>
 </screenshots>
 </application>
