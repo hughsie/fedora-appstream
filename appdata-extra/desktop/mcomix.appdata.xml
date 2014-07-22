@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014 Your Name <name@emailaddress.com> -->
+<!-- Copyright 2014 Ryan Lerch <rlerch@redhat.com> -->
 <application>
 <id type="desktop">mcomix.desktop</id>
 <metadata_license>CC0-1.0</metadata_license>
 <summary>
-<!--Brief summary of application.e.g. for Inkscape "Create and edit Scalable Vector Graphics images"-->
+  comics viewer
 </summary>
 <description>
-<!-- One or two paras about the application. Only <p> <ul> <ol> and <li> can be used-->
-<!-- see http://people.freedesktop.org/~hughsient/appdata/#description for style details-->
 <p>
-
+  MComics is an image viewer specifically for reading comics. It features support for a wide range 
+  of archive formats including CBR and CBZ. The interface is specifically designed for reading comics
+  allowing you to easily flip to the next page, and it also provides a thumbnail view on the left to
+  show upcoming pages.
 </p>
 </description>
 <url type="homepage">http://mcomix.sourceforge.net/</url>
 <screenshots>
-<screenshot type="default"><!--http://projectname/screenshot.png--></screenshot>
-<!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
-<!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
+  <screenshot type="default">http://sourceforge.net/p/mcomix/screenshot/273801.jpg</screenshot>
+  <screenshot>http://sourceforge.net/p/mcomix/screenshot/273797.jpg/thumb</screenshot>
 </screenshots>
 </application>
