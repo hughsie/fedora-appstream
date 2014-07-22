@@ -4,19 +4,17 @@
 <id type="desktop">librecad.desktop</id>
 <metadata_license>CC0-1.0</metadata_license>
 <summary>
-<!--Brief summary of application.e.g. for Inkscape "Create and edit Scalable Vector Graphics images"-->
+  2D Computer Aided Design (CAD)
 </summary>
 <description>
-<!-- One or two paras about the application. Only <p> <ul> <ol> and <li> can be used-->
-<!-- see http://people.freedesktop.org/~hughsient/appdata/#description for style details-->
 <p>
-
+  libreCAD is an 2D Computer Aided Design (CAD) application for creating plans and designs on your computer. 
+  It can be used to make  accurate 2D representations of floorplans, part designs, and just about anything 
+  that can be represented as a flat 2D plan. 
 </p>
 </description>
 <url type="homepage">http://librecad.org/</url>
 <screenshots>
-<screenshot type="default"><!--http://projectname/screenshot.png--></screenshot>
-<!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
-<!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
+<screenshot type="default">http://wiki.librecad.org/images/f/f8/Lcnotclosed.png</screenshot>
 </screenshots>
 </application>
