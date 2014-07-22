@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014 Your Name <name@emailaddress.com> -->
+<!-- Copyright 2014 Ryan Lerch <rlerch@redhat.com> -->
 <application>
 <id type="desktop">geeqie.desktop</id>
 <metadata_license>CC0-1.0</metadata_license>
 <summary>
-<!--Brief summary of application.e.g. for Inkscape "Create and edit Scalable Vector Graphics images"-->
+  image browser
 </summary>
 <description>
-<!-- One or two paras about the application. Only <p> <ul> <ol> and <li> can be used-->
-<!-- see http://people.freedesktop.org/~hughsient/appdata/#description for style details-->
 <p>
-
+  Geeqie is an application for browsing images -- you open up an image or directory to browse
+  and view all the images in that directory. It also displays all the relevant data and metadata
+  for your images in various, configurable sidebar widgets. It can display many forms of data, 
+  including exif metadata, color histograms, GPS locations of the photo.
+  
 </p>
 </description>
 <url type="homepage">http://geeqie.sourceforge.net/</url>
 <screenshots>
-<screenshot type="default"><!--http://projectname/screenshot.png--></screenshot>
-<!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
-<!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
+  <screenshot type="default">http://sourceforge.net/p/geeqie/screenshot/233062.jpg</screenshot>
+  <screenshot>http://sourceforge.net/p/geeqie/screenshot/235493.jpg</screenshot>
 </screenshots>
 </application>
