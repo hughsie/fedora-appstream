@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014 Your Name <name@emailaddress.com> -->
+<!-- Copyright 2014 Ryan Lerch <rlerch@redhat.com> -->
 <application>
-<id type="desktop">xzgv.desktop</id>
-<metadata_license>CC0-1.0</metadata_license>
-<summary>
-<!--Brief summary of application.e.g. for Inkscape "Create and edit Scalable Vector Graphics images"-->
-</summary>
-<description>
-<!-- One or two paras about the application. Only <p> <ul> <ol> and <li> can be used-->
-<!-- see http://people.freedesktop.org/~hughsient/appdata/#description for style details-->
-<p>
-
-</p>
-</description>
-<url type="homepage">http://sourceforge.net/projects/xzgv/</url>
-<screenshots>
-<screenshot type="default"><!--http://projectname/screenshot.png--></screenshot>
-<!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
-<!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
-</screenshots>
+	<id type="desktop">xzgv.desktop</id>
+	<metadata_license>CC0-1.0</metadata_license>
+	<summary>
+		simple image viewer
+	</summary>
+	<description>
+		<p>
+			xzgv is a simple image editor, with a focus on controlling all actions using keyboard input.
+			It has a simple, two pane layout, with all the thumbnails of the current directory listed
+			in the left pane, and the image viewed in the main pane. The menu in xzgv can be viewed
+			in a context menu that is shown by right-clicking on the main image pane. This context
+			menu also lists all the keyboard shortcuts if you are new to xzgv and need to know them
+		</p>
+	</description>
+	<url type="homepage">http://sourceforge.net/projects/xzgv/</url>
+	<screenshots>
+		<screenshot type="default">https://raw.githubusercontent.com/hughsie/fedora-appstream/master/screenshots-extra/xzgv/a.png</screenshot>
+	</screenshots>
 </application>
