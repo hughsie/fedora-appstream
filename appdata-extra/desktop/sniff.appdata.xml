@@ -7,7 +7,7 @@
 		Create and edit Dogtail scripts
 	</summary>
 	<description>
-		<p>Sniff is a useful tool that can assist in writing dogtail scripts for automated GUI testing.</p>
+		<p>AT-SPI Browser (also known as Sniff) is a useful tool that can assist in writing dogtail scripts for automated GUI testing.</p>
 		<p>Dogtail exposes elements on your desktop as a hierarchical tree of objects.  
 		Digging through the often-cluttered hierarchy of objects can be tedious and time consuming.
 		</p>
@@ -15,8 +15,6 @@
 	</description>
 	<url type="homepage">http://dogtail.fedorahosted.org/</url>
 	<screenshots>
-		<screenshot type="default"><!--http://projectname/screenshot.png--></screenshot>
-		<!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
-		<!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
+		<screenshot type="default">https://fedorahosted.org/dogtail/raw-attachment/wiki/WikiStart/sniff.png</screenshot>
 	</screenshots>
 </application>
