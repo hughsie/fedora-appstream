@@ -1,22 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014 Your Name <name@emailaddress.com> -->
+<!-- Copyright 2014 Ryan Lerch <rlerch@redhat.com> -->
 <application>
-<id type="desktop">postr.desktop</id>
-<metadata_license>CC0-1.0</metadata_license>
-<summary>
-<!--Brief summary of application.e.g. for Inkscape "Create and edit Scalable Vector Graphics images"-->
-</summary>
-<description>
-<!-- One or two paras about the application. Only <p> <ul> <ol> and <li> can be used-->
-<!-- see http://people.freedesktop.org/~hughsient/appdata/#description for style details-->
-<p>
-
-</p>
-</description>
-<url type="homepage">http://projects.gnome.org/postr/</url>
-<screenshots>
-<screenshot type="default"><!--http://projectname/screenshot.png--></screenshot>
-<!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
-<!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
-</screenshots>
+	<id type="desktop">postr.desktop</id>
+	<metadata_license>CC0-1.0</metadata_license>
+	<summary>upload photos to Flickr</summary>
+	<description>
+		<p>
+			Postr is a simple application for uploading images from your computer
+			to the Flickr image sharing website. It has a simple yet powerful user
+			interface that allows you to set common attributes for your photos on
+			Flickr like title, description, tags, sets, groups, privacy and licence.
+			It also has session management, integration with the Nautilus file browser, 
+			and also supports dragging and dropping files from any file browser.
+		</p>
+	</description>
+	<url type="homepage">http://projects.gnome.org/postr/</url>
+	<screenshots>
+		<screenshot type="default">http://burtonini.com/computing/screenshots/postr-2.png</screenshot>
+	</screenshots>
 </application>
