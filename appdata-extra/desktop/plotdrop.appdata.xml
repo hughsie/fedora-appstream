@@ -1,22 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014 Your Name <name@emailaddress.com> -->
+<!-- Copyright 2014 Ryan Lerch <rlerch@redhat.com> -->
 <application>
-<id type="desktop">plotdrop.desktop</id>
-<metadata_license>CC0-1.0</metadata_license>
-<summary>
-<!--Brief summary of application.e.g. for Inkscape "Create and edit Scalable Vector Graphics images"-->
-</summary>
-<description>
-<!-- One or two paras about the application. Only <p> <ul> <ol> and <li> can be used-->
-<!-- see http://people.freedesktop.org/~hughsient/appdata/#description for style details-->
-<p>
-
-</p>
-</description>
-<url type="homepage">http://plotdrop.sourceforge.net/</url>
-<screenshots>
-<screenshot type="default"><!--http://projectname/screenshot.png--></screenshot>
-<!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
-<!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
-</screenshots>
+	<id type="desktop">plotdrop.desktop</id>
+	<metadata_license>CC0-1.0</metadata_license>
+	<summary>create graphs and data visualizations</summary>
+	<description>
+		<p>
+			plotdrop is a simple application for creating quick graphs from
+			2D datasets using the GNUPlot backend. To use plotdrop, you simply
+			drag and drop a data file from your file browser, configure the options
+			and generate your graph.
+		</p>
+	</description>
+	<url type="homepage">http://plotdrop.sourceforge.net/</url>
+	<screenshots>
+		<screenshot type="default">http://plotdrop.sourceforge.net/screenshot-0.5.jpeg</screenshot>
+	</screenshots>
 </application>
