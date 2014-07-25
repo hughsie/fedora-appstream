@@ -1,22 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014 Your Name <name@emailaddress.com> -->
+<!-- Copyright 2014 Ryan Lerch <rlerch@redhat.com> -->
 <application>
-<id type="desktop">qcomicbook.desktop</id>
-<metadata_license>CC0-1.0</metadata_license>
-<summary>
-<!--Brief summary of application.e.g. for Inkscape "Create and edit Scalable Vector Graphics images"-->
-</summary>
-<description>
-<!-- One or two paras about the application. Only <p> <ul> <ol> and <li> can be used-->
-<!-- see http://people.freedesktop.org/~hughsient/appdata/#description for style details-->
-<p>
-
-</p>
-</description>
-<url type="homepage">http://qcomicbook.org/</url>
-<screenshots>
-<screenshot type="default"><!--http://projectname/screenshot.png--></screenshot>
-<!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
-<!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
-</screenshots>
+	<id type="desktop">qcomicbook.desktop</id>
+	<metadata_license>CC0-1.0</metadata_license>
+	<summary>read comics</summary>
+	<description>
+		<p>
+			QComicBook is an application for reading comics and supports a wide range of formats, 
+			including CBZ, CBR and CBT. QComicBook has a wide range of features to enhance your
+			comic reading, including page preview, a thumbnails view, bookmarks, and a specific
+			mode for reading manga.
+		</p>
+	</description>
+	<url type="homepage">http://qcomicbook.org/</url>
+	<screenshots>
+		<screenshot type="default">http://qcomicbook.org/screenshots/qcomicbook072-os2.png</screenshot>
+	</screenshots>
 </application>
