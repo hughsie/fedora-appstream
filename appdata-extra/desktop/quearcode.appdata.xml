@@ -1,22 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014 Your Name <name@emailaddress.com> -->
+<!-- Copyright 2014 Ryan Lerch <rlerch@redhat.com> -->
 <application>
-<id type="desktop">quearcode.desktop</id>
-<metadata_license>CC0-1.0</metadata_license>
-<summary>
-<!--Brief summary of application.e.g. for Inkscape "Create and edit Scalable Vector Graphics images"-->
-</summary>
-<description>
-<!-- One or two paras about the application. Only <p> <ul> <ol> and <li> can be used-->
-<!-- see http://people.freedesktop.org/~hughsient/appdata/#description for style details-->
-<p>
-
-</p>
-</description>
-<url type="homepage">http://sourceforge.net/projects/quearcode/</url>
-<screenshots>
-<screenshot type="default"><!--http://projectname/screenshot.png--></screenshot>
-<!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
-<!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
-</screenshots>
+	<id type="desktop">quearcode.desktop</id>
+	<metadata_license>CC0-1.0</metadata_license>
+	<summary>Generate QR codes</summary>
+	<description>
+		<p>
+			Quearcode is a simple application for quickly generating QR codes. Simply
+			enter the text you want to encode, set the size of the QR code, and press
+			Generate to open up your generated QR code in the default image viewer.
+		</p>
+	</description>
+	<url type="homepage">http://sourceforge.net/projects/quearcode/</url>
+	<screenshots>
+		<screenshot type="default">https://raw.githubusercontent.com/hughsie/fedora-appstream/master/screenshots-extra/quearcode/a.png</screenshot>
+	</screenshots>
 </application>
