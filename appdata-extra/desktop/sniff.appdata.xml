@@ -4,14 +4,14 @@
 	<id type="desktop">sniff.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
 	<summary>
-		<!--Brief summary of application.e.g. for Inkscape "Create and edit Scalable Vector Graphics images"-->
+		Create and edit Dogtail scripts
 	</summary>
 	<description>
-		<!-- One or two paras about the application. Only <p> <ul> <ol> and <li> can be used-->
-		<!-- see http://people.freedesktop.org/~hughsient/appdata/#description for style details-->
-		<p>
-			
+		<p>Sniff is a useful tool that can assist in writing dogtail scripts for automated GUI testing.</p>
+		<p>Dogtail exposes elements on your desktop as a hierarchical tree of objects.  
+		Digging through the often-cluttered hierarchy of objects can be tedious and time consuming.
 		</p>
+		<p>Sniff makes it easy to visualize this hierarchy by providing a GUI browser that renders the object hierarchy as an expandable tree.</p>
 	</description>
 	<url type="homepage">http://dogtail.fedorahosted.org/</url>
 	<screenshots>
