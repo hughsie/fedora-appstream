@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014 Your Name <name@emailaddress.com> -->
+<!-- Copyright 2014 Ravi Srinivasan <ravishankar.srinivasan@gmail.com> -->
 <application>
 	<id type="desktop">teamgit.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
 	<summary>
-		<!--Brief summary of application.e.g. for Inkscape "Create and edit Scalable Vector Graphics images"-->
+		A GUI tool to manage Git repositories
 	</summary>
 	<description>
-		<!-- One or two paras about the application. Only <p> <ul> <ol> and <li> can be used-->
-		<!-- see http://people.freedesktop.org/~hughsient/appdata/#description for style details-->
 		<p>
-			
+		  teamgit is a GUI tool to manage Git repositories. It provides a nice commit interface to git	
+		</p>
+		<p>
+		  TeamGit aims to be easy to use. Its goal is simplicity, powerfulness and a uniform interface on all platforms.	
 		</p>
 	</description>
-	<url type="homepage">http://gitorious.org/projects/teamgit</url>
+	<url type="homepage">https://www.gitorious.org/teamgit</url>
 	<screenshots>
 		<screenshot type="default"><!--http://projectname/screenshot.png--></screenshot>
 		<!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
