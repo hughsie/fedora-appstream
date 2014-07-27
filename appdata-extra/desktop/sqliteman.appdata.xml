@@ -16,8 +16,6 @@
 	</description>
 	<url type="homepage">http://www.sqliteman.com/</url>
 	<screenshots>
-		<screenshot type="default"><!--http://projectname/screenshot.png--></screenshot>
-		<!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
-		<!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
+		<screenshot type="default">http://sqliteman.yarpen.cz/linux_1.png</screenshot>
 	</screenshots>
 </application>
