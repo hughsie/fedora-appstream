@@ -11,7 +11,7 @@
 		  tkpp is a GUI frontend to pp, which can turn perl scripts into stand-alone PAR files, perl scripts or executables.	
 		</p>
 	</description>
-	<url type="homepage">http://search.cpan.org/dist/PAR-Packer/</url>
+	<url type="homepage">http://search.cpan.org/dist/PAR-Packer/script/tkpp</url>
 	<screenshots>
 		<screenshot type="default"><!--http://projectname/screenshot.png--></screenshot>
 		<!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
