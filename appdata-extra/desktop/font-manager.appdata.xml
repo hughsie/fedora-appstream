@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2014 Chris Roberts <croberts@croberts.org -->
+<application>
+<id type="desktop">font-manager.desktop</id>
+<metadata_license>CC0-1.0</metadata_license>
+<summary>
+A font management application for GTK+ Desktops
+</summary>
+<description>
+<p>
+Font Manager lets a user manage the fonts from the GUI, so they do not have to use the Command 
+line or have to change any config files in their enviroment. 
+Font Manager will work with any GTK+ Desktop
+</p>
+</description>
+<url type="homepage">http://code.google.com/p/font-manager</url>
+<screenshots>
+<screenshot type="default">http://font-manager.googlecode.com/svn/resources/font-manager.googlecode.com/font-manager.png</screenshot>
+</screenshots>
+</application>

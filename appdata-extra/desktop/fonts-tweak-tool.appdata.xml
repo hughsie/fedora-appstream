@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2014 Ryan Lerch <rlerch@redhat.com> -->
+<application>
+<id type="desktop">fonts-tweak-tool.desktop</id>
+<metadata_license>CC0-1.0</metadata_license>
+<summary>
+  advanced settings for font display on the desktop
+</summary>
+<description>
+<p>
+  The Fonts Tweak Tool is a utility application that allows you to further change the
+  font configuration on your system. GNOME Tweak Tool allows you to configure and change
+  the default font on your system, but the Fonts Tweak Tool goes further. It allows you to 
+  set specific default fonts for different lanugaues, set hinting and font rendering options
+  on a per-font basis, and specify global font substitutions.
+</p>
+</description>
+<url type="homepage">https://bitbucket.org/tagoh/fonts-tweak-tool/</url>
+<screenshots>
+<screenshot type="default">https://raw.githubusercontent.com/hughsie/fedora-appstream/master/screenshots-extra/fonts-tweak-tool/a.png</screenshot></screenshot>
+  <screenshot>https://raw.githubusercontent.com/hughsie/fedora-appstream/master/screenshots-extra/fonts-tweak-tool/a.png</screenshot>
+</screenshots>
+</application>

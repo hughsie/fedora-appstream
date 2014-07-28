@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2014 Ryan Lerch <rlerch@redhat.com> -->
+<application>
+	<id type="desktop">tiled.desktop</id>
+	<metadata_license>CC0-1.0</metadata_license>
+	<summary>
+		2D game map editing
+	</summary>
+	<description>
+		<p>
+			Tiled is a tool to create game maps for a wide range of 2D games, including side scrolling,
+			isometric view, and orthogonal projection games. It saves maps in its own TMX format, which
+			has support in a wide range of games and game engines. 
+		</p>
+	</description>
+	<url type="homepage">http://www.mapeditor.org</url>
+	<screenshots>
+		<screenshot type="default">http://www.mapeditor.org/img/screenshot-terrain.png</screenshot>
+		<screenshot>http://www.mapeditor.org/img/screenshot-objects.png</screenshot>
+		<screenshot>http://www.mapeditor.org/img/screenshot-isometric.png</screenshot>
+	</screenshots>
+</application>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2014 Ryan Lerch <rlerch@redhat.com> -->
+<application>
+<id type="desktop">chinese-calendar.desktop</id>
+<metadata_license>CC0-1.0</metadata_license>
+<summary>
+  Chinese traditional calendar
+</summary>
+<description>
+<p>
+  Chinese Calendar is a calendar application tailored to Chinese users. It allows you to easily
+  find the names and dates of festivals and also query solar terms typically used in China.
+</p>
+</description>
+<url type="homepage">https://launchpad.net/chinese-calendar</url>
+<screenshots>
+<screenshot type="default">http://assets.ubuntu.com/sites/ubuntu/1138/u/img/desktop/image-chinese-lunar-calendar.png</screenshot>
+</screenshots>
+</application>

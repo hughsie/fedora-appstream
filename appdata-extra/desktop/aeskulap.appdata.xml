@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2014 Ryan Lerch <rlerch@redhat.com> -->
+<application>
+<id type="desktop">aeskulap.desktop</id>
+<metadata_license>CC0-1.0</metadata_license>
+<summary>
+medical image viewer
+</summary>
+<description>
+<p>
+aeskulap is a viewer for medical images with support for the DICOM format.
+</p>
+
+</description>
+<url type="homepage">http://aeskulap.nongnu.org</url>
+<screenshots>
+<screenshot type="default">http://aeskulap.nongnu.org/gfx/screenshot1-full.jpg</screenshot>
+</screenshots>
+</application>

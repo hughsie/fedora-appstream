@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2014 Ryan Lerch <rlerch@redhat.com> -->
+<application>
+<id type="desktop">fotowall.desktop</id>
+<metadata_license>CC0-1.0</metadata_license>
+<summary>
+  create a composition of photos and images
+</summary>
+<description>
+
+<p>
+  Fotowall is an application that allows you to easily create a composition of your photos. 
+  Simply import the photos you want, add captions, rotate the images, add shadows and blurs, 
+  and move the images around to make your own custom, creative composition. Fotowall is great 
+  for turning a bunch of your photos into a personalized, creative wallpaper -- it even can create
+  a canvas the exact size of your desktop background.
+</p>
+</description>
+<url type="homepage">http://www.enricoros.com/opensource/fotowall/</url>
+<screenshots>
+  <screenshot type="default">https://raw.githubusercontent.com/hughsie/fedora-appstream/master/screenshots-extra/fotowall/a.png</screenshot>
+</screenshots>
+</application>

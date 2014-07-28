@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2014 Ryan Lerch <rlerch@redhat.com> -->
+<application>
+<id type="desktop">jaxodraw.desktop</id>
+<metadata_license>CC0-1.0</metadata_license>
+<summary>
+  Create and edit Feynman diagrams 
+</summary>
+<description>
+<p>
+  Jaxodraw is an application for creating and editing Feynman diagrams, with the ability to export to LaTeX. Feynman diagrams are a specific diagram scheme to represent the mathematical expressions that describe the behavior of subatomic particles.
+</p>
+</description>
+<url type="homepage">http://jaxodraw.sourceforge.net/</url>
+<screenshots>
+<screenshot type="default">http://jaxodraw.sourceforge.net/images/general.png</screenshot>
+</screenshots>
+</application>
