@@ -14,6 +14,6 @@
   </description>
   <url type="homepage">http://nomacs.org</url>
   <screenshots>
-    <screenshot type="default"><!--http://projectname/screenshot.png--></screenshot>
+    <screenshot type="default">https://raw.githubusercontent.com/hughsie/fedora-appstream/master/screenshots-extra/nomacs/a.png</screenshot>
   </screenshots>
 </application>
