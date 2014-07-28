@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2014 Ryan Lerch <rlerch@redhat.com> -->
 <application>
-  <id type="desktop">screenie.desktop</id>
+  <id type="desktop">screenie-composer.desktop</id>
   <metadata_license>CC0-1.0</metadata_license>
   <summary>Create stylish screenshots</summary>
   <description>
