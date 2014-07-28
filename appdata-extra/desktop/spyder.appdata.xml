@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014 Your Name <name@emailaddress.com> -->
+<!-- Copyright 2014 Ravi Srinivasan <ravishankar.srinivasan@gmail.com> -->
 <application>
 	<id type="desktop">spyder.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
 	<summary>
-		<!--Brief summary of application.e.g. for Inkscape "Create and edit Scalable Vector Graphics images"-->
+		A powerful feature rich IDE for Python development
 	</summary>
 	<description>
-		<!-- One or two paras about the application. Only <p> <ul> <ol> and <li> can be used-->
-		<!-- see http://people.freedesktop.org/~hughsient/appdata/#description for style details-->
 		<p>
-			
+		Spyder is an advanced IDE for developing scientific applications using the Python programming language.	
+		</p>
+		<p>
+		Spyder provides features for editing and testing Python code along with powerful runtime introspection and debugging.
 		</p>
 	</description>
 	<url type="homepage">http://spyderlib.googlecode.com</url>
