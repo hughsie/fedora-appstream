@@ -6,14 +6,15 @@
   <summary>Graphical viewer for Monotone repositories</summary>
   <description>
     <p>
-     guitone is a tool to visually navigate Monotone repositories. guitone aim to be a
-     full implementation of the monotone automation interface, and provides features such as:
+     Guitone is a tool to visually navigate Monotone repositories.
+     Guitone aims to be a full implementation of the monotone automation
+     interface, and provides features such as:
     </p>
     <ul>
-      <li>browsing a loaded workspace, with filtering by file states</li>
-      <li>display of the attributes of files</li>
-      <li>opening of files with the system's default editor or browser</li>
-      <li>showing differences between files</li>
+      <li>Browsing a loaded workspace, with filtering by file states</li>
+      <li>Display of the attributes of files</li>
+      <li>Opening of files with the system's default editor or browser</li>
+      <li>Showing differences between files</li>
     </ul>
   </description>
   <url type="homepage">https://guitone.thomaskeller.biz/</url>

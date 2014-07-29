@@ -3,7 +3,6 @@
 <application>
   <id type="desktop">geeqie.desktop</id>
   <metadata_license>CC0-1.0</metadata_license>
-  <summary>image browser</summary>
   <description>
   <p>
     Geeqie is an application for browsing images -- you open up an image or directory to browse

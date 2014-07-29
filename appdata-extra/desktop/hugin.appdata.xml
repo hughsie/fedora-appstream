@@ -3,14 +3,14 @@
 <application>
   <id type="desktop">hugin.desktop</id>
   <metadata_license>CC0-1.0</metadata_license>
-  <summary>stitch images together to create panoramas</summary>
   <description>
   <p>
-    Hugin is an application for taking a sequence of images, and stitching them together
-    to create, a single joined image -- a panaorama. Once your chosen images are imported,
-    hugin will attempt to find the similar points in your images, and create a panorama. Then
-    hugin has a wide range of manual options and tweaks to fine-tune the points and create a
-    seamless image.
+    Hugin is an application for taking a sequence of images, and stitching
+    them together to create, a single joined image -- a panaorama.
+    Once your chosen images are imported, Hugin will attempt to find the
+    similar points in your images, and create a panorama.
+    Then hugin has a wide range of manual options and tweaks to fine-tune
+    the points and create a seamless image.
   </p>
   </description>
   <url type="homepage">http://hugin.sourceforge.net/</url>

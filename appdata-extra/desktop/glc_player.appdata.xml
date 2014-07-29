@@ -3,12 +3,14 @@
 <application>
   <id type="desktop">glc_player.desktop</id>
   <metadata_license>CC0-1.0</metadata_license>
-  <summary>view 3D models</summary>
+  <summary>View 3D models</summary>
   <description>
   <p>
-    GLC Player is an application for viewing 3D models. It supports a wide range of formats,
-    including:  COLLADA, 3DXML, OBJ, 3DS, STL, OFF and COFF. It can also be used to export
-    still images of your models, and even export a library of models to a gallery HTML page.
+    GLC Player is an application for viewing 3D models.
+    It supports a wide range of formats, including:  COLLADA, 3DXML, OBJ,
+    3DS, STL, OFF and COFF.
+    It can also be used to export still images of your models, and even
+    export a library of models to a gallery HTML page.
   </p>
   </description>
   <url type="homepage">http://www.glc-player.net/</url>

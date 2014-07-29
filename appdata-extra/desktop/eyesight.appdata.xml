@@ -6,9 +6,9 @@
   <summary>View and rotate images</summary>
   <description>
     <p>
-      eyesight is a simple image viewer that allows the user to view either a
+      Eyesight is a simple image viewer that allows the user to view either a
       single image, or a whole directory of images.
-      eyesight also allows the user to rotate the image, and save the result.
+      Eyesight also allows the user to rotate the image, and save the result.
     </p>
   </description>
   <url type="homepage">https://github.com/mauios/eyesight</url>
