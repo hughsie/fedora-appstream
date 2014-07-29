@@ -6,11 +6,13 @@
   <summary>Graphical tree viewer for Mecurial repositories</summary>
   <description>
     <p>
-     hgview is a tool to visually navigate the tree and history of a Mecurial repository. hgview has a wide range of features for browsing and interacting with a Mecurial repository graphically, including:
+     HgView is a tool to visually navigate the tree and history of a Mecurial repository.
+     HgView has a wide range of features for browsing and interacting with a Mecurial
+     repository graphically, including:
     <ul>
-      <li>key-based navigation of the revisions history of a repository</li>
-      <li>automatic refresh of the revision graph when the repository is modified</li>
-      <li>display of the current working directory as a special node in the graph</li>
+      <li>Key-based navigation of the revisions history of a repository</li>
+      <li>Automatic refresh of the revision graph when the repository is modified</li>
+      <li>Display of the current working directory as a special node in the graph</li>
     </ul>
     </p>
   </description>

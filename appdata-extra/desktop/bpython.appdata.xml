@@ -6,7 +6,11 @@
   <summary>Graphical interface for the Python console</summary>
   <description>
     <p>
-      bpython is a graphical alternative for the Python console. It provides a number of additional features that are not possible with the regular (terminal based) Python console, including: syntax highlighting, command autocompletion, parameter lists for built in Python functions, and the ability to save code to a file.
+      bpython is a graphical alternative for the Python console.
+      It provides a number of additional features that are not possible with the
+      regular (terminal based) Python console, including: syntax highlighting,
+      command autocompletion, parameter lists for built in Python functions,
+      and the ability to save code to a file.
     </p>
   </description>
   <url type="homepage">http://www.bpython-interpreter.org/</url>

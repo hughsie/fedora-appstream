@@ -6,7 +6,7 @@
   <summary>Text editor for PHP files</summary>
   <description>
     <p>
-      gphpedit is a text editor specifically designed for editing PHP files
+      gPHPEdit is a text editor specifically designed for editing PHP files
       and files that typically are used in PHP projects (HTML and CSS files).
       It has support for syntax highlighting, code folding, function lists,
       parameter popups and a class browser.
