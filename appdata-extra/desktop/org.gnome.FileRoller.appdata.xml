@@ -6,24 +6,24 @@
   <summary>Open, modify and create compressed archive files</summary>
   <description>
     <p>
-      Archive Manager (also known as File Roller) is the default GNOME application for opening, creating, and
-      modifying archive and compressed archive files.
+      Archive Manager (also known as File Roller) is the default GNOME application
+      for opening, creating, and modifying archive and compressed archive files.
     </p>
     <p>
       Archive Manager supports a wide range of different archive files, including:
-      <ul>
-        <li>gzip archives (.tar.gz, .tgz)</li>
-        <li>bzip archives (.tar.bz, .tbz)</li>
-        <li>zip archives (.zip)</li>
-        <li>xz archives(.tar.xz)</li>
-      </ul>
     </p>
+    <ul>
+      <li>gzip archives (.tar.gz, .tgz)</li>
+      <li>bzip archives (.tar.bz, .tbz)</li>
+      <li>zip archives (.zip)</li>
+      <li>xz archives(.tar.xz)</li>
+    </ul>
   </description>
   <url type="homepage">https://wiki.gnome.org/Apps/FileRoller</url>
   <screenshots>
     <screenshot type="default">https://wiki.gnome.org/Apps/FileRoller?action=AttachFile&amp;do=get&amp;target=file-roller.png</screenshot>
   </screenshots>
-<!-- FIXME: change this to an upstream email address for spec updates
-<updatecontact>someone_who_cares@upstream_project.org</updatecontact>
- -->
+  <!-- FIXME: change this to an upstream email address for spec updates
+  <updatecontact>someone_who_cares@upstream_project.org</updatecontact>
+   -->
 </application>

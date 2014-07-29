@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2014 Richard Hughes <richard@hughsie.com> -->
 <application>
-<id type="desktop">evince.desktop</id>
-<metadata_license>CC0-1.0</metadata_license>
-<description>
-<p>
-Evince is a document viewer for multiple document formats: PDF, Postscript,
-djvu, tiff, dvi, XPS , SyncTex support with gedit and comics books (cbr,cbz,cb7 cbt).
-</p>
-<p>
-Evince can show your documents in page view, full screen or presentation mode.
-You can search for keywords in your document or scroll through page thumbnails
-to navigate documents. 
-</p>
-<p>
-Evince allows you to zoom in or zoom out to see more on your screen.
-Evince also supports opening password protected PDF files.
-</p>
-</description>
-<url type="homepage">https://projects.gnome.org/evince/</url>
-<screenshots>
-<screenshot type="default">https://projects.gnome.org/evince/images/screenshot-full.png</screenshot>
-</screenshots>
-<!-- FIXME: change this to an upstream email address for spec updates
-<updatecontact>someone_who_cares@upstream_project.org</updatecontact>
- -->
+  <id type="desktop">evince.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <description>
+    <p>
+      Evince is a document viewer for multiple document formats: PDF, Postscript,
+      djvu, tiff, dvi, XPS , SyncTex support with gedit and comics books (cbr,cbz,cb7 cbt).
+    </p>
+    <p>
+      Evince can show your documents in page view, full screen or presentation mode.
+      You can search for keywords in your document or scroll through page thumbnails
+      to navigate documents.
+    </p>
+    <p>
+      Evince allows you to zoom in or zoom out to see more on your screen.
+      Evince also supports opening password protected PDF files.
+    </p>
+  </description>
+  <url type="homepage">https://projects.gnome.org/evince/</url>
+  <screenshots>
+    <screenshot type="default">https://projects.gnome.org/evince/images/screenshot-full.png</screenshot>
+  </screenshots>
+  <!-- FIXME: change this to an upstream email address for spec updates
+  <updatecontact>someone_who_cares@upstream_project.org</updatecontact>
+   -->
 </application>

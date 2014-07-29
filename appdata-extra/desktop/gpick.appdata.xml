@@ -6,7 +6,15 @@
   <summary>Advanced color picker and color palette creator</summary>
   <description>
     <p>
-      Gpick is an application that allows you to sample any color from anywhere on the desktop, and use it to create palettes (i.e. collections of colors) for use in graphic design applications. Gpick also has other features that help in the creation of color palettes, such as: the ability to create a palette from an imported image, automatic naming of colors, and a scheme generator. Color palettes generated in Gpick can be exported many different formats, including: Inkscape/Gimp Palettes (*.gpl), Adobe Swatch Exchange (*.ase), and Alias/WaveFront Material (*.mtl). 
+      Gpick is an application that allows you to sample any color from anywhere
+      on the desktop, and use it to create palettes (i.e. collections of colors)
+      for use in graphic design applications.
+      Gpick also has other features that help in the creation of color palettes,
+      such as: the ability to create a palette from an imported image, automatic
+      naming of colors, and a scheme generator.
+      Color palettes generated in Gpick can be exported many different formats,
+      including: Inkscape/Gimp Palettes (*.gpl), Adobe Swatch Exchange (*.ase),
+      and Alias/WaveFront Material (*.mtl).
     </p>
   </description>
   <url type="homepage">https://code.google.com/p/gpick/</url>
@@ -14,7 +22,7 @@
   <screenshots>
     <screenshot type="default">http://wiki.gpick.googlecode.com/hg/images/main-page-gpick-screenshot.png</screenshot>
   </screenshots>
-<!-- FIXME: change this to an upstream email address for spec updates
-<updatecontact>someone_who_cares@upstream_project.org</updatecontact>
- -->
+  <!-- FIXME: change this to an upstream email address for spec updates
+  <updatecontact>someone_who_cares@upstream_project.org</updatecontact>
+   -->
 </application>

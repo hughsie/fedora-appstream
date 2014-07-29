@@ -6,7 +6,7 @@
   <summary>2D puzzle game</summary>
   <description>
     <p>
-      Berusky is a 2D puzzle game where you control up to 5 bugs that have to 
+      Berusky is a 2D puzzle game where you control up to 5 bugs that have to
       work together to solve puzzles by moving boxes, using keys and blowing up
       explosives.
     </p>
@@ -16,7 +16,7 @@
     <screenshot type="default">http://www.anakreon.cz/images/b1screens/Stred1.gif</screenshot>
     <screenshot>http://www.anakreon.cz/images/b1screens/Tezk2.gif</screenshot>
   </screenshots>
-<!-- FIXME: change this to an upstream email address for spec updates
-<updatecontact>someone_who_cares@upstream_project.org</updatecontact>
- -->
+  <!-- FIXME: change this to an upstream email address for spec updates
+  <updatecontact>someone_who_cares@upstream_project.org</updatecontact>
+   -->
 </application>

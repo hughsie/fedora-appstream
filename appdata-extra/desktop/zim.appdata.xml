@@ -6,19 +6,19 @@
   <summary>Write notes in a desktop wiki</summary>
   <description>
     <p>
-        Zim brings the power of a wiki to your desktop, providing a neat and structured 
-        way to take notes and record your thoughts. Each page in Zim is automatically 
-        saved as text file with wiki markup, including the ability to link pages. Pages in
-        Zim are also displayed in the sidebar in a hierarchical tree style layout to help
-        organize your notes better.
-
+      Zim brings the power of a wiki to your desktop, providing a neat and structured
+      way to take notes and record your thoughts.
+      Each page in Zim is automatically  saved as text file with wiki markup,
+      including the ability to link pages.
+      Pages in Zim are also displayed in the sidebar in a hierarchical tree style
+      layout to help organize your notes better.
     </p>
   </description>
   <url type="homepage">http://zim-wiki.org/</url>
   <screenshots>
     <screenshot type="default">http://zim-wiki.org/screenshots/thumbs/zim-normal.png</screenshot>
   </screenshots>
-<!-- FIXME: change this to an upstream email address for spec updates
-<updatecontact>someone_who_cares@upstream_project.org</updatecontact>
- -->
+  <!-- FIXME: change this to an upstream email address for spec updates
+  <updatecontact>someone_who_cares@upstream_project.org</updatecontact>
+   -->
 </application>

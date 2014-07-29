@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2014 Ryan Lerch <rlerch@redhat.com>-->
 <application>
-  <id type="desktop">nomacs.desktop</id>  
+  <id type="desktop">nomacs.desktop</id>
   <metadata_license>CC0-1.0</metadata_license>
-  <summary>view and edit images</summary>
+  <summary>View and edit images</summary>
   <description>
     <p>
-      nomacs is a fast image viewer with additional image editing functionality. When viewing
-      images, it features fast thumbnail previews, a zoomable grid display of thumbnails, a
-      chromeless view, and display of metadata and image details with a histogram. It also has the 
-      ability to edit images, including cropping, resizing, rotating and color correction.
+      nomacs is a fast image viewer with additional image editing functionality.
+      When viewing images, it features fast thumbnail previews, a zoomable grid
+      display of thumbnails, a chromeless view, and display of metadata and
+      image details with a histogram.
+      It also has the ability to edit images, including cropping, resizing,
+      rotating and color correction.
     </p>
   </description>
   <url type="homepage">http://nomacs.org</url>

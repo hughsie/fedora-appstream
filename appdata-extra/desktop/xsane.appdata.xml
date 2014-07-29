@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2014 Ryan Lerch <rlerch@redhat.com> -->
 <application>
-	<id type="desktop">xsane.desktop</id>
-	<metadata_license>CC0-1.0</metadata_license>
-	<summary>
-		scan images with a scanner
-	</summary>
-	<description>
-		<p>
-			XSane is an application to scan images using a hardware scanner attached to your computer.
-			It is able to save in a variety of image formats, including TIFF and JPEG and can even 
-			save your scan as a PDF. XSane also has support for scanning multiple pages and merging them
-			into a single document.
-		</p>
-	</description>
-	<url type="homepage">http://www.xsane.org/</url>
-	<screenshots>
-		<screenshot type="default">http://www.xsane.org/doc/xsane-save.jpg</screenshot>
-	</screenshots>
+  <id type="desktop">xsane.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <summary>Scan images with a scanner</summary>
+  <description>
+    <p>
+      XSane is an application to scan images using a hardware scanner attached
+      to your computer.
+      It is able to save in a variety of image formats, including TIFF and JPEG
+      and can even save your scan as a PDF.
+      XSane also has support for scanning multiple pages and merging them into
+      a single document.
+    </p>
+  </description>
+  <url type="homepage">http://www.xsane.org/</url>
+  <screenshots>
+    <screenshot type="default">http://www.xsane.org/doc/xsane-save.jpg</screenshot>
+  </screenshots>
 </application>

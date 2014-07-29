@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2014 Ryan Lerch <rlerch@redhat.com> -->
 <application>
-	<id type="desktop">screengrab.desktop</id>
-	<metadata_license>CC0-1.0</metadata_license>
-	<summary>capture screenshots</summary>
-	<description>
-		<p>
-			Screengrab is a utility to take screenshots of your desktop. With Screengrab
-			you can take a shot of your whole desktop, a specific window, or you can select
-			the area you want to capture by dragging a rectangle with the mouse. Additionally
-			it features the ability to copy the screenshot to the clipboard, set a delay before
-			the screenshot is taken and save with filenames containing the current date and time.
-		</p>
-	</description>
-	<url type="homepage">http://screengrab.doomer.org/</url>
-	<screenshots>
-		<screenshot type="default">http://i.imgur.com/VfdeqYo.png</screenshot>
-	</screenshots>
+  <id type="desktop">screengrab.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <summary>Capture screenshots</summary>
+  <description>
+    <p>
+      Screengrab is a utility to take screenshots of your desktop.
+      With Screengrab you can take a shot of your whole desktop, a specific window,
+      or you can select the area you want to capture by dragging a rectangle with the mouse.
+      Additionally it features the ability to copy the screenshot to the clipboard,
+      set a delay before the screenshot is taken and save with filenames
+      containing the current date and time.
+    </p>
+  </description>
+  <url type="homepage">http://screengrab.doomer.org/</url>
+  <screenshots>
+    <screenshot type="default">http://i.imgur.com/VfdeqYo.png</screenshot>
+  </screenshots>
 </application>

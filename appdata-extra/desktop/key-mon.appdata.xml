@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2014 Chris Roberts <croberts@croberts.org -->
 <application>
-<id type="desktop">key-mon.desktop</id>
-<metadata_license>CC0-1.0</metadata_license>
-<summary>
-Utility to show live keyboard and mouse status for teaching and screencasts. 
-</summary>
-<description>
-<p>Key-mon is a Utility to show live keyboard and mouse status for teaching and screencasts. 
-This tool will show the keyboard when doing a screen recording including: different key combinations, mouse wheel scrolling, support for 3 button mice, and touch tablet support. </p>
-</description>
-<url type="homepage">http://code.google.com/p/key-mon/</url>
-<screenshots>
-<screenshot type="default">http://key-mon.googlecode.com/hg/docs/2x-no-mouse-meta.png</screenshot>
-<!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
-<!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
-</screenshots>
+  <id type="desktop">key-mon.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <summary>Show live keyboard and mouse status for teaching and screencasts</summary>
+  <description>
+    <p>
+      Key-mon is a Utility to show live keyboard and mouse status for teaching and screencasts.
+      This tool will show the keyboard when doing a screen recording including:
+      different key combinations, mouse wheel scrolling, support for 3 button mice,
+      and touch tablet support.
+    </p>
+  </description>
+  <url type="homepage">http://code.google.com/p/key-mon/</url>
+  <screenshots>
+    <screenshot type="default">http://key-mon.googlecode.com/hg/docs/2x-no-mouse-meta.png</screenshot>
+  <!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
+  <!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
+  </screenshots>
 </application>

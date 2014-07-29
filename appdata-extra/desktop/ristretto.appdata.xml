@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2014 Ryan Lerch <rlerch@redhat.com> -->
 <application>
-<id type="desktop">ristretto.desktop</id>
-<metadata_license>CC0-1.0</metadata_license>
-<summary>
-  simple image viewer
-</summary>
-<description>
-<p>
-  Ristretto is a simple application for viewing, zooming and rotating images. It also
-  has the ability to set an image as your desktop background.
-</p>
-</description>
-<url type="homepage">http://goodies.xfce.org/projects/applications/ristretto/</url>
-<screenshots>
-<screenshot type="default">http://goodies.xfce.org/_media/projects/applications/ristretto-screenshot.png</screenshot>
-<screenshot>http://goodies.xfce.org/_media/projects/applications/ristretto-screenshot-1.png</screenshot>
-<screenshot>http://goodies.xfce.org/_media/projects/applications/ristretto-screenshot-2.png</screenshot>
-</screenshots>
+  <id type="desktop">ristretto.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <summary>Simple image viewer</summary>
+  <description>
+    <p>
+      Ristretto is a simple application for viewing, zooming and rotating images. It also
+      has the ability to set an image as your desktop background.
+    </p>
+  </description>
+  <url type="homepage">http://goodies.xfce.org/projects/applications/ristretto/</url>
+  <screenshots>
+    <screenshot type="default">http://goodies.xfce.org/_media/projects/applications/ristretto-screenshot.png</screenshot>
+    <screenshot>http://goodies.xfce.org/_media/projects/applications/ristretto-screenshot-1.png</screenshot>
+    <screenshot>http://goodies.xfce.org/_media/projects/applications/ristretto-screenshot-2.png</screenshot>
+  </screenshots>
 </application>

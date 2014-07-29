@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2014 Richard Hughes <richard@hughsie.com> -->
 <application>
-    <id type="desktop">gobby.desktop</id>
-    <metadata_license>CC0-1.0</metadata_license>
-    <description>
-        <p>
-            Gobby is a free collaborative editor supporting multiple documents in one session and a multi-user chat. 
-            It runs on Microsoft Windows, Mac OS X, Linux and other Unix-like platforms.
-        </p>
-        <p>
-            It uses GTK+ 2.6 as its windowing toolkit and thus integrates nicely into the GNOME desktop environment.         
-        </p>
-        <p>
-            This is the stable 0.4 version of gobby.
-        </p>
-</description>
-<url type="homepage">http://gobby.0x539.de/</url>
-<screenshots>
+  <id type="desktop">gobby.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <description>
+    <p>
+      Gobby is a free collaborative editor supporting multiple documents in one session and a multi-user chat.
+      It runs on Microsoft Windows, Mac OS X, Linux and other Unix-like platforms.
+    </p>
+    <p>
+      It uses GTK+ 2.6 as its windowing toolkit and thus integrates nicely into the GNOME desktop environment.
+    </p>
+    <p>
+      This is the stable 0.4 version of gobby.
+    </p>
+  </description>
+  <url type="homepage">http://gobby.0x539.de/</url>
+  <screenshots>
     <screenshot type="default">http://gobby.0x539.de/screenshots/gobby-0.4.8-linux_kde4.png</screenshot>
     <screenshot>http://gobby.0x539.de/screenshots/gobby-0.4.5-linux.png</screenshot>
-</screenshots>
-<updatecontact>obby-users(@)list.0x539.de</updatecontact>
+  </screenshots>
+  <updatecontact>obby-users(@)list.0x539.de</updatecontact>
 </application>

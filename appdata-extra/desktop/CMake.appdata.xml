@@ -7,8 +7,8 @@
   <summary>Create new CMake projects</summary>
   <description>
     <p>
-      CMake is an open source, cross platform build system that can build, test, 
-      and package software. CMake GUI is a graphical user interface that can 
+      CMake is an open source, cross platform build system that can build, test,
+      and package software. CMake GUI is a graphical user interface that can
       create and edit CMake projects.
     </p>
   </description>
@@ -16,7 +16,7 @@
   <screenshots>
     <screenshot type="default">https://raw.githubusercontent.com/hughsie/fedora-appstream/master/screenshots-extra/CMake/a.png</screenshot>
   </screenshots>
-<!-- FIXME: change this to an upstream email address for spec updates
-<updatecontact>someone_who_cares@upstream_project.org</updatecontact>
- -->
+  <!-- FIXME: change this to an upstream email address for spec updates
+  <updatecontact>someone_who_cares@upstream_project.org</updatecontact>
+   -->
 </application>

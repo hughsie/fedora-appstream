@@ -18,10 +18,12 @@
   </description>
   <url type="homepage">http://www.sublimetext.com/</url>
   <screenshots>
-    <screenshot type="default">http://4.bp.blogspot.com/-b8Ek7zoBIIk/T-j5PRPhA2I/AAAAAAAABFI/XyiS1_6ev40/s1600/sublime-text-2-screenshot.png         http://i1-win.softpedia-static.com/screenshots/Sublime-Text_12.png?1373521681  http://i1-win.softpedia-static.com/screenshots/Sublime-Text_13.png?1373521681  http://i1-win.softpedia-static.com/screenshots/Sublime-Text_18.png?1373521681</screenshot>
+    <screenshot type="default">http://4.bp.blogspot.com/-b8Ek7zoBIIk/T-j5PRPhA2I/AAAAAAAABFI/XyiS1_6ev40/s1600/sublime-text-2-screenshot.png</screenshot>
+    <screenshot>http://i1-win.softpedia-static.com/screenshots/Sublime-Text_12.png?1373521681</screenshot>
+    <screenshot>http://i1-win.softpedia-static.com/screenshots/Sublime-Text_13.png?1373521681</screenshot>
+    <screenshot>http://i1-win.softpedia-static.com/screenshots/Sublime-Text_18.png?1373521681</screenshot>
   </screenshots>
   <!-- FIXME: change this to an upstream email address for spec updates
   <updatecontact>someone_who_cares@upstream_project.org</updatecontact>
    -->
-  <project_group>GNOME</project_group>
 </application>

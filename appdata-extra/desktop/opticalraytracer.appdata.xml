@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2014 Ryan Lerch <rlerch@redhat.com> -->
 <application>
-	<id type="desktop">opticalraytracer.desktop</id>
-	<metadata_license>CC0-1.0</metadata_license>
-	<summary>analyze the optical properties of lenses</summary>
-	<description>
-		<p>
-			Optical Ray Tracer is an application for analyzing the properties of lenses.
-			You specify a single lens, or a series of lenses, then Optical Ray Tracer can
-			simulate how light will behave when it passes through them.
-		</p>
-	</description>
-	<url type="homepage">http://arachnoid.com/OpticalRayTracer/index.html</url>
-	<screenshots>
-		<screenshot type="default">http://arachnoid.com/OpticalRayTracer/images/optical_ray_tracer_image.png</screenshot>
-	</screenshots>
+  <id type="desktop">opticalraytracer.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <summary>Analyze the optical properties of lenses</summary>
+  <description>
+    <p>
+      Optical Ray Tracer is an application for analyzing the properties of lenses.
+      You specify a single lens, or a series of lenses, then Optical Ray Tracer can
+      simulate how light will behave when it passes through them.
+    </p>
+  </description>
+  <url type="homepage">http://arachnoid.com/OpticalRayTracer/index.html</url>
+  <screenshots>
+    <screenshot type="default">http://arachnoid.com/OpticalRayTracer/images/optical_ray_tracer_image.png</screenshot>
+  </screenshots>
 </application>

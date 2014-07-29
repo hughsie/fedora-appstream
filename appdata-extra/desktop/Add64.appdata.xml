@@ -6,14 +6,17 @@
   <summary>Additive software sound synthesizer</summary>
   <description>
     <p>
-      Add64 is an additive modular software synthesizer for generating sounds. Unlike other software synthesizers -- that use a skeuomorphic interface of knobs, sliders and buttons, Add64 displays a spectral graph and allows the user to modify the oscillators and related parameters.
+      Add64 is an additive modular software synthesizer for generating sounds.
+      Unlike other software synthesizers -- that use a skeuomorphic interface of
+      knobs, sliders and buttons, Add64 displays a spectral graph and allows the
+      user to modify the oscillators and related parameters.
     </p>
   </description>
   <url type="homepage">http://www.amsynth.com/add64.html</url>
   <screenshots>
     <screenshot type="default">http://www.amsynth.com/images/Add64-Harmonics.png</screenshot>
   </screenshots>
-<!-- FIXME: change this to an upstream email address for spec updates
-<updatecontact>someone_who_cares@upstream_project.org</updatecontact>
- -->
+  <!-- FIXME: change this to an upstream email address for spec updates
+  <updatecontact>someone_who_cares@upstream_project.org</updatecontact>
+   -->
 </application>

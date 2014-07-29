@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2014 Ryan Lerch <rlerch@redhat.com> -->
 <application>
-	<id type="desktop">mandelbulber.desktop</id>
-	<metadata_license>CC0-1.0</metadata_license>
-	<summary>view 3D Mandelbrot fractals</summary>
-	<description>
-		<p>
-			Mandelbulber is an application for generating, rendering and viewing
-			3D Mandelbrot fractals. It supports the generation of many different
-			3D Fractals, including Mandelbulb, Menger Sponge, BulbBox, Quaternion 
-			and Hypercomplex fractal systems. It has an extensive user interface 
-			for tweaking the variables of your fractals, and then renders your
-			fractal in a seperate window where you can pan and zoom in on your
-			mathmatical creation. Mandelbulber also has the ability to specify
-			a camera, camerapath and keyframes to render a fly-through style video
-			of your fractal creation.
-		</p>
-	</description>
-	<url type="homepage">http://www.mandelbulber.com/</url>
-	<screenshots>
-		<screenshot type="default">http://www.mandelbulber.com/main_theme/random/screenshot_HR.jpg</screenshot>
-	</screenshots>
+  <id type="desktop">mandelbulber.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <summary>View 3D Mandelbrot fractals</summary>
+  <description>
+    <p>
+      Mandelbulber is an application for generating, rendering and viewing
+      3D Mandelbrot fractals. It supports the generation of many different
+      3D Fractals, including Mandelbulb, Menger Sponge, BulbBox, Quaternion
+      and Hypercomplex fractal systems. It has an extensive user interface
+      for tweaking the variables of your fractals, and then renders your
+      fractal in a seperate window where you can pan and zoom in on your
+      mathmatical creation. Mandelbulber also has the ability to specify
+      a camera, camerapath and keyframes to render a fly-through style video
+      of your fractal creation.
+    </p>
+  </description>
+  <url type="homepage">http://www.mandelbulber.com/</url>
+  <screenshots>
+    <screenshot type="default">http://www.mandelbulber.com/main_theme/random/screenshot_HR.jpg</screenshot>
+  </screenshots>
 </application>

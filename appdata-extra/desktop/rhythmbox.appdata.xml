@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2014 Richard Hughes <richard@hughsie.com> -->
 <application>
-<id type="desktop">rhythmbox.desktop</id>
-<metadata_license>CC0-1.0</metadata_license>
-<description>
-<p>
-Rhythmbox is an integrated music management application, originally inspired by
-Apple's iTunes.
-It is free software, designed to work well under the GNOME Desktop, and based on
-the powerful GStreamer media framework..
-</p>
-<!-- FIXME: Needs another couple of paragraphs -->
-</description>
-<url type="homepage">https://projects.gnome.org/rhythmbox/</url>
-<screenshots>
-<screenshot type="default">https://projects.gnome.org/rhythmbox/screenshots/rb-auto-playlist.png</screenshot>
-</screenshots>
-<!-- FIXME: change this to an upstream email address for spec updates
-<updatecontact>someone_who_cares@upstream_project.org</updatecontact>
- -->
+  <id type="desktop">rhythmbox.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <description>
+    <p>
+      Rhythmbox is an integrated music management application, originally inspired by
+      Apple's iTunes.
+      It is free software, designed to work well under the GNOME Desktop, and based on
+      the powerful GStreamer media framework..
+    </p>
+    <!-- FIXME: Needs another couple of paragraphs -->
+  </description>
+  <url type="homepage">https://projects.gnome.org/rhythmbox/</url>
+  <screenshots>
+    <screenshot type="default">https://projects.gnome.org/rhythmbox/screenshots/rb-auto-playlist.png</screenshot>
+  </screenshots>
+  <!-- FIXME: change this to an upstream email address for spec updates
+  <updatecontact>someone_who_cares@upstream_project.org</updatecontact>
+   -->
 </application>

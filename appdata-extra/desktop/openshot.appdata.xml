@@ -19,7 +19,9 @@
   </description>
   <url type="homepage">http://www.openshotvideo.com/</url>
   <screenshots>
-    <screenshot type="default">http://www.openshot.org/screenshots/</screenshot>
+    <screenshot type="default">http://www.openshot.org/images/gallery1.png</screenshot>
+    <screenshot>http://www.openshot.org/images/gallery2.png</screenshot>
+    <screenshot>http://www.openshot.org/images/gallery3.png</screenshot>
   </screenshots>
   <updatecontact>openshot.developers@lists.launchpad.net</updatecontact>
 </application>

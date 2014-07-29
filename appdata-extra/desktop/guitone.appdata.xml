@@ -8,19 +8,19 @@
     <p>
      guitone is a tool to visually navigate Monotone repositories. guitone aim to be a
      full implementation of the monotone automation interface, and provides features such as:
-      <ul>
-        <li>browsing a loaded workspace, with filtering by file states</li>
-        <li>display of the attributes of files</li>
-        <li>opening of files with the system's default editor or browser</li>
-        <li>showing differences between files</li>
-      </ul>
     </p>
+    <ul>
+      <li>browsing a loaded workspace, with filtering by file states</li>
+      <li>display of the attributes of files</li>
+      <li>opening of files with the system's default editor or browser</li>
+      <li>showing differences between files</li>
+    </ul>
   </description>
   <url type="homepage">https://guitone.thomaskeller.biz/</url>
   <screenshots>
     <screenshot type="default">https://guitone.thomaskeller.biz/web/screens/1.0rc2/changeset_browser.png</screenshot>
   </screenshots>
-<!-- FIXME: change this to an upstream email address for spec updates
-<updatecontact>someone_who_cares@upstream_project.org</updatecontact>
- -->
+  <!-- FIXME: change this to an upstream email address for spec updates
+  <updatecontact>someone_who_cares@upstream_project.org</updatecontact>
+   -->
 </application>

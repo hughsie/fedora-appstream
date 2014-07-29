@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2014 Ryan Lerch <rlerch@redhat.com> -->
 <application>
-	<id type="desktop">luminance-hdr.desktop</id>
-	<metadata_license>CC0-1.0</metadata_license>
-	<summary>create HDR images</summary>
-	<description>
-		<p>
-			Luminance HDR is an application for taking a set of pictures taken
-			of the same scene with different exposure settings, and creating a 
-			high dynamic range (HDR) image. It supports a range on imput images, 
-			including JPEG, TIFF and RAW. It can also rotate and crop, and tonemap
-			HDR images.
-		</p>
-	</description>
-	<url type="homepage">http://qtpfsgui.sourceforge.net/</url>
-	<screenshots>
-		<screenshot type="default">http://qtpfsgui.sourceforge.net/screenshots/MainWindow-2.jpg</screenshot>
-	</screenshots>
+  <id type="desktop">luminance-hdr.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <summary>Create HDR images</summary>
+  <description>
+    <p>
+      Luminance HDR is an application for taking a set of pictures taken
+      of the same scene with different exposure settings, and creating a
+      high dynamic range (HDR) image. It supports a range on imput images,
+      including JPEG, TIFF and RAW. It can also rotate and crop, and tonemap
+      HDR images.
+    </p>
+  </description>
+  <url type="homepage">http://qtpfsgui.sourceforge.net/</url>
+  <screenshots>
+    <screenshot type="default">http://qtpfsgui.sourceforge.net/screenshots/MainWindow-2.jpg</screenshot>
+  </screenshots>
 </application>

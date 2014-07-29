@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2014 Ryan Lerch <rlerch@redhat.com> -->
 <application>
-<id type="desktop">tintii.desktop</id>
-<metadata_license>CC0-1.0</metadata_license>
-<summary>
-	apply selective color effects to images
-</summary>
-<description>
-<p>
-	tintii is an application for applying selective color effects to images. it 
-	is primarily used for selective color effects where you keep one color in 
-	an image saturated, yet make the rest of the image black and white.
-</p>
-</description>
-<url type="homepage">http://www.indii.org/software/tintii</url>
-<screenshots>
-<screenshot type="default">http://www.indii.org/images/tintii/examples/Kiwi-Fruit.gif</screenshot>
-</screenshots>
+  <id type="desktop">tintii.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <summary>Apply selective color effects to images</summary>
+  <description>
+    <p>
+      Tintii is an application for applying selective color effects to images.
+      It is primarily used for selective color effects where you keep one color in
+      an image saturated, yet make the rest of the image black and white.
+    </p>
+  </description>
+  <url type="homepage">http://www.indii.org/software/tintii</url>
+  <screenshots>
+    <screenshot type="default">http://www.indii.org/images/tintii/examples/Kiwi-Fruit.gif</screenshot>
+  </screenshots>
 </application>

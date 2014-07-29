@@ -7,22 +7,21 @@
  <summary>An avatar creator</summary>
  <description>
   <p>
-      MeMaker gives users a wide variety of images that, when placed 
-      together, create an avatar. This avatar is intended to represent 
-      the way that this person is in some way. The goal of the project 
-      is to have enough images that anyone can create an image that 
-      they feel would closely represent them without having to use a photo
-      in the image itself.
+    MeMaker gives users a wide variety of images that, when placed
+    together, create an avatar. This avatar is intended to represent
+    the way that this person is in some way. The goal of the project
+    is to have enough images that anyone can create an image that
+    they feel would closely represent them without having to use a photo
+    in the image itself.
   </p>
   <p>
-      MeMaker is a nifty little tool that takes packages of theme avatar 
-      features and easily places them together to make an avatar of your 
-      liking. Features include Hair, Faces, Eyes, even Glasses and 
-      Accessories like hats and earings.
+    MeMaker is a nifty little tool that takes packages of theme avatar
+    features and easily places them together to make an avatar of your
+    liking. Features include Hair, Faces, Eyes, even Glasses and
+    Accessories like hats and earings.
   </p>
  </description>
  <!-- No screenshots -->
  <url type="homepage">https://launchpad.net/memaker</url>
  <updatecontact>encompass@gmail.com</updatecontact>
 </application>
-

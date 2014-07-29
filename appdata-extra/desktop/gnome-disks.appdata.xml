@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2014 Richard Hughes <richard@hughsie.com> -->
 <application>
-<id type="desktop">gnome-disks.desktop</id>
-<metadata_license>CC0-1.0</metadata_license>
-<description>
-<p>
-Disks provides a way to inspect, format, partition and configure disks and block devices.
-</p>
-<p>
-Using Disks, you can view SMART data, manage RAID devices and benchmark physical disks.
-Tasks are executed in the background, even after the application has been closed by the user.
-</p>
-</description>
-<screenshots>
-<screenshot type="default">http://people.freedesktop.org/~david/gnome-disks-mdraid-20120920-1.png</screenshot>
-<screenshot>http://people.freedesktop.org/~david/Screenshot-0204%20Flash%20Disk%20(0204%20Flash%20Disk)%20%e2%80%93%20Benchmark.png</screenshot>
-</screenshots>
-<url type="homepage">https://wiki.gnome.org/Design/Apps/Disks</url>
-<updatecontact>zeuthen@gmail.com</updatecontact>
+  <id type="desktop">gnome-disks.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <description>
+    <p>
+      Disks provides a way to inspect, format, partition and configure disks and block devices.
+    </p>
+    <p>
+      Using Disks, you can view SMART data, manage RAID devices and benchmark physical disks.
+      Tasks are executed in the background, even after the application has been closed by the user.
+    </p>
+  </description>
+  <screenshots>
+  <screenshot type="default">http://people.freedesktop.org/~david/gnome-disks-mdraid-20120920-1.png</screenshot>
+    <screenshot>http://people.freedesktop.org/~david/Screenshot-0204%20Flash%20Disk%20(0204%20Flash%20Disk)%20%e2%80%93%20Benchmark.png</screenshot>
+  </screenshots>
+  <url type="homepage">https://wiki.gnome.org/Design/Apps/Disks</url>
+  <updatecontact>zeuthen@gmail.com</updatecontact>
 </application>

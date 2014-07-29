@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2014 Ryan Lerch <rlerch@redhat.com> -->
 <application>
-<id type="desktop">YAGF.desktop</id>
-<metadata_license>CC0-1.0</metadata_license>
-<summary>
-  convert images to text
-</summary>
-<description>
-<p>
-  YAGF is an application that can convert an image to text using optical character recognition (OCR).
-  You can scan directly from a scanner, or import a previously scanned image or PDF file, and convert 
-  it to text output. YAGF has two different OCR engines to choose from: Cuneform and Tesseract, so if
-  your results are not suitable with one engine, you can use the other.
-</p>
-</description>
-<url type="homepage">http://symmetrica.net/cuneiform-linux/yagf-en.html</url>
-<screenshots>
-  <screenshot type="default">http://symmetrica.net/cuneiform-linux/yagf.jpg</screenshot>
-</screenshots>
+  <id type="desktop">YAGF.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <summary>Convert images to text</summary>
+  <description>
+    <p>
+      YAGF is an application that can convert an image to text using optical
+      character recognition (OCR).
+      You can scan directly from a scanner, or import a previously scanned image
+      or PDF file, and convert it to text output.
+      YAGF has two different OCR engines to choose from: Cuneform and Tesseract,
+      so if your results are not suitable with one engine, you can use the other.
+    </p>
+  </description>
+  <url type="homepage">http://symmetrica.net/cuneiform-linux/yagf-en.html</url>
+  <screenshots>
+    <screenshot type="default">http://symmetrica.net/cuneiform-linux/yagf.jpg</screenshot>
+  </screenshots>
 </application>

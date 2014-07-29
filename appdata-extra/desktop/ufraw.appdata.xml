@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2014 Ryan Lerch <rlerch@redhat.com> -->
 <application>
-	<id type="desktop">ufraw.desktop</id>
-	<metadata_license>CC0-1.0</metadata_license>
-	<summary>
-		import and edit images in the RAW format
-	</summary>
-	<description>
-		<p>
-			The Unidentified Flying Raw (UFRaw) is an application that decodes RAW format image
-			files and allows you to manipulate them, changing parameters such as the exposure and
-			white balance of the image. UFRaw uses the DCRaw RAW decoder, and supports the 
-			RAW format of over 600 cameras, including many Sony, Nikon, Canon and Fuji cameras.
-		</p>
-	</description>
-	<url type="homepage">http://ufraw.sourceforge.net</url>
-	<screenshots>
-		<screenshot type="default">http://ufraw.sourceforge.net/Guide/UFRaw-screenshot.jpg</screenshot>
-	</screenshots>
+  <id type="desktop">ufraw.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <summary>Import and edit images in the RAW format</summary>
+  <description>
+    <p>
+      The Unidentified Flying Raw (UFRaw) is an application that decodes RAW format image
+      files and allows you to manipulate them, changing parameters such as the exposure and
+      white balance of the image.
+      UFRaw uses the DCRaw RAW decoder, and supports the RAW format of over 600
+      cameras, including many Sony, Nikon, Canon and Fuji cameras.
+    </p>
+  </description>
+  <url type="homepage">http://ufraw.sourceforge.net</url>
+  <screenshots>
+    <screenshot type="default">http://ufraw.sourceforge.net/Guide/UFRaw-screenshot.jpg</screenshot>
+  </screenshots>
 </application>

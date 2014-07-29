@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2014 Richard Hughes <richard@hughsie.com> -->
 <application>
-<id type="desktop">nemiver.desktop</id>
-<metadata_license>CC0-1.0</metadata_license>
-<description>
-<p>
-Nemiver is an on-going effort to write a standalone graphical debugger that integrates well in the GNOME desktop environment.
-It currently features a backend which uses the well known GNU Debugger gdb to debug C / C++ programs.
-</p>
-<p>
-We believe that Nemiver is mature and robust enough to just let you debug your favorite C or C++ application in a pleasant way, as we use it daily for our own debugging purposes.
-</p>
-</description>
-<screenshots>
-<screenshot type="default">https://projects.gnome.org/nemiver/images/nemiver-main-page.png</screenshot>
-</screenshots>
-<url type="homepage">https://projects.gnome.org/nemiver/</url>
-<updatecontact>nemiver-list@gnome.org</updatecontact>
+  <id type="desktop">nemiver.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <description>
+    <p>
+      Nemiver is an on-going effort to write a standalone graphical debugger that
+      integrates well in the GNOME desktop environment.
+      It currently features a backend which uses the well known GNU Debugger gdb
+      to debug C / C++ programs.
+    </p>
+    <p>
+      We believe that Nemiver is mature and robust enough to just let you debug
+      your favorite C or C++ application in a pleasant way, as we use it daily
+      for our own debugging purposes.
+    </p>
+  </description>
+  <screenshots>
+    <screenshot type="default">https://projects.gnome.org/nemiver/images/nemiver-main-page.png</screenshot>
+  </screenshots>
+  <url type="homepage">https://projects.gnome.org/nemiver/</url>
+  <updatecontact>nemiver-list@gnome.org</updatecontact>
 </application>

@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2014 Richard Hughes <richard@hughsie.com> -->
 <application>
-<id type="desktop">geany.desktop</id>
-<metadata_license>CC0-1.0</metadata_license>
-<description>
-<p>
-Geany is a small and lightweight Integrated Development Environment.
-It was developed to provide a small and fast IDE.
-Another goal was to be as independent as possible from a KDE or GNOME -
-Geany only requires the GTK2 runtime libraries.
-</p>
-<!-- FIXME: Probably needs another paragraph or two -->
-</description>
-<url type="homepage">http://www.geany.org/</url>
-<screenshots>
-<!-- FIXME: Needs an official up to date screenshot -->
-<screenshot type="default">http://www.geany.org/uploads/Gallery/geany_build.png</screenshot>
-</screenshots>
-<!-- FIXME: change this to an upstream email address for spec updates
-<updatecontact>someone_who_cares@upstream_project.org</updatecontact>
- -->
+	<id type="desktop">geany.desktop</id>
+	<metadata_license>CC0-1.0</metadata_license>
+	<description>
+		<p>
+			Geany is a small and lightweight Integrated Development Environment.
+			It was developed to provide a small and fast IDE.
+			Another goal was to be as independent as possible from a KDE or GNOME -
+			Geany only requires the GTK2 runtime libraries.
+		</p>
+	<!-- FIXME: Probably needs another paragraph or two -->
+	</description>
+	<url type="homepage">http://www.geany.org/</url>
+	<screenshots>
+	<!-- FIXME: Needs an official up to date screenshot -->
+	<screenshot type="default">http://www.geany.org/uploads/Gallery/geany_build.png</screenshot>
+	</screenshots>
+	<!-- FIXME: change this to an upstream email address for spec updates
+	<updatecontact>someone_who_cares@upstream_project.org</updatecontact>
+	 -->
 </application>

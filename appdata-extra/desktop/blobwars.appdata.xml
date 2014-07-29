@@ -17,7 +17,7 @@
     <screenshot>http://3.bp.blogspot.com/-oBB_IbOXWEI/T4RuI6G3Y5I/AAAAAAAAA1s/_Tb2v1YrINk/s1600/02.jpg</screenshot>
     <screenshot>http://3.bp.blogspot.com/-s0v-Lr5WBa0/T4RuH7DbgKI/AAAAAAAAA1k/58HXOP40NIk/s1600/01.jpg</screenshot>
   </screenshots>
-<!-- FIXME: change this to an upstream email address for spec updates
-<updatecontact>someone_who_cares@upstream_project.org</updatecontact>
- -->
+  <!-- FIXME: change this to an upstream email address for spec updates
+  <updatecontact>someone_who_cares@upstream_project.org</updatecontact>
+   -->
 </application>

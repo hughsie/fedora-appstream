@@ -3,14 +3,11 @@
 <application>
 <id type="desktop">aeskulap.desktop</id>
 <metadata_license>CC0-1.0</metadata_license>
-<summary>
-medical image viewer
-</summary>
+<summary>Medical image viewer</summary>
 <description>
 <p>
-aeskulap is a viewer for medical images with support for the DICOM format.
+Aeskulap is a viewer for medical images with support for the DICOM format.
 </p>
-
 </description>
 <url type="homepage">http://aeskulap.nongnu.org</url>
 <screenshots>

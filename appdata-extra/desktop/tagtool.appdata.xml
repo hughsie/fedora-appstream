@@ -1,43 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2014 Richard Hughes <richard@hughsie.com> -->
 <application>
-    <id type="desktop">tagtool.desktop</id>
-    <metadata_license>CC0-1.0</metadata_license>
-    <name>Audio Tag Tool</name>
-    <summary>Ogg Vorbis and MP3 tag manager</summary>
-    <description>
-        <p>
-            Audio Tag Tool is a program to manage the information fields in MP3 and 
-            Ogg Vorbis files (commonly called 'tags').  It is available under the GNU 
-            General Public Licence (GPL).  Please send me any comments or bugs you 
-            find.
-        </p>
-        <p>
-            Tag Tool can be used to edit tags one by one, but the most useful 
-            features are the ability to easily tag or rename hundreds of files at 
-            once, in any desired format.
-        </p>
-        <p>
-            The interface is arranged into two sections, with the list of available 
-            files on the left and a set of tabs on the right. Each tab corresponds to 
-            one of the main operations Audio Tag Tool can do:
-        </p>
-            <ul>
-                <li>Lets you edit the tags individually</li>
-                <li>You can set the tags of multiple files at once</li>
-                <li>The tag fields can be set to a fixed value, filled in from the file's name, or left alone</li>
-                <li>Allows you to remove the tags from multiple files at once</li>
-                <li>For MP3 files it lets you choose to remove only ID3v1 or ID3v2 tags</li>
-                <li>You can rename multiple files at once and/or organize them into directories</li>
-                <li>Generates playlists. Playlists can be sorted by file name or by any tag field</li>
-            </ul>
-        <p>
-            The mass tag and mass rename features can handle filenames in any 
-            format thanks to an easily configurable format template. 
-        </p>
-    </description>
-    <!-- No screenshots :( -->
-    <url type="homepage">https://github.com/tagtool/tagtool</url>
-    <updatecontact>ms@ansta.lt</updatecontact>
+  <id type="desktop">tagtool.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <name>Audio Tag Tool</name>
+  <summary>Ogg Vorbis and MP3 tag manager</summary>
+  <description>
+    <p>
+      Audio Tag Tool is a program to manage the information fields in MP3 and
+      Ogg Vorbis files (commonly called 'tags').  It is available under the GNU
+      General Public Licence (GPL).  Please send me any comments or bugs you
+      find.
+    </p>
+    <p>
+      Tag Tool can be used to edit tags one by one, but the most useful
+      features are the ability to easily tag or rename hundreds of files at
+      once, in any desired format.
+    </p>
+    <p>
+      The interface is arranged into two sections, with the list of available
+      files on the left and a set of tabs on the right. Each tab corresponds to
+      one of the main operations Audio Tag Tool can do:
+    </p>
+    <ul>
+      <li>Lets you edit the tags individually</li>
+      <li>You can set the tags of multiple files at once</li>
+      <li>The tag fields can be set to a fixed value, filled in from the file's name, or left alone</li>
+      <li>Allows you to remove the tags from multiple files at once</li>
+      <li>For MP3 files it lets you choose to remove only ID3v1 or ID3v2 tags</li>
+      <li>You can rename multiple files at once and/or organize them into directories</li>
+      <li>Generates playlists. Playlists can be sorted by file name or by any tag field</li>
+    </ul>
+    <p>
+    The mass tag and mass rename features can handle filenames in any
+    format thanks to an easily configurable format template.
+    </p>
+  </description>
+  <!-- No screenshots :( -->
+  <url type="homepage">https://github.com/tagtool/tagtool</url>
+  <updatecontact>ms@ansta.lt</updatecontact>
 </application>
-

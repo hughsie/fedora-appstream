@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2014 Richard Hughes <richard@hughsie.com> -->
 <application>
-<id type="desktop">planner.desktop</id>
-<metadata_license>CC0-1.0</metadata_license>
-<name>Planner</name>
-<summary>An easy-to-use project management application</summary>
-<description>
-<p>
-Planner is an easy-to-use no-nonsense cross-platform project management application.
-</p>
-<p>
-Either XML files or a postgresql database can be used to store data.
-Projects can also be printed to PDF or exported to HTML for easy viewing from
-any web browser.
-</p>
-</description>
-<url type="homepage">https://wiki.gnome.org/Planner/</url>
-<screenshots>
-<screenshot type="default">https://wiki.gnome.org/Planner/Screenshots?action=AttachFile&amp;do=get&amp;target=gantt.png</screenshot>
-</screenshots>
-<!-- FIXME: change this to an upstream email address for spec updates
-<updatecontact>someone_who_cares@upstream_project.org</updatecontact>
- -->
+  <id type="desktop">planner.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <name>Planner</name>
+  <summary>An easy-to-use project management application</summary>
+  <description>
+    <p>
+      Planner is an easy-to-use no-nonsense cross-platform project management application.
+    </p>
+    <p>
+      Either XML files or a postgresql database can be used to store data.
+      Projects can also be printed to PDF or exported to HTML for easy viewing from
+      any web browser.
+    </p>
+  </description>
+  <url type="homepage">https://wiki.gnome.org/Planner/</url>
+  <screenshots>
+    <screenshot type="default">https://wiki.gnome.org/Planner/Screenshots?action=AttachFile&amp;do=get&amp;target=gantt.png</screenshot>
+  </screenshots>
+  <!-- FIXME: change this to an upstream email address for spec updates
+  <updatecontact>someone_who_cares@upstream_project.org</updatecontact>
+   -->
 </application>

@@ -1,23 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2014 Ryan Lerch <rlerch@redhat.com> -->
 <application>
-	<id type="desktop">phatch.desktop</id>
-	<metadata_license>CC0-1.0</metadata_license>
-	<summary>process many images in one step</summary>
-	<description>
-		<p>
-			Phatch (PHoto bATCH Processor) is an application to batch process images. 
-			With phatch, you specify a group of images that you want to process, and then
-			specify the effects you want to apply; once you click apply the process is run
-			automatically without having to edit each image individually. Phatch has many 
-			effects you can apply to your images, including resizing, rotating, renaming,
-			colour effects (like desaturation and color warmth), drop shadows and adding
-			a background.
-
-		</p>
-	</description>
-	<url type="homepage">http://photobatch.stani.be/</url>
-	<screenshots>
-		<screenshot type="default">http://photobatch.wdfiles.com/local--files/start/Screenshot-Phatch3d.jpg</screenshot>
-	</screenshots>
+  <id type="desktop">phatch.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <summary>Process many images in one step</summary>
+  <description>
+    <p>
+      Phatch (PHoto bATCH Processor) is an application to batch process images.
+      With phatch, you specify a group of images that you want to process, and then
+      specify the effects you want to apply; once you click apply the process is run
+      automatically without having to edit each image individually.
+      Phatch has many effects you can apply to your images, including resizing,
+      rotating, renaming, colour effects (like desaturation and color warmth),
+      drop shadows and adding a background.
+    </p>
+  </description>
+  <url type="homepage">http://photobatch.stani.be/</url>
+  <screenshots>
+    <screenshot type="default">http://photobatch.wdfiles.com/local--files/start/Screenshot-Phatch3d.jpg</screenshot>
+  </screenshots>
 </application>

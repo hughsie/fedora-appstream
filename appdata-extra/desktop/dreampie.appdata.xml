@@ -15,7 +15,7 @@
     <screenshot>http://www.dreampie.org/screenshot2.png</screenshot>
     <screenshot>http://www.dreampie.org/screenshot4.png</screenshot>
   </screenshots>
-<!-- FIXME: change this to an upstream email address for spec updates
-<updatecontact>someone_who_cares@upstream_project.org</updatecontact>
- -->
+  <!-- FIXME: change this to an upstream email address for spec updates
+  <updatecontact>someone_who_cares@upstream_project.org</updatecontact>
+   -->
 </application>

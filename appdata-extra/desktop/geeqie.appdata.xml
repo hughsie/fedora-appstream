@@ -1,23 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2014 Ryan Lerch <rlerch@redhat.com> -->
 <application>
-<id type="desktop">geeqie.desktop</id>
-<metadata_license>CC0-1.0</metadata_license>
-<summary>
-  image browser
-</summary>
-<description>
-<p>
-  Geeqie is an application for browsing images -- you open up an image or directory to browse
-  and view all the images in that directory. It also displays all the relevant data and metadata
-  for your images in various, configurable sidebar widgets. It can display many forms of data, 
-  including exif metadata, color histograms, GPS locations of the photo.
-  
-</p>
-</description>
-<url type="homepage">http://geeqie.sourceforge.net/</url>
-<screenshots>
-  <screenshot type="default">http://sourceforge.net/p/geeqie/screenshot/233062.jpg</screenshot>
-  <screenshot>http://sourceforge.net/p/geeqie/screenshot/235493.jpg</screenshot>
-</screenshots>
+  <id type="desktop">geeqie.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <summary>image browser</summary>
+  <description>
+  <p>
+    Geeqie is an application for browsing images -- you open up an image or directory to browse
+    and view all the images in that directory. It also displays all the relevant data and metadata
+    for your images in various, configurable sidebar widgets. It can display many forms of data,
+    including exif metadata, color histograms, GPS locations of the photo.
+  </p>
+  </description>
+  <url type="homepage">http://geeqie.sourceforge.net/</url>
+  <screenshots>
+    <screenshot type="default">http://sourceforge.net/p/geeqie/screenshot/233062.jpg</screenshot>
+    <screenshot>http://sourceforge.net/p/geeqie/screenshot/235493.jpg</screenshot>
+  </screenshots>
 </application>
