@@ -12,9 +12,4 @@
 		</p>
 	</description>
 	<url type="homepage">http://search.cpan.org/dist/PAR-Packer/script/tkpp</url>
-	<screenshots>
-		<screenshot type="default"><!--http://projectname/screenshot.png--></screenshot>
-		<!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
-		<!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
-	</screenshots>
 </application>
