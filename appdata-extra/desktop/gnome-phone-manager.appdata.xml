@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2014 Your Name <email@address.com> -->
+<application>
+	<id type="desktop">gnome-phone-manager.desktop</id>
+	<metadata_license>CC0-1.0</metadata_license>
+	<summary>control your mobile phone from your desktop</summary>
+	<description>
+		<p>
+			Phone Manager allows you to control your mobile phone. It uses the
+			gnokii backend that typically works with older Nokia devices. Phone
+			manager allows you to send SMS messages, view the address book on your
+			phone, and receive notifications on the desktop when a new SMS arrives.
+		</p>
+	</description>
+	<url type="homepage">https://live.gnome.org/PhoneManager/</url>
+	<screenshots>
+		<screenshot type="default">https://wiki.gnome.org/PhoneManager?action=AttachFile&amp;do=get&amp;target=prefs-2.png</screenshot>
+	</screenshots>
+</application>
