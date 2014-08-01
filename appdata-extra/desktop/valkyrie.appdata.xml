@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014 Your Name <name@emailaddress.com> -->
+<!-- Copyright 2014 Ravi Srinivasan <ravishankar.srinivasan@gmail.com> -->
 <application>
 	<id type="desktop">valkyrie.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
 	<summary>
-		<!--Brief summary of application.e.g. for Inkscape "Create and edit Scalable Vector Graphics images"-->
+		A GUI front end to valgrind which helps developers profile programs and detect memory management issues
 	</summary>
 	<description>
-		<!-- One or two paras about the application. Only <p> <ul> <ol> and <li> can be used-->
-		<!-- see http://people.freedesktop.org/~hughsient/appdata/#description for style details-->
 		<p>
-			
+		  Valkyrie is a graphical user interface for Valgrind. Valkyrie is designed for simplicity and ease of use, whilst allowing access to the full range of Valgrind command-line options.	
 		</p>
 	</description>
-	<url type="homepage">http://www.valgrind.org/</url>
+	<url type="homepage">http://www.open-works.net/projects/valkyrie.html</url>
 	<screenshots>
 		<screenshot type="default"><!--http://projectname/screenshot.png--></screenshot>
 		<!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
