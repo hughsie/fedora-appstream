@@ -16,8 +16,6 @@
 	</description>
 	<url type="homepage">http://www.open-works.net/projects/valkyrie.html</url>
 	<screenshots>
-		<screenshot type="default"><!--http://projectname/screenshot.png--></screenshot>
-		<!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
-		<!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
+		<screenshot type="default">http://www.open-works.net/images/valkyrie/memcheck_view_1.png</screenshot>
 	</screenshots>
 </application>
