@@ -15,9 +15,4 @@
 		</p>
 	</description>
 	<url type="homepage">http://translate.sourceforge.net/wiki/virtaal/index</url>
-	<screenshots>
-		<screenshot type="default"><!--http://projectname/screenshot.png--></screenshot>
-		<!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
-		<!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
-	</screenshots>
 </application>
