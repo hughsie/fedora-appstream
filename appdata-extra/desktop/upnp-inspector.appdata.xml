@@ -16,8 +16,6 @@
 	</description>
 	<url type="homepage">http://coherence.beebits.net/wiki/UPnP-Inspector</url>
 	<screenshots>
-		<screenshot type="default"><!--http://projectname/screenshot.png--></screenshot>
-		<!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
-		<!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
+		<screenshot type="default">http://coherence.beebits.net/download/Inspector-1.png</screenshot>
 	</screenshots>
 </application>
