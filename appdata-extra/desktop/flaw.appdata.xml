@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2014 Your Name <email@address.com> -->
+<application>
+	<id type="desktop">flaw.desktop</id>
+	<metadata_license>CC0-1.0</metadata_license>
+	<summary><!--summary here--></summary>
+	<description>
+		<p>
+			<!--Description here-->
+		</p>
+	</description>
+	<url type="homepage">http://flaw.sourceforge.net/</url>
+	<screenshots>
+		<screenshot type="default">http://flaw.sourceforge.net/images/ingame1.png</screenshot>
+		<screenshot>http://flaw.sourceforge.net/images/ingame3.png</screenshot>
+		<screenshot>http://flaw.sourceforge.net/images/menu.png</screenshot>
+	</screenshots>
+</application>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2014 Your Name <email@address.com> -->
+<application>
+	<id type="desktop">barrage.desktop</id>
+	<metadata_license>CC0-1.0</metadata_license>
+	<summary><!--summary here--></summary>
+	<description>
+		<p>
+			<!--Description here-->
+		</p>
+	</description>
+	<url type="homepage">http://lgames.sourceforge.net/index.php?project=Barrage</url>
+	<screenshots>
+		<screenshot type="default">http://lgames.sourceforge.net/Barrage/ss1.jpg</screenshot>
+		<screenshot>http://lgames.sourceforge.net/Barrage/ss0.jpg</screenshot>
+		<screenshot>http://lgames.sourceforge.net/Barrage/ss2.jpg</screenshot>
+	</screenshots>
+</application>

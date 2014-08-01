@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2014 Your Name <email@address.com> -->
+<application>
+	<id type="desktop">naev.desktop</id>
+	<metadata_license>CC0-1.0</metadata_license>
+	<summary><!--summary here--></summary>
+	<description>
+		<p>
+			<!--Description here-->
+		</p>
+	</description>
+	<url type="homepage">http://code.google.com/p/naev/</url>
+	<screenshots>
+		<screenshot type="default">http://naev.googlecode.com/svn/trunk/site/screenshots/0.4.0-beta1/naev0.png</screenshot>
+		<screenshot>http://naev.googlecode.com/svn/trunk/site/screenshots/0.4.0-beta1/naev1.png</screenshot>
+	</screenshots>
+</application>

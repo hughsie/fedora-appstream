@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2014 Your Name <email@address.com> -->
+<application>
+	<id type="desktop">kajongg.desktop</id>
+	<metadata_license>CC0-1.0</metadata_license>
+	<summary><!--summary here--></summary>
+	<description>
+		<p>
+			<!--Description here-->
+		</p>
+	</description>
+	<url type="homepage">https://projects.kde.org/projects/kde/kdegames/kajongg</url>
+	<screenshots>
+		<screenshot type="default">http://www.kde.org/images/screenshots/kajongg.png</screenshot>
+		<screenshot><!--screenshot url here--></screenshot>
+		<screenshot><!--screenshot url here--></screenshot>
+	</screenshots>
+</application>

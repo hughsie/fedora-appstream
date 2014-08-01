@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2014 Your Name <email@address.com> -->
+<application>
+	<id type="desktop">gbrainy.desktop</id>
+	<metadata_license>CC0-1.0</metadata_license>
+	<summary><!--summary here--></summary>
+	<description>
+		<p>
+			<!--Description here-->
+		</p>
+	</description>
+	<url type="homepage">http://live.gnome.org/gbrainy</url>
+	<screenshots>
+		<screenshot type="default">http://www.softcatala.org/~jmas/gbrainy/gbrainy_logic.png</screenshot>
+		<screenshot>http://www.softcatala.org/~jmas/gbrainy/gbrainy_memory.png</screenshot>
+		<screenshot>http://www.softcatala.org/~jmas/gbrainy/gbrainy_main.png</screenshot>
+	</screenshots>
+</application>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2014 Your Name <email@address.com> -->
+<application>
+	<id type="desktop">netpanzer.desktop</id>
+	<metadata_license>CC0-1.0</metadata_license>
+	<summary><!--summary here--></summary>
+	<description>
+		<p>
+			<!--Description here-->
+		</p>
+	</description>
+	<url type="homepage">http://netpanzer.berlios.de</url>
+	<screenshots>
+		<screenshot type="default">http://www.netpanzer.info/public/netpanzer.info/images/netpanzer-game/screenshot63.jpg</screenshot>
+	</screenshots>
+</application>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2014 Your Name <email@address.com> -->
+<application>
+	<id type="desktop">pokerth.desktop</id>
+	<metadata_license>CC0-1.0</metadata_license>
+	<summary><!--summary here--></summary>
+	<description>
+		<p>
+			<!--Description here-->
+		</p>
+	</description>
+	<url type="homepage">http://www.pokerth.net</url>
+	<screenshots>
+		<screenshot type="default">http://www.pokerth.net/images/stories/screenshots/viewsize/pokerth07.png</screenshot>
+	</screenshots>
+</application>

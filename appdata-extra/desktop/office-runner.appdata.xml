@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2014 Your Name <email@address.com> -->
+<application>
+	<id type="desktop">office-runner.desktop</id>
+	<metadata_license>CC0-1.0</metadata_license>
+	<summary><!--summary here--></summary>
+	<description>
+		<p>
+			<!--Description here-->
+		</p>
+	</description>
+	<url type="homepage">http://www.hadess.net/2011/09/omg-i-haz-designed-bug-fix.html</url>
+	<screenshots>
+		<screenshot type="default">http://2.bp.blogspot.com/-aJ2QmlyCCQ8/TnNgJniDNaI/AAAAAAAAAa8/jUiYw74gbjk/s1600/office-runner.png</screenshot>
+	</screenshots>
+</application>

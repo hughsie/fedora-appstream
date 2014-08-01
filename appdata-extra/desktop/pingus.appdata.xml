@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2014 Your Name <email@address.com> -->
+<application>
+	<id type="desktop">pingus.desktop</id>
+	<metadata_license>CC0-1.0</metadata_license>
+	<summary><!--summary here--></summary>
+	<description>
+		<p>
+			<!--Description here-->
+		</p>
+	</description>
+	<url type="homepage">http://pingus.seul.org/</url>
+	<screenshots>
+		<screenshot type="default">http://pingus.seul.org/images/screen_0.7.0-4.jpg</screenshot>
+		<screenshot>http://pingus.seul.org/images/screen_0.7.0-3.jpg</screenshot>
+	</screenshots>
+</application>

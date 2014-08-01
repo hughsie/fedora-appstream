@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2014 Your Name <email@address.com> -->
+<application>
+	<id type="desktop">glob2.desktop</id>
+	<metadata_license>CC0-1.0</metadata_license>
+	<summary><!--summary here--></summary>
+	<description>
+		<p>
+			<!--Description here-->
+		</p>
+	</description>
+	<url type="homepage">http://globulation2.org/</url>
+	<screenshots>
+		<screenshot type="default">http://globulation2.org/images/9/93/Beta3-Battle.jpg</screenshot>
+		<screenshot>http://globulation2.org/images/5/5a/Beta2_MoreAttackingEnemy.jpg</screenshot>
+		<screenshot>http://globulation2.org/images/6/6a/Beta2_ParticleEffects.jpg</screenshot>
+	</screenshots>
+</application>

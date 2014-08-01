@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2014 Your Name <email@address.com> -->
+<application>
+	<id type="desktop">flare.desktop</id>
+	<metadata_license>CC0-1.0</metadata_license>
+	<summary><!--summary here--></summary>
+	<description>
+		<p>
+			<!--Description here-->
+		</p>
+	</description>
+	<url type="homepage">http://www.flarerpg.org</url>
+	<screenshots>
+		<screenshot type="default">http://www.flarerpg.org/images/screenshots/0047.jpg</screenshot>
+		<screenshot>http://www.flarerpg.org/images/screenshots/0050.jpg</screenshot>
+		<screenshot>http://www.flarerpg.org/images/screenshots/0052.jpg</screenshot>
+	</screenshots>
+</application>

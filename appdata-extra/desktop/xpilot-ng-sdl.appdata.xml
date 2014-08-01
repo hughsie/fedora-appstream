@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2014 Your Name <email@address.com> -->
+<application>
+	<id type="desktop">xpilot-ng-sdl.desktop</id>
+	<metadata_license>CC0-1.0</metadata_license>
+	<summary><!--summary here--></summary>
+	<description>
+		<p>
+			<!--Description here-->
+		</p>
+	</description>
+	<url type="homepage">http://xpilot.sourceforge.net</url>
+	<screenshots>
+		<screenshot type="default"><!--screenshot url here--></screenshot>
+		<screenshot><!--screenshot url here--></screenshot>
+		<screenshot><!--screenshot url here--></screenshot>
+	</screenshots>
+</application>
