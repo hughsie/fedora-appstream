@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014 Your Name <name@emailaddress.com> -->
+<!-- Copyright 2014 Ravi Srinivasan <ravishankar.srinivasan@gmail.com> -->
 <application>
 	<id type="desktop">upnp-inspector.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
 	<summary>
-		<!--Brief summary of application.e.g. for Inkscape "Create and edit Scalable Vector Graphics images"-->
+		A GUI tool to discover and explore UPnP (Univeral Plug and Play) devices on your network
 	</summary>
 	<description>
-		<!-- One or two paras about the application. Only <p> <ul> <ol> and <li> can be used-->
-		<!-- see http://people.freedesktop.org/~hughsient/appdata/#description for style details-->
 		<p>
-			
+		  upnp-inspector is a UPnP Device and Service analyzer and a debugging tool.	
+		</p>
+		<p>
+		   You can discover and explore UPnP devices on your network. Detected devices are displayed in a tree-view, where - amongst other things - actions can be called and state-variables be queried. 	
 		</p>
 	</description>
 	<url type="homepage">http://coherence.beebits.net/wiki/UPnP-Inspector</url>
