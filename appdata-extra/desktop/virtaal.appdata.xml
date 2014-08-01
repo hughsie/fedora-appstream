@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014 Your Name <name@emailaddress.com> -->
+<!-- Copyright 2014 Ravi Srinivasan <ravishankar.srinivasan@gmail.com> -->
 <application>
 	<id type="desktop">virtaal.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
 	<summary>
-		<!--Brief summary of application.e.g. for Inkscape "Create and edit Scalable Vector Graphics images"-->
+		An easy to use and powerful offline translation tool
 	</summary>
 	<description>
-		<!-- One or two paras about the application. Only <p> <ul> <ol> and <li> can be used-->
-		<!-- see http://people.freedesktop.org/~hughsient/appdata/#description for style details-->
 		<p>
-			
+		  Virtaal is a feature rich translation tool that allows you to focus on translation, without the tool getting in the way.	
 		</p>
 	</description>
 	<url type="homepage">http://translate.sourceforge.net/wiki/virtaal/index</url>
