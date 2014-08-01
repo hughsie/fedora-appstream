@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014 Your Name <name@emailaddress.com> -->
+<!-- Copyright 2014 Ravi Srinivasan <ravishankar.srinivasan@gmail.com> -->
 <application>
 	<id type="desktop">winpdb.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
 	<summary>
-		<!--Brief summary of application.e.g. for Inkscape "Create and edit Scalable Vector Graphics images"-->
+		A debugger for the Python programming labguage
 	</summary>
 	<description>
-		<!-- One or two paras about the application. Only <p> <ul> <ol> and <li> can be used-->
-		<!-- see http://people.freedesktop.org/~hughsient/appdata/#description for style details-->
 		<p>
-			
+		 Winpdb is a fast multi platform debugger for the Python programming language.	
+		</p>
+		<p>
+		 It can debug multi threaded code and supports namespace modification and encrypted communication.	
 		</p>
 	</description>
 	<url type="homepage">http://www.winpdb.org/</url>
