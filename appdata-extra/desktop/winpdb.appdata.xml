@@ -16,8 +16,6 @@
 	</description>
 	<url type="homepage">http://www.winpdb.org/</url>
 	<screenshots>
-		<screenshot type="default"><!--http://projectname/screenshot.png--></screenshot>
-		<!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
-		<!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
+		<screenshot type="default">http://winpdb.org/images/screenshot_winpdb.png</screenshot>
 	</screenshots>
 </application>
