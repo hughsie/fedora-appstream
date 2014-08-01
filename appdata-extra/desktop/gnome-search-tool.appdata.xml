@@ -3,16 +3,17 @@
 <application>
 	<id type="desktop">gnome-search-tool.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
-	<summary><!--summary here--></summary>
+	<summary>search the files on your computer</summary>
 	<description>
 		<p>
-			<!--Description here-->
+			The Search Tool allows you to search your computer for files
+			based on their names. It also allows you to restrict the search
+			to specific directories, and specify other parameters for searching
+			such as when a file was last modified. 
 		</p>
 	</description>
-	<url type="homepage">http://www.gnome.org/gnome-3/</url>
+	<url type="homepage">https://git.gnome.org/browse/gnome-search-tool/</url>
 	<screenshots>
-		<screenshot type="default"><!--screenshot url here--></screenshot>
-		<screenshot><!--screenshot url here--></screenshot>
-		<screenshot><!--screenshot url here--></screenshot>
+		<screenshot type="default">https://raw.githubusercontent.com/hughsie/fedora-appstream/master/screenshots-extra/gnome-search-tool/a.png</screenshot>
 	</screenshots>
 </application>
