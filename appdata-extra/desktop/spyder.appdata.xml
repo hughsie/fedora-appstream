@@ -16,8 +16,6 @@
 	</description>
 	<url type="homepage">http://spyderlib.googlecode.com</url>
 	<screenshots>
-		<screenshot type="default"><!--http://projectname/screenshot.png--></screenshot>
-		<!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
-		<!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
+		<screenshot type="default">http://wiki.spyderlib.googlecode.com/hg/Screenshots/spyder-linux.png</screenshot>
 	</screenshots>
 </application>
