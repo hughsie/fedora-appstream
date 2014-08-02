@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014 Your Name <email@address.com> -->
+<!-- Copyright 2014 Ravi Srinivasan <ravishankar.srinivasan@gmail.com> -->
 <application>
 	<id type="desktop">asylum.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
-	<summary><!--summary here--></summary>
+	<summary>A retro platform style game where you enter the surreal world of a brain and destroy damaged brain cells</summary>
 	<description>
 		<p>
-			<!--Description here-->
+			Asylum is a Linux port of the game "Asylum" written originally for the Acorn Archimedes.
+		</p>
+		<p>
+			Enter the surreal world inside a young boy's brain and help destroy malfunctioning brain cells.
 		</p>
 	</description>
 	<url type="homepage">http://sdl-asylum.sourceforge.net</url>
