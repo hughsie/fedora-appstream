@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014 Your Name <email@address.com> -->
+<!-- Copyright 2014 Ravi Srinivasan <ravishankar.srinivasan@gmail.com> -->
 <application>
 	<id type="desktop">ballz.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
-	<summary><!--summary here--></summary>
+	<summary>A platform game with puzzle elements</summary>
 	<description>
 		<p>
-			<!--Description here-->
+			Ballz is a platformer with some puzzle elements. You take control of a ball which is genetically modified by the British secret service.
+		</p>
+		<p>
+			Your mission is to rescue captured British soldiers from a prison in Iran.
 		</p>
 	</description>
 	<url type="homepage">http://code.google.com/p/db-tins07/</url>
