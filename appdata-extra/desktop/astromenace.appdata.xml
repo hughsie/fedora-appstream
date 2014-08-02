@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014 Your Name <email@address.com> -->
+<!-- Copyright 2014 Ravi Srinivasan <ravishankar.srinivasan@gmail.com> -->
 <application>
 	<id type="desktop">astromenace.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
-	<summary><!--summary here--></summary>
+	<summary>An intense 3D scrolling space shooter</summary>
 	<description>
 		<p>
-			<!--Description here-->
+			Astromenace is a hardcore 3D space shooter with intense gameplay and stunning graphics.
+		</p>
+		<p>
+			 Immerse into a decisive battle against tons of cunning foes, face the terrifying bosses and protect your homeland throughout 15 diverse levels of the game.
 		</p>
 	</description>
 	<url type="homepage">http://www.viewizard.com/</url>
