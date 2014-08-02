@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014 Your Name <email@address.com> -->
+<!-- Copyright 2014 William Moreno Reyes <williamjmorenor@gmail.com> -->
 <application>
 	<id type="desktop">gbrainy.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
-	<summary><!--summary here--></summary>
+	<summary>
+		Mental trainer with logical puzzles and memory challenges
+	</summary>
 	<description>
 		<p>
-			<!--Description here-->
+			Gbrainy is a collection of games designed to keep your mind active
+			through games of mental agility as logical puzzles, short term memory 
+			trainers and verbal analogies with different difficulty levels for kids and adults.
 		</p>
 	</description>
 	<url type="homepage">http://live.gnome.org/gbrainy</url>
