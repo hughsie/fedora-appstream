@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014 Your Name <email@address.com> -->
+<!-- Copyright 2014 Ravi Srinivasan <ravishankar.srinivasan@gmail.com> -->
 <application>
 	<id type="desktop">berusky2.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
-	<summary><!--summary here--></summary>
+	<summary>A 3D Logic and Puzzle game</summary>
 	<description>
 		<p>
-			<!--Description here-->
+			Berusky2 is a 3D logic and puzzle game where you play through 9 levels of increasing complexity.
+		</p>
+		<p>
+			It challenges your visual and spatial thinking abilities via a series of logic puzzles on each level.
 		</p>
 	</description>
 	<url type="homepage">http://www.anakreon.cz/en/Berusky2.htm</url>
