@@ -7,17 +7,24 @@
 	<metadata_license>CC0-1.0</metadata_license>
 	<summary>
 		<!--Brief summary of application.e.g. for Inkscape "Create and edit Scalable Vector Graphics images"-->
+		Amateur radio programming tool for many makes and models.
 	</summary>
 	<description>
 		<!-- One or two paras about the application. Only <p> <ul> <ol> and <li> can be used-->
 		<!-- see http://people.freedesktop.org/~hughsient/appdata/#description for style details-->
 		<p>
-			
+		CHIRP is a free, open-source tool for programming your amateur radio. It supports a large number of
+		manufacturers and models, as well as provides a way to interface with multiple data sources and formats.
+		You can use CHIRP to, for example, download memory channels from your radio, update them, and then
+		upload them to the radio, either by performing a clone operation, or one memory at a time in live mode.
+		Besides radiop-specific formats, files can also be converted to and from CSV and ARRL TravelPlus.
 		</p>
+		<p>Some of the supported manufacturers include AnyTone, Alinco, Baofeng, Baojie, Icom, Intek, Jetstream, 
+		Kenwood, KYD, Puxing, TYT, Yaesu and Wouxun.</p>
 	</description>
 	<url type="homepage">http://chirp.danplanet.com/</url>
 	<screenshots>
-		<screenshot type="default"><!--http://projectname/screenshot.png--></screenshot>
+		<screenshot type="default">http://chirp.danplanet.com/download/site/screenshot1.png</screenshot>
 		<!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
 		<!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
 	</screenshots>
