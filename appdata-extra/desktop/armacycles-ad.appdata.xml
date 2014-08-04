@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014 Your Name <email@address.com> -->
+<!-- Copyright 2014 Ryan Lerch <rlerch@redhat.com> -->
 <application>
 	<id type="desktop">armacycles-ad.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
-	<summary><!--summary here--></summary>
+	<summary>3D motorcycle battle</summary>
 	<description>
 		<p>
-			<!--Description here-->
+			Armagetron is a 3D Tron-inspired game where the player controls a motorcycle
+			that emits a immovable wall behind it. Gameplay consists of 2 of these cycles
+			battling to trap each other to force their opponent to crash into the wall.
 		</p>
 	</description>
 	<url type="homepage">http://armagetronad.sf.net</url>
