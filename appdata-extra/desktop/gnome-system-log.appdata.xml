@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2014 Your Name <email@address.com> -->
+<application>
+	<id type="desktop">gnome-system-log.desktop</id>
+	<metadata_license>CC0-1.0</metadata_license>
+	<summary>view system logs</summary>
+	<description>
+		<p>
+			System Logs is an application for viewing the system logs on your 
+			computer. It provides a graphical viewer for the logs that one would
+			typically view in a terminal, such as the boot.log or the system
+			messages.
+		</p>
+	</description>
+	<url type="homepage">https://git.gnome.org/browse/gnome-system-log/</url>
+	<screenshots>
+		<screenshot type="default">https://raw.githubusercontent.com/hughsie/fedora-appstream/master/screenshots-extra/gnome-system-log/a.png</screenshot>
+	</screenshots>
+</application>
