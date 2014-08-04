@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014 Your Name <email@address.com> -->
+<!-- Copyright 2014 Ryan Lerch <rlerch@redhat.com> -->
 <application>
 	<id type="desktop">KGoldrunner.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
-	<summary><!--summary here--></summary>
+	<summary>2D action puzzle platform game</summary>
 	<description>
 		<p>
-			<!--Description here-->
+			KGoldrunner is a two-dimensional side view action puzzle game where you play
+			as a golden runner that collects diamonds. The player leads the runner (either 
+			with the keyboard or the mouse) through a series of levels with ladders, 
+			obstacles and other puzzles to collect all the diamonds and escape the maze.
 		</p>
 	</description>
 	<url type="homepage">https://projects.kde.org/projects/kde/kdegames/kgoldrunner</url>
 	<screenshots>
 		<screenshot type="default">https://raw.githubusercontent.com/hughsie/fedora-appstream/master/screenshots-extra/KGoldrunner/a.png</screenshot>
-		<screenshot><!--screenshot url here--></screenshot>
-		<screenshot><!--screenshot url here--></screenshot>
 	</screenshots>
 </application>
