@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014 Your Name <email@address.com> -->
+<!-- Copyright 2014 Ryan Lerch <rlerch@redhat.com> -->
 <application>
 	<id type="desktop">enigma.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
-	<summary><!--summary here--></summary>
+	<summary>puzzle game</summary>
 	<description>
 		<p>
-			<!--Description here-->
+			Enigma is a puzzle game where the player controls a marble with their
+			mouse to uncover matching sets of stones. While Enigma starts out simply,
+			soon you will enounter a wide range of mazes, lazers and traps to stop
+			you from your goal of matching stones. Enigma also features a large number
+			of user-contributed levels that can also be downloaded from the internet.
 		</p>
 	</description>
 	<url type="homepage">http://www.nongnu.org/enigma/</url>
