@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014 Your Name <email@address.com> -->
+<!-- Copyright 2014 Ryan Lerch <rlerch@redhat.com> -->
 <application>
 	<id type="desktop">fbg2.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
-	<summary><!--summary here--></summary>
+	<summary>move the falling blocks to create lines</summary>
 	<description>
 		<p>
-			<!--Description here-->
+			The Falling Block Game is a game where groups of blocks of certain
+			predefined shapes fall from the top of the screen, and the player
+			has to rotate and move them to create lines of blocks that then
+			disappear when a line is complete.
 		</p>
 	</description>
 	<url type="homepage">http://sourceforge.net/projects/fbg/</url>
