@@ -5,12 +5,19 @@
 	<metadata_license>CC0-1.0</metadata_license>
 	<summary>
 		<!--Brief summary of application.e.g. for Inkscape "Create and edit Scalable Vector Graphics images"-->
+		Generate toolpath data (GCode) for CNC machining.
 	</summary>
 	<description>
 		<!-- One or two paras about the application. Only <p> <ul> <ol> and <li> can be used-->
 		<!-- see http://people.freedesktop.org/~hughsient/appdata/#description for style details-->
 		<p>
-			
+		  PyCAM is a GCode generator for 3-axis CNC machining. PyCAM reads STL 3D models as well as SVG, DXF and PS 2D contour models.
+		</p>
+		<p>
+		  On start, PyCAM presents you with two windows. The first one is an interactive 3D model visualization tool. The second window allows you to perform transformations to the model, configure tools, processes and boundaries.
+		</p>
+		<p>
+		  PyCAM also supports non-interactive commandline operation to script the generation of GCode or its use without an X server.
 		</p>
 	</description>
 	<url type="homepage">http://sourceforge.net/projects/pycam/</url>
