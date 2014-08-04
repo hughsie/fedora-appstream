@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2014 Your Name <email@address.com> -->
+<application>
+	<id type="desktop">gnome-subtitles.desktop</id>
+	<metadata_license>CC0-1.0</metadata_license>
+	<summary>create subtitles for videos</summary>
+	<description>
+		<p>
+			GNOME Subtitles is an application for creating and editing subtitles
+			for videos. It allows you to load up a video file, and create a subtitle
+			file to go with that video, and tweak the timings of the subtitles. 
+			It supports a wide range of subtitle and video formats.  
+		</p>
+	</description>
+	<url type="homepage">http://gnome-subtitles.sourceforge.net/</url>
+	<screenshots>
+		<screenshot type="default">http://gnome-subtitles.sourceforge.net/files/screenshots/Screenshot-GnomeSubtitles-VideoTimesTranslation.png</screenshot>
+		<screenshot><!--screenshot url here--></screenshot>
+		<screenshot><!--screenshot url here--></screenshot>
+	</screenshots>
+</application>
