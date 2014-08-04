@@ -3,6 +3,7 @@
 <application>
   <id type="desktop">hgview.desktop</id>
   <metadata_license>CC0-1.0</metadata_license>
+  <name>HgView</name>
   <summary>Graphical tree viewer for Mecurial repositories</summary>
   <description>
     <p>
