@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014 Your Name <email@address.com> -->
+<!-- Copyright 2014 Ryan Lerch <rlerch@redhat.com> -->
 <application>
-	<id type="desktop">gnome-search-tool.desktop</id>
-	<metadata_license>CC0-1.0</metadata_license>
-	<summary>search the files on your computer</summary>
-	<description>
-		<p>
-			The Search Tool allows you to search your computer for files
-			based on their names. It also allows you to restrict the search
-			to specific directories, and specify other parameters for searching
-			such as when a file was last modified. 
-		</p>
-	</description>
-	<url type="homepage">https://git.gnome.org/browse/gnome-search-tool/</url>
-	<screenshots>
-		<screenshot type="default">https://raw.githubusercontent.com/hughsie/fedora-appstream/master/screenshots-extra/gnome-search-tool/a.png</screenshot>
-	</screenshots>
+  <id type="desktop">gnome-search-tool.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <summary>Search the files on your computer</summary>
+  <description>
+    <p>
+      The Search Tool allows you to search your computer for files
+      based on their names. It also allows you to restrict the search
+      to specific directories, and specify other parameters for searching
+      such as when a file was last modified.
+    </p>
+  </description>
+  <url type="homepage">https://git.gnome.org/browse/gnome-search-tool/</url>
+  <screenshots>
+    <screenshot type="default">https://raw.githubusercontent.com/hughsie/fedora-appstream/master/screenshots-extra/gnome-search-tool/a.png</screenshot>
+  </screenshots>
 </application>
