@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014 Your Name <name@emailaddress.com> -->
+<!-- Copyright 2014 Gustavo Olivares <guolivar@gmail.com> -->
 <application>
 	<id type="desktop">proguard.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
 	<summary>
 		<!--Brief summary of application.e.g. for Inkscape "Create and edit Scalable Vector Graphics images"-->
+		Optimize, obfuscate and pre-verify Java class files.
 	</summary>
 	<description>
 		<!-- One or two paras about the application. Only <p> <ul> <ol> and <li> can be used-->
 		<!-- see http://people.freedesktop.org/~hughsient/appdata/#description for style details-->
 		<p>
-			
+			ProGuard is an optimizer, obfuscator and pre-verifier for Java class files. It optimizes the file by detecting and removing unused classes, fields, methods, attributes and instructions. It obfuscates the file by renaming the remaining objects using short and meaningless names. It is also able to pre-verify the processed code for Java 6 or higher or for Java Micro Edition.
+		</p>
+		<p>
+			ProGuard is a command-line but it has a “wizard-like” graphical user interface that gives access to all the options through tabs. It also comes with plugins for Ant, for Gradle, and for the JME Wireless Toolkit.
 		</p>
 	</description>
 	<url type="homepage">http://proguard.sourceforge.net</url>
