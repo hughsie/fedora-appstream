@@ -3,11 +3,17 @@
 <application>
 	<id type="desktop">haxima.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
-	<summary><!--summary here--></summary>
+	<summary>top view 2D role playing game</summary>
 	<description>
 		<p>
-			<!--Description here-->
+			Haxima is a 2D role playing game (RPG) that runs on the Nazghul engine.
+			You start out as a defenseless wanderer, you have to equip yourself,
+			learn spells, and travel the land completing quests.
 		</p>
 	</description>
 	<url type="homepage">http://myweb.cableone.net/gmcnutt/nazghul.html</url>
+	<screenshots>
+		<screenshot type="default">https://raw.githubusercontent.com/hughsie/fedora-appstream/master/screenshots-extra/haxima/a.png</screenshot>
+		<screenshot>https://raw.githubusercontent.com/hughsie/fedora-appstream/master/screenshots-extra/haxima/b.png</screenshot>
+	</screenshots>
 </application>
