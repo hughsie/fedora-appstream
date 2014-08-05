@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014 Your Name <email@address.com> -->
+<!-- Copyright 2014 Ryan Lerch <rlerch@redhat.com> -->
 <application>
 	<id type="desktop">fillets.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
-	<summary><!--summary here--></summary>
+	<summary>solve the puzzle and help the fish escape</summary>
 	<description>
 		<p>
-			<!--Description here-->
+			Fish Fillets is a puzzle game where the player has to guide a fish through a series
+			of obstacles to escape the maze. Fish Fillets features over 70 levels of puzzles and 
+			a comforting soundtrack.
 		</p>
 	</description>
 	<url type="homepage">http://fillets.sourceforge.net/</url>
