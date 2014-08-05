@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014 Your Name <email@address.com> -->
+<!-- Copyright 2014 Ryan Lerch <rlerch@redhat.com> -->
 <application>
 	<id type="desktop">haxima.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
-	<summary>top view 2D role playing game</summary>
+	<summary>Top view 2D role playing game</summary>
 	<description>
 		<p>
 			Haxima is a 2D role playing game (RPG) that runs on the Nazghul engine.
