@@ -1,18 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014 Your Name <email@address.com> -->
+<!-- Copyright 2014 Edgar Muniz Berlinck <edgar.vv@gmail.com> -->
 <application>
 	<id type="desktop">flare.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
-	<summary><!--summary here--></summary>
+	<summary>Flare</summary>
 	<description>
 		<p>
-			<!--Description here-->
+			Single-player 2D RPG. Flare brings to you a dark fantasy world, action, items and equipments.
+		</p>
+		<p>
+                        Built using Flare engine, a engine made especially for 2d RPG games.
 		</p>
 	</description>
 	<url type="homepage">http://www.flarerpg.org</url>
 	<screenshots>
 		<screenshot type="default">http://www.flarerpg.org/images/screenshots/0047.jpg</screenshot>
+		<screenshot>http://www.flarerpg.org/images/screenshots/0048.jpg</screenshot>
+		<screenshot>http://www.flarerpg.org/images/screenshots/0049.jpg</screenshot>
 		<screenshot>http://www.flarerpg.org/images/screenshots/0050.jpg</screenshot>
+		<screenshot>http://www.flarerpg.org/images/screenshots/0051.jpg</screenshot>
 		<screenshot>http://www.flarerpg.org/images/screenshots/0052.jpg</screenshot>
 	</screenshots>
 </application>
