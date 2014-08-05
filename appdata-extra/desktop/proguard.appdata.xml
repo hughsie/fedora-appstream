@@ -19,7 +19,7 @@
 	</description>
 	<url type="homepage">http://proguard.sourceforge.net</url>
 	<screenshots>
-		<screenshot type="default"><!--http://projectname/screenshot.png--></screenshot>
+		<screenshot type="default">http://proguard.sourceforge.net/screenshot_gui1.gif</screenshot>
 		<!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
 		<!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
 	</screenshots>
