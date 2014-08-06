@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="addon">
+  <id>inksmoto</id>
+  <extends>inkscape.desktop</extends>
+  <name>inksmoto</name>
+  <summary>Tools for creating levels in Inkscape for the xmoto game</summary>
+  <pkgname>inksmoto</pkgname>
+  <description>
+    <p>
+      This Inkscape extension adds a new menu item to the Extensions menu in 
+      Inkscape with all you need to create levels for the 2D motocross platform
+      game, xmoto. It also adds a new format in the Save As dialog to save your 
+      level as an xmoto .lvl file.
+    </p>
+  </description>
+  <url type="homepage">http://wiki.xmoto.tuxfamily.org/index.php?title=Inksmoto-0.7.0</url>
+  <metadata_license>CC0-1.0</metadata_license>
+</component>
