@@ -3,7 +3,7 @@
 <application>
 	<id type="desktop">asylum.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
-	<summary>A retro platform style game where you enter the surreal world of a brain and destroy damaged brain cells</summary>
+	<summary>A retro plataform style game where you enter the surreal world of a brain and destroy damaged brain cells</summary>
 	<description>
 		<p>
 			Asylum is a Linux port of the game "Asylum" written originally for the Acorn Archimedes.
