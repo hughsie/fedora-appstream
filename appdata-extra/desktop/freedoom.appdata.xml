@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014 Your Name <email@address.com> -->
+<!-- Copyright 2014 Edgar Muniz Berlinck <edgar.vv@gmail.com> -->
 <application>
 	<id type="desktop">freedoom.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
-	<summary><!--summary here--></summary>
+	<summary>Free Doom</summary>
 	<description>
 		<p>
-			<!--Description here-->
+			Free and Open-Source version of DOOM (Yes, that famous old game that you did play on your old pc)
 		</p>
 	</description>
 	<url type="homepage">https://savannah.nongnu.org/projects/freedoom/</url>
+	<screenshots>
+		<screenshot type="default">http://freedoom.github.io/img/screenshots/th_0.6.3_02.jpg</screenshot>
+		<screenshothttp://freedoom.github.io/img/screenshots/th_0.6.3_01.jpg</screenshot>
+		<screenshot>http://freedoom.github.io/img/screenshots/th_0.6.3_03.jpg</screenshot>
+		<screenshot>http://freedoom.github.io/img/screenshots/th_0.6.3_04.jpg</screenshot>
+	</screenshots>
 </application>
