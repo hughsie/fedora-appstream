@@ -3,7 +3,7 @@
 <application>
 	<id type="desktop">lordsawar.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
-	<summary>LordsAWar!</summary>
+	<summary>Turn based war game</summary>
 	<description>
 		<p>
 			Turn-based game where you objective is use your city's resources to build one army to coquest more cityes to get more resources to build more army to conquer more cityes.
