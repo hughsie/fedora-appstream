@@ -3,7 +3,7 @@
 <application>
 	<id type="desktop">kajongg.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
-	<summary>Kajongg</summary>
+	<summary>Mah Jongg Puzzle Game</summary>
 	<description>
 		<p>
 			Mah Jongg board game for KDE. Can be played against up to four players (human or computer) or solo.
