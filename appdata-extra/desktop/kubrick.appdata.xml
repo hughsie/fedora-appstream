@@ -3,7 +3,7 @@
 <application>
 	<id type="desktop">kubrick.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
-	<summary>Kubrick</summary>
+	<summary>Rubik's Cube Puzzle Game</summary>
 	<description>
 		<p>
 			Puzzle Game based on Rubik's Cube for KDE.
