@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014 Your Name <email@address.com> -->
+<!-- Copyright 2014 Ravi Srinivasan <ravishankar.srinivasan@gmail.com> -->
 <application>
 	<id type="desktop">curblaster.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
-	<summary><!--summary here--></summary>
+	<summary>A 2D side scrolling space shooter</summary>
 	<description>
 		<p>
-			<!--Description here-->
+			Curblaster is an ncurses based 2D side scrolling space shooter. The objective is to transport pods safely through gates and obstacles.
 		</p>
 	</description>
 	<url type="homepage">http://curblaster.sourceforge.net</url>
