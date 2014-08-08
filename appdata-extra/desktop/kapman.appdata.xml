@@ -3,7 +3,7 @@
 <application>
 	<id type="desktop">kapman.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
-	<summary>Kapman</summary>
+	<summary>Pacman like casual game</summary>
 	<description>
 		<p>
 			Pac-man clone for KDE, with very cool graphics.
