@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014 Your Name <email@address.com> -->
+<!-- Copyright 2014 Edgar Muniz Berlinck <edgar.vv@gmail.com> -->
 <application>
 	<id type="desktop">manaplus.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
-	<summary><!--summary here--></summary>
+	<summary>Mana Plus</summary>
 	<description>
 		<p>
-			<!--Description here-->
+			Free 2D MMORPG. You can choose to join a Guild, become stronger and travel new lands as one adventurer or live in peace with your friends.
 		</p>
 	</description>
-	<url type="homepage">http://manaplus.evolonline.org/</url>
+	<url type="homepage">http://manaplus.org/</url>
 	<screenshots>
 		<screenshot type="default">http://manaplus.org/_media/manaplus_screenshot_8.png</screenshot>
+		<screenshot>http://manaplus.org/_media/manaplus_screenshot_11.png</screenshot>
+		<screenshot>http://manaplus.org/_media/manaplus_screenshot_15.png</screenshot>
 	</screenshots>
 </application>
