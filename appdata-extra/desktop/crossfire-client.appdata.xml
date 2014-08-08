@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014 Your Name <email@address.com> -->
+<!-- Copyright 2014 Ravi Srinivasan <ravishankar.srinivasan@gmail.com> -->
 <application>
 	<id type="desktop">crossfire-client.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
-	<summary><!--summary here--></summary>
+	<summary>A multiplayer co-operative Role Playing Game (RPG) involving exploration, magic and treasure hunting</summary>
 	<description>
 		<p>
-			<!--Description here-->
+			Crossfire is an open source RPG with numerous maps that can be explored for treasures and artifacts. 
 		</p>
 	</description>
 	<url type="homepage">http://crossfire.real-time.com</url>
