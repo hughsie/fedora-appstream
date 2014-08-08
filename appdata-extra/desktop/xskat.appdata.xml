@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014 Your Name <email@address.com> -->
+<!-- Copyright 2014 Ravi Srinivasan <ravishankar.srinivasan@gmail.com> -->
 <application>
 	<id type="desktop">xskat.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
-	<summary><!--summary here--></summary>
+	<summary>A trick taking card game popular in Germany</summary>
 	<description>
 		<p>
-			<!--Description here-->
+			XSkat is a trick taking card game that is popular in Germany. It has single and multiplayer (IRC, LAN) options. 
 		</p>
 	</description>
 	<url type="homepage">http://www.xskat.de/xskat.html</url>
