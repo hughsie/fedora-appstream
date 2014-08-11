@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014 Your Name <email@address.com> -->
+<!-- Copyright 2014 Ryan Lerch <rlerch@redhat.com> -->
 <application>
-	<id type="desktop">gwget.desktop</id>
-	<metadata_license>CC0-1.0</metadata_license>
-	<summary>download manager</summary>
-	<description>
-		<p>
-			gwget is an application that allows you to manage the downloading of 
-			files from the internet. It supports the pausing and resuming of downloads,
-			can download all the accompanying files of a HTML page, and supports drag
-			and drop.
-		</p>
-	</description>
-	<url type="homepage">http://gnome.org/projects/gwget</url>
-	<screenshots>
-		<screenshot type="default">https://projects.gnome.org/gwget/main_window_p.jpg</screenshot>
-	</screenshots>
+  <id type="desktop">gwget.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <summary>Download manager</summary>
+  <description>
+    <p>
+      gwget is an application that allows you to manage the downloading of 
+      files from the internet. It supports the pausing and resuming of downloads,
+      can download all the accompanying files of a HTML page, and supports drag
+      and drop.
+    </p>
+  </description>
+  <url type="homepage">http://gnome.org/projects/gwget</url>
+  <screenshots>
+    <screenshot type="default">https://projects.gnome.org/gwget/main_window_p.jpg</screenshot>
+  </screenshots>
 </application>
