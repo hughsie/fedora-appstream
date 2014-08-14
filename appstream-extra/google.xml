@@ -102,7 +102,7 @@
 
   <application>
     <!-- Copyright 2014, Google Inc. -->
-    <id type="codec">libnpgoogletalk.so</id>
+    <id type="addon">libnpgoogletalk.so</id>
     <name>Google Talk</name>
     <summary>Bring your conversations to life with video calls for free</summary>
     <pkgname>google-talkplugin</pkgname>
@@ -126,6 +126,9 @@
         connect with everyone, and no one gets left out.
       </p>
     </description>
+    <extends>epiphany.desktop</extends>
+    <extends>firefox.desktop</extends>
+    <extends>midori.desktop</extends>
     <metadata>
       <value key="X-Kudo-Popular"/>
     </metadata>

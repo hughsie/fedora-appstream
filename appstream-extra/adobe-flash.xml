@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2014 Richard Hughes <richard@hughsie.com> -->
+<applications>
+  <application>
+    <id type="addon">flash-player-properties.desktop</id>
+    <pkgname>flash-plugin</pkgname>
+    <metadata_license>CC0</metadata_license>
+    <name>Adobe Flash</name>
+    <summary>Codec for multimedia and rich content</summary>
+    <description>
+      <p>
+        Adobe Flash Player is for running rich Internet applications and
+        for watching streaming video and listening to audio.
+      </p>
+    </description>
+    <project_license>Proprietary</project_license>
+    <extends>epiphany.desktop</extends>
+    <extends>firefox.desktop</extends>
+    <extends>midori.desktop</extends>
+  </application>
+</applications>
