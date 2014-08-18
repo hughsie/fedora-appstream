@@ -3,10 +3,10 @@
 <application>
 	<id type="desktop">mj.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
-	<summary><!--summary here--></summary>
+	<summary>Mahjong game platforms with network capability </summary>
 	<description>
 		<p>
-			<!--Description here-->
+			Game platforms with network capability game can be played by four humans, by a human vs three computer players, or any other combination.
 		</p>
 	</description>
 	<url type="homepage">http://mahjong.julianbradfield.org/</url>
