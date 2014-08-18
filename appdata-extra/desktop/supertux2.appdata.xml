@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014 Your Name <email@address.com> -->
+<!-- Copyright 2014 William Moreno Reyes <williamjmorenor@fedoraproject.org> -->
 <application>
 	<id type="desktop">supertux2.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
-	<summary><!--summary here--></summary>
+	<summary>
+		Run and jump game similar to Super Mario
+	</summary>
 	<description>
 		<p>
-			<!--Description here-->
+			SuperTux is a 2D game very similar to Super Mario with Tux Penguin as protagonist,
+			you must end each level by jumping and running to avoid obstacles and enemies.
 		</p>
 	</description>
 	<url type="homepage">http://supertux.lethargik.org/</url>
