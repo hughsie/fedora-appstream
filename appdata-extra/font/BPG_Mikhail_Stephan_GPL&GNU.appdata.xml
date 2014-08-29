@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <application>
-  <id type="font">BPG_Mikhail_Stephan_GPL-GNU.otf</id>
+  <id type="font">BPG_Mikhail_Stephan_GPL&amp;GNU.otf</id>
   <licence>CC0</licence>
   <summary>Mikhail Stephan family of BPG Georgian fonts</summary>
 </application>

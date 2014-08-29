@@ -66,7 +66,7 @@ def main():
         filename = '../appdata-extra/font/' + font_id.rsplit('.', 1)[0] + '.appdata.xml'
         txt = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"
         txt += "<application>\n"
-        txt += "  <id type=\"font\">%s</id>\n" % font_id
+        txt += "  <id type=\"font\">%s</id>\n" % font_id.replace("&", "&amp;")
         txt += "  <licence>CC0</licence>\n"
         if len(name) > 0:
             txt += "  <name>%s</name>\n" % name

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <application>
-  <id type="font">BPG_Nateli_Caps_GPL-GNU.ttf</id>
+  <id type="font">BPG_Nateli_Caps_GPL&amp;GNU.ttf</id>
   <licence>CC0</licence>
   <name>BPG Nateli</name>
   <summary>Nateli family of BPG Georgian fonts</summary>

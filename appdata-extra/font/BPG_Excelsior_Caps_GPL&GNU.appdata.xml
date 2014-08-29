@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <application>
-  <id type="font">BPG_Excelsior_Caps_GPL-GNU.ttf</id>
+  <id type="font">BPG_Excelsior_Caps_GPL&amp;GNU.ttf</id>
   <licence>CC0</licence>
   <name>BPG Excelsior</name>
   <summary>Excelsior family of BPG Georgian fonts</summary>
