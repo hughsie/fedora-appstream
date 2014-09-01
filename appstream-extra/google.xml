@@ -27,6 +27,10 @@
       <p>
         To use Google+ you need a Google account and be over the age of 13.
       </p>
+      <p>
+        This webapp provides a quick way to launch a web browser to access
+        Google+.
+      </p>
     </description>
     <metadata>
       <value key="X-Kudo-Popular"/>
@@ -61,6 +65,10 @@
       <p>
         To use Google Drive you need to be over the age of 13.
       </p>
+      <p>
+        This webapp provides a quick way to launch a web browser to access
+        Google Drive.
+      </p>
     </description>
     <metadata>
       <value key="X-Kudo-Popular"/>
@@ -94,6 +102,10 @@
       <p>
         To use Google Maps you need to be over the age of 13.
       </p>
+      <p>
+        This webapp provides a quick way to launch a web browser to access
+        Google Maps.
+      </p>
     </description>
     <metadata>
       <value key="X-Kudo-Popular"/>
@@ -124,6 +136,10 @@
       <p>
         Hangouts works on computers, Android and Apple devices, so you can
         connect with everyone, and no one gets left out.
+      </p>
+      <p>
+        This webapp provides a quick way to launch a web browser to access
+        Google Talk.
       </p>
     </description>
     <extends>epiphany.desktop</extends>

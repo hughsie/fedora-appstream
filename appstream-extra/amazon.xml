@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<xml version="1.0"?>
 <applications version="0.1">
 
   <application>
@@ -34,6 +34,10 @@
       </p>
       <p>
         To use the Kindle Cloud reader you must have Amazon.com account.
+      </p>
+      <p>
+        This webapp provides a quick way to launch a web browser to access the
+        Kindle Cloud Reader.
       </p>
     </description>
     <metadata>

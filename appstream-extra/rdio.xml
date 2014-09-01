@@ -32,6 +32,10 @@
         Build a collection of your favorites, so they're always close at hand,
         and share the music you love with the people who might love it next.
       </p>
+      <p>
+        This webapp provides a quick way to launch a web browser to access
+        Rdio.
+      </p>
     </description>
     <metadata>
       <value key="X-Kudo-Popular"/>

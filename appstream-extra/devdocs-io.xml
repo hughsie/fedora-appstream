@@ -21,6 +21,10 @@
         Devdocs.io is a small application that allows you to quickly search and view
         developer documentation for various programming langauges and libraries. 
       </p>
+      <p>
+        This webapp provides a quick way to launch a web browser to access
+        Devdocs.io.
+      </p>
     </description>
     <metadata>
       <value key="X-Kudo-Popular"/>

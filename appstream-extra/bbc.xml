@@ -28,6 +28,10 @@
       <p>
         To use BBC iPlayer you must be located in the UK and pay a TV licence.
       </p>
+      <p>
+        This webapp provides a quick way to launch a web browser to access BBC
+        iPlayer.
+      </p>
     </description>
     <metadata>
       <value key="X-Kudo-Popular"/>
