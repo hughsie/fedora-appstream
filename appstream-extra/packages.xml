@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<applications version="0.1">
+
+  <application>
+    <id type="webapp">epiphany-fedora-packages.desktop</id>
+    <name>Fedora Packages</name>
+    <summary>The best place to find out what is in the Fedora repositories</summary>
+    <icon type="remote">http://fedoraproject.org/w/uploads/e/e5/Fedora_infinity.png</icon>
+    <appcategories>
+      <appcategory>Network</appcategory>
+    </appcategories>
+    <keywords>
+      <keyword>packages</keyword>
+      <keyword>repository</keyword>
+    </keywords>
+    <url type="homepage">http://apps.fedoraproject.org/packages/</url>
+    <description>
+      <p>
+          A meta-app over the other packaging apps; the best place to find out
+          what is in the Fedora repositories. Which packages are present in
+          which version, who is maintaining them, what patches have been
+          applied, what bugs have been reported against them. All these kind of
+          questions can be answered here. It is sometimes called "Fedora
+          Community v2" after the old Fedora Community site.
+      </p>
+      <p>
+          This webapp provides a quick way to launch a web browser to access
+          Fedora packages.
+      </p>
+    </description>
+    <metadata>
+      <value key="X-Kudo-Popular"/>
+    </metadata>
+  </application>
+
+</applications>
