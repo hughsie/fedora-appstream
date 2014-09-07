@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<applications version="0.1">
+
+  <application>
+    <id type="webapp">epiphany-ask-fedora.desktop</id>
+    <name>Ask Fedora</name>
+    <summary>Fedora community knowledge base and support forum</summary>
+    <icon type="remote">http://fedoraproject.org/w/uploads/e/e5/Fedora_infinity.png</icon>
+    <appcategories>
+      <appcategory>Network</appcategory>
+    </appcategories>
+    <keywords>
+      <keyword>askbot</keyword>
+      <keyword>askfedora</keyword>
+      <keyword>troubleshooting</keyword>
+    </keywords>
+    <url type="homepage">http://ask.fedoraproject.com/</url>
+    <description>
+      <p>
+          Ask Fedora is a community knowledge base and support forum and
+          designed to be the primary place for community support in Fedora.
+      </p>
+      <p>
+          It is powered by Askbot, a Django based web application.
+      </p>
+      <p>
+        This webapp provides a quick way to launch a web browser to access
+        Ask Fedora.
+      </p>
+    </description>
+    <metadata>
+      <value key="X-Kudo-Popular"/>
+    </metadata>
+  </application>
+
+</applications>
