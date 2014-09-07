@@ -21,11 +21,8 @@
           designed to be the primary place for community support in Fedora.
       </p>
       <p>
-          It is powered by Askbot, a Django based web application.
-      </p>
-      <p>
-        This webapp provides a quick way to launch a web browser to access
-        Ask Fedora.
+          This webapp provides a quick way to launch a web browser to access
+          Ask Fedora.
       </p>
     </description>
     <metadata>
