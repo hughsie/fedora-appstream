@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014 Your Name <email@address.com> -->
+<!-- Copyright 2014 William Moreno Reyes <williamjmoreno@gmail.com> -->
 <application>
 	<id type="desktop">netpanzer.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
-	<summary><!--summary here--></summary>
+	<summary>Multiplayer war game in real time</summary>
 	<description>
 		<p>
-			<!--Description here-->
+		Play a on line tactical game over the internet or a LAN, with one vs one option using a direct connect or modem. netPanzer in designed for a fast game mode, without the need of collect resources, any player can play until his last unit is destroyed.
 		</p>
 	</description>
 	<url type="homepage">http://netpanzer.berlios.de</url>
