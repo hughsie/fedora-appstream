@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014 Your Name <email@address.com> -->
+<!-- Copyright 2014 William Moreno Reyes <williamjmorenor@gmail.com> -->
 <application>
 	<id type="desktop">office-runner.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
-	<summary><!--summary here--></summary>
+	<summary>Close your laptop lid and start running</summary>
 	<description>
 		<p>
-			<!--Description here-->
+			Office runner let you close your laptop lid and go quickly to a meeting or other place without having to wait until the computer turns off and then wake up.
 		</p>
 	</description>
 	<url type="homepage">http://www.hadess.net/2011/09/omg-i-haz-designed-bug-fix.html</url>
