@@ -3,10 +3,12 @@
 <application>
 	<id type="desktop">openalchemist.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
-	<summary><!--summary here--></summary>
+	<summary>Puzzle game featuring chemicals</summary>
 	<description>
 		<p>
-			<!--Description here-->
+		  OpenAlchemist is a tile-matching puzzle game in which appear the chemical elements.
+		  OpenAlchemist is an easy-to-play game suitable for children and young people.
+		  It aims for reflection, adventure and suspense.
 		</p>
 	</description>
 	<url type="homepage">http://www.openalchemist.com</url>
