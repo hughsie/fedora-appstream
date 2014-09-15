@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014 Your Name <email@address.com> -->
+<!-- Copyright 2014 Luya Tshimbalanga <luya@fedoraproject.org> -->
 <application>
 	<id type="desktop">uqm.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
-	<summary><!--summary here--></summary>
+	<summary>Classic space adventure game</summary>
 	<description>
-		<p>
-			<!--Description here-->
+		<p>A port of classic game Star Control II that includes adventure and melee mode with enhancement for modern system.
 		</p>
 	</description>
 	<url type="homepage">http://sc2.sourceforge.net/</url>
