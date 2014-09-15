@@ -3,11 +3,10 @@
 <application>
 	<id type="desktop">speed-dreams.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
-	<summary><!--summary here--></summary>
+	<summary>The Open Racing Car Simulator</summary>
 	<description>
-		<p>
-			<!--Description here-->
-		</p>
+		<p>Speed-Dreams is a 3D racing cars simulator forked from TORCS using OpenGL. The goal is to have programmed robots drivers racing
+        	 against each others. You can also drive yourself with either a wheel, keyboard or mouse.</p>
 	</description>
 	<url type="homepage">http://speed-dreams.org/</url>
 	<screenshots>
