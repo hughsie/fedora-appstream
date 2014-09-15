@@ -1,18 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014 Your Name <email@address.com> -->
+<!-- Copyright 2014 Edgar Muniz Berlinck <edgar.vvl@gmail.com> -->
 <application>
 	<id type="desktop">warzone2100.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
-	<summary><!--summary here--></summary>
+	<summary>Strategy war game</summary>
 	<description>
 		<p>
-			<!--Description here-->
+			Warzone 2100 is a strategy war game with a nuclear post-apocalyptic scenario. You can play the campaign 
+			or against your friends, parents and relatives in multiplayer mode.
+		</p>
+		<p>
+			Command your forces to crush your enemies and to restore the world.
+		</p>
+		<p>
+			The game offers alot of addons that can be downloaded on the main website.
 		</p>
 	</description>
 	<url type="homepage">http://wz2100.net/</url>
 	<screenshots>
-		<screenshot type="default"><!--screenshot url here--></screenshot>
-		<screenshot><!--screenshot url here--></screenshot>
-		<screenshot><!--screenshot url here--></screenshot>
+		<screenshot type="default">http://static.giantbomb.com/uploads/original/0/7192/428661-000023.jpg</screenshot>
+		<screenshot>http://www.download26.com/modules/wfdownloads/images/screenshots/warzonescreenshot.png</screenshot>
+		<screenshot>http://media.moddb.com/images/downloads/1/10/9762/screen11.jpg</screenshot>
 	</screenshots>
 </application>
