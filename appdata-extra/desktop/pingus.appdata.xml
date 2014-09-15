@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014 Your Name <email@address.com> -->
+<!-- Copyright 2014 Edgar Muniz Berlinck <edgar.vv@gmail.com> -->
 <application>
 	<id type="desktop">pingus.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
-	<summary><!--summary here--></summary>
+	<summary>Free version of Lemmings Puzzle Game</summary>
 	<description>
 		<p>
-			<!--Description here-->
+			Pingus is a Puzzle game where you need to save all your little penguins using the 
+			capabilities provided to you in the current level.
+		</p>
+		<p>
+			The basic game idea is to be like Lemmings game. This versions has some other cool 
+			stuff like a world map and some very cool secret levels.
 		</p>
 	</description>
 	<url type="homepage">http://pingus.seul.org/</url>
