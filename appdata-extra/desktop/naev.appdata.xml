@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014 Your Name <email@address.com> -->
+<!-- Copyright 2014 William Moreno Reyes <williamjmorenor@gmail.com> -->
 <application>
 	<id type="desktop">naev.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
-	<summary><!--summary here--></summary>
+	<summary>2D space combat game</summary>
 	<description>
 		<p>
-			<!--Description here-->
+			Naev is a 2D space combat game similar to Escape Velocity, in the game you have the control of a space ship with a top-down perspective.<!--Description here-->
 		</p>
 	</description>
 	<url type="homepage">http://code.google.com/p/naev/</url>
