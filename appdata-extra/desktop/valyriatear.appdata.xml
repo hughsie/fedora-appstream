@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014 Your Name <email@address.com> -->
+<!-- Copyright 2014 William Moreno Reyes<williamjmorenor@gmail.com> -->
 <application>
 	<id type="desktop">valyriatear.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
-	<summary><!--summary here--></summary>
+	<summary>Role playing game with medieval theme</summary>
 	<description>
 		<p>
-			<!--Description here-->
+			Valyria Rear  is a single person japanese role-playing game in 2D with a medieval theme with many  features like a entertaining story, 
+			full map exploration, side-view battles, character management, puzzles and more. 
 		</p>
 	</description>
 	<url type="homepage">http://valyriatear.blogspot.de/</url>
