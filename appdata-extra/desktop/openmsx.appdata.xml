@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014 Your Name <email@address.com> -->
+<!-- Copyright 2014 Edgar Muniz Berlinck <edgar.vv@gmail.com> -->
 <application>
 	<id type="desktop">openmsx.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
-	<summary><!--summary here--></summary>
+	<summary>Emulate all aspects of the MSX with 100% accuracy</summary>
 	<description>
 		<p>
-			<!--Description here-->
+			MSX is an old Z80-based family of home computers as an attempt to establish a single standard 
+			in home computing similar to VHS in video. 
+		</p>
+		<p>
+			The MSX standard died from year 1988.
+		</p>
+		<p>
+			The MSX standard has been designed by a company called ASCII in Cooperation with Microsoft which
+			has provided a firmware version of his extended BASIC (called "MicroSoft eXtended BASIC") for the machine, 
+			which explains the MSX name.
 		</p>
 	</description>
 	<url type="homepage">http://openmsx.sourceforge.net</url>
