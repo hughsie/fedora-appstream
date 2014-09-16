@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014 Your Name <email@address.com> -->
+<!-- Copyright 2014 Eduardo Mayorga <e@mayorgalinux.com> -->
 <application>
 	<id type="desktop">teeworlds.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
-	<summary><!--summary here--></summary>
+	<summary>Online multiplayer shooter game</summary>
 	<description>
 		<p>
-			<!--Description here-->
+		  Teeworlds is a 2D online action game for up to 16 players battling in several game modes.
+		  The controls are inspired by First Person Shooter game genre.
+		  It lets you desing custom maps.
 		</p>
 	</description>
 	<url type="homepage">http://www.teeworlds.com/</url>
