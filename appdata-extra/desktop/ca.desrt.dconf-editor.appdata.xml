@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!-- HOUSEKEEPING, REMOVE THIS COMMENT WHEN THIS GOES UPSTREAM
+UpstreamURL:  https://raw.githubusercontent.com/GNOME/dconf/master/editor/ca.desrt.dconf-editor.appdata.xml
+-->
+
 <application>
   <id type="desktop">ca.desrt.dconf-editor.desktop</id>
   <licence>CC0</licence>

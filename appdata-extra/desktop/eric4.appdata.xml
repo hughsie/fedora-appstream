@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!-- HOUSEKEEPING, REMOVE THIS COMMENT WHEN THIS GOES UPSTREAM
+UpstreamURL:  http://die-offenbachs.homelinux.org:48888/viewvc/eric4%20IDE/eric4/trunk/eric4.appdata.xml?revision=4558&view=markup
+-->
+
 <application>
   <id type="desktop">eric4.desktop</id>
   <metadata_license>CC-BY-3.0</metadata_license>

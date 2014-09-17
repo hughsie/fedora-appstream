@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2014 Ryan Lerch <rlerch@redhat.com> -->
+
+<!-- HOUSEKEEPING, REMOVE THIS COMMENT WHEN THIS GOES UPSTREAM
+UpstreamURL:  https://git.gnome.org/browse/file-roller/tree/data/org.gnome.FileRoller.appdata.xml.in
+-->
+
 <application>
   <id type="desktop">file-roller.desktop</id>
   <metadata_license>CC0-1.0</metadata_license>

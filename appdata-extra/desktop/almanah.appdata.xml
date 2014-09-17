@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2014 Álvaro Peña <alvaropg@gmail.com> -->
+
+<!-- HOUSEKEEPING FOR RICHARD, REMOVE THIS COMMENT WHEN THIS GOES UPSTREAM
+UpstreamURL: https://git.gnome.org/browse/almanah/tree/data/almanah.appdata.xml.in
+-->
+
 <application>
   <id type="desktop">almanah.desktop</id>
   <metadata_license>CC0-1.0</metadata_license>

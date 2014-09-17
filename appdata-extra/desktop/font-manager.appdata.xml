@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2014 Chris Roberts <croberts@croberts.org -->
+
+<!-- HOUSEKEEPING, REMOVE THIS COMMENT WHEN THIS GOES UPSTREAM
+BugReportURL: https://code.google.com/p/font-manager/issues/detail?id=91
+SentUpstream: 2014-09-17
+-->
+
 <application>
   <id type="desktop">font-manager.desktop</id>
   <metadata_license>CC0-1.0</metadata_license>

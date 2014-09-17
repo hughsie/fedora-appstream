@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2014 Ryan Lerch <rlerch@redhat.com> -->
+
+<!-- HOUSEKEEPING, REMOVE THIS COMMENT WHEN THIS GOES UPSTREAM
+BugReportURL: https://sourceforge.net/p/add64/discussion/general/thread/6ff4fec1/
+SentUpstream: 2014-09-17
+-->
+
 <application>
   <id type="desktop">Add64.desktop</id>
   <metadata_license>CC0-1.0</metadata_license>

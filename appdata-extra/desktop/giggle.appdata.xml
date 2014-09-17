@@ -1,9 +1,10 @@
-<!--App data from upstream, but they havent had a release yet, so putting it here
-in the meantime
-https://git.gnome.org/browse/giggle/tree/data/giggle.appdata.xml
--->
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2014 Richard Hughes <richard@hughsie.com> -->
+
+<!-- HOUSEKEEPING, REMOVE THIS COMMENT WHEN THIS GOES UPSTREAM
+UpstreamURL:  https://git.gnome.org/browse/giggle/tree/data/giggle.appdata.xml
+-->
+
 <application>
   <id type="desktop">giggle.desktop</id>
   <licence>CC0-1.0</licence>
