@@ -3,10 +3,11 @@
 <application>
 	<id type="desktop">tennix.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
-	<summary><!--summary here--></summary>
+	<summary>tennis simulator</summary>
 	<description>
 		<p>
-			<!--Description here-->
+			Tennix is a overhead view tennis simulator for one or two players. It features locations
+			from all 4 Grand Slam tournaments in Australia, France, the USA and England.
 		</p>
 	</description>
 	<url type="homepage">http://icculus.org/tennix/</url>
