@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014 Your Name <email@address.com> -->
+<!-- Copyright 2014 Edgar Muniz Berlinck <edgar.vv@gmail.com> -->
 <application>
 	<id type="desktop">kubrick.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
-	<summary><!--summary here--></summary>
+	<summary>Rubik's Cube Puzzle Game</summary>
 	<description>
 		<p>
-			<!--Description here-->
+			Puzzle Game based on Rubik's Cube for KDE.
 		</p>
 	</description>
 	<url type="homepage">https://projects.kde.org/projects/kde/kdegames/kubrick</url>
 	<screenshots>
-		<screenshot type="default">https://raw.githubusercontent.com/hughsie/fedora-appstream/master/screenshots-extra/kubrick/a.png</screenshot>
+		<screenshot type="default">http://www.kde.org/images/screenshots/kubrick.png</screenshot>
 		<screenshot><!--screenshot url here--></screenshot>
 		<screenshot><!--screenshot url here--></screenshot>
 	</screenshots>
