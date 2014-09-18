@@ -1,13 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014 Your Name <email@address.com> -->
+<!-- Copyright 2014 Edgar Muniz Berlinck <edgar.vv@gmail.com> -->
 <application>
 	<id type="desktop">freedoom.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
-	<summary><!--summary here--></summary>
+	<summary>First person shoot DOOM-based game</summary>
 	<description>
 		<p>
-			<!--Description here-->
+			Free alternative for IWAD. Freedoom brings to you a set of resources for the DOOM game engine.
+		</p>
+		<p>
+			Freedoon is a 3-in-1 game: 
+			 - Freedoom: 32 levels game in one charpter (Compatible with DOOM II mods).
+			 - Ultimate Freedoom: Alternative game with 36 levels distributed in 4 charpters (Compatible with original DOOM and Ultimate DOOM mods)
+			 - FreeDM: 32 levels designed for Deathmatch mode.
 		</p>
 	</description>
-	<url type="homepage">https://savannah.nongnu.org/projects/freedoom/</url>
+	<url type="homepage">http://freedoom.github.io/</url>
+	<screenshots>
+		<screenshot type="default">http://freedoom.github.io/img/screenshots/th_0.6.3_02.jpg</screenshot>
+		<screenshothttp://freedoom.github.io/img/screenshots/th_0.6.3_01.jpg</screenshot>
+		<screenshot>http://freedoom.github.io/img/screenshots/th_0.6.3_03.jpg</screenshot>
+		<screenshot>http://freedoom.github.io/img/screenshots/th_0.6.3_04.jpg</screenshot>
+	</screenshots>
 </application>
