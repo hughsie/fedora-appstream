@@ -9,7 +9,7 @@ SentUpstream: 2014-09-17
 -->
 
 <application>
-  <id type="desktop">gnome-screenshot.desktop</id>
+  <id type="desktop">org.gnome.Screenshot.desktop</id>
   <metadata_license>CC0-1.0</metadata_license>
   <description>
     <p>
