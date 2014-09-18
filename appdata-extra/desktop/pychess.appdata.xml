@@ -3,10 +3,15 @@
 <application>
 	<id type="desktop">pychess.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
-	<summary><!--summary here--></summary>
+	<summary>
+	Chess client written entirely in Python
+	</summary>
 	<description>
 		<p>
-			<!--Description here-->
+		Pychess is a Chess client can start a game using its own engine 
+		or any other engine installed on the computer is completely written 
+		in Python from the User Interface to the game engine and can connect 
+		to play games online with other people.
 		</p>
 	</description>
 	<url type="homepage">http://pychess.org</url>
