@@ -2,10 +2,8 @@
 <!-- Copyright 2014 Ryan Lerch <rlerch@redhat.com> -->
 
 <!-- HOUSEKEEPING, REMOVE THIS COMMENT WHEN THIS GOES UPSTREAM
-UpstreamURL:  ########################
-BugReportURL: ########################
-EmailAddress: ########################
-SentUpstream: 2014-09-17
+BugReportURL: https://code.google.com/p/gpick/issues/detail?id=117
+SentUpstream: 2014-06-14
 -->
 
 <application>

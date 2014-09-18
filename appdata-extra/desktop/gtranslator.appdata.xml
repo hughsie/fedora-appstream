@@ -2,10 +2,7 @@
 <!-- Copyright 2014 Richard Hughes <richard@hughsie.com> -->
 
 <!-- HOUSEKEEPING, REMOVE THIS COMMENT WHEN THIS GOES UPSTREAM
-UpstreamURL:  ########################
-BugReportURL: ########################
-EmailAddress: ########################
-SentUpstream: 2014-09-17
+UpstreamURL:  https://git.gnome.org/browse/gtranslator/plain/data/gtranslator.appdata.xml.in
 -->
 
 <application>
