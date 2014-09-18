@@ -3,10 +3,14 @@
 <application>
 	<id type="desktop">sudoku-savant.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
-	<summary><!--summary here--></summary>
+	<summary>
+	Complete a numeric puzzle with the numbers from one to nine
+	</summary>
 	<description>
 		<p>
-			<!--Description here-->
+		        Sudoku Savnt a free version of the popular logic game Sudoku for the Linux desktop . 
+			The game is to fill a nine by nine grid with the numbers from one to nine filling 
+			the rows, columns and three by three squares without repeating a value on them.
 		</p>
 	</description>
 	<url type="homepage">http://sourceforge.net/projects/sudoku-savant/</url>
