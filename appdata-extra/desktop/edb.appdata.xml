@@ -2,10 +2,8 @@
 <!-- Copyright 2014 Evan Teran <evan.teran@gmail.com> -->
 
 <!-- HOUSEKEEPING, REMOVE THIS COMMENT WHEN THIS GOES UPSTREAM
-UpstreamURL:  ########################
-BugReportURL: ########################
-EmailAddress: ########################
-SentUpstream: 2014-09-17
+BugReportURL: https://code.google.com/p/edb-debugger/issues/detail?id=130
+SentUpstream: 2014-09-18
 -->
 
 <application>
