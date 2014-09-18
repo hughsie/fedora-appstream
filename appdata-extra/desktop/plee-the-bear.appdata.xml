@@ -3,10 +3,11 @@
 <application>
 	<id type="desktop">plee-the-bear.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
-	<summary><!--summary here--></summary>
+	<summary>rescue your kidnapped son in this side scrolling platform game</summary>
 	<description>
 		<p>
-			<!--Description here-->
+			Plee the bear is a side scrolling platform game where you have to rescue your kidnapped son.
+			Progress through the levels and dodge all the obstacles to try to rescue your son.
 		</p>
 	</description>
 	<url type="homepage">http://plee-the-bear.sourceforge.net/</url>
