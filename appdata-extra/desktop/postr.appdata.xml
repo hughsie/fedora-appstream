@@ -2,10 +2,8 @@
 <!-- Copyright 2014 Ryan Lerch <rlerch@redhat.com> -->
 
 <!-- HOUSEKEEPING, REMOVE THIS COMMENT WHEN THIS GOES UPSTREAM
-UpstreamURL:  ########################
-BugReportURL: ########################
-EmailAddress: ########################
-SentUpstream: 2014-09-17
+BugReportURL: https://bugzilla.gnome.org/show_bug.cgi?id=736864
+SentUpstream: 2014-09-18
 -->
 
 <application>
@@ -23,7 +21,7 @@ SentUpstream: 2014-09-17
       and also supports dragging and dropping files from any file browser.
     </p>
   </description>
-  <url type="homepage">http://projects.gnome.org/postr/</url>
+  <url type="homepage">https://wiki.gnome.org/Apps/Postr</url>
   <screenshots>
     <screenshot type="default">http://burtonini.com/computing/screenshots/postr-2.png</screenshot>
   </screenshots>

@@ -2,10 +2,8 @@
 <!-- Copyright 2014 Richard Hughes <richard@hughsie.com> -->
 
 <!-- HOUSEKEEPING, REMOVE THIS COMMENT WHEN THIS GOES UPSTREAM
-UpstreamURL:  ########################
-BugReportURL: ########################
-EmailAddress: ########################
-SentUpstream: 2014-09-17
+BugReportURL: https://bugzilla.gnome.org/show_bug.cgi?id=736866
+SentUpstream: 2014-09-18
 -->
 
 <application>

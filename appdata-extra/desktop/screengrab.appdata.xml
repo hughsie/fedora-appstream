@@ -2,10 +2,8 @@
 <!-- Copyright 2014 Ryan Lerch <rlerch@redhat.com> -->
 
 <!-- HOUSEKEEPING, REMOVE THIS COMMENT WHEN THIS GOES UPSTREAM
-UpstreamURL:  ########################
-BugReportURL: ########################
-EmailAddress: ########################
-SentUpstream: 2014-09-17
+BugReportURL: https://github.com/DOOMer/screengrab/issues/57
+SentUpstream: 2014-09-18
 -->
 
 <application>

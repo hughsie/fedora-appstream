@@ -2,10 +2,8 @@
 <!-- Copyright 2014 Richard Hughes <richard@hughsie.com> -->
 
 <!-- HOUSEKEEPING, REMOVE THIS COMMENT WHEN THIS GOES UPSTREAM
-UpstreamURL:  ########################
-BugReportURL: ########################
-EmailAddress: ########################
-SentUpstream: 2014-09-17
+BugReportURL: https://groups.google.com/d/msg/qmpdclient/2GOQngPOLFM/1Bz1LvwmB8YJ
+SentUpstream: 2014-09-18
 -->
 
 <application>

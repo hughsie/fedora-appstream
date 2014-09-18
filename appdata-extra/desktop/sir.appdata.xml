@@ -2,9 +2,7 @@
 <!-- Copyright 2014 Ryan Lerch <rlerch@redhat.com> -->
 
 <!-- HOUSEKEEPING, REMOVE THIS COMMENT WHEN THIS GOES UPSTREAM
-UpstreamURL:  ########################
-BugReportURL: ########################
-EmailAddress: ########################
+BugReportURL: https://code.google.com/p/sir/issues/detail?id=6
 SentUpstream: 2014-09-17
 -->
 
@@ -24,7 +22,7 @@ SentUpstream: 2014-09-17
       including PNG, JPG, BMP, SVG and TIFF.
     </p>
   </description>
-  <url type="homepage">http://sir.projet-libre.org</url>
+  <url type="homepage">https://code.google.com/p/sir/</url>
   <screenshots>
     <screenshot type="default">https://raw.githubusercontent.com/hughsie/fedora-appstream/master/screenshots-extra/sir/a.png</screenshot>
   </screenshots>

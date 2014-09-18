@@ -2,10 +2,7 @@
 <!-- Copyright 2014 Richard Hughes <richard@hughsie.com> -->
 
 <!-- HOUSEKEEPING, REMOVE THIS COMMENT WHEN THIS GOES UPSTREAM
-UpstreamURL:  ########################
-BugReportURL: ########################
-EmailAddress: ########################
-SentUpstream: 2014-09-17
+UpstreamURL:  https://bitbucket.org/erikg/revelation/src/19df2c5ff72f888219d68bfe61fa85f0ba9b11f9/data/revelation.appdata.xml.in
 -->
 
 <application>

@@ -2,10 +2,8 @@
 <!-- Copyright 2014 Richard Hughes <richard@hughsie.com> -->
 
 <!-- HOUSEKEEPING, REMOVE THIS COMMENT WHEN THIS GOES UPSTREAM
-UpstreamURL:  ########################
-BugReportURL: ########################
-EmailAddress: ########################
-SentUpstream: 2014-09-17
+EmailAddress: rhythmbox-devel@gnome.org
+SentUpstream: 2013-09-05
 -->
 
 <application>
