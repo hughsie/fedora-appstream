@@ -2,10 +2,7 @@
 <!-- Copyright 2014 Richard Hughes <richard@hughsie.com> -->
 
 <!-- HOUSEKEEPING, REMOVE THIS COMMENT WHEN THIS GOES UPSTREAM
-UpstreamURL:  ########################
-BugReportURL: ########################
-EmailAddress: ########################
-SentUpstream: 2014-09-17
+SentUpstream: Dead!
 -->
 
 <application>
@@ -22,7 +19,7 @@ SentUpstream: 2014-09-17
       baseball bats, and bazookas.
     </p>
   </description>
-  <url type="homepage">http://sourceforge.net/projects/warmux.mirror/</url>
+  <url type="homepage">http://sourceforge.net/projects/warmux/</url>
   <screenshots>
     <screenshot type="default">http://a.fsdn.com/con/app/proj/warmux.mirror/screenshots/Warmux.jpg</screenshot>
     <screenshot>http://a.fsdn.com/con/app/proj/warmux.mirror/screenshots/warmux.png</screenshot>
