@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014 Your Name <email@address.com> -->
+<!-- Copyright 2014 Eduardo Mayorga <e@mayorgalinux.com> -->
 <application>
 	<id type="desktop">pioneers.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
-	<summary><!--summary here--></summary>
+	<summary>Multiplayer board game inspired by The Settlers of Catan</summary>
 	<description>
 		<p>
-			<!--Description here-->
+		  Pioneers is a free videogame implementation of the famous German game Settlers of Catan.
+		  The goal is to build towns, cities and roads on a board that is different every time, while accumulating various types of cards.
+		  It can be played online.
 		</p>
 	</description>
 	<url type="homepage">http://pio.sourceforge.net/</url>
