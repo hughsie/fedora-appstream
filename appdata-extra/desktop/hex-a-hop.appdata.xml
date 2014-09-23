@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2014 Tim Waugh <twaugh@redhat.com> -->
+<application>
+	<id type="desktop">hex-a-hop.desktop</id>
+	<metadata_license>CC0-1.0</metadata_license>
+	<summary>Break all the green hexagons without getting trapped</summary>
+	<description>
+		<p>
+			In Hex-A-Hop you have to destroy all the green hexagons in each level. Jumping onto a green hexagon makes it start to crack. When you jump off, it breaks. Use the hexagons as stepping stones but make sure to visit them in the right order or you'll end up stuck on one with no way off.
+		</p>
+		<p>
+			If you get stuck, use the infinite undo to instantly rewind to the point where you went wrong. Be warned: it isn't always easy to work out how far you need to rewind.
+		</p>
+		<p>
+			Once you've completed a level, the map screen lets you choose which level to try next.
+		</p>
+	</description>
+	<url type="homepage">https://sourceforge.net/projects/hexahop</url>
+	<screenshots>
+		<screenshot type="default">http://hexahop.sourceforge.net/images/screenshot3.jpg</screenshot>
+		<screenshot>http://hexahop.sourceforge.net/images/screenshot1.jpg</screenshot>
+		<screenshot>http://hexahop.sourceforge.net/images/screenshot4.jpg</screenshot>
+	</screenshots>
+</application>

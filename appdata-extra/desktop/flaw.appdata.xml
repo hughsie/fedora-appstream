@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2014 Edgar Muniz Berlinck <edgar.vv@gmail.com> -->
+<application>
+	<id type="desktop">flaw.desktop</id>
+	<metadata_license>CC0-1.0</metadata_license>
+	<summary>Casual Wizards Battle Game</summary>
+	<description>
+		<p>
+			Flaw is a game where you control a wizard and your goal is to survive as much as you can. 
+                </p>
+                
+                <p>
+                	In addition to the fireballs that arise increasingly in larger quantities, 
+                	there are other wizards trying to kill you.
+                </p>
+		
+		<p>
+			The game has some items that give you special abilities to defend yourself or attack your enemies.
+		</p>
+
+		<p>
+			Flaw can be played on single-player mode or with your friends.
+		</p>
+		
+	</description>
+	<url type="homepage">http://flaw.sourceforge.net/</url>
+	<screenshots>
+		<screenshot type="default">http://flaw.sourceforge.net/images/ingame1.png</screenshot>
+		<screenshot>http://flaw.sourceforge.net/images/ingame3.png</screenshot>
+		<screenshot>http://flaw.sourceforge.net/images/ingame2.png</screenshot>
+		<screenshot>http://flaw.sourceforge.net/images/menu.png</screenshot>
+	</screenshots>
+</application>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2014 Edgar Muniz Berlinck <edgar.vv@gmail.com> -->
+<application>
+	<id type="desktop">kapman.desktop</id>
+	<metadata_license>CC0-1.0</metadata_license>
+	<summary>Pacman clone for KDE</summary>
+	<description>
+		<p>
+			Pacman clone for KDE, with very cool graphics.
+		</p>
+	</description>
+	<url type="homepage">https://projects.kde.org/projects/kde/kdegames/kapman</url>
+	<screenshots>
+		<screenshot type="default">http://www.kde.org/images/screenshots/resized/kapman.png</screenshot>
+		<screenshot><!--screenshot url here--></screenshot>
+		<screenshot><!--screenshot url here--></screenshot>
+	</screenshots>
+</application>

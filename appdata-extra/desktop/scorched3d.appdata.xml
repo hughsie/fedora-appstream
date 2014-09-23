@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2014 Ryan Lerch <rlerch@redhat.com> -->
+<application>
+	<id type="desktop">scorched3d.desktop</id>
+	<metadata_license>CC0-1.0</metadata_license>
+	<summary>Turn based 3D artillery game</summary>
+	<description>
+		<p>
+			Scorched 3D is a turn-based 3D artillery game where you take control of a 
+			tank and attack your opponents in a 3D landscape with a range of weapons.
+			It also features some real-time elements allowing you to counter opponents
+			attacks, and also features online multiplayer modes.
+		</p>
+	</description>
+	<!--<screenshots>
+		<screenshot type="default"></screenshot>
+		<screenshot></screenshot>
+		<screenshot></screenshot>
+	</screenshots>-->
+	<url type="homepage">http://www.scorched3d.co.uk/</url>
+</application>

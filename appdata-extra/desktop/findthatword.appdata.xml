@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2014 Tim Waugh <twaugh@redhat.com -->
+<application>
+	<id type="desktop">findthatword.desktop</id>
+	<metadata_license>CC0-1.0</metadata_license>
+	<summary>Create word search puzzles</summary>
+	<description>
+		<p>
+			Find That Word is an easy way to create your own word search puzzles ready to print or save as PDF.
+		</p>
+	</description>
+	<url type="homepage">http://findthatword.sourceforge.net/</url>
+	<screenshots>
+		<screenshot type="default">http://findthatword.sourceforge.net/uploads/Screenshot-FindThatWord-Ubuntu.png</screenshot>
+	</screenshots>
+</application>

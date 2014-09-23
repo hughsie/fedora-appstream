@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2014 Your Name <email@address.com> -->
+<application>
+	<id type="desktop">mj.desktop</id>
+	<metadata_license>CC0-1.0</metadata_license>
+	<summary>Mahjong game platforms with network capability </summary>
+	<description>
+		<p>
+			Game platforms with network capability game can be played by four humans, by a human vs three computer players, or any other combination.
+		</p>
+	</description>
+	<url type="homepage">http://mahjong.julianbradfield.org/</url>
+	<screenshots>
+		<screenshot type="default">http://mahjong.julianbradfield.org/screenshots/11.gif</screenshot>
+	</screenshots>
+</application>

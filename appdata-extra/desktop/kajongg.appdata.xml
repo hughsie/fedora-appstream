@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2014 Your Name <email@address.com> -->
+<application>
+	<id type="desktop">kajongg.desktop</id>
+	<metadata_license>CC0-1.0</metadata_license>
+	<summary>Mah Jongg Puzzle Game</summary>
+	<description>
+		<p>
+			Mah Jongg board game for KDE. Can be played against up to four players (human or computer) or solo.
+		</p>
+	</description>
+	<url type="homepage">https://projects.kde.org/projects/kde/kdegames/kajongg</url>
+	<screenshots>
+		<screenshot type="default">http://www.kde.org/images/screenshots/kajongg.png</screenshot>
+	</screenshots>
+</application>

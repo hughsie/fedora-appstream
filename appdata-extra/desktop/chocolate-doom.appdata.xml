@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2014 Ravi Srinivasan <ravishankar.srinivasan@gmail.com> -->
+<application>
+	<id type="desktop">chocolate-doom.desktop</id>
+	<metadata_license>CC0-1.0</metadata_license>
+	<summary>A clone of the popular DOS game DOOM</summary>
+	<description>
+		<p>
+			Chocolate Doom is an original source port of the popular DOOM game for the PC.
+		</p>
+		<p>
+			It accurately reproduces the playing experience of the original DOOM game and is compatible with the numerous mods and levels designed for the original.
+		</p>
+	</description>
+	<url type="homepage">http://chocolate-doom.org/</url>
+	<screenshots>
+		<screenshot type="default">http://www.chocolate-doom.org/wiki/images/a/a7/Chocolate-doom.png</screenshot>
+	</screenshots>
+</application>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2014 Ravi Srinivasan <ravishankar.srinivasan@gmail.com> -->
+<application>
+	<id type="desktop">cave9.desktop</id>
+	<metadata_license>CC0-1.0</metadata_license>
+	<summary>A cave exploration game featuring unique controls based on gravity</summary>
+	<description>
+		<p>
+			cave9 is 3D cave exploration game based on the SF-cave game. You control a jet that maneuvers through a series of caves and the objective
+			of the game is to avoid colliding with the cave walls.
+		</p>
+	</description>
+	<url type="homepage">http://code.google.com/p/cave9</url>
+	<screenshots>
+		<screenshot type="default">http://cave9.googlecode.com/files/cave9-small.jpg</screenshot>
+	</screenshots>
+</application>

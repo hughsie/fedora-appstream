@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2014 Tim Waugh <twaugh@redhat.com> -->
+<application>
+	<id type="desktop">hexglass.desktop</id>
+	<metadata_license>CC0-1.0</metadata_license>
+	<summary>Drop shapes to the bottom without leaving gaps</summary>
+	<description>
+		<p>
+			In HexGlass the object is to rotate shaped pieces as the fall to the bottom so that they don't leave gaps. The pieces are made of small numbers of hexagons stuck together, and it is hard to work out the right way to rotate each piece as there are 6 possible orientations.
+		</p>
+		<p>
+			When a row is completed without any gaps, it is removed and all the hexagonal blocks above it move down one row. As the pieces fall faster, make sure not to let the screen fill up!
+		</p>
+	</description>
+	<url type="homepage">http://code.google.com/p/hexglass</url>
+	<screenshots>
+		<screenshot type="default">http://hexglass.googlecode.com/svn/wiki/preview.png</screenshot>
+	</screenshots>
+</application>

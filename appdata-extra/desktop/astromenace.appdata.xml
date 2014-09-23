@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2014 Ravi Srinivasan <ravishankar.srinivasan@gmail.com> -->
+<application>
+	<id type="desktop">astromenace.desktop</id>
+	<metadata_license>CC0-1.0</metadata_license>
+	<summary>A fast paced and intense 3D scrolling space shooter with stunning graphics</summary>
+	<description>
+		<p>
+			Astromenace is a 3D scrolling space shooter with amazing graphics and intense gameplay.
+		</p>
+		<p>
+			You have a range of vehicles to choose from and numerous weapons that can be upgraded as you repel wave after wave of spaceships and dodge space objects.
+		</p>
+	</description>
+	<url type="homepage">http://www.viewizard.com/</url>
+	<screenshots>
+		<screenshot type="default">http://www.viewizard.com/astromenace/am3.jpg</screenshot>
+		<screenshot>http://www.viewizard.com/astromenace/am6.jpg</screenshot>
+		<screenshot>http://www.viewizard.com/astromenace/am10.jpg</screenshot>
+	</screenshots>
+</application>

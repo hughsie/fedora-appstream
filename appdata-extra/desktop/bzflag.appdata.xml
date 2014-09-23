@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2014 Ravi Srinivasan <ravishankar.srinivasan@gmail.com> -->
+<application>
+	<id type="desktop">bzflag.desktop</id>
+	<metadata_license>CC0-1.0</metadata_license>
+	<summary>An online multiplayer 3D tank battle game</summary>
+	<description>
+		<p>
+			bzflag is a multiplayer tank battle game with "retro" 3D style graphics.
+		</p>
+	</description>
+	<url type="homepage">http://bzflag.org</url>
+	<screenshots>
+		<screenshot type="default">http://bzflag.org/resources/screenshots/dantes_inferno_01.jpg</screenshot>
+		<screenshot>http://bzflag.org/resources/screenshots/aa_bridge_crossing_01.jpg</screenshot>
+		<screenshot>http://bzflag.org/resources/screenshots/pandemonium_01.jpg</screenshot>
+	</screenshots>
+</application>

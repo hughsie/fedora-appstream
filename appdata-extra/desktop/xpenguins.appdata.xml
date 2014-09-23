@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2014 William Moreno Reyes <williamjmorenor@gmail.com> -->
+<application>
+	<id type="desktop">xpenguins.desktop</id>
+	<metadata_license>CC0-1.0</metadata_license>
+	<summary>Animated penguin for your desktop.</summary>
+	<description>
+		<p>
+			XPenguins let you have an animated penguin (or more) in you desktop than will play in your space work and windows.
+		</p>
+	</description>
+	<url type="homepage">http://xpenguins.seul.org/</url>
+	<screenshots>
+		<screenshot type="default">http://xpenguins.seul.org/images/kde_screenshot.jpg</screenshot>
+		<screenshot>http://xpenguins.seul.org/images/applet.jpg</screenshot>
+		<screenshot>https://extensions.gnome.org/static/extension-data/screenshots/screenshot_405.png</screenshot>
+	</screenshots>
+</application>

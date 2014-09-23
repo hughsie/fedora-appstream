@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2014 Edgar Muniz Berlinck <edgar.vv@gmail.com> -->
+<application>
+	<id type="desktop">lbrickbuster2.desktop</id>
+	<metadata_license>CC0-1.0</metadata_license>
+	<summary>Free version of Breakout</summary>
+	<description>
+		<p>
+			Break all the tiles and don't let your ball fall. Simple and fun.
+		</p>
+	</description>
+	<url type="homepage">http://lgames.sourceforge.net/index.php?project=LBreakout2</url>
+	<screenshots>
+		<screenshot type="default">http://lgames.sourceforge.net/LBreakout2/ss2.jpg</screenshot>
+	</screenshots>
+</application>

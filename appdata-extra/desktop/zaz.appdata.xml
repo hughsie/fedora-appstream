@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2014 Zbigniew Jędrzejewski-Szmek <zbyszek@in.waw.pl> -->
+<application>
+	<id type="desktop">zaz.desktop</id>
+	<metadata_license>CC0-1.0</metadata_license>
+	<summary>Rearrange flowing balls to make triplets</summary>
+	<description>
+		<p>
+			Zaz is a mouse-operated arcade puzzle game where
+			balls have to be rearranged by quickly pulling one
+			out of the sequence and allowing it to jump back in
+			in a different place. Triplets "explode" and delay
+			the inevitable moment when there are too many balls
+			and the player loses.
+		</p>
+	</description>
+	<url type="homepage">http://sourceforge.net/projects/zaz/</url>
+	<screenshots>
+		<screenshot width="642" height="520" type="default">http://in.waw.pl/~zbyszek/fedora/Zaz_easy_level.png</screenshot>
+		<screenshot width="642" height="520" >http://in.waw.pl/~zbyszek/fedora/Zaz_hard_level.png</screenshot>
+		<screenshot width="642" height="520" >http://in.waw.pl/~zbyszek/fedora/Zaz_main_menu.png</screenshot>
+		<screenshot width="642" height="520" >http://in.waw.pl/~zbyszek/fedora/Zaz_splashscreen.png</screenshot>
+	</screenshots>
+</application>

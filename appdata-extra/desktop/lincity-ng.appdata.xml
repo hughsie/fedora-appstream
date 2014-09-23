@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2014 Edgar Muniz Berlinck <edgar.vv@gmail.com> -->
+<application>
+	<id type="desktop">lincity-ng.desktop</id>
+	<metadata_license>CC0-1.0</metadata_license>
+	<summary>LinCity-NG</summary>
+	<description>
+		<p>
+			LinCity-NG is a game where you are the mayor of a small town and your goal is to make it prosper gerenciand building improvements and the resources of their city. 
+		</p>
+		<p>
+			Good game for Sim City fans.
+		</p>
+	</description>
+	<url type="homepage">http://sourceforge.net/projects/lincity-ng.berlios/</url>
+	<screenshots>
+		<screenshot type="default">http://a.fsdn.com/con/app/proj/lincity-ng.berlios/screenshots/Lincity-ng-2.0.png</screenshot>
+		<screenshot>http://a.fsdn.com/con/app/proj/lincity-ng.berlios/screenshots/NewSolar.png</screenshot>
+		<screenshot>http://a.fsdn.com/con/app/proj/lincity-ng.berlios/screenshots/Height.png</screenshot>
+	</screenshots>
+</application>

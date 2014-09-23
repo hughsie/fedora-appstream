@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2014 Ryan Lerch <rlerch@redhat.com> -->
+<application>
+	<id type="desktop">glob2.desktop</id>
+	<metadata_license>CC0-1.0</metadata_license>
+	<summary>real time strategy game with globs</summary>
+	<description>
+		<p>
+			Globulation 2 is a real time strategy (RTS) game where you use three types of globs:
+			workers, scouts, and warriors to wage war on computer controlled communites of other
+			globs. Globulation is unique from other RTS games in that it removes a lot of the 
+			micromanagement from the gameplay. You cannot control the globs directly, only place
+			buildings and let the globs do what they do best.
+		</p>
+	</description>
+	<url type="homepage">http://globulation2.org/</url>
+	<screenshots>
+		<screenshot type="default">http://globulation2.org/images/9/93/Beta3-Battle.jpg</screenshot>
+		<screenshot>http://globulation2.org/images/5/5a/Beta2_MoreAttackingEnemy.jpg</screenshot>
+		<screenshot>http://globulation2.org/images/6/6a/Beta2_ParticleEffects.jpg</screenshot>
+	</screenshots>
+</application>

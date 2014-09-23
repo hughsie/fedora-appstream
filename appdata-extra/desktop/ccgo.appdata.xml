@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2014 Ravi Srinivasan <ravishankar.srinivasan@gmail.com> -->
+<application>
+	<id type="desktop">ccgo.desktop</id>
+	<metadata_license>CC0-1.0</metadata_license>
+	<summary>Play a game of "Go" against your computer or other players on the internet</summary>
+	<description>
+		<p>
+			ccgo allows you to play the popular chinese strategy game "Go" against your computer or other players on the internet.
+		</p>
+	</description>
+	<url type="homepage">http://ccdw.org/~cjj/prog/ccgo/</url>
+	<screenshots>
+		<screenshot type="default">http://ccdw.org/~cjj/prog/ccgo/screen_shot.png</screenshot>
+	</screenshots>
+</application>
