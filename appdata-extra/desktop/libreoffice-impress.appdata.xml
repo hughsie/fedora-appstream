@@ -2,10 +2,9 @@
 <!-- Copyright 2014 Richard Hughes <richard@hughsie.com> -->
 
 <!-- HOUSEKEEPING, REMOVE THIS COMMENT WHEN THIS GOES UPSTREAM
-UpstreamURL:  ########################
-BugReportURL: ########################
-EmailAddress: ########################
-SentUpstream: 2014-09-17
+UpstreamURL:  Upstream, but packaged in a -appdata subpackage in Fedora
+EmailAddress: dtardon and caolan in #libreoffice on freenode.
+SentUpstream: 2014-09-23
 -->
 
 <application>

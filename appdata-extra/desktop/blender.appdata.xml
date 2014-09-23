@@ -2,10 +2,9 @@
 <!-- Copyright 2014 Richard Hughes <richard@hughsie.com> -->
 
 <!-- HOUSEKEEPING, REMOVE THIS COMMENT WHEN THIS GOES UPSTREAM
-UpstreamURL:  ########################
-BugReportURL: ########################
-EmailAddress: ########################
-SentUpstream: 2014-09-17
+BugReportURL: Long discussions with sergey on #blendercoders
+BugReportURL: http://lists.blender.org/pipermail/bf-committers/2014-September/044217.html
+SentUpstream: 2014-09-23
 -->
 
 <application>

@@ -2,10 +2,8 @@
 <!-- Copyright 2014 Richard Hughes <richard@hughsie.com> -->
 
 <!-- HOUSEKEEPING, REMOVE THIS COMMENT WHEN THIS GOES UPSTREAM
-UpstreamURL:  ########################
-BugReportURL: ########################
-EmailAddress: ########################
-SentUpstream: 2014-09-17
+UpstreamURL:  http://xmedcon.sourceforge.net/Main/Upcoming
+SentUpstream: 2014-09-23
 -->
 
 <application>
@@ -30,6 +28,6 @@ SentUpstream: 2014-09-17
   <screenshots>
     <screenshot type="default">http://xmedcon.sourceforge.net/images/shotlnx.jpg</screenshot>
   </screenshots>
-  <url type="homepage">http://xmedcon.sourceforge.net//</url>
+  <url type="homepage">http://xmedcon.sourceforge.net/</url>
   <updatecontact>enlf@users.sourceforge.net</updatecontact>
 </application>
