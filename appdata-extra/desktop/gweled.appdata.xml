@@ -2,10 +2,8 @@
 <!-- Copyright 2014 William Moreno <williamjmorenor@fedoraproject.org> -->
 
 <!-- HOUSEKEEPING, REMOVE THIS COMMENT WHEN THIS GOES UPSTREAM
-UpstreamURL:  xxxxx
-BugReportURL: xxxxx
-EmailAddress: xxxxx
-SentUpstream: xxxxx
+BugReportURL: https://bugs.launchpad.net/gweled/+bug/1322917
+SentUpstream: 2014-06-12
 -->
 
 <application>

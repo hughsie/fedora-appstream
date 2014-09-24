@@ -5,7 +5,7 @@
 UpstreamURL:  xxxxx
 BugReportURL: xxxxx
 EmailAddress: xxxxx
-SentUpstream: xxxxx
+SentUpstream: 2014-09-24
 -->
 
 <application>
@@ -18,7 +18,7 @@ SentUpstream: xxxxx
       Can be played against up to four players (human or computer) or solo.
     </p>
   </description>
-  <url type="homepage">https://projects.kde.org/projects/kde/kdegames/kajongg</url>
+  <url type="homepage">http://www.kde.org/applications/games/kajongg/</url>
   <screenshots>
     <screenshot type="default">http://www.kde.org/images/screenshots/kajongg.png</screenshot>
   </screenshots>
