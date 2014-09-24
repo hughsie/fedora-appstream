@@ -8,16 +8,13 @@
 	</summary>
 	<description>
 		<p>
-			Lazarus is a free cross-plataform IDE for Free Pascal. The Environment remind the old Delphi 7	
-			likewise some of the components found in the LCL - Lazarus Component Library.
+			Lazarus is a free cross-platform IDE for Free Pascal. The environment is similar to Delphi 7	
+			and some of the components found in the LCL - Lazarus Component Library.
 		</p>
 		<p>
 			Lazarus is compatible with some Delphi code, so if you have a standard delphi application
-			using standard components (or other with lazarus compatible version) you can compile it 
+			using standard components (or other with Lazarus compatible version) you can compile it 
 			with no problems.
-		</p>
-		<p>
-			Lazarus is free and you can use it to develop open source or comercial applications.
 		</p>
 	</description>
 	<url type="homepage">http://www.lazarus.freepascal.org/</url>
