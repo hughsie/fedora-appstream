@@ -2,10 +2,8 @@
 <!-- Copyright 2014 Ryan Lerch <rlerch@redhat.com> -->
 
 <!-- HOUSEKEEPING, REMOVE THIS COMMENT WHEN THIS GOES UPSTREAM
-UpstreamURL:  xxxxx
-BugReportURL: xxxxx
-EmailAddress: xxxxx
-SentUpstream: xxxxx
+BugReportURL: https://bugs.launchpad.net/armagetronad/+bug/1323628
+SentUpstream: 2014-09-24
 -->
 
 <application>
