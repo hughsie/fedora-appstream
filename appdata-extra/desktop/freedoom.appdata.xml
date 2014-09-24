@@ -10,6 +10,7 @@
 		</p>
 		<p>
 			Freedoo, is a 3-in-1 game:
+		</p>
 			<ul>
 			 <li>
 			 	Freedoom: 32 levels game in one charpter (Compatible with DOOM II mods).
@@ -20,7 +21,6 @@
 			 <li>
 			 	FreeDM: 32 levels designed for Deathmatch mode.
 			 </li>
-		</p>
 	</description>
 	<url type="homepage">http://freedoom.github.io/</url>
 	<screenshots>
