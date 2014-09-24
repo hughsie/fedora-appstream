@@ -1,19 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2014 Ryan Lerch <rlerch@redhat.com> -->
+
+<!-- HOUSEKEEPING, REMOVE THIS COMMENT WHEN THIS GOES UPSTREAM
+UpstreamURL:  xxxxx
+BugReportURL: xxxxx
+EmailAddress: xxxxx
+SentUpstream: xxxxx
+-->
+
 <application>
-	<id type="desktop">gvrng.desktop</id>
-	<metadata_license>CC0-1.0</metadata_license>
-	<summary>a game to learn the basics of programming</summary>
-	<description>
-		<p>
-			Guido van Robot is an educational game where players use a basic programming
-			language to control a robotic triangle through streets and press buttons. The
-			simplistic language that is used helps students understand the basics of programming
-			including command sequences, conditional statements, loops, and abstracting procedures.
-		</p>
-	</description>
-	<url type="homepage">http://gvr.sourceforge.net</url>
-	<screenshots>
-		<screenshot type="default">http://gvr.sourceforge.net/screen_shots/gnuLinuxGvR.png</screenshot>
-	</screenshots>
+  <id type="desktop">gvrng.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <summary>a game to learn the basics of programming</summary>
+  <description>
+    <p>
+      Guido van Robot is an educational game where players use a basic programming
+      language to control a robotic triangle through streets and press buttons.
+      The simplistic language that is used helps students understand the basics
+      of programming including command sequences, conditional statements, loops,
+      and abstracting procedures.
+    </p>
+  </description>
+  <url type="homepage">http://gvr.sourceforge.net</url>
+  <screenshots>
+    <screenshot type="default">http://gvr.sourceforge.net/screen_shots/gnuLinuxGvR.png</screenshot>
+  </screenshots>
 </application>

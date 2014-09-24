@@ -1,16 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2014 William Moreno Reyes <williamjmorenor@gmail.com> -->
+
+<!-- HOUSEKEEPING, REMOVE THIS COMMENT WHEN THIS GOES UPSTREAM
+UpstreamURL:  xxxxx
+BugReportURL: xxxxx
+EmailAddress: xxxxx
+SentUpstream: xxxxx
+-->
+
 <application>
-	<id type="desktop">methane.desktop</id>
-	<metadata_license>CC0-1.0</metadata_license>
-	<summary>Platform Arcade Game similar to Bubble Bubble</summary>
-	<description>
-		<p>
-			Super Methane Brothers is a platform arcade game Puff and Blow each have a Methane Gas Gun which fires a cloud of immobilising gas. If this comes into contact with a bad guy, he will be absorbed into the gas and then float around the screen for a limited time. Bad guys are harmless in this state. Puff and Blow must suck the floating gas clouds into their guns and blast them out against a vertical surface. Bad guys then turn into bonuses which can be collected.
-		</p>
-	</description>
-	<url type="homepage">http://methane.sourceforge.net/</url>
-	<screenshots>
-		<screenshot type="default">http://methane.sourceforge.net/gamepic.gif</screenshot>
-	</screenshots>
+  <id type="desktop">methane.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <summary>Platform Arcade Game similar to Bubble Bubble</summary>
+  <description>
+    <p>
+      Super Methane Brothers is a platform arcade game Puff and Blow each have a
+      Methane Gas Gun which fires a cloud of immobilising gas.
+      If this comes into contact with a bad guy, he will be absorbed into the gas
+      and then float around the screen for a limited time.
+      Bad guys are harmless in this state.
+      Puff and Blow must suck the floating gas clouds into their guns and blast
+      them out against a vertical surface.
+      bThe Bad guys then turn into bonuses which can be collected.
+    </p>
+  </description>
+  <url type="homepage">http://methane.sourceforge.net/</url>
+  <screenshots>
+    <screenshot type="default">http://methane.sourceforge.net/gamepic.gif</screenshot>
+  </screenshots>
 </application>

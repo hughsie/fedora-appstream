@@ -1,18 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2014 Ryan Lerch <rlerch@redhat.com> -->
+
+<!-- HOUSEKEEPING, REMOVE THIS COMMENT WHEN THIS GOES UPSTREAM
+UpstreamURL:  xxxxx
+BugReportURL: xxxxx
+EmailAddress: xxxxx
+SentUpstream: xxxxx
+-->
+
 <application>
-	<id type="desktop">iapetal.desktop</id>
-	<metadata_license>CC0-1.0</metadata_license>
-	<summary>safely land the spaceship</summary>
-	<description>
-		<p>
-			Rescue the scientists in the flying habitat module from an asteroid shower by 
-			safely landing your lander on it and ferrying them to the ground. Keyboard controls
-			control the rotation and thrust of your lander to create a soft landing.
-		</p>
-	</description>
-	<url type="homepage">http://iapetal.sourceforge.net</url>
-	<screenshots>
-		<screenshot type="default">https://raw.githubusercontent.com/hughsie/fedora-appstream/master/screenshots-extra/iapetal/a.png</screenshot>
-	</screenshots>
+  <id type="desktop">iapetal.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <summary>safely land the spaceship</summary>
+  <description>
+    <p>
+      Rescue the scientists in the flying habitat module from an asteroid shower by
+      safely landing your lander on it and ferrying them to the ground.
+      Keyboard controls control the rotation and thrust of your lander to
+      create a soft landing.
+    </p>
+  </description>
+  <url type="homepage">http://iapetal.sourceforge.net</url>
+  <screenshots>
+    <screenshot type="default">https://raw.githubusercontent.com/hughsie/fedora-appstream/master/screenshots-extra/iapetal/a.png</screenshot>
+  </screenshots>
 </application>

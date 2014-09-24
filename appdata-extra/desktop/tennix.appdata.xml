@@ -1,17 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2014 Your Name <email@address.com> -->
+
+<!-- HOUSEKEEPING, REMOVE THIS COMMENT WHEN THIS GOES UPSTREAM
+UpstreamURL:  xxxxx
+BugReportURL: xxxxx
+EmailAddress: xxxxx
+SentUpstream: xxxxx
+-->
+
 <application>
-	<id type="desktop">tennix.desktop</id>
-	<metadata_license>CC0-1.0</metadata_license>
-	<summary>tennis simulator</summary>
-	<description>
-		<p>
-			Tennix is a overhead view tennis simulator for one or two players. It features locations
-			from all 4 Grand Slam tournaments in Australia, France, the USA and England.
-		</p>
-	</description>
-	<url type="homepage">http://icculus.org/tennix/</url>
-	<screenshots>
-		<screenshot type="default">http://icculus.org/tennix/screenshots/2011/tennix-ingame-2011.png</screenshot>
-	</screenshots>
+  <id type="desktop">tennix.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <summary>tennis simulator</summary>
+  <description>
+    <p>
+      Tennix is a overhead view tennis simulator for one or two players.
+      It features locations from all 4 Grand Slam tournaments in Australia,
+      France, the USA and England.
+    </p>
+  </description>
+  <url type="homepage">http://icculus.org/tennix/</url>
+  <screenshots>
+    <screenshot type="default">http://icculus.org/tennix/screenshots/2011/tennix-ingame-2011.png</screenshot>
+  </screenshots>
 </application>

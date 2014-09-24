@@ -1,25 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2014 Edgar Muniz Berlinck <edgar.vv@gmail.com> -->
+
+<!-- HOUSEKEEPING, REMOVE THIS COMMENT WHEN THIS GOES UPSTREAM
+UpstreamURL:  xxxxx
+BugReportURL: xxxxx
+EmailAddress: xxxxx
+SentUpstream: xxxxx
+-->
+
 <application>
-	<id type="desktop">openmsx.desktop</id>
-	<metadata_license>CC0-1.0</metadata_license>
-	<summary>Emulate all aspects of the MSX with 100% accuracy</summary>
-	<description>
-		<p>
-			MSX is an old Z80-based family of home computers as an attempt to establish a single standard 
-			in home computing similar to VHS in video. 
-		</p>
-		<p>
-			The MSX standard died from year 1988.
-		</p>
-		<p>
-			The MSX standard has been designed by a company called ASCII in Cooperation with Microsoft which
-			has provided a firmware version of his extended BASIC (called "MicroSoft eXtended BASIC") for the machine, 
-			which explains the MSX name.
-		</p>
-	</description>
-	<url type="homepage">http://openmsx.sourceforge.net</url>
-	<screenshots>
-		<screenshot type="default">http://openmsx.sourceforge.net/images/screenshots/mlimit3.png</screenshot>
-	</screenshots>
+  <id type="desktop">openmsx.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <summary>Emulate all aspects of the MSX with 100% accuracy</summary>
+  <description>
+    <p>
+      MSX is an old Z80-based family of home computers as an attempt to establish
+      a single standard in home computing similar to VHS in video.
+    </p>
+    <p>
+      The MSX standard died from year 1988.
+    </p>
+    <p>
+      The MSX standard has been designed by a company called ASCII in Cooperation
+      with Microsoft which has provided a firmware version of his extended BASIC
+      (called "MicroSoft eXtended BASIC") for the machine, which explains the MSX name.
+    </p>
+  </description>
+  <url type="homepage">http://openmsx.sourceforge.net</url>
+  <screenshots>
+    <screenshot type="default">http://openmsx.sourceforge.net/images/screenshots/mlimit3.png</screenshot>
+  </screenshots>
 </application>

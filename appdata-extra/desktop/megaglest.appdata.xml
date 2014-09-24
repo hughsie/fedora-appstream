@@ -1,20 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2014 William Moreno Reyes <williamjmorenor@gmail.com> -->
+
+<!-- HOUSEKEEPING, REMOVE THIS COMMENT WHEN THIS GOES UPSTREAM
+UpstreamURL:  xxxxx
+BugReportURL: xxxxx
+EmailAddress: xxxxx
+SentUpstream: xxxxx
+-->
+
 <application>
-	<id type="desktop">megaglest.desktop</id>
-	<metadata_license>CC0-1.0</metadata_license>
-	<summary>3D Real Time Strategy game</summary>
-	<description>
-		<p>
-			MegaGlest is a real time strategy game in a fantasy world with elements of past civilizations and magic, 
-			you must build up an army and defeat your foe, you can choose one of seven factions: 
-			Magic, Tech, Indians, Egypt, Norsemen, Persian and Romans.<!--Description here-->
-		</p>
-	</description>
-	<url type="homepage">http://megaglest.org/</url>
-	<screenshots>
-		<screenshot type="default">http://megaglest.org/uploads/images/screenshots/screen10.jpg</screenshot>
-		<screenshot>megaglest.org/uploads/images/screenshots/mg1.jpg</screenshot>
-		<screenshot>http://megaglest.org/uploads/images/screenshots/screen2.jpg</screenshot>
-	</screenshots>
+  <id type="desktop">megaglest.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <summary>3D Real Time Strategy game</summary>
+  <description>
+    <p>
+      MegaGlest is a real time strategy game in a fantasy world with elements of
+      past civilizations and magic, you must build up an army and defeat your foe,
+      you can choose one of seven factions:
+      Magic, Tech, Indians, Egypt, Norsemen, Persian and Romans.
+    </p>
+  </description>
+  <url type="homepage">http://megaglest.org/</url>
+  <screenshots>
+    <screenshot type="default">http://megaglest.org/uploads/images/screenshots/screen10.jpg</screenshot>
+    <screenshot>http://megaglest.org/uploads/images/screenshots/mg1.jpg</screenshot>
+    <screenshot>http://megaglest.org/uploads/images/screenshots/screen2.jpg</screenshot>
+  </screenshots>
 </application>

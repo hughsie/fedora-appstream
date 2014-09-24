@@ -1,16 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2014 William Moreno Reyes <williamjmorenor@gmail.com> -->
+
+<!-- HOUSEKEEPING, REMOVE THIS COMMENT WHEN THIS GOES UPSTREAM
+UpstreamURL:  xxxxx
+BugReportURL: xxxxx
+EmailAddress: xxxxx
+SentUpstream: xxxxx
+-->
+
 <application>
-	<id type="desktop">neverputt.desktop</id>
-	<metadata_license>CC0-1.0</metadata_license>
-	<summary>Guide a ball around the obstacles tilting the floor</summary>
-	<description>
-		<p>
-			In Neverball you must guide a ball around the obstacle tilting the floor before the time is over.
-		</p>
-		<p>
-			Neverball is very similar to Super Monkey Ball, you must guide the ball to the end point of each level getting all coins as you can.
-		</p>
-	</description>
-	<url type="homepage">http://neverball.org</url>
+  <id type="desktop">neverputt.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <summary>Guide a ball around the obstacles tilting the floor</summary>
+  <description>
+    <p>
+      In Neverball you must guide a ball around the obstacle tilting the floor
+      before the time is over.
+    </p>
+    <p>
+      Neverball is very similar to Super Monkey Ball, you must guide the ball to
+      the end point of each level getting all coins as you can.
+    </p>
+  </description>
+  <url type="homepage">http://neverball.org</url>
 </application>

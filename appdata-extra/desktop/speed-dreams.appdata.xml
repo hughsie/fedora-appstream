@@ -1,16 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2014 Your Name <email@address.com> -->
+
+<!-- HOUSEKEEPING, REMOVE THIS COMMENT WHEN THIS GOES UPSTREAM
+UpstreamURL:  xxxxx
+BugReportURL: xxxxx
+EmailAddress: xxxxx
+SentUpstream: xxxxx
+-->
+
 <application>
-	<id type="desktop">speed-dreams.desktop</id>
-	<metadata_license>CC0-1.0</metadata_license>
-	<summary>The Open Racing Car Simulator</summary>
-	<description>
-		<p>Speed-Dreams is a 3D racing cars simulator forked from TORCS using OpenGL. The goal is to have programmed robots drivers racing
-        	 against each others. You can also drive yourself with either a wheel, keyboard or mouse.</p>
-	</description>
-	<url type="homepage">http://speed-dreams.org/</url>
-	<screenshots>
-		<screenshot type="default">http://speed-dreams.org/images/sd-20/speed-dreams-20-track-epsie.jpg</screenshot>
-		<screenshot>http://speed-dreams.org/images/sd-20/speed-dreams-20-car-supercars.jpg</screenshot>
-	</screenshots>
+  <id type="desktop">speed-dreams.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <summary>The Open Racing Car Simulator</summary>
+  <description>
+    <p>
+      Speed-Dreams is a 3D racing cars simulator forked from TORCS using OpenGL.
+      The goal is to have programmed robots drivers racing against each others.
+      You can also drive yourself with either a wheel, keyboard or mouse.
+    </p>
+  </description>
+  <url type="homepage">http://speed-dreams.org/</url>
+  <screenshots>
+    <screenshot type="default">http://speed-dreams.org/images/sd-20/speed-dreams-20-track-epsie.jpg</screenshot>
+    <screenshot>http://speed-dreams.org/images/sd-20/speed-dreams-20-car-supercars.jpg</screenshot>
+  </screenshots>
 </application>

@@ -1,23 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2014 Edgar Muniz Berlinck <edgar.vv@gmail.com> -->
+
+<!-- HOUSEKEEPING, REMOVE THIS COMMENT WHEN THIS GOES UPSTREAM
+UpstreamURL:  xxxxx
+BugReportURL: xxxxx
+EmailAddress: xxxxx
+SentUpstream: xxxxx
+-->
+
 <application>
-	<id type="desktop">funguloids.desktop</id>
-	<metadata_license>CC0-1.0</metadata_license>
-	<summary>3D casual game</summary>
-	<description>
-		<p>
-			Those Funny Funguloids! 3d is a casual game where you must travel through various worlds offered by the game and capture all the mushrooms you find. Beware of enemies, they will do anything to make you fail!
-		</p>
-	</description>
-	<url type="homepage">http://funguloids.sourceforge.net</url>
-	<screenshots>
-		<screenshot type="default">http://funguloids.sourceforge.net/shot02.jpg</screenshot>
-		<screenshot>http://funguloids.sourceforge.net/shot01.jpg</screenshot>
-		<screenshot>http://funguloids.sourceforge.net/shot03.jpg</screenshot>
-		<screenshot>http://funguloids.sourceforge.net/shot04.jpg</screenshot>
-		<screenshot>http://funguloids.sourceforge.net/shot06.jpg</screenshot>
-		<screenshot>http://funguloids.sourceforge.net/shot07.jpg</screenshot>
-		<screenshot>http://funguloids.sourceforge.net/shot05.jpg</screenshot>
-		<screenshot>http://funguloids.sourceforge.net/shot08.jpg</screenshot>
-	</screenshots>
+  <id type="desktop">funguloids.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <summary>3D casual game</summary>
+  <description>
+    <p>
+      Those Funny Funguloids! 3d is a casual game where you must travel through
+      various worlds offered by the game and capture all the mushrooms you find.
+      Beware of enemies, they will do anything to make you fail!
+    </p>
+  </description>
+  <url type="homepage">http://funguloids.sourceforge.net</url>
+  <screenshots>
+    <screenshot type="default">http://funguloids.sourceforge.net/shot02.jpg</screenshot>
+    <screenshot>http://funguloids.sourceforge.net/shot01.jpg</screenshot>
+    <screenshot>http://funguloids.sourceforge.net/shot03.jpg</screenshot>
+    <screenshot>http://funguloids.sourceforge.net/shot04.jpg</screenshot>
+    <screenshot>http://funguloids.sourceforge.net/shot06.jpg</screenshot>
+    <screenshot>http://funguloids.sourceforge.net/shot07.jpg</screenshot>
+    <screenshot>http://funguloids.sourceforge.net/shot05.jpg</screenshot>
+    <screenshot>http://funguloids.sourceforge.net/shot08.jpg</screenshot>
+  </screenshots>
 </application>

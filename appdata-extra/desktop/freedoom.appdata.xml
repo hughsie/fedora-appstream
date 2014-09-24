@@ -1,32 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2014 Edgar Muniz Berlinck <edgar.vv@gmail.com> -->
+
+<!-- HOUSEKEEPING, REMOVE THIS COMMENT WHEN THIS GOES UPSTREAM
+UpstreamURL:  xxxxx
+BugReportURL: xxxxx
+EmailAddress: xxxxx
+SentUpstream: xxxxx
+-->
+
 <application>
-	<id type="desktop">freedoom.desktop</id>
-	<metadata_license>CC0-1.0</metadata_license>
-	<summary>First person shoot DOOM-based game</summary>
-	<description>
-		<p>
-			Free alternative for IWAD. Freedoom brings to you a set of resources for the DOOM game engine.
-		</p>
-		<p>
-			Freedoo, is a 3-in-1 game:
-		</p>
-			<ul>
-			 <li>
-			 	Freedoom: 32 levels game in one charpter (Compatible with DOOM II mods).
-			 </li>
-			 <li>
-			 	Ultimate Freedoom: Alternative game with 36 levels distributed in 4 charpters (Compatible with original DOOM and Ultimate DOOM mods)
-			 </li>
-			 <li>
-			 	FreeDM: 32 levels designed for Deathmatch mode.
-			 </li>
-	</description>
-	<url type="homepage">http://freedoom.github.io/</url>
-	<screenshots>
-		<screenshot type="default">http://freedoom.github.io/img/screenshots/th_0.6.3_02.jpg</screenshot>
-		<screenshot>http://freedoom.github.io/img/screenshots/th_0.6.3_01.jpg</screenshot>
-		<screenshot>http://freedoom.github.io/img/screenshots/th_0.6.3_03.jpg</screenshot>
-		<screenshot>http://freedoom.github.io/img/screenshots/th_0.6.3_04.jpg</screenshot>
-	</screenshots>
+  <id type="desktop">freedoom.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <summary>First person shoot DOOM-based game</summary>
+  <description>
+    <p>
+      Free alternative for IWAD.
+      Freedoom brings to you a set of resources for the DOOM game engine.
+    </p>
+    <p>
+      Freedoo, is a 3-in-1 game:
+    </p>
+    <ul>
+     <li>
+       Freedoom: 32 levels game in one charpter (Compatible with DOOM II mods)
+     </li>
+     <li>
+       Ultimate Freedoom: Alternative game with 36 levels distributed in 4 charpters (Compatible with original DOOM and Ultimate DOOM mods)
+     </li>
+     <li>
+       FreeDM: 32 levels designed for Deathmatch mode
+     </li>
+    </ul>
+  </description>
+  <url type="homepage">http://freedoom.github.io/</url>
+  <screenshots>
+    <screenshot type="default">http://freedoom.github.io/img/screenshots/th_0.6.3_02.jpg</screenshot>
+    <screenshot>http://freedoom.github.io/img/screenshots/th_0.6.3_01.jpg</screenshot>
+    <screenshot>http://freedoom.github.io/img/screenshots/th_0.6.3_03.jpg</screenshot>
+    <screenshot>http://freedoom.github.io/img/screenshots/th_0.6.3_04.jpg</screenshot>
+  </screenshots>
 </application>

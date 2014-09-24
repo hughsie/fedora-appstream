@@ -1,20 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2014 Ravi Srinivasan <ravishankar.srinivasan@gmail.com> -->
+
+<!-- HOUSEKEEPING, REMOVE THIS COMMENT WHEN THIS GOES UPSTREAM
+UpstreamURL:  xxxxx
+BugReportURL: xxxxx
+EmailAddress: xxxxx
+SentUpstream: xxxxx
+-->
+
 <application>
-	<id type="desktop">asylum.desktop</id>
-	<metadata_license>CC0-1.0</metadata_license>
-	<summary>A retro platform style game where you enter the surreal world of a brain and destroy damaged brain cells</summary>
-	<description>
-		<p>
-			Asylum is a Linux port of the game "Asylum" written originally for the Acorn Archimedes.
-		</p>
-		<p>
-			Enter the surreal world inside a young boy's brain and help destroy malfunctioning brain cells.
-		</p>
-	</description>
-	<url type="homepage">http://sdl-asylum.sourceforge.net</url>
-	<screenshots>
-		<screenshot type="default">http://sourceforge.net/p/sdl-asylum/screenshot/134775.jpg</screenshot>
-		<screenshot>http://sourceforge.net/p/sdl-asylum/screenshot/136451.jpg</screenshot>
-	</screenshots>
+  <id type="desktop">asylum.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <summary>A retro platform style game where you enter the surreal world of a brain</summary>
+  <description>
+    <p>
+      Asylum is a Linux port of the game "Asylum" written originally for the
+      Acorn Archimedes.
+    </p>
+    <p>
+      Enter the surreal world inside a young boy's brain and help destroy
+      malfunctioning brain cells.
+    </p>
+  </description>
+  <url type="homepage">http://sdl-asylum.sourceforge.net</url>
+  <screenshots>
+    <screenshot type="default">http://sourceforge.net/p/sdl-asylum/screenshot/134775.jpg</screenshot>
+    <screenshot>http://sourceforge.net/p/sdl-asylum/screenshot/136451.jpg</screenshot>
+  </screenshots>
 </application>

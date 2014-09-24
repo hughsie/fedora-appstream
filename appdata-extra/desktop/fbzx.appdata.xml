@@ -1,18 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2014 Ryan Lerch <rlerch@redhat.com> -->
+
+<!-- HOUSEKEEPING, REMOVE THIS COMMENT WHEN THIS GOES UPSTREAM
+UpstreamURL:  xxxxx
+BugReportURL: xxxxx
+EmailAddress: xxxxx
+SentUpstream: xxxxx
+-->
+
 <application>
-	<id type="desktop">fbzx.desktop</id>
-	<metadata_license>CC0-1.0</metadata_license>
-	<summary> a Sinclair Spectrum emulator</summary>
-	<description>
-		<p>
-			FBZX is a Sinclair Spectrum emulator that accurately emulates the screen, sound and keyboard
-			of many Spectrum devices including Issue 2 and Issue 3 of the original Spectrum, 
-			the classic and the Spanish 128K versions, and the Amstrad Plus 2 and 2A.
-		</p>
-	</description>
-	<url type="homepage">http://www.rastersoft.com/fbzx.html</url>
-	<screenshots>
-		<screenshot type="default">http://www.rastersoft.com/imagen/fbzx.png</screenshot>
-	</screenshots>
+  <id type="desktop">fbzx.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <summary> a Sinclair Spectrum emulator</summary>
+  <description>
+    <p>
+      FBZX is a Sinclair Spectrum emulator that accurately emulates the screen,
+      sound and keyboard of many Spectrum devices including Issue 2 and Issue 3
+      of the original Spectrum, the classic and the Spanish 128K versions,
+      and the Amstrad Plus 2 and 2A.
+    </p>
+  </description>
+  <url type="homepage">http://www.rastersoft.com/fbzx.html</url>
+  <screenshots>
+    <screenshot type="default">http://www.rastersoft.com/imagen/fbzx.png</screenshot>
+  </screenshots>
 </application>

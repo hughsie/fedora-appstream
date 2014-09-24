@@ -1,18 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2014 Ryan Lerch <rlerch@redhat.com> -->
+
+<!-- HOUSEKEEPING, REMOVE THIS COMMENT WHEN THIS GOES UPSTREAM
+UpstreamURL:  xxxxx
+BugReportURL: xxxxx
+EmailAddress: xxxxx
+SentUpstream: xxxxx
+-->
+
 <application>
-	<id type="desktop">hatari.desktop</id>
-	<metadata_license>CC0-1.0</metadata_license>
-	<summary>Atari emulator</summary>
-	<description>
-		<p>
-			Hatari is an emulator that emulates Atari ST, Atari STE, Atari TT and Atari Falcon
-			devices. It has the ability to emulate the joystick with input from either the host's
-			keyboard or joystick.
-		</p>
-	</description>
-	<url type="homepage">http://hatari.tuxfamily.org/</url>
-	<screenshots>
-		<screenshot type="default">http://hatari.tuxfamily.org/screens/features/deskhigh.png</screenshot>
-	</screenshots>
+  <id type="desktop">hatari.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <summary>Atari emulator</summary>
+  <description>
+    <p>
+      Hatari is an emulator that emulates Atari ST, Atari STE, Atari TT and Atari Falcon
+      devices.
+      It has the ability to emulate the joystick with input from either the host's
+      keyboard or joystick.
+    </p>
+  </description>
+  <url type="homepage">http://hatari.tuxfamily.org/</url>
+  <screenshots>
+    <screenshot type="default">http://hatari.tuxfamily.org/screens/features/deskhigh.png</screenshot>
+  </screenshots>
 </application>

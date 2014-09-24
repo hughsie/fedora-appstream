@@ -1,17 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2014 Eduardo Mayorga <e@mayorgalinux.com> -->
+
+<!-- HOUSEKEEPING, REMOVE THIS COMMENT WHEN THIS GOES UPSTREAM
+UpstreamURL:  xxxxx
+BugReportURL: xxxxx
+EmailAddress: xxxxx
+SentUpstream: xxxxx
+-->
+
 <application>
-	<id type="desktop">springlobby.desktop</id>
-	<metadata_license>CC0-1.0</metadata_license>
-	<summary>Find games using Spring-RTS engine</summary>
-	<description>
-		<p>
-		  SpringLobby configures the Spring-RTS engine so that you can connect to the server using the right maps and mods. This helps you to discover the game you want. 
-		  It also allows you to communicate to other players before the game's start.
-		</p>
-	</description>
-	<url type="homepage">http://springlobby.info</url>
-	<screenshots>
-		<screenshot type="default">http://springlobby.info/landing/screenshots/10_sp.png</screenshot>
-	</screenshots>
+  <id type="desktop">springlobby.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <summary>Find games using Spring-RTS engine</summary>
+  <description>
+    <p>
+      SpringLobby configures the Spring-RTS engine so that you can connect to
+      the server using the right maps and mods.
+      This helps you to discover the game you want.
+      It also allows you to communicate to other players before the game's start.
+    </p>
+  </description>
+  <url type="homepage">http://springlobby.info</url>
+  <screenshots>
+    <screenshot type="default">http://springlobby.info/landing/screenshots/10_sp.png</screenshot>
+  </screenshots>
 </application>

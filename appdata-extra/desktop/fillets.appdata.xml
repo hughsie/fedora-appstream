@@ -1,19 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2014 Ryan Lerch <rlerch@redhat.com> -->
+
+<!-- HOUSEKEEPING, REMOVE THIS COMMENT WHEN THIS GOES UPSTREAM
+UpstreamURL:  xxxxx
+BugReportURL: xxxxx
+EmailAddress: xxxxx
+SentUpstream: xxxxx
+-->
+
 <application>
-	<id type="desktop">fillets.desktop</id>
-	<metadata_license>CC0-1.0</metadata_license>
-	<summary>solve the puzzle and help the fish escape</summary>
-	<description>
-		<p>
-			Fish Fillets is a puzzle game where the player has to guide a fish through a series
-			of obstacles to escape the maze. Fish Fillets features over 70 levels of puzzles and 
-			a comforting soundtrack.
-		</p>
-	</description>
-	<url type="homepage">http://fillets.sourceforge.net/</url>
-	<screenshots>
-		<screenshot type="default">http://fillets.sourceforge.net/img/screenshot/ffng-pyramid.png</screenshot>
-		<screenshot>http://fillets.sourceforge.net/img/screenshot/ffng-chest.png</screenshot>
-	</screenshots>
+  <id type="desktop">fillets.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <summary>solve the puzzle and help the fish escape</summary>
+  <description>
+    <p>
+      Fish Fillets is a puzzle game where the player has to guide a fish through a series
+      of obstacles to escape the maze.
+      Fish Fillets features over 70 levels of puzzles and a comforting soundtrack.
+    </p>
+  </description>
+  <url type="homepage">http://fillets.sourceforge.net/</url>
+  <screenshots>
+    <screenshot type="default">http://fillets.sourceforge.net/img/screenshot/ffng-pyramid.png</screenshot>
+    <screenshot>http://fillets.sourceforge.net/img/screenshot/ffng-chest.png</screenshot>
+  </screenshots>
 </application>

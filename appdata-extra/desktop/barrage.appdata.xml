@@ -1,21 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2014 Ravi Srinivasan <ravishankar.srinivasan@gmail.com> -->
+
+<!-- HOUSEKEEPING, REMOVE THIS COMMENT WHEN THIS GOES UPSTREAM
+UpstreamURL:  xxxxx
+BugReportURL: xxxxx
+EmailAddress: xxxxx
+SentUpstream: xxxxx
+-->
+
 <application>
-	<id type="desktop">barrage.desktop</id>
-	<metadata_license>CC0-1.0</metadata_license>
-	<summary>A fast paced action game where you shoot down as many targets as possible in 3 minutes</summary>
-	<description>
-		<p>
-			Barrage is a fast paced shooter game where the objective is to destroy targets like soldiers, tanks and jeeps within 3 minutes.
-		</p>
-		<p>
-			The player controls a gun that shoots small and large grenades at fast moving targets and you need to manage your aim, ammo and re-load times carefully.
-		</p>
-	</description>
-	<url type="homepage">http://lgames.sourceforge.net/index.php?project=Barrage</url>
-	<screenshots>
-		<screenshot type="default">http://lgames.sourceforge.net/Barrage/ss1.jpg</screenshot>
-		<screenshot>http://lgames.sourceforge.net/Barrage/ss0.jpg</screenshot>
-		<screenshot>http://lgames.sourceforge.net/Barrage/ss2.jpg</screenshot>
-	</screenshots>
+  <id type="desktop">barrage.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <summary>A fast paced action game where you shoot down as many targets as possible</summary>
+  <description>
+    <p>
+      Barrage is a fast paced shooter game where the objective is to destroy
+      targets like soldiers, tanks and jeeps within 3 minutes.
+    </p>
+    <p>
+      The player controls a gun that shoots small and large grenades at fast
+      moving targets and you need to manage your aim, ammo and re-load times carefully.
+    </p>
+  </description>
+  <url type="homepage">http://lgames.sourceforge.net/index.php?project=Barrage</url>
+  <screenshots>
+    <screenshot type="default">http://lgames.sourceforge.net/Barrage/ss1.jpg</screenshot>
+    <screenshot>http://lgames.sourceforge.net/Barrage/ss0.jpg</screenshot>
+    <screenshot>http://lgames.sourceforge.net/Barrage/ss2.jpg</screenshot>
+  </screenshots>
 </application>

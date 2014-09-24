@@ -1,19 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2014 Ravi Srinivasan <ravishankar.srinivasan@gmail.com> -->
+
+<!-- HOUSEKEEPING, REMOVE THIS COMMENT WHEN THIS GOES UPSTREAM
+UpstreamURL:  xxxxx
+BugReportURL: xxxxx
+EmailAddress: xxxxx
+SentUpstream: xxxxx
+-->
+
 <application>
-	<id type="desktop">colossus.desktop</id>
-	<metadata_license>CC0-1.0</metadata_license>
-	<summary>A fantasy board game with strategic and tactical battle elements</summary>
-	<description>
-		<p>
-			Colossus is a JAVA based clone of Avalon Hill's "Titan" Board game. 
-		</p>
-		<p>
-			It is a fantasy board game where you lead an army of mythological creatures against other players.
-		</p>
-	</description>
-	<url type="homepage">http://colossus.sourceforge.net/</url>
-	<screenshots>
-		<screenshot type="default">http://colossus.sourceforge.net/pics/screenshots/Colossi.jpg</screenshot>
-	</screenshots>
+  <id type="desktop">colossus.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <summary>A fantasy board game with strategic and tactical battle elements</summary>
+  <description>
+    <p>
+      Colossus is a JAVA based clone of Avalon Hill's "Titan" Board game.
+    </p>
+    <p>
+      It is a fantasy board game where you lead an army of mythological creatures
+      against other players.
+    </p>
+  </description>
+  <url type="homepage">http://colossus.sourceforge.net/</url>
+  <screenshots>
+    <screenshot type="default">http://colossus.sourceforge.net/pics/screenshots/Colossi.jpg</screenshot>
+  </screenshots>
 </application>

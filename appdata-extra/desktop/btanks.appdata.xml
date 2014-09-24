@@ -1,20 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2014 Ravi Srinivasan <ravishankar.srinivasan@gmail.com> -->
+
+<!-- HOUSEKEEPING, REMOVE THIS COMMENT WHEN THIS GOES UPSTREAM
+UpstreamURL:  xxxxx
+BugReportURL: xxxxx
+EmailAddress: xxxxx
+SentUpstream: xxxxx
+-->
+
 <application>
-	<id type="desktop">btanks.desktop</id>
-	<metadata_license>CC0-1.0</metadata_license>
-	<summary>A fun filled scrolling game with battle tanks</summary>
-	<description>
-		<p>
-			Battle tanks is a fun filled old school style scrolling battle tank game.
-		</p>
-		<p>
-			It has original cartoon style graphics and sound track and is multiplayer focused. 
-			Choose from 3 different vehicles and destroy your enemies using a large assortment of weapons.
-		</p>
-	</description>
-	<url type="homepage">http://btanks.sourceforge.net/</url>
-	<screenshots>
-		<screenshot type="default">http://btanks.sourceforge.net/images/screen/scr0001-big.jpg</screenshot>
-	</screenshots>
+  <id type="desktop">btanks.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <summary>A fun filled scrolling game with battle tanks</summary>
+  <description>
+    <p>
+      Battle tanks is a fun filled old school style scrolling battle tank game.
+    </p>
+    <p>
+      It has original cartoon style graphics and sound track and is multiplayer
+      focused.
+      Choose from 3 different vehicles and destroy your enemies using a large
+      assortment of weapons.
+    </p>
+  </description>
+  <url type="homepage">http://btanks.sourceforge.net/</url>
+  <screenshots>
+    <screenshot type="default">http://btanks.sourceforge.net/images/screen/scr0001-big.jpg</screenshot>
+  </screenshots>
 </application>

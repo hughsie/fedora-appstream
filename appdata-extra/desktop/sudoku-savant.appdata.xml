@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2014 William Moreno <williamjmorenor@gmail.com> -->
+
+<!-- HOUSEKEEPING, REMOVE THIS COMMENT WHEN THIS GOES UPSTREAM
+UpstreamURL:  xxxxx
+BugReportURL: xxxxx
+EmailAddress: xxxxx
+SentUpstream: xxxxx
+-->
+
 <application>
-	<id type="desktop">sudoku-savant.desktop</id>
-	<metadata_license>CC0-1.0</metadata_license>
-	<summary>
-	Complete a numeric puzzle with the numbers from one to nine
-	</summary>
-	<description>
-		<p>
-		        Sudoku Savnt a free version of the popular logic game Sudoku for the Linux desktop . 
-			The game is to fill a nine by nine grid with the numbers from one to nine filling 
-			the rows, columns and three by three squares without repeating a value on them.
-		</p>
-	</description>
-	<url type="homepage">http://sourceforge.net/projects/sudoku-savant/</url>
+  <id type="desktop">sudoku-savant.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <summary>Complete a numeric puzzle with the numbers from one to nine</summary>
+  <description>
+    <p>
+      Sudoku Savnt a free version of the popular logic game Sudoku for the Linux desktop .
+      The game is to fill a nine by nine grid with the numbers from one to nine
+      filling the rows, columns and three by three squares without repeating a
+      value on them.
+    </p>
+  </description>
+  <url type="homepage">http://sourceforge.net/projects/sudoku-savant/</url>
 </application>
