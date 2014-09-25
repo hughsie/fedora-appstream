@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2014 Your Name <email@address.com> -->
-
 <!-- HOUSEKEEPING, REMOVE THIS COMMENT WHEN THIS GOES UPSTREAM
 BugReportURL: https://bugs.kde.org/show_bug.cgi?id=339366
 SentUpstream: 2014-09-24
 -->
-
 <component type="desktop">
   <id>kajongg.desktop</id>
   <metadata_license>CC0-1.0</metadata_license>
@@ -20,26 +18,29 @@ SentUpstream: 2014-09-24
   <screenshots>
     <screenshot type="default">
       <image>http://www.kde.org/images/screenshots/kajongg.png</image>
-      <caption><!-- Describe this screenshot in less than ~10 words --></caption>
+      <caption/>
     </screenshot>
   </screenshots>
   <project_group>KDE</project_group>
 
-  <!-- FIXME: Use https://spdx.org/licenses/ -->
-  <project_license><!-- Insert SPDX ID Here --></project_license>
+  <!--FIXME: convert to an SPDX ID-->
+  <project_license/>
 
   <!-- FIXME: this is a translatable version of project_group -->
   <developer_name>KDE e.V.</developer_name>
 
   <!-- FIXME: where to report bugs for the application, or empty for none -->
-  <url type="bugtracker"><!-- https://bugs.kde.org/enter_bug.cgi?format=guided --></url>
+  <url type="bugtracker"/>
 
   <!-- FIXME: where to donate to the application -->
-  <url type="donation"><!-- http://www.homepage.com/donation.html --></url>
+  <url type="donation"/>
 
   <!-- FIXME: where to report bugs for the application -->
-  <url type="help"><!-- http://www.homepage.com/docs/ --></url>
+  <url type="help"/>
 
   <!-- FIXME: this is optional, but recommended -->
-  <updatecontact><!-- upstream-contact_at_email.com --></updatecontact>
+  <updatecontact/>
+
+  <!--FIXME: this is a translatable version of project_group-->
+  <developer_name>KDE e.V.</developer_name>
 </component>

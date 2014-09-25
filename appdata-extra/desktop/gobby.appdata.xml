@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2014 Richard Hughes <richard@hughsie.com> -->
-
 <!-- HOUSEKEEPING, REMOVE THIS COMMENT WHEN THIS GOES UPSTREAM
 EmailAddress: armin@0x539.de
 SentUpstream: 2014-09-23
 -->
-
-<application>
-  <id type="desktop">gobby.desktop</id>
+<component type="desktop">
+  <id>gobby.desktop</id>
   <metadata_license>CC0-1.0</metadata_license>
   <description>
     <p>
@@ -23,8 +21,29 @@ SentUpstream: 2014-09-23
   </description>
   <url type="homepage">http://gobby.0x539.de/</url>
   <screenshots>
-    <screenshot type="default">http://gobby.0x539.de/screenshots/gobby-0.4.8-linux_kde4.png</screenshot>
-    <screenshot>http://gobby.0x539.de/screenshots/gobby-0.4.5-linux.png</screenshot>
+    <screenshot type="default">
+      <image>http://gobby.0x539.de/screenshots/gobby-0.4.8-linux_kde4.png</image>
+      <caption><!-- Describe this screenshot in less than ~10 words --></caption>
+    </screenshot>
+    <screenshot>
+      <image>http://gobby.0x539.de/screenshots/gobby-0.4.5-linux.png</image>
+      <caption><!-- Describe this screenshot in less than ~10 words --></caption>
+    </screenshot>
   </screenshots>
   <updatecontact>obby-users(@)list.0x539.de</updatecontact>
-</application>
+
+  <!--FIXME: Use https://spdx.org/licenses/-->
+  <project_license><!-- Insert SPDX ID Here --></project_license>
+
+  <!--FIXME: You can use a project or developer name if there's no company-->
+  <developer_name><!-- Company Name --></developer_name>
+
+  <!--FIXME: where to report bugs for the application-->
+  <url type="bugtracker"><!-- http://www.homepage.com/where-to-report_bug.html --></url>
+
+  <!--FIXME: where to donate to the application-->
+  <url type="donation"><!-- http://www.homepage.com/donation.html --></url>
+
+  <!--FIXME: where to report bugs for the application-->
+  <url type="help"><!-- http://www.homepage.com/docs/ --></url>
+</component>

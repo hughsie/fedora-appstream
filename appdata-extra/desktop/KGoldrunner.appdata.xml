@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2014 Ryan Lerch <rlerch@redhat.com> -->
-
 <!-- HOUSEKEEPING, REMOVE THIS COMMENT WHEN THIS GOES UPSTREAM
 EmailAddress: iandw.au@gmail.com
 SentUpstream: 2014-09-24
 -->
-
-<application>
-  <id type="desktop">KGoldrunner.desktop</id>
+<component type="desktop">
+  <id>KGoldrunner.desktop</id>
   <metadata_license>CC0-1.0</metadata_license>
   <summary>2D action puzzle platform game</summary>
   <description>
@@ -21,6 +19,27 @@ SentUpstream: 2014-09-24
   </description>
   <url type="homepage">https://projects.kde.org/projects/kde/kdegames/kgoldrunner</url>
   <screenshots>
-    <screenshot type="default">https://raw.githubusercontent.com/hughsie/fedora-appstream/master/screenshots-extra/KGoldrunner/a.png</screenshot>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/hughsie/fedora-appstream/master/screenshots-extra/KGoldrunner/a.png</image>
+      <caption><!-- Describe this screenshot in less than ~10 words --></caption>
+    </screenshot>
   </screenshots>
-</application>
+
+  <!--FIXME: Use https://spdx.org/licenses/-->
+  <project_license><!-- Insert SPDX ID Here --></project_license>
+
+  <!--FIXME: You can use a project or developer name if there's no company-->
+  <developer_name><!-- Company Name --></developer_name>
+
+  <!--FIXME: where to report bugs for the application-->
+  <url type="bugtracker"><!-- http://www.homepage.com/where-to-report_bug.html --></url>
+
+  <!--FIXME: where to donate to the application-->
+  <url type="donation"><!-- http://www.homepage.com/donation.html --></url>
+
+  <!--FIXME: where to report bugs for the application-->
+  <url type="help"><!-- http://www.homepage.com/docs/ --></url>
+
+  <!--FIXME: this is optional, but recommended-->
+  <updatecontact><!-- upstream-contact_at_email.com --></updatecontact>
+</component>

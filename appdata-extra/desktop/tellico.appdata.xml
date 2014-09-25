@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop">
   <id>tellico.desktop</id>
   <metadata_license>CC0-1.0</metadata_license>
@@ -209,7 +209,7 @@
   <url type="faq">http://tellico-project.org/faq</url>
   <url type="help">http://docs.kde.org/development/en/extragear-office/tellico/index.html</url>
   <screenshots>
-    <screenshot type="default" width="867" height="627">
+    <screenshot height="627" width="867" type="default">
       <image>http://kde.org/images/screenshots/tellico.png</image>
     </screenshot>
   </screenshots>
@@ -217,4 +217,13 @@
   <provides>
     <binary>tellico</binary>
   </provides>
+
+  <!--FIXME: this is a translatable version of project_group-->
+  <developer_name>KDE e.V.</developer_name>
+
+  <!--FIXME: where to donate to the application-->
+  <url type="donation"><!-- http://www.homepage.com/donation.html --></url>
+
+  <!--FIXME: this is optional, but recommended-->
+  <updatecontact><!-- upstream-contact_at_email.com --></updatecontact>
 </component>
