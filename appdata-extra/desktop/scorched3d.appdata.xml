@@ -2,10 +2,8 @@
 <!-- Copyright 2014 Ryan Lerch <rlerch@redhat.com> -->
 
 <!-- HOUSEKEEPING, REMOVE THIS COMMENT WHEN THIS GOES UPSTREAM
-UpstreamURL:  xxxxx
-BugReportURL: xxxxx
-EmailAddress: xxxxx
-SentUpstream: xxxxx
+BugReportURL: http://www.scorched3d.co.uk/mantisbt/view.php?id=209
+SentUpstream: 2014-09-25
 -->
 
 <application>
@@ -20,10 +18,9 @@ SentUpstream: xxxxx
       attacks, and also features online multiplayer modes.
     </p>
   </description>
-  <!--<screenshots>
-    <screenshot type="default"></screenshot>
-    <screenshot></screenshot>
-    <screenshot></screenshot>
-  </screenshots>-->
+  <screenshots>
+    <screenshot type="default">http://www.scorched3d.co.uk/phpBB3/gallery/image.php?album_id=8&amp;image_id=61&amp;view=no_count</screenshot>
+    <screenshot>http://www.scorched3d.co.uk/phpBB3/gallery/image.php?album_id=3&amp;image_id=4&amp;view=no_count</screenshot>
+  </screenshots>
   <url type="homepage">http://www.scorched3d.co.uk/</url>
 </application>
