@@ -26,7 +26,7 @@ UpstreamURL:  https://git.gnome.org/browse/gtranslator/plain/data/gtranslator.ap
   </description>
   <!--
   <screenshots>
-    <screenshot type="default">xxxxxx</screenshot>
+    <screenshot type="default">http://link-to.png</screenshot>
   </screenshots>
   -->
   <url type="homepage">https://projects.gnome.org/gtranslator/</url>

@@ -2,16 +2,14 @@
 <!-- Copyright 2014 Your Name <email@address.com> -->
 
 <!-- HOUSEKEEPING, REMOVE THIS COMMENT WHEN THIS GOES UPSTREAM
-UpstreamURL:  xxxxx
-BugReportURL: xxxxx
-EmailAddress: xxxxx
-SentUpstream: xxxxx
+EmailAddress: m@thp.io
+SentUpstream: 2014-09-25
 -->
 
 <application>
   <id type="desktop">tennix.desktop</id>
   <metadata_license>CC0-1.0</metadata_license>
-  <summary>tennis simulator</summary>
+  <summary>Tennis simulator</summary>
   <description>
     <p>
       Tennix is a overhead view tennis simulator for one or two players.

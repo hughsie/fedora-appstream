@@ -2,10 +2,8 @@
 <!-- Copyright 2014 Eduardo Mayorga <e@mayorgalinux.com> -->
 
 <!-- HOUSEKEEPING, REMOVE THIS COMMENT WHEN THIS GOES UPSTREAM
-UpstreamURL:  xxxxx
-BugReportURL: xxxxx
-EmailAddress: xxxxx
-SentUpstream: xxxxx
+BugReportURL: https://github.com/springlobby/springlobby/issues/241
+SentUpstream: 2014-09-25
 -->
 
 <application>
