@@ -6,8 +6,8 @@ BugReportURL: https://bugs.kde.org/show_bug.cgi?id=339366
 SentUpstream: 2014-09-24
 -->
 
-<application>
-  <id type="desktop">kajongg.desktop</id>
+<component type="desktop">
+  <id>kajongg.desktop</id>
   <metadata_license>CC0-1.0</metadata_license>
   <summary>Mah Jongg Puzzle Game</summary>
   <description>
@@ -18,6 +18,28 @@ SentUpstream: 2014-09-24
   </description>
   <url type="homepage">http://www.kde.org/applications/games/kajongg/</url>
   <screenshots>
-    <screenshot type="default">http://www.kde.org/images/screenshots/kajongg.png</screenshot>
+    <screenshot type="default">
+      <image>http://www.kde.org/images/screenshots/kajongg.png</image>
+      <caption><!-- Describe this screenshot in less than ~10 words --></caption>
+    </screenshot>
   </screenshots>
-</application>
+  <project_group>KDE</project_group>
+
+  <!-- FIXME: Use https://spdx.org/licenses/ -->
+  <project_license><!-- Insert SPDX ID Here --></project_license>
+
+  <!-- FIXME: this is a translatable version of project_group -->
+  <developer_name>KDE e.V.</developer_name>
+
+  <!-- FIXME: where to report bugs for the application, or empty for none -->
+  <url type="bugtracker"><!-- https://bugs.kde.org/enter_bug.cgi?format=guided --></url>
+
+  <!-- FIXME: where to donate to the application -->
+  <url type="donation"><!-- http://www.homepage.com/donation.html --></url>
+
+  <!-- FIXME: where to report bugs for the application -->
+  <url type="help"><!-- http://www.homepage.com/docs/ --></url>
+
+  <!-- FIXME: this is optional, but recommended -->
+  <updatecontact><!-- upstream-contact_at_email.com --></updatecontact>
+</component>
