@@ -4,18 +4,25 @@
 	<id type="desktop">keepassx.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
 	<summary>
-		<!--Brief summary of application.e.g. for Inkscape "Create and edit Scalable Vector Graphics images"-->
+		Create and store secure passwords 
 	</summary>
 	<description>
 		<p>
-			<!-- One or two paras about the application. Only <p> <ul> <ol> and <li> can be used-->
-			<!-- see http://people.freedesktop.org/~hughsient/appdata/#description for style details-->
-
+			Keepassx let you to create a secure password and store this password in a secure encrypted database with many features like:
+			<ul>
+			<li>Create a single database for all your passwords</li>
+			<li>Keep your username and password store in a single file</li>
+			<li>Copy your username or password to clipboard and delete it after using it</li>
+			<li>Encrypted and password protected database</li>
+			</ul>
+		</p>
+		<p>
+			With keepassx you will never forget a URL, username or password again and you can use the same database across many operating systems like Mac OS on Windows
 		</p>
 	</description>
 	<url type="homepage">http://keepassx.sourceforge.net</url>
 	<screenshots>
-		<screenshot type="default"><!--http://projectname/screenshot.png--></screenshot>
-		<!--<screenshot>http://projectname/screenshot.png</screenshot>-->
+		<screenshot type="default">http://www.keepassx.org/images/screenshots/main_window.png</screenshot>
+		<screenshot>http://www.keepassx.org/images/screenshots/win_main_windows.jpg</screenshot>
 	</screenshots>
 </application>
