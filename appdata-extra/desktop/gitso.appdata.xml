@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014 Your Name <name@emailaddress.com> -->
+<!-- Copyright 2014 William Moreno Reyese <williamjmorenor@gmail.com> -->
 <application>
 	<id type="desktop">gitso.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
 	<summary>
-		<!--Brief summary of application.e.g. for Inkscape "Create and edit Scalable Vector Graphics images"-->
+		Make a simple two steps VCN connection
 	</summary>
 	<description>
 		<p>
-			<!-- One or two paras about the application. Only <p> <ul> <ol> and <li> can be used-->
-			<!-- see http://people.freedesktop.org/~hughsient/appdata/#description for style details-->
-
+			Gitso is a simple VCN client that allows user to easily share his  screens with other people with just two steps.
 		</p>
 	</description>
 	<url type="homepage">http://code.google.com/p/gitso/</url>
