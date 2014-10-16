@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<application>
-  <id type="font">Navilu.ttf</id>
-  <licence>CC0</licence>
-  <summary>A Kannada sans-serif font</summary>
-  <metadata>
-    <value key="FontSubFamily">Serif</value>
-  </metadata>
-</application>

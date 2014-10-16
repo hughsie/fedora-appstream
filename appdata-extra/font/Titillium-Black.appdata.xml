@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<application>
-  <id type="font">Titillium-Black.otf</id>
-  <licence>CC0</licence>
-  <summary>A sans-serif font designed inside Campi Visivi's Type Design course</summary>
-  <metadata>
-    <value key="FontSubFamily">Sans Bold</value>
-  </metadata>
-</application>

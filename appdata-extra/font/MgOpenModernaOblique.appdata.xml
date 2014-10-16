@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<application>
-  <id type="font">MgOpenModernaOblique.ttf</id>
-  <licence>CC0</licence>
-  <summary>A set of fixed-stroke-width sans serif font faces</summary>
-  <metadata>
-    <value key="FontSubFamily">Sans</value>
-  </metadata>
-</application>

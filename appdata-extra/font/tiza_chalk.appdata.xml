@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<application>
-  <id type="font">tiza_chalk.ttf</id>
-  <licence>CC0</licence>
-  <summary>Chalky slab-serif fonts</summary>
-  <metadata>
-    <value key="FontSubFamily">Slab-serif</value>
-  </metadata>
-</application>
