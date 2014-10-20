@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<applications version="0.1">
+
+  <application>
+    <!-- Copyright 2014, The Fedora Project -->
+    <id type="webapp">epiphany-askfedora.desktop</id>
+    <name>Ask Fedora</name>
+    <summary>Read instantly in your browser</summary>
+    <icon type="local">/usr/share/icons/hicolor/256x256/apps/fedora-logo-icon.png</icon>
+    <appcategories>
+      <appcategory>System</appcategory>
+      <appcategory>Documentation</appcategory>
+    </appcategories>
+    <keywords>
+      <keyword>help</keyword>
+      <keyword>question</keyword>
+      <keyword>troubleshooting</keyword>
+    </keywords>
+    <url type="homepage">https://ask.fedoraproject.org</url>
+    <description>
+      <p>
+        Ask Fedora is a community knowledge base and support forum and
+        designed to be the primary place for community support in Fedora.
+      </p>
+    </description>
+    <metadata>
+    </metadata>
+  </application>
+
+</applications>
