@@ -1,21 +1,10 @@
-<?xml version="1.0"?>
-<applications version="0.1">
-
-  <application>
-    <!-- Copyright 2013, Rdio, Inc. -->
-    <id type="webapp">epiphany-rdio.desktop</id>
+<?xml version="1.0" encoding="UTF-8"?>
+<components version="0.8" origin="">
+  <component type="webapp">
+    <id>epiphany-rdio.desktop</id>
+    <metadata_license>CC0-1.0</metadata_license>
     <name>Rdio</name>
     <summary>An ad-free music subscription service</summary>
-    <icon type="remote">http://cdn3.rd.io/user/press/rdio-icon.png</icon>
-    <appcategories>
-      <appcategory>Audio</appcategory>
-      <appcategory>Music</appcategory>
-    </appcategories>
-    <keywords>
-      <keyword>music</keyword>
-      <keyword>streaming</keyword>
-    </keywords>
-    <url type="homepage">http://www.rdio.com/</url>
     <description>
       <p>
         Rdio has millions of songs, from massive hits to rare gems to cult
@@ -37,11 +26,20 @@
         Rdio.
       </p>
     </description>
+    <icon type="remote">http://cdn3.rd.io/user/press/rdio-icon.png</icon>
+    <categories>
+      <category>Audio</category>
+      <category>Music</category>
+    </categories>
+    <keywords>
+      <keyword>music</keyword>
+      <keyword>streaming</keyword>
+    </keywords>
+    <url type="homepage">http://www.rdio.com/</url>
     <metadata>
       <value key="X-Kudo-Popular"/>
-      <value key="X-Needs-Flash"/>
       <value key="X-Needs-Dark-Theme"/>
+      <value key="X-Needs-Flash"/>
     </metadata>
-  </application>
-
-</applications>
+  </component>
+</components>

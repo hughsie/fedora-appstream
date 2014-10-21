@@ -1,20 +1,10 @@
-<?xml version="1.0"?>
-<applications version="0.1">
-
-  <application>
-    <!-- Copyright 2013, Facebook Inc. -->
-    <id type="webapp">epiphany-facebook.desktop</id>
+<?xml version="1.0" encoding="UTF-8"?>
+<components version="0.8" origin="">
+  <component type="webapp">
+    <id>epiphany-facebook.desktop</id>
+    <metadata_license>CC0-1.0</metadata_license>
     <name>Facebook</name>
     <summary>Give people the power to share</summary>
-    <icon type="remote">https://www.facebook.com/images/fb_icon_325x325.png</icon>
-    <appcategories>
-      <appcategory>Network</appcategory>
-      <appcategory>InstantMessaging</appcategory>
-    </appcategories>
-    <keywords>
-      <keyword>facebook</keyword>
-    </keywords>
-    <url type="homepage">http://www.facebook.com/</url>
     <description>
       <p>
         Facebook is the world's most popular social networking website.
@@ -29,9 +19,17 @@
         Facebook.
       </p>
     </description>
+    <icon type="remote">https://www.facebook.com/images/fb_icon_325x325.png</icon>
+    <categories>
+      <category>InstantMessaging</category>
+      <category>Network</category>
+    </categories>
+    <keywords>
+      <keyword>facebook</keyword>
+    </keywords>
+    <url type="homepage">http://www.facebook.com/</url>
     <metadata>
       <value key="X-Kudo-Popular"/>
     </metadata>
-  </application>
-
-</applications>
+  </component>
+</components>

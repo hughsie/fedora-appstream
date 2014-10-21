@@ -1,23 +1,10 @@
-<?xml version="1.0"?>
-<applications version="0.1">
-
-  <application>
-    <!-- Copyright 2013, BBC -->
-    <id type="webapp">epiphany-bbciplayer.desktop</id>
+<?xml version="1.0" encoding="UTF-8"?>
+<components version="0.8" origin="">
+  <component type="webapp">
+    <id>epiphany-bbciplayer.desktop</id>
+    <metadata_license>CC0-1.0</metadata_license>
     <name>BBC iPlayer</name>
     <summary>Catch up on BBC TV and Radio programmes, or watch/listen live</summary>
-    <icon type="remote">http://www.bbc.co.uk/terms/images/stock/bbciplayer_logo_black.jpg</icon>
-    <appcategories>
-      <appcategory>Video</appcategory>
-      <appcategory>TV</appcategory>
-    </appcategories>
-    <keywords>
-      <keyword>iplayer</keyword>
-      <keyword>drama</keyword>
-      <keyword>news</keyword>
-      <keyword>entertainment</keyword>
-    </keywords>
-    <url type="homepage">http://www.bbc.co.uk/iplayer/bigscreen</url>
     <description>
       <p>
         Watch live BBC channels, listen to BBC radios, or catch up on programmes
@@ -33,11 +20,22 @@
         iPlayer.
       </p>
     </description>
+    <icon type="remote">http://www.bbc.co.uk/terms/images/stock/bbciplayer_logo_black.jpg</icon>
+    <categories>
+      <category>TV</category>
+      <category>Video</category>
+    </categories>
+    <keywords>
+      <keyword>drama</keyword>
+      <keyword>entertainment</keyword>
+      <keyword>iplayer</keyword>
+      <keyword>news</keyword>
+    </keywords>
+    <url type="homepage">http://www.bbc.co.uk/iplayer/bigscreen</url>
     <metadata>
       <value key="X-Kudo-Popular"/>
-      <value key="X-Needs-Flash"/>
       <value key="X-Needs-Dark-Theme"/>
+      <value key="X-Needs-Flash"/>
     </metadata>
-  </application>
-
-</applications>
+  </component>
+</components>

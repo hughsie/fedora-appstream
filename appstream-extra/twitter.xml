@@ -1,21 +1,10 @@
-<?xml version="1.0"?>
-<applications version="0.1">
-
-  <application>
-    <!-- Copyright 2013, Twitter Inc. -->
-    <id type="webapp">epiphany-twitter.desktop</id>
+<?xml version="1.0" encoding="UTF-8"?>
+<components version="0.8" origin="">
+  <component type="webapp">
+    <id>epiphany-twitter.desktop</id>
+    <metadata_license>CC0-1.0</metadata_license>
     <name>Twitter</name>
     <summary>Start a conversation, explore your interests, and be in the know</summary>
-    <icon type="remote">https://abs.twimg.com/a/1381897480/images/resources/twitter-bird-blue-on-white.png</icon>
-    <appcategories>
-      <appcategory>Network</appcategory>
-      <appcategory>InstantMessaging</appcategory>
-    </appcategories>
-    <keywords>
-      <keyword>twitter</keyword>
-      <keyword>tweet</keyword>
-    </keywords>
-    <url type="homepage">http://www.twitter.com/</url>
     <description>
       <p>
         Twitter is a micro-blogging website that lets you 'Tweet' messages of
@@ -29,9 +18,18 @@
         Twitter.
       </p>
     </description>
+    <icon type="remote">https://abs.twimg.com/a/1381897480/images/resources/twitter-bird-blue-on-white.png</icon>
+    <categories>
+      <category>InstantMessaging</category>
+      <category>Network</category>
+    </categories>
+    <keywords>
+      <keyword>tweet</keyword>
+      <keyword>twitter</keyword>
+    </keywords>
+    <url type="homepage">http://www.twitter.com/</url>
     <metadata>
       <value key="X-Kudo-Popular"/>
     </metadata>
-  </application>
-
-</applications>
+  </component>
+</components>

@@ -1,74 +1,73 @@
-<?xml version="1.0"?>
-<applications version="0.1">
-
-  <application>
-   <id type="source">rpmfusion-free-release</id>
-   <pkgname>rpmfusion-free-release</pkgname>
-    <name>RPM Fusion Free</name>
-    <summary>RPM Fusion Repository Configuration</summary>
-  </application>
-
-  <application>
-   <id type="source">rpmfusion-nonfree-release</id>
-   <pkgname>rpmfusion-nonfree-release</pkgname>
-    <name>RPM Fusion Non-Free</name>
-    <summary>RPM Fusion Repository Configuration</summary>
-  </application>
-
-  <application>
-   <id type="source">livna-release</id>
-   <pkgname>livna-release</pkgname>
-    <name>Livna</name>
-    <summary>Livna Repository Configuration</summary>
-  </application>
-
-  <application>
-   <id type="source">adobe-release-x86_64</id>
-   <pkgname>adobe-release-x86_64</pkgname>
+<?xml version="1.0" encoding="UTF-8"?>
+<components version="0.8" origin="">
+  <component type="source">
+    <id>adobe-release-x86_64</id>
+    <pkgname>adobe-release-x86_64</pkgname>
+    <metadata_license>CC0-1.0</metadata_license>
     <name>Adobe</name>
     <summary>Adobe Repository Configuration</summary>
-  </application>
-
-  <application>
-   <id type="source">bjnplugin</id>
-   <pkgname>bjnplugin</pkgname>
+  </component>
+  <component type="source">
+    <id>bjnplugin</id>
+    <pkgname>bjnplugin</pkgname>
+    <metadata_license>CC0-1.0</metadata_license>
     <name>Blue Jeans</name>
     <summary>Blue Jeans Repository Configuration</summary>
-  </application>
-
-  <application>
-   <id type="source">google-earth-stable</id>
-   <pkgname>google-earth-stable</pkgname>
-    <name>Google Earth</name>
-    <summary>Google Earth Repository Configuration</summary>
-  </application>
-
-  <application>
-   <id type="source">google-musicmanager-beta</id>
-   <pkgname>google-musicmanager-beta</pkgname>
-    <name>Google MusicManager</name>
-    <summary>Google MusicManager Repository Configuration</summary>
-  </application>
-
-  <application>
-   <id type="source">google-talkplugin</id>
-   <pkgname>google-talkplugin</pkgname>
-    <name>Google Talk</name>
-    <summary>Google Talk Repository Configuration</summary>
-  </application>
-
-  <application>
-   <id type="source">google-chrome</id>
-   <pkgname>google-chrome</pkgname>
+  </component>
+  <component type="source">
+    <id>google-chrome</id>
+    <pkgname>google-chrome</pkgname>
+    <metadata_license>CC0-1.0</metadata_license>
     <name>Google Chrome</name>
     <summary>Google Chrome Repository Configuration</summary>
-  </application>
-
-  <application>
-   <id type="source">nautilus-dropbox</id>
-   <pkgname>nautilus-dropbox</pkgname>
+  </component>
+  <component type="source">
+    <id>google-earth-stable</id>
+    <pkgname>google-earth-stable</pkgname>
+    <metadata_license>CC0-1.0</metadata_license>
+    <name>Google Earth</name>
+    <summary>Google Earth Repository Configuration</summary>
+  </component>
+  <component type="source">
+    <id>google-musicmanager-beta</id>
+    <pkgname>google-musicmanager-beta</pkgname>
+    <metadata_license>CC0-1.0</metadata_license>
+    <name>Google MusicManager</name>
+    <summary>Google MusicManager Repository Configuration</summary>
+  </component>
+  <component type="source">
+    <id>google-talkplugin</id>
+    <pkgname>google-talkplugin</pkgname>
+    <metadata_license>CC0-1.0</metadata_license>
+    <name>Google Talk</name>
+    <summary>Google Talk Repository Configuration</summary>
+  </component>
+  <component type="source">
+    <id>livna-release</id>
+    <pkgname>livna-release</pkgname>
+    <metadata_license>CC0-1.0</metadata_license>
+    <name>Livna</name>
+    <summary>Livna Repository Configuration</summary>
+  </component>
+  <component type="source">
+    <id>nautilus-dropbox</id>
+    <pkgname>nautilus-dropbox</pkgname>
+    <metadata_license>CC0-1.0</metadata_license>
     <name>Dropbox</name>
     <summary>Dropbox Repository Configuration</summary>
-  </application>
-
-</applications>
+  </component>
+  <component type="source">
+    <id>rpmfusion-free-release</id>
+    <pkgname>rpmfusion-free-release</pkgname>
+    <metadata_license>CC0-1.0</metadata_license>
+    <name>RPM Fusion Free</name>
+    <summary>RPM Fusion Repository Configuration</summary>
+  </component>
+  <component type="source">
+    <id>rpmfusion-nonfree-release</id>
+    <pkgname>rpmfusion-nonfree-release</pkgname>
+    <metadata_license>CC0-1.0</metadata_license>
+    <name>RPM Fusion Non-Free</name>
+    <summary>RPM Fusion Repository Configuration</summary>
+  </component>
+</components>

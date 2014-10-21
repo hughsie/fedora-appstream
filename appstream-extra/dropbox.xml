@@ -1,20 +1,10 @@
-<?xml version="1.0"?>
-<applications version="0.1">
-
-  <application>
-    <!-- Copyright 2013, Dropbox, Inc. -->
-    <id type="webapp">epiphany-dropbox.desktop</id>
+<?xml version="1.0" encoding="UTF-8"?>
+<components version="0.8" origin="">
+  <component type="webapp">
+    <id>epiphany-dropbox.desktop</id>
+    <metadata_license>CC0-1.0</metadata_license>
     <name>Dropbox</name>
     <summary>A free service that shares your documents easily</summary>
-    <icon type="remote">https://dt8kf6553cww8.cloudfront.net/static/images/brand/linux-vflMtqYV6.png</icon>
-    <!--
-    <icon type="remote">https://photos.dropbox.com/t/0/AABg3A1B6-2tA_I9pY8noNZ3FDvqcLJT1uwC7y87v_8nSQ/12/77382098/png/1024x768/3/1383217200/0/2/dropbox-linux.png/jC_aPe4_tD-ZBxs8yNIOHx5KZZETAe0CKrsjTm5A81A</icon>
-    -->
-    <keywords>
-      <keyword>dropbox</keyword>
-      <keyword>sync</keyword>
-    </keywords>
-    <url type="homepage">http://www.dropbox.com/</url>
     <description>
       <p>
         Dropbox is a free service that lets you bring your photos, docs, and
@@ -28,9 +18,14 @@
         Dropbox.
       </p>
     </description>
+    <icon type="remote">https://dt8kf6553cww8.cloudfront.net/static/images/brand/linux-vflMtqYV6.png</icon>
+    <keywords>
+      <keyword>dropbox</keyword>
+      <keyword>sync</keyword>
+    </keywords>
+    <url type="homepage">http://www.dropbox.com/</url>
     <metadata>
       <value key="X-Kudo-Popular"/>
     </metadata>
-  </application>
-
-</applications>
+  </component>
+</components>

@@ -1,22 +1,10 @@
-<?xml version="1.0"?>
-<applications version="0.1">
-
-  <application>
-    <!-- Copyright 2013, Amazon.com, Inc. -->
-    <id type="webapp">epiphany-kindlecloud.desktop</id>
+<?xml version="1.0" encoding="UTF-8"?>
+<components version="0.8" origin="">
+  <component type="webapp">
+    <id>epiphany-kindlecloud.desktop</id>
+    <metadata_license>CC0-1.0</metadata_license>
     <name>Kindle Cloud Reader</name>
     <summary>Read instantly in your browser</summary>
-    <icon type="remote">http://g-ecx.images-amazon.com/images/G/01/kindle/www/ariel/kindle-icon-kcp120._SL90_.png</icon>
-    <appcategories>
-      <appcategory>Education</appcategory>
-      <appcategory>Literature</appcategory>
-    </appcategories>
-    <keywords>
-      <keyword>reader</keyword>
-      <keyword>ebook</keyword>
-      <keyword>book</keyword>
-    </keywords>
-    <url type="homepage">https://read.amazon.com</url>
     <description>
       <p>
         Buy Once, Read Everywhere: You don't need to own a Kindle device to
@@ -40,10 +28,20 @@
         Kindle Cloud Reader.
       </p>
     </description>
+    <icon type="remote">http://g-ecx.images-amazon.com/images/G/01/kindle/www/ariel/kindle-icon-kcp120._SL90_.png</icon>
+    <categories>
+      <category>Education</category>
+      <category>Literature</category>
+    </categories>
+    <keywords>
+      <keyword>book</keyword>
+      <keyword>ebook</keyword>
+      <keyword>reader</keyword>
+    </keywords>
+    <url type="homepage">https://read.amazon.com</url>
     <metadata>
       <value key="X-Kudo-Popular"/>
       <value key="X-Needs-Dark-Theme"/>
     </metadata>
-  </application>
-
-</applications>
+  </component>
+</components>
