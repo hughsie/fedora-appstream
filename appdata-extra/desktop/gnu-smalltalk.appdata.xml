@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014 Your Name <name@emailaddress.com> -->
+<!-- Copyright 2014 Edgar Muniz Berlinck <edgar.vv@gmail.com> -->
 <application>
 	<id type="desktop">gnu-smalltalk.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
 	<summary>
-		<!--Brief summary of application.e.g. for Inkscape "Create and edit Scalable Vector Graphics images"-->
+		A free implementation of Smalltalk Programming Language
 	</summary>
 	<description>
-		<!-- One or two paras about the application. Only <p> <ul> <ol> and <li> can be used-->
-		<!-- see http://people.freedesktop.org/~hughsient/appdata/#description for style details-->
 		<p>
-			
+			Smalltalk is a dynamic object oriented language from the 80's. There is no primitives types, 
+			everything is represented as objects: Types, Methods, Numbers.. Everything. Is very easy to learn if you compare
+			with C++ for instance and the code is easy to read, making Smalltalk a good choice for beginners.
+		</p>
+		<p>
+			You can use GNU Smalltalk on any POSIX based SO (including Linux) and Windows.
 		</p>
 	</description>
-	<url type="homepage">http://www.gnu.org/software/smalltalk/smalltalk.html</url>
+	<url type="homepage">http://smalltalk.gnu.org/</url>
 	<screenshots>
-		<screenshot type="default"><!--http://projectname/screenshot.png--></screenshot>
+		<screenshot type="default">https://c1.staticflickr.com/3/2256/1639800921_6f2d7a0615.jpg</screenshot>
 		<!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
 		<!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
 	</screenshots>
