@@ -1,22 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014 Your Name <name@emailaddress.com> -->
+<!-- Copyright 2014 Edgar Muniz Berlinck <edgar.vv@gmail.com> -->
 <application>
 	<id type="desktop">qgit.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
 	<summary>
-		<!--Brief summary of application.e.g. for Inkscape "Create and edit Scalable Vector Graphics images"-->
+		Navigate under your git repositories using a GUI client.
 	</summary>
 	<description>
-		<!-- One or two paras about the application. Only <p> <ul> <ol> and <li> can be used-->
-		<!-- see http://people.freedesktop.org/~hughsient/appdata/#description for style details-->
 		<p>
-			
+			QGit is a GIT repository viewer. It displays changes in a repository or a selected set of commit.
+			This also includes visualizing the commit graph, showing information related to each commit, and 
+			the files in the trees of each revision.
 		</p>
+		
 	</description>
-	<url type="homepage">http://libre.tibirna.org/projects/qgit</url>
+	<url type="homepage">http://qgit.sourceforge.net/</url>
 	<screenshots>
-		<screenshot type="default"><!--http://projectname/screenshot.png--></screenshot>
-		<!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
-		<!--<screenshot type="default">http://projectname/screenshot.png</screenshot>-->
+		<screenshot type="default">http://a.fsdn.com/con/app/proj/qgit/screenshots/72605.jpg</screenshot>
+		<screenshot type="default">http://a.fsdn.com/con/app/proj/qgit/screenshots/72609.jpg</screenshot>
+		<screenshot type="default">http://a.fsdn.com/con/app/proj/qgit/screenshots/72605.jpg</screenshot>
+		<screenshot type="default">http://a.fsdn.com/con/app/proj/qgit/screenshots/72613.jpg</screenshot>
+		<screenshot type="default">http://a.fsdn.com/con/app/proj/qgit/screenshots/72597.jpg</screenshot>
 	</screenshots>
 </application>
