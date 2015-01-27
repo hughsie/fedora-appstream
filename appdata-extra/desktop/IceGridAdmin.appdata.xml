@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014 Your Name <name@emailaddress.com> -->
+<!-- Copyright 2015 Edgar Muniz Berlinck <edgar.vv@gmail.com> -->
 <application>
 	<id type="desktop">IceGridAdmin.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
 	<summary>
-		<!--Brief summary of application.e.g. for Inkscape "Create and edit Scalable Vector Graphics images"-->
+		Build distributed applications with minimal effort
 	</summary>
 	<description>
-		<!-- One or two paras about the application. Only <p> <ul> <ol> and <li> can be used-->
-		<!-- see http://people.freedesktop.org/~hughsient/appdata/#description for style details-->
 		<p>
-			
+		Internet Communication Engine, or just ICE, is a object-oriented toolkit. With ICE you just	
+		need to focus all your efforts on your application business logic, leaving the complex network	
+		communication programming with ICE.	
+		
+		Supports Java. C++, Python, Ruby, PHP, Javascript, Objective-C and dozens of languages.
 		</p>
 	</description>
 	<url type="homepage">http://www.zeroc.com/</url>
