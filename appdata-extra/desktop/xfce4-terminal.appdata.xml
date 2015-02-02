@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014 Your Name <name@emailaddress.com> -->
+<!-- Copyright 2014 William José Moreno Reyes <williamjmorenor@gmail.com> -->
 <application>
 	<id type="desktop">xfce4-terminal.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
 	<summary>
-		<!--Brief summary of application.e.g. for Inkscape "Create and edit Scalable Vector Graphics images"-->
+		Terminal Emulator for the XFCE Desktop
 	</summary>
 	<description>
 		<p>
-			<!-- One or two paras about the application. Only <p> <ul> <ol> and <li> can be used-->
-			<!-- see http://people.freedesktop.org/~hughsient/appdata/#description for style details-->
+			Run commands, performs administrative tasks, or simply enjoy the advantages of the command line interface with this terminal emulator for the XFCE desktop
 
 		</p>
 	</description>
 	<url type="homepage">http://docs.xfce.org/apps/terminal/start</url>
 	<screenshots>
-		<screenshot type="default"><!--http://projectname/screenshot.png--></screenshot>
-		<!--<screenshot>http://projectname/screenshot.png</screenshot>-->
+		<screenshot type="default">http://docs.xfce.org/_media/apps/terminal/terminal-first-time.png</screenshot>
+		<screenshot>http://docs.xfce.org/_media/apps/terminal/terminal-multiple-tabs.png</screenshot>
 	</screenshots>
 </application>
