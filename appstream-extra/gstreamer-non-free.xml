@@ -47,6 +47,54 @@
     <url type="missing">http://fedoraproject.org/wiki/Multimedia</url>
   </component>
   <component priority="-1" type="codec">
+    <id>gstreamer-libav</id>
+    <pkgname>gstreamer1-libav</pkgname>
+    <metadata_license>CC0-1.0</metadata_license>
+    <name>GStreamer Multimedia Codecs - libav</name>
+    <summary>Multimedia playback for a large number of additional formats</summary>
+    <description>
+      <p>
+        This addon supports a large number of audio and video compression
+        formats through the use of the libav library.
+      </p>
+      <p>
+        These codecs can be used for encoding 40+ formats (MPEG, DivX, MPEG4,
+        AC3, DV, ...), decoding 90+ formats (AVI, MPEG, OGG, Matroska, ASF,
+        ...), demuxing 30+ formats, and handling colorspace conversion.
+        Some of these formats are patent encumbered.
+        Although patent encumbered formats like MP3 are sometimes a way of life
+        you should always try to produce and distribute content using free
+        formats like Ogg and Theora whenever possible.
+      </p>
+      <p>
+        A codec decodes audio and video for for playback or editing and is also
+        used for transmission or storage.
+        Different codecs are used in video-conferencing, streaming media and
+        video editing applications.
+      </p>
+    </description>
+    <icon type="stock">application-x-executable</icon>
+    <categories>
+      <category>Addons</category>
+      <category>Codecs</category>
+    </categories>
+    <keywords>
+      <keyword>AC-3</keyword>
+      <keyword>ASF</keyword>
+      <keyword>AVI</keyword>
+      <keyword>DivX</keyword>
+      <keyword>DV</keyword>
+      <keyword>Matroska</keyword>
+      <keyword>MPEG-1</keyword>
+      <keyword>MPEG-2</keyword>
+      <keyword>MPEG-4</keyword>
+      <keyword>OGG</keyword>
+    </keywords>
+    <project_license>LGPL-2.0</project_license>
+    <url type="homepage">http://gstreamer.freedesktop.org/</url>
+    <url type="missing">http://fedoraproject.org/wiki/Multimedia</url>
+  </component>
+  <component priority="-1" type="codec">
     <id>gstreamer-ugly</id>
     <pkgname>gstreamer1-plugins-ugly</pkgname>
     <metadata_license>CC0-1.0</metadata_license>
