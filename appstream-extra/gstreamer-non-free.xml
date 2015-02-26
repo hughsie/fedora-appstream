@@ -42,7 +42,7 @@
       <keyword>Mimic</keyword>
       <keyword>Siren</keyword>
     </keywords>
-    <project_license>LGPL-2.0</project_license>
+    <project_license>LGPL-2.0 and PatentConcern</project_license>
     <url type="homepage">http://gstreamer.freedesktop.org/</url>
     <url type="missing">http://fedoraproject.org/wiki/Multimedia</url>
   </component>
@@ -136,7 +136,7 @@
       <keyword>MPEG-2</keyword>
       <keyword>RealMedia</keyword>
     </keywords>
-    <project_license>LGPL-2.0</project_license>
+    <project_license>LGPL-2.0 and PatentConcern</project_license>
     <url type="homepage">http://gstreamer.freedesktop.org/</url>
     <url type="missing">http://fedoraproject.org/wiki/Multimedia</url>
   </component>
