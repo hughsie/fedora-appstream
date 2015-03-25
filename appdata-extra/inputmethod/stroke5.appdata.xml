@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<application>
-<id type="inputmethod">stroke5.db</id>
-<metadata_license>CC0</metadata_license>
-<name>Stroke 5</name>
-<summary>Chinese input method</summary>
-<description>
-<p>
-Stroke 5 is a very simple stroke-based Chinese input method.
-It was designed specifically for people with limited hand mobility or computer
-literacy, like the elderly or disabled.
-</p>
-<p>
-Input methods are typing systems allowing users to input complex languages.
-They are necessary because these contain too many characters to simply be laid
-out on a traditional keyboard.
-</p>
-</description>
-<!--
-<url type="homepage">FIXME</url>
--->
-</application>
+<component type="inputmethod">
+  <id>stroke5.db</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <name>Stroke 5</name>
+  <summary>Chinese input method</summary>
+  <description>
+    <p>
+      Stroke 5 is a very simple stroke-based Chinese input method.
+      It was designed specifically for people with limited hand mobility or computer
+      literacy, like the elderly or disabled.
+    </p>
+    <p>
+      Input methods are typing systems allowing users to input complex languages.
+      They are necessary because these contain too many characters to simply be laid
+      out on a traditional keyboard.
+    </p>
+  </description>
+  <url type="homepage">https://code.google.com/p/ibus/</url>
+  <url type="bugtracker">https://code.google.com/p/ibus/issues/list</url>
+  <url type="help">https://code.google.com/p/ibus/wiki/FAQ</url>
+  <update_contact><!-- upstream-contact_at_email.com --></update_contact>
+</component>

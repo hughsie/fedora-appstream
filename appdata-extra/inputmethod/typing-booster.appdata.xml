@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<application>
-<id type="inputmethod">typing-booster.xml</id>
-<metadata_license>CC0</metadata_license>
-<name>Typing Booster</name>
-<summary>Predictive input method</summary>
-<description>
-<p>
-Ibus-Typing Booster is a predictive input method and predicts complete words
-based on partial input.
-One can then simply select the desired word from a list of suggestions and
-improve one's typing speed and spelling.
-</p>
-<p>
-Input methods are typing systems allowing users to input complex languages.
-They are necessary because these contain too many characters to simply be laid
-out on a traditional keyboard.
-</p>
-</description>
-<!--
-<url type="homepage">FIXME</url>
--->
-</application>
+<component type="inputmethod">
+  <id>typing-booster.xml</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <name>Typing Booster</name>
+  <summary>Predictive input method</summary>
+  <description>
+    <p>
+      Ibus-Typing Booster is a predictive input method and predicts complete words
+      based on partial input.
+      One can then simply select the desired word from a list of suggestions and
+      improve one's typing speed and spelling.
+    </p>
+    <p>
+      Input methods are typing systems allowing users to input complex languages.
+      They are necessary because these contain too many characters to simply be laid
+      out on a traditional keyboard.
+    </p>
+  </description>
+  <url type="homepage">https://code.google.com/p/ibus/</url>
+  <url type="bugtracker">https://code.google.com/p/ibus/issues/list</url>
+  <url type="help">https://code.google.com/p/ibus/wiki/FAQ</url>
+  <update_contact><!-- upstream-contact_at_email.com --></update_contact>
+</component>
