@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2013 Richard Hughes <richard@hughsie.com> -->
-<application>
-  <id type="codec">gstreamer-bad-free</id>
-  <metadata_license>CC0</metadata_license>
+<component type="codec">
+  <id>gstreamer-bad-free</id>
+  <metadata_license>CC0-1.0</metadata_license>
   <name>GStreamer Multimedia Codecs - Extra</name>
   <description>
     <p>
@@ -22,4 +22,9 @@
       video editing applications.
     </p>
   </description>
-</application>
+  <url type="homepage">http://gstreamer.freedesktop.org/</url>
+  <url type="bugtracker">https://bugzilla.gnome.org/enter_bug.cgi?product=GStreamer</url>
+  <url type="help">http://gstreamer.freedesktop.org/documentation/</url>
+  <url type="donation">http://www.gnome.org/friends/</url>
+  <update_contact><!-- upstream-contact_at_email.com --></update_contact>
+</component>
