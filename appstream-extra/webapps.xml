@@ -157,7 +157,7 @@
         Dropbox.
       </p>
     </description>
-    <icon type="remote">https://dt8kf6553cww8.cloudfront.net/static/images/brand/linux-vflMtqYV6.png</icon>
+    <icon type="remote">https://www.dropbox.com/s/hi2dcyswjhcj5yr/dropbox-linux.png?dl=1</icon>
     <keywords>
       <keyword>dropbox</keyword>
       <keyword>sync</keyword>
@@ -258,7 +258,7 @@
         Google Maps.
       </p>
     </description>
-    <icon type="remote">http://upload.wikimedia.org/wikipedia/en/e/ee/Google_Maps_application_icon.jpg</icon>
+    <icon type="remote">https://developers.google.com/maps/web/images/embed-places-icon.png</icon>
     <categories>
       <category>Maps</category>
       <category>Science</category>
@@ -368,7 +368,7 @@
         Rdio.
       </p>
     </description>
-    <icon type="remote">http://cdn3.rd.io/user/press/rdio-icon.png</icon>
+    <icon type="remote">http://rdio0img-a.akamaihd.net/user/press/rdio-app-icon.png</icon>
     <categories>
       <category>Audio</category>
       <category>Music</category>
