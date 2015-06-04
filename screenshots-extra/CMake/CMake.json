@@ -1,0 +1,13 @@
+{
+	"screenshots":
+		[
+			{
+				"application": "CMake",
+				"file": "a.png",
+				"application-version": "3.2.2",
+				"desktop": "GNOME-3.16",
+				"desktop-dpi": "2x",
+				"description": "Main window of the CMake GUI"
+			},
+		],
+}
