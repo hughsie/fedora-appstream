@@ -1,0 +1,13 @@
+{
+	"screenshots":
+		[
+			{
+				"application": "IQMol",
+				"file": "iqmol-2.3.0.png",
+				"application-version": "2.3.0",
+				"desktop": "GNOME-3.16",
+				"desktop-dpi": "2x",
+				"description": "IQMol showing a Lauric Acid molecule"
+			},
+		],
+}
