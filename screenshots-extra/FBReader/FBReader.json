@@ -1,0 +1,13 @@
+{
+	"screenshots":
+		[
+			{
+				"application": "FBReader",
+				"file": "fbreader-qt-0.12.10.png",
+				"application-version": "0.12.10",
+				"desktop": "GNOME-3.16",
+				"desktop-dpi": "2x",
+				"description": "Main window of FBReader"
+			},
+		],
+}
