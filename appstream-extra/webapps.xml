@@ -416,4 +416,31 @@
       <value key="X-Kudo-Popular"/>
     </metadata>
   </component>
+  <component type="webapp">
+    <id>epiphany-telegram.desktop</id>
+    <metadata_license>CC0-1.0</metadata_license>
+    <name>Telegram</name>
+    <summary>Telegram is an instant messaging app focused on speed and security</summary>
+    <description>
+      <p>
+        Telegram is an instant messaging app focused on speed and security.
+      </p>
+      <p>
+        This webapp provides a quick way to launch a web browser to access
+        Telegram.
+      </p>
+    </description>
+    <icon type="remote">https://web.telegram.org/img/icons/icon128.png</icon>
+    <categories>
+      <category>InstantMessaging</category>
+      <category>Network</category>
+    </categories>
+    <keywords>
+      <keyword>telegram</keyword>
+    </keywords>
+    <url type="homepage">https://telegram.org/</url>
+    <metadata>
+      <value key="X-Kudo-Popular"/>
+    </metadata>
+  </component>
 </components>
