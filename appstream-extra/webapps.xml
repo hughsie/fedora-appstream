@@ -23,10 +23,6 @@
       <p>
         To use the Kindle Cloud reader you must have Amazon.com account.
       </p>
-      <p>
-        This webapp provides a quick way to launch a web browser to access the
-        Kindle Cloud Reader.
-      </p>
     </description>
     <icon type="remote">http://g-ecx.images-amazon.com/images/G/01/kindle/www/ariel/kindle-icon-kcp120._SL90_.png</icon>
     <categories>
@@ -86,10 +82,6 @@
       <p>
         To use BBC iPlayer you must be located in the UK and pay a TV licence.
       </p>
-      <p>
-        This webapp provides a quick way to launch a web browser to access BBC
-        iPlayer.
-      </p>
     </description>
     <icon type="remote">http://www.bbc.co.uk/terms/images/stock/bbciplayer_logo_black.jpg</icon>
     <categories>
@@ -118,10 +110,6 @@
       <p>
         Devdocs.io is a small application that allows you to quickly search and view
         developer documentation for various programming langauges and libraries. 
-      </p>
-      <p>
-        This webapp provides a quick way to launch a web browser to access
-        Devdocs.io.
       </p>
     </description>
     <icon type="remote">http://devdocs.io/images/webapp-icon-256.png</icon>
@@ -152,10 +140,6 @@
       <p>
         To use Dropbox you need to be over the age of 13.
       </p>
-      <p>
-        This webapp provides a quick way to launch a web browser to access
-        Dropbox.
-      </p>
     </description>
     <icon type="remote">https://www.dropbox.com/s/hi2dcyswjhcj5yr/dropbox-linux.png?dl=1</icon>
     <keywords>
@@ -180,10 +164,6 @@
       </p>
       <p>
         To use Facebook you need a Facebook login and be over the age of 13.
-      </p>
-      <p>
-        This webapp provides a quick way to launch a web browser to access
-        Facebook.
       </p>
     </description>
     <icon type="remote">https://www.facebook.com/images/fb_icon_325x325.png</icon>
@@ -222,10 +202,6 @@
       <p>
         To use Google Drive you need to be over the age of 13.
       </p>
-      <p>
-        This webapp provides a quick way to launch a web browser to access
-        Google Drive.
-      </p>
     </description>
     <icon type="remote">http://www.google.com/images/icons/product/drive-64.png</icon>
     <keywords>
@@ -252,10 +228,6 @@
       </p>
       <p>
         To use Google Maps you need to be over the age of 13.
-      </p>
-      <p>
-        This webapp provides a quick way to launch a web browser to access
-        Google Maps.
       </p>
     </description>
     <icon type="remote">https://developers.google.com/maps/web/images/embed-places-icon.png</icon>
@@ -285,10 +257,6 @@
       </p>
       <p>
         To use Google+ you need a Google account and be over the age of 13.
-      </p>
-      <p>
-        This webapp provides a quick way to launch a web browser to access
-        Google+.
       </p>
     </description>
     <icon type="remote">https://developers.google.com/+/images/branding/g+128.png</icon>
@@ -323,10 +291,6 @@
       <p>
         Hangouts works on computers, Android and Apple devices, so you can
         connect with everyone, and no one gets left out.
-      </p>
-      <p>
-        This webapp provides a quick way to launch a web browser to access
-        Google Talk.
       </p>
     </description>
     <icon type="stock">application-x-executable</icon>
@@ -363,10 +327,6 @@
         Build a collection of your favorites, so they're always close at hand,
         and share the music you love with the people who might love it next.
       </p>
-      <p>
-        This webapp provides a quick way to launch a web browser to access
-        Rdio.
-      </p>
     </description>
     <icon type="remote">http://rdio0img-a.akamaihd.net/user/press/rdio-app-icon.png</icon>
     <categories>
@@ -397,10 +357,6 @@
       <p>
         To use Twitter you need a twitter account and be over the age of 13.
       </p>
-      <p>
-        This webapp provides a quick way to launch a web browser to access
-        Twitter.
-      </p>
     </description>
     <icon type="remote">https://abs.twimg.com/a/1381897480/images/resources/twitter-bird-blue-on-white.png</icon>
     <categories>
@@ -424,10 +380,6 @@
     <description>
       <p>
         Telegram is an instant messaging app focused on speed and security.
-      </p>
-      <p>
-        This webapp provides a quick way to launch a web browser to access
-        Telegram.
       </p>
     </description>
     <icon type="remote">https://web.telegram.org/img/icons/icon128.png</icon>
