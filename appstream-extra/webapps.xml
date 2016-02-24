@@ -3,6 +3,7 @@
   <component type="webapp">
     <id>epiphany-kindlecloud.desktop</id>
     <metadata_license>CC0-1.0</metadata_license>
+    <project_license>proprietary</project_license>
     <name>Kindle Cloud Reader</name>
     <summary>Read instantly in your browser</summary>
     <description>
@@ -70,6 +71,7 @@
   <component type="webapp">
     <id>epiphany-bbciplayer.desktop</id>
     <metadata_license>CC0-1.0</metadata_license>
+    <project_license>proprietary</project_license>
     <name>BBC iPlayer</name>
     <summary>Catch up on BBC TV and Radio programmes, or watch/listen live</summary>
     <description>
@@ -104,6 +106,7 @@
   <component type="webapp">
     <id>devdocs-io.desktop</id>
     <metadata_license>CC0-1.0</metadata_license>
+    <project_license>MPL-2.0</project_license>
     <name>Devdocs.io</name>
     <summary>Easily view and search developer documentation</summary>
     <description>
@@ -121,7 +124,6 @@
       <keyword>documentation</keyword>
       <keyword>programming</keyword>
     </keywords>
-    <project_license>Mozilla Public License v2.0</project_license>
     <url type="homepage">http://devdocs.io/</url>
     <metadata>
       <value key="X-Kudo-Popular"/>
@@ -130,6 +132,7 @@
   <component type="webapp">
     <id>epiphany-dropbox.desktop</id>
     <metadata_license>CC0-1.0</metadata_license>
+    <project_license>proprietary</project_license>
     <name>Dropbox</name>
     <summary>A free service that shares your documents easily</summary>
     <description>
@@ -154,6 +157,7 @@
   <component type="webapp">
     <id>epiphany-facebook.desktop</id>
     <metadata_license>CC0-1.0</metadata_license>
+    <project_license>proprietary</project_license>
     <name>Facebook</name>
     <summary>Give people the power to share</summary>
     <description>
@@ -182,6 +186,7 @@
   <component type="webapp">
     <id>epiphany-googledrive.desktop</id>
     <metadata_license>CC0-1.0</metadata_license>
+    <project_license>proprietary</project_license>
     <name>Google Drive</name>
     <summary>Everything you need, everywhere you go</summary>
     <description>
@@ -214,6 +219,8 @@
   </component>
   <component type="webapp">
     <id>epiphany-googlemaps.desktop</id>
+    <metadata_license>CC0-1.0</metadata_license>
+    <project_license>proprietary</project_license>
     <name>Google Maps</name>
     <summary>A web mapping service application and technology</summary>
     <description>
@@ -245,6 +252,8 @@
   </component>
   <component type="webapp">
     <id>epiphany-googleplus.desktop</id>
+    <metadata_license>CC0-1.0</metadata_license>
+    <project_license>proprietary</project_license>
     <name>Google Plus</name>
     <summary>Share and discover</summary>
     <description>
@@ -277,6 +286,7 @@
     <id>libnpgoogletalk.so</id>
     <pkgname>google-talkplugin</pkgname>
     <metadata_license>CC0-1.0</metadata_license>
+    <project_license>proprietary</project_license>
     <name>Google Talk</name>
     <summary>Bring your conversations to life with video calls for free</summary>
     <description>
@@ -309,6 +319,7 @@
   <component type="webapp">
     <id>epiphany-rdio.desktop</id>
     <metadata_license>CC0-1.0</metadata_license>
+    <project_license>proprietary</project_license>
     <name>Rdio</name>
     <summary>An ad-free music subscription service</summary>
     <description>
@@ -347,6 +358,7 @@
   <component type="webapp">
     <id>epiphany-twitter.desktop</id>
     <metadata_license>CC0-1.0</metadata_license>
+    <project_license>proprietary</project_license>
     <name>Twitter</name>
     <summary>Start a conversation, explore your interests, and be in the know</summary>
     <description>
@@ -375,6 +387,7 @@
   <component type="webapp">
     <id>epiphany-telegram.desktop</id>
     <metadata_license>CC0-1.0</metadata_license>
+    <project_license>proprietary</project_license>
     <name>Telegram</name>
     <summary>Telegram is an instant messaging app focused on speed and security</summary>
     <description>
