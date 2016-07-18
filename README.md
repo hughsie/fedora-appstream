@@ -1,1 +1,1 @@
-Fedora-specific AppData overrides and extra AppStream metadata
+Fedora-specific AppStream metadata

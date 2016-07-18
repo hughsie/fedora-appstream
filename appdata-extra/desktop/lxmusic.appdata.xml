@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014 Richard Hughes <richard@hughsie.com> -->
-
-<application>
-<id type="desktop">lxmusic.desktop</id>
-<metadata_license>CC0-1.0</metadata_license>
-<name>LXMusic</name>
-<summary>A minimalist music player for LXDE</summary>
-</application>
