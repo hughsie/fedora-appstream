@@ -27,7 +27,7 @@
         video editing applications.
       </p>
     </description>
-    <icon type="stock">application-x-executable</icon>
+    <icon type="stock">application-x-addon</icon>
     <categories>
       <category>Addons</category>
       <category>Codecs</category>
@@ -73,7 +73,7 @@
         video editing applications.
       </p>
     </description>
-    <icon type="stock">application-x-executable</icon>
+    <icon type="stock">application-x-addon</icon>
     <categories>
       <category>Addons</category>
       <category>Codecs</category>
@@ -119,7 +119,7 @@
         video editing applications.
       </p>
     </description>
-    <icon type="stock">application-x-executable</icon>
+    <icon type="stock">application-x-addon</icon>
     <categories>
       <category>Addons</category>
       <category>Codecs</category>
