@@ -349,7 +349,7 @@
     <id>epiphany-telegram.desktop</id>
     <metadata_license>CC0-1.0</metadata_license>
     <project_license>proprietary</project_license>
-    <name>Telegram</name>
+    <name>Telegram Web</name>
     <summary>Telegram is an instant messaging app focused on speed and security</summary>
     <description>
       <p>
@@ -364,7 +364,8 @@
     <keywords>
       <keyword>telegram</keyword>
     </keywords>
-    <url type="homepage">https://telegram.org/</url>
+    <url type="homepage">https://web.telegram.org/</url>
+    <launchable type="url">https://web.telegram.org/</launchable>
     <metadata>
       <value key="X-Kudo-Popular"/>
     </metadata>
