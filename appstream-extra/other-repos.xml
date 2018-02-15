@@ -8,53 +8,11 @@
     <summary>Adobe Repository Configuration</summary>
   </component>
   <component type="source">
-    <id>bjnplugin</id>
-    <pkgname>bjnplugin</pkgname>
-    <metadata_license>CC0-1.0</metadata_license>
-    <name>Blue Jeans</name>
-    <summary>Blue Jeans Repository Configuration</summary>
-  </component>
-  <component type="source">
-    <id>google-chrome</id>
-    <pkgname>google-chrome</pkgname>
-    <metadata_license>CC0-1.0</metadata_license>
-    <name>Google Chrome</name>
-    <summary>Google Chrome Repository Configuration</summary>
-  </component>
-  <component type="source">
-    <id>google-earth-stable</id>
-    <pkgname>google-earth-stable</pkgname>
-    <metadata_license>CC0-1.0</metadata_license>
-    <name>Google Earth</name>
-    <summary>Google Earth Repository Configuration</summary>
-  </component>
-  <component type="source">
-    <id>google-musicmanager-beta</id>
-    <pkgname>google-musicmanager-beta</pkgname>
-    <metadata_license>CC0-1.0</metadata_license>
-    <name>Google MusicManager</name>
-    <summary>Google MusicManager Repository Configuration</summary>
-  </component>
-  <component type="source">
-    <id>google-talkplugin</id>
-    <pkgname>google-talkplugin</pkgname>
-    <metadata_license>CC0-1.0</metadata_license>
-    <name>Google Talk</name>
-    <summary>Google Talk Repository Configuration</summary>
-  </component>
-  <component type="source">
     <id>livna-release</id>
     <pkgname>livna-release</pkgname>
     <metadata_license>CC0-1.0</metadata_license>
     <name>Livna</name>
     <summary>Livna Repository Configuration</summary>
-  </component>
-  <component type="source">
-    <id>nautilus-dropbox</id>
-    <pkgname>nautilus-dropbox</pkgname>
-    <metadata_license>CC0-1.0</metadata_license>
-    <name>Dropbox</name>
-    <summary>Dropbox Repository Configuration</summary>
   </component>
   <component type="source">
     <id>rpmfusion-free-release</id>
