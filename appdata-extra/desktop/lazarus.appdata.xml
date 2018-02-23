@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2014 Edgar Muniz Berlinck <edgar.vv@gmail.com> -->
+<!-- Submitted upstream http://mantis.freepascal.org/view.php?id=31364 -->
 <application>
 	<id type="desktop">lazarus.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
