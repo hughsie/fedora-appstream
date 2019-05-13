@@ -250,38 +250,6 @@
       <value key="X-Kudo-Popular"/>
     </metadata>
   </component>
-  <component type="webapp">
-    <id>epiphany-googleplus.desktop</id>
-    <metadata_license>CC0-1.0</metadata_license>
-    <project_license>proprietary</project_license>
-    <name>Google Plus</name>
-    <summary>Share and discover</summary>
-    <description>
-      <p>
-        Google+ is one of the most active social media networks with hundreds of
-        millions of people having active accounts.
-        Whether it's a simple note or a special photograph, share life's
-        important moments with just the right people.
-        You can even make a video call with up to 10 friends at once.
-      </p>
-      <p>
-        To use Google+ you need a Google account and be over the age of 13.
-      </p>
-    </description>
-    <icon type="remote">https://developers.google.com/+/images/branding/g+128.png</icon>
-    <categories>
-      <category>InstantMessaging</category>
-      <category>Network</category>
-    </categories>
-    <keywords>
-      <keyword>google</keyword>
-      <keyword>plus</keyword>
-    </keywords>
-    <url type="homepage">http://plus.google.com/</url>
-    <metadata>
-      <value key="X-Kudo-Popular"/>
-    </metadata>
-  </component>
   <component type="addon">
     <id>libnpgoogletalk.so</id>
     <pkgname>google-talkplugin</pkgname>
